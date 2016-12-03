@@ -34,26 +34,31 @@
 
 % Contentseses
 \tableofcontents
-\cleardoublepage
+% \cleardoublepage
 
 % Hauptteil einleiten --> Seitennummerierung wieder arabisch
 \mainmatter
 
-\include{kapitel1}
+%\include{kapitel1}
+\include{chapter_abstract}
+\include{chapter_project}
+\include{chapter_concept}
+\include{chapter_implementation}
 %\include{kapitel2}
 %\include{kapitel3}
 %\include{kapitel4}
 %\include{kapitel5}
 %\include{kapitel6}
 %\include{kapitel7}
-\cleardoublepage
+% \cleardoublepage
 
 % VERZEICHNISSE (Abbildungen, Tabellen)
 % Literatur
-\nocite{wiki:wissarbeit}
+% \nocite{wiki:wissarbeit}
 \bibliographystyle{alphadin}
 \bibliography{Bachelorarbeit}
-\cleardoublepage
+\listoffigures
+% \cleardoublepage
 
 % ERKLÄRUNG
 \input{_eidversicherung}
