@@ -1,9 +1,12 @@
 \select@language {american}
 \contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}
-\contentsline {chapter}{\numberline {2}Project \& Organisation}{3}{chapter.2}
+\contentsline {chapter}{\numberline {2}Context}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}SinnerSchrader}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Related Bachelor's Thesis}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Team}{3}{section.2.3}
+\contentsline {subsection}{\numberline {2.1.1}Project-Driven Organisation}{3}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2}Project}{3}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Agile}{3}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Team}{4}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Related Bachelor's Thesis}{4}{subsection.2.2.3}
 \contentsline {chapter}{\numberline {3}Concept}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Requirements}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Functional Requirements}{5}{subsection.3.1.1}
