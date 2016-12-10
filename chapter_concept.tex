@@ -1,31 +1,6 @@
 \chapter{Concept}
 The application should be accessible to all employees of SinnerSchrader. Due to the heterogeneity of the people’s computer setups running Windows, macOS and Linux, creating a native application supported by everyone’s system is a rather complicated task. A web application using standard technologies does not only solve this problem, but can also be used from mobile devices such as smart phones and tablets. Furthermore, there is no need to manually install and update the software so that it can be assumed that all users use the latest version of the application. This is not only a positive factor regarding the overall usability of the system, but also assures bugs and security issues are eliminated the moment a fixed version of the software is deployed. All those advantages compared to native clients and the fact that SinnerSchrader’s expertise lies in the development of web applications made the decision that this tool should be realized as such. (TODO: wording as such)
 
-\section{Requirements}
-\subsection{Functional Requirements}
-\begin{itemize}
-	\item User Profiles
-	Anyone can see another user’s profile consisting of basic information about the user such as Name, Location, E-Mail and personal skills. Personal skills are composed of a name, a knowledge level and a will level, both on a scale from one to four.
-	\item Employees can provide and edit their skills
-	Users can add new skills from a pool of known skills to their own profile. Already added skills can be edited and removed from the profile.
-	\item Search
-	A search function can be used to find people who have added one or more specific skills to their profile. When searching for multiple skills, only persons matching all of them will will be displayed. The results shall be ordered by knowledge levels and/or wills.
-	\item Management of known skills
-	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users personal skills are automatically updated when a skill has been edited so that the integrity of the user profiles is maintained at all times.
-\end{itemize}
-
-
-
-\subsection{Non Functional Requirements}
-TODO: Klären und formulieren
-\begin{itemize}
-	\item Desktop/Devices
-	\item Browsers
-	\item Scalability
-	\item Load/Response Times
-\end{itemize}
-
-
 
 
 \section{Commercial Solutions}
@@ -56,16 +31,48 @@ Not only can users provide information about their skills, but managers can also
 Furthermore, only managers can search for persons. Taking into consideration that SinnerSchrader needs a tool to enable everyone to find someone with a specific skillset, this is a serious disadvantage.
 SkillsDB also offers features SinnerSchrader does not intent to use including, but not limited to the automatic generation of project reports based on plan succession and demands for assessments.
 
-\subsection{Conclusion}
-All of the analyzed applications offer the required features, but also include functionality SinnerSchrader does not intend to use. Furthermore, those systems differentiate between employees and their supervisors and thus restrain transparency. Instead of a solution for monitoring employees and rating them, we want a tool for everyone to find another person who offers the skills needed to solve a concrete problem.
+
+
+\section{Requirements}
+\subsection{Functional Requirements}
+\begin{itemize}
+	\item User Profiles \\
+	Anyone can see another user’s profile consisting of basic information about the user such as Name, Location, E-Mail and personal skills. Personal skills are composed of a name, a knowledge level and a will level, both on a scale from one to four.
+	\item Provide/Edit skills\\
+	Users can add new skills from a pool of known skills to their own profile. Already added skills can be edited and removed from the profile.
+	\item Search\\
+	A search function can be used to find people who have added one or more specific skills to their profile. When searching for multiple skills, only persons matching all of them will will be displayed.
+	\begin{itemize}
+		\item Ranking\\
+			By default, the search results order should be defined by a score aggregating the individuals knowledge and will levels. Employees willing to enhance their knowledge about a searched skill should be preferred to others having the same knowledge but a lower will.
+		\item Sorting\\
+			The user should be able to sort the search results not only by said score,
+			but also solely by knowledge and will level.
+	\end{itemize}
+	\item Management of known skills\\
+	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users personal skills are automatically updated when a skill has been edited so that the integrity of the user profiles is maintained at all times.
+\end{itemize}
 
 
 
+\subsection{Non Functional Requirements}
+TODO: Klären und formulieren
+\begin{itemize}
+	\item Desktop/Devices
+	\item Browsers
+	\item Scalability
+	\item Load/Response Times
+\end{itemize}
+
+\subsection{Revisiting Commercial Solutions}
+(TODO: Featurematrix aufstellen)
+As shown in (TODO: verweis auf matrix), none of the analyzed softwares (TODO verweis) offers all features required, but all of them include various functions SinnerSchrader does not intend to use, which brings undesired complexity into the applications.
+One of the most critical features, sorting the search results by best match, is not offered by any of the commercial solutions.
+Furthermore, all those systems differentiate between employees and their supervisors and thus restrain transparency. Instead of a solution for monitoring employees and rating them, we want a tool for everyone to find another person who offers the skills needed to solve a concrete problem.
 
 
 
-
-\section{Basic Concept \& Wireframes}
+\section{Visual Concept \& Wireframes}
 The application should be as simple as possible and usable for everyone, in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a people search that provides a way to input the skills needed and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via Email or Google Hangouts(TODO: footnote). Unlike the considered commercial solutions, this tool will not include features like creating statistics, assessments, applicant management, or any dashboard other than the basic search view.
 Furthermore, there will not be any different roles with different access rights for employees and their managers, since this application is meant to be a tool enhancing collaboration, not supervision.
 \begin{figure}[h]
@@ -76,3 +83,5 @@ Furthermore, there will not be any different roles with different access rights 
 \end{figure}
 
 TODO: Put UML/BPMN here
+
+\sections{Matching Algorithm}

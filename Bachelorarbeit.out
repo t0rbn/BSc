@@ -1,40 +1,31 @@
-\BOOKMARK [0][-]{chapter.1}{Abstract}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Context}{}% 2
-\BOOKMARK [1][-]{section.2.1}{What is SinnerSchrader?}{chapter.2}% 3
-\BOOKMARK [2][-]{subsection.2.1.1}{Project-Driven Business}{section.2.1}% 4
-\BOOKMARK [1][-]{section.2.2}{Project}{chapter.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.1}{Agile}{section.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.2.2}{Team}{section.2.2}% 7
-\BOOKMARK [2][-]{subsection.2.2.3}{Related Bachelor's Thesis}{section.2.2}% 8
-\BOOKMARK [0][-]{chapter.3}{Concept}{}% 9
-\BOOKMARK [1][-]{section.3.1}{Requirements}{chapter.3}% 10
-\BOOKMARK [2][-]{subsection.3.1.1}{Functional Requirements}{section.3.1}% 11
-\BOOKMARK [2][-]{subsection.3.1.2}{Non Functional Requirements}{section.3.1}% 12
-\BOOKMARK [1][-]{section.3.2}{Commercial Solutions}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.2.1}{Skills Base}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.2}{Talent Management \(engage!\)}{section.3.2}% 15
-\BOOKMARK [2][-]{subsection.3.2.3}{SkillsDB Pro}{section.3.2}% 16
-\BOOKMARK [2][-]{subsection.3.2.4}{Conclusion}{section.3.2}% 17
-\BOOKMARK [1][-]{section.3.3}{Basic Concept \046 Wireframes}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 19
-\BOOKMARK [1][-]{section.4.1}{Application Structure}{chapter.4}% 20
-\BOOKMARK [2][-]{subsection.4.1.1}{MongoDB}{section.4.1}% 21
-\BOOKMARK [2][-]{subsection.4.1.2}{LDAP}{section.4.1}% 22
-\BOOKMARK [2][-]{subsection.4.1.3}{Reverse Proxy}{section.4.1}% 23
-\BOOKMARK [2][-]{subsection.4.1.4}{API}{section.4.1}% 24
-\BOOKMARK [1][-]{section.4.2}{Infrastructure}{chapter.4}% 25
-\BOOKMARK [2][-]{subsection.4.2.1}{Maven Build}{section.4.2}% 26
-\BOOKMARK [2][-]{subsection.4.2.2}{Gitlab CI}{section.4.2}% 27
-\BOOKMARK [2][-]{subsection.4.2.3}{Deployment}{section.4.2}% 28
-\BOOKMARK [1][-]{section.4.3}{Frontend}{chapter.4}% 29
-\BOOKMARK [2][-]{subsection.4.3.1}{React}{section.4.3}% 30
-\BOOKMARK [2][-]{subsection.4.3.2}{Typescript}{section.4.3}% 31
-\BOOKMARK [1][-]{section.4.4}{Backend}{chapter.4}% 32
-\BOOKMARK [2][-]{subsection.4.4.1}{Java}{section.4.4}% 33
-\BOOKMARK [2][-]{subsection.4.4.2}{Spring Boot MVC}{section.4.4}% 34
-\BOOKMARK [2][-]{subsection.4.4.3}{Spring Data}{section.4.4}% 35
-\BOOKMARK [2][-]{subsection.4.4.4}{Spring LDAP}{section.4.4}% 36
-\BOOKMARK [2][-]{subsection.4.4.5}{Swagger}{section.4.4}% 37
-\BOOKMARK [2][-]{subsection.4.4.6}{Testing}{section.4.4}% 38
-\BOOKMARK [1][-]{section.4.5}{License}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter*.7}{Eidesstattliche Versicherung}{}% 40
+\BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter.1}{SinnerSchrader}{}% 2
+\BOOKMARK [1][-]{subsection.1.0.1}{Project-Driven Business}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.2}{Concept}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Commercial Solutions}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.1.1}{Skills Base}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.2}{Talent Management \(engage!\)}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.3}{SkillsDB Pro}{section.2.1}% 8
+\BOOKMARK [1][-]{section.2.2}{Requirements}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.1}{Functional Requirements}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{Non Functional Requirements}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.3}{Revisiting Commercial Solutions}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Basic Concept \046 Wireframes}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Implementation}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Application Structure}{chapter.3}% 15
+\BOOKMARK [2][-]{subsection.3.1.1}{MongoDB}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.2}{LDAP}{section.3.1}% 17
+\BOOKMARK [2][-]{subsection.3.1.3}{Reverse Proxy}{section.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.1.4}{API}{section.3.1}% 19
+\BOOKMARK [1][-]{section.3.2}{Infrastructure}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.2.1}{Maven Build}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.2}{Gitlab CI}{section.3.2}% 22
+\BOOKMARK [2][-]{subsection.3.2.3}{Deployment}{section.3.2}% 23
+\BOOKMARK [1][-]{section.3.3}{Backend}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.3.1}{Spring Boot MVC}{section.3.3}% 25
+\BOOKMARK [2][-]{subsection.3.3.2}{Spring Data}{section.3.3}% 26
+\BOOKMARK [2][-]{subsection.3.3.3}{Spring LDAP}{section.3.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.4}{Swagger}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.5}{Testing}{section.3.3}% 29
+\BOOKMARK [1][-]{section.3.4}{License}{chapter.3}% 30
+\BOOKMARK [0][-]{chapter*.8}{Eidesstattliche Versicherung}{}% 31
