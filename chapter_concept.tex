@@ -136,8 +136,8 @@ Knowing the current state one can easily deduct the most probable future state. 
 can be adjusted accordingly in order to factor the transition into the prospective projections.
 \begin{figure}[!htp]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/markov-chain.png}
-    \caption[Markov Chain]{A simple markov chain displayed as graph.}
+    \includegraphics[width=0.5\textwidth]{images/markov-chain.png}
+    \caption[Markov Chain]{A simple markov chain displayed as graph. The states are represented as vertecies. All possible transitions between states are denoted as edges. The edge weights define the probability of the transition relative to all other outgoing edges of a node.}
     \label{fig:markovchain}
 \end{figure}
 
@@ -194,7 +194,9 @@ var knownSkills = [
     ]
   }
 ]
-
+\end{lstlisting}
+\newpage
+\begin{lstlisting}
 function suggest(searched) {
   var accumulated = {};
 
