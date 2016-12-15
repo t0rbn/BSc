@@ -51,7 +51,7 @@ described as the skill and will levels that stick out of their overall capabilit
 \end{itemize}
 
 
-\subsection{Proposed Algorithm}
+\subsection{Proposed Fitness Score}
 Skill and will levels are described as integer values on a scale form zero to three. This scale, called $V$, can be expressed as
 \begin{gather*}
   V = \{ x \in \mathrm{N}_0^+ \ | \  0 \leq x \leq 3\}
@@ -87,14 +87,14 @@ value of zero would have the greatest specialization possible and thus get assig
   s_w = \frac{|V| \ + a_s - \left( \left( \sum_{x \in E} v_w(x)\right) \cdot \frac{1}{|E|} \right)}{2 \ |V|}
 \end{gather*}
 
-The resulting fitness score $f$ is a weighted mead of the introduced facors. The weights $w_{as}$, $w_{aw}$, $w_{ss}$, $w_{sw}$ should sum up to one.\footnote{Mathematically, this is not neccessary, but it results in much more human readable values}.
+The resulting fitness score $f$ is a weighted mean of the introduced facors. The weights $w_{as}$, $w_{aw}$, $w_{ss}$, $w_{sw}$ sum up to one.\footnote{Mathematically, this is not neccessary, but it results in much more human readable values.}
 
 \begin{gather*}
   f = \left(\frac{w_{as} \cdot a_s}{|V|} + \frac{w_{aw} \cdot a_w}{|V|} + w_{ss} \cdot s_s + w_{sw} \cdot s_w \right) \cdot \frac{1}{4} \\
   w_{as} + w_{aw} + w_{ss} + w_{sw} = 1
 \end{gather*}
 
-\subsection{Example Caclulation}
+\subsection{Example Caculation}
 Given are three example employees, Alice, Bob and Charlie, with the same three skills each.
 (Notation: skill level/will level)
 \newline
@@ -123,3 +123,92 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to a sear
 \end{center}
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would also designate Charlie as the most fitting person. Interestingly, Bob would be preferred to Alice, since his higher motivational levels compensate his lack of skill in Ruby.
+
+\section{Recommendation Engine}
+Recommender systems `are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information'\cite{Isinkaye2015261} that are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items
+more prominentely than articles the customer is unlikely to buy. In the context of the skill management application, a recommender system will be used to predict skills a user might want to search for based on the ones they already entered and a the knowledge which skills are more often searched for together.
+When entering an item into the search bar, the user will be offered to select items the recommender system predicts they might want to combine with the already entered ones.
+
+\subsection{Markov Chains}
+Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is only dependent on the current state which is called the `markov property'. In the context of the skill management application, we assume this to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is skill set of the current search plus one more item.
+The basic concept is to store all possible states of the system and the respective probability of switching between from any state to any other one.
+Knowing the current state one can easily deduct the most probable future state. When a state transistion occurs, the outgoing probabilities of the origin states
+can be adjusted accordingly in order to factor the transition into the prospective projections.
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/markov-chain.png}
+    \caption[Markov Chain]{A simple markov chain displayed as graph.}
+    \label{fig:markovchain}
+\end{figure}
+
+\subsection{Proposed Recommendation Algorithm}
+In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
+the next one based on this exact starting point. On the other downside, this would require the system to save a large number of origin states and thus
+consume memory. Furthermore, it would result in a lot of different origin states that contian very few possible future states due to being to
+specific to a single search.
+Another way to implement such a recommendation system would be to only inspect the last entered search item and ignoring all other ones.
+Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
+This solution would disregard the whole context of the search item.
+A usable tradeoff would be to store all known items together with a list of all other items the former hast been searched together with and the count of times this has happened before.
+In order to suggest the next skill to search, the recommendation algorithm has to merge the lists of simiar items of every searched item in order to sum up
+the search counts. The resulting list contains skills that users have searched before in combination with the given ones, their counts have been aggregated.
+The item having the highest total count in the list will be suggested.
+\newpage
+\subsection{Pseudo-Code}
+A possible pseudo-implementation of the propsed algorithm
+could look like this:
+
+\begin{lstlisting}[language=JS]
+var knownSkills = [
+  {
+    name: "java",
+    similar: [
+      {
+        name: "php",
+        count: 3
+      }, {
+        name: "ruby",
+        count: 2
+      }
+    ]
+  }, {
+    name: "php",
+    similar: [
+      {
+        name: "java",
+        count: 5
+      }, {
+        name: "ruby",
+        count: 2
+      }
+    ]
+    name: "ruby",
+    similar: [
+      {
+        name: "java",
+        count: 0
+      }, {
+        name: "php",
+        count: 5
+      }
+    ]
+  }
+]
+
+function suggest(searched) {
+  var accumulated = {};
+
+  for (s in searched) {
+    for (t in knownSkills.getByName(t).getSimilar()) {
+      if (accumulated.getByName(t) exists) {
+        accumulated.getByName(t).count += t.count
+      } else {
+        accumulated.getByName(t) = t.clone()
+      }
+    }
+  }
+
+  return accumulated.getHighestCount();
+}
+
+\end{lstlisting}

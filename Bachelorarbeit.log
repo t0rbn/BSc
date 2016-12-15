@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  15 DEC 2016 14:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  15 DEC 2016 17:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -798,7 +798,7 @@ Package csquotes Info: Redefining alias 'default' -> 'american'.
  (./Bachelorarbeit.aux
 (./_titlepage.aux) (./chapter_abstract.aux) (./chapter_project.aux)
 (./chapter_objectives.aux) (./chapter_concept.aux)
-(./chapter_implementation.aux))
+(./chapter_implementation.aux) (./chapter_evaluation.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -881,14 +881,14 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 
 \openout2 = `_titlepage.aux'.
 
-(./_titlepage.tex <images/unilogo.png, id=156, 4944.4725pt x 1600.47937pt>
+(./_titlepage.tex <images/unilogo.png, id=188, 4944.4725pt x 1600.47937pt>
 File: images/unilogo.png Graphic file (type png)
 
 <use images/unilogo.png>
 Package pdftex.def Info: images/unilogo.png used on input line 9.
 (pdftex.def)             Requested size: 176.40707pt x 57.09703pt.
 
-<images/minlogo.png, id=158, 2490.30376pt x 569.12625pt>
+<images/minlogo.png, id=190, 2490.30376pt x 569.12625pt>
 File: images/minlogo.png Graphic file (type png)
 
 <use images/minlogo.png>
@@ -1046,7 +1046,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 39.
 
-<images/skillsbase-dashboard.png, id=244, 2017.5375pt x 1022.82124pt>
+<images/skillsbase-dashboard.png, id=284, 2017.5375pt x 1022.82124pt>
 File: images/skillsbase-dashboard.png Graphic file (type png)
 
 <use images/skillsbase-dashboard.png>
@@ -1054,7 +1054,7 @@ Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 43.
 
 (pdftex.def)             Requested size: 341.43436pt x 173.08134pt.
  [4 <./images/skillsbase-dashboard.png>]
-<images/talent_management_-_skillmanagement_-_skillsuche.png, id=253, 1204.5pt 
+<images/talent_management_-_skillmanagement_-_skillsuche.png, id=293, 1204.5pt 
 x 752.8125pt>
 File: images/talent_management_-_skillmanagement_-_skillsuche.png Graphic file 
 (type png)
@@ -1072,7 +1072,7 @@ Underfull \vbox (badness 1077) has occurred while \output is active []
 
 (./chapter_concept.tex
 chapter 3.
-<images/wireframe.png, id=271, 1284.8pt x 1216.545pt>
+<images/wireframe.png, id=311, 1284.8pt x 1216.545pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
@@ -1097,34 +1097,55 @@ Underfull \hbox (badness 10000) in paragraph at lines 98--102
 
  []
 
-) [11]
+[11] <images/markov-chain.png, id=351, 793.0428pt x 379.1766pt>
+File: images/markov-chain.png Graphic file (type png)
+
+<use images/markov-chain.png>
+Package pdftex.def Info: images/markov-chain.png used on input line 139.
+(pdftex.def)             Requested size: 341.43436pt x 163.25104pt.
+ [12 <./images/markov-chain.png>] [13]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 161.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 162.
+ [14]) [15]
 \openout2 = `chapter_implementation.aux'.
 
- (./chapter_implementation.tex [12
+
+(./chapter_implementation.tex [16
 
 
 
 
 ]
 chapter 4.
-) [13] (./Bachelorarbeit.bbl [14
+) [17]
+\openout2 = `chapter_evaluation.aux'.
+
+ (./chapter_evaluation.tex [18
+
+
+
+
+]
+chapter 5.
+) [19] (./Bachelorarbeit.bbl [20
 
 
 
 ]
 chapter without number
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 14.
-(/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [15] [16
+) [21] [22
 
 
-]
-(./Bachelorarbeit.lof)
+] (./Bachelorarbeit.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorarbeit.lof'.
 
- (./_eidversicherung.tex [17] [18
+ (./_eidversicherung.tex [23] [24
 
 
 ]
@@ -1134,37 +1155,38 @@ beige-fügten Verze-ich-nis angegebe-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 68.
- [19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 68.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 69.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 69.
  (./Bachelorarbeit.aux (./_titlepage.aux) (./chapter_abstract.aux)
 (./chapter_project.aux) (./chapter_objectives.aux) (./chapter_concept.aux)
-(./chapter_implementation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 68.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 68.
+(./chapter_implementation.aux) (./chapter_evaluation.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 69.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 69.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 83E88D4F582E36000E2D714B36E6258E;2429.
+(rerunfilecheck)             Checksum: C5DE81624FC6268987F778377C138EC4;2967.
  ) 
 Here is how much of TeX's memory you used:
- 12023 strings out of 493013
- 183039 string characters out of 6139317
- 402849 words of memory out of 5000000
- 15197 multiletter control sequences out of 15000+600000
- 45636 words of font info for 103 fonts, out of 8000000 for 9000
+ 12453 strings out of 493013
+ 187334 string characters out of 6139317
+ 416849 words of memory out of 5000000
+ 15547 multiletter control sequences out of 15000+600000
+ 48484 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,11n,66p,8825b,534s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,11n,66p,8825b,1982s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/sh
-are/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/
-type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/u
-plr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/shar
-e/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (25 pages, 747460 bytes).
+are/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/
+type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
+lb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
+/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/palatino/uplri8a.pfb>
+Output written on Bachelorarbeit.pdf (31 pages, 832978 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 357 compressed objects within 4 object streams
- 83 named destinations out of 1000 (max. 500000)
- 330 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 551 PDF objects out of 1000 (max. 8388607)
+ 491 compressed objects within 5 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 399 words of extra memory for PDF output out of 10000 (max. 10000000)
 
