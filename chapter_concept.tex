@@ -18,5 +18,108 @@ TODO: Put UML/BPMN here
 
 
 \section{Scoring Algorithm}
-TODO: erklären wer was wann warum
-TODO: Formel texen
+The application should (TODO wording, rein vom Konjunktiv her) sort all found persons by their fitness into the searched skill set.
+This implies there has to be an algorithm that can assign a score describing said fitness to every person found.
+
+\subsection{Requirements}
+According to \cite{USN}, an algorithm that matches persons to positions based on their skills has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
+\begin{itemize}
+  \item Easy to implement and maintain
+  \item Fast to execute, so as not to become a computational bottleneck
+  \item Takes into account factors: rating, pay grade and NECs\footnote{Navy Enlisted Classifications} and future taxonomies characterizing required knowledge, skills and abilities
+  \item Basic eligibility attained if achieving a specified score level Factors going into a skill match typically include:
+  \begin{itemize}
+    \item Rating(s) or job type
+    \item Pay grade(s) or pay bands
+    \item NEC(s) or future taxonomies characterizing required knowledge, skills, and abilities
+  \end{itemize}
+\end{itemize}\cite[P. 14]{USN}
+
+These qualities include factors very specific to the US Navy and thus will have to be evaluated and traslated into SinnerSchraders field of operation, but general requirements such an algorithm has to meet can be deducted: It may not be too complex as employees should be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
+
+\subsection{Factors to Include}
+An Estimation of a concrete person's fitness into a position described by the searched skill set needs not only to take into account the matching of offered and required skills, but also the employees motivation to apply said skills derived from their preferences and their personal specialities and expertise. Latter can be
+described as the skill and will levels that stick out of their overall capabilities. So the important factors to be included in the algorithm are:
+\begin{itemize}
+  \item Average level of knowledge regarding the searched skills.
+  \item Average level of will regarding the searched skills.
+  \item Specialization in the searched skills, including:
+  \begin{itemize}
+    \item Specialization in knowledge about the searched skills.
+    \item Preference of the searched skills over others.
+  \end{itemize}
+\end{itemize}
+
+
+\subsection{Proposed Algorithm}
+Skill and will levels are described as integer values on a scale form zero to three. This scale, called $V$, can be expressed as
+\begin{gather*}
+  V = \{ x \in \mathrm{N}_0^+ \ | \  0 \leq x \leq 3\}
+\end{gather*}
+
+All existing skills are accumulated in the set $S$. The employee's skills are represented by $E$ which is a subset of $S$. The search items are
+defined as $Q$.
+
+\begin{gather*}
+  S = \{java, ruby, ...\} \\
+  E = \{x \in S \ | \ \textrm{employee has skill x}\} \\
+  Q = \{x \in S \ | \ \textrm{user searches for skill x}\} \\
+\end{gather*}
+
+The functions $v_s$ and $v_w$ assign a level of skill/will to each value in $E$.
+\begin{gather*}
+  v_s: E \mapsto V \\
+  v_w: E \mapsto V \\
+\end{gather*}
+
+The averages of the employees' skill/will values of the searched skills are defined as $a_s$ and $a_w$.
+The variables $s_s$ and $s_w$ describe the employee's specialization in the searched items defined as the difference
+of the average skill/will level of the searched items and the average level of all items.
+A person with maximal interest and knowledge in all searched items and an infinite number of skills with the minimal
+value of zero would have the greatest specialization possible and thus get assigned a value of one.
+
+\begin{gather*}
+  a_s = \left( \sum_{x \in E \cap Q} v_s(x) \right) \cdot \frac{1}{|E \cap Q|} \\
+  a_w = \left( \sum_{x \in E \cap Q} v_w(x) \right) \cdot \frac{1}{|E \cap Q|}
+\end{gather*}
+\begin{gather*}
+  s_s = \frac{|V| \ + a_s - \left( \left( \sum_{x \in E} v_s(x)\right) \cdot \frac{1}{|E|} \right)}{2 \ |V|}\\
+  s_w = \frac{|V| \ + a_s - \left( \left( \sum_{x \in E} v_w(x)\right) \cdot \frac{1}{|E|} \right)}{2 \ |V|}
+\end{gather*}
+
+The resulting fitness score $f$ is a weighted mead of the introduced facors. The weights $w_{as}$, $w_{aw}$, $w_{ss}$, $w_{sw}$ should sum up to one.\footnote{Mathematically, this is not neccessary, but it results in much more human readable values}.
+
+\begin{gather*}
+  f = \left(\frac{w_{as} \cdot a_s}{|V|} + \frac{w_{aw} \cdot a_w}{|V|} + w_{ss} \cdot s_s + w_{sw} \cdot s_w \right) \cdot \frac{1}{4} \\
+  w_{as} + w_{aw} + w_{ss} + w_{sw} = 1
+\end{gather*}
+
+\subsection{Example Caclulation}
+Given are three example employees, Alice, Bob and Charlie, with the same three skills each.
+(Notation: skill level/will level)
+\newline
+\newline
+\begin{center}
+\begin{tabular}{r|ccc}
+  Person  & Java & Ruby & C++ \\
+  \hline
+  Alice   & 2/1  & 2/2 & 3/3 \\
+  Bob     & 2/3  & 0/3 & 0/1 \\
+  Charlie & 3/3  & 2/1 & 1/2 \\
+\end{tabular}
+\end{center}
+
+Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to a search for the skills Java and Ruby results in the following values\footnote{Values have been rounded off to two significant digits.}:
+
+
+\begin{center}
+\begin{tabular}{r|ccccc}
+  Person  & $a_s$ & $a_w$ & $s_s$ & $s_w$ & $f$\\
+  \hline
+  Alice   & 2   & 1.5 & 0.44 & 0.42 & 0.127\\
+  Bob     & 1   & 3   & 0.56 & 0.61 & 0.156\\
+  Charlie & 2.5 & 2   & 0.58 & 0.5  & 0.161\\
+\end{tabular}
+\end{center}
+
+Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would also designate Charlie as the most fitting person. Interestingly, Bob would be preferred to Alice, since his higher motivational levels compensate his lack of skill in Ruby.
