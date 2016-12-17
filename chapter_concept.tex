@@ -125,9 +125,40 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to a sear
 Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would also designate Charlie as the most fitting person. Interestingly, Bob would be preferred to Alice, since his higher motivational levels compensate his lack of skill in Ruby.
 
 \section{Recommendation Engine}
-Recommender systems `are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information'\cite{Isinkaye2015261} that are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items
+Recommender systems `are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information' \cite{Isinkaye2015261} that are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items
 more prominentely than articles the customer is unlikely to buy. In the context of the skill management application, a recommender system will be used to predict skills a user might want to search for based on the ones they already entered and a the knowledge which skills are more often searched for together.
 When entering an item into the search bar, the user will be offered to select items the recommender system predicts they might want to combine with the already entered ones.
+
+\subsection{Techniques of Content Filtering}
+As described by \cite{Isinkaye2015261}, there are five basic techniques for filtering items to find the ones to recommend to the user:
+\begin{itemize}
+	\item Content Based Filtering\\
+		The content is filtered by examining its attributes in order to find items that are contentually similar to the one the user is currently or has previously been interacting with.
+	\item Collaborative Filtering\\
+		Collaborative filtering techniques rely on the assumption that users can be divided into groups of `neighbors' that behave similarly, so that reccommendations are decutable from ohter users' former interactions.
+		\begin{itemize}
+			\item Model Based Filtering\\
+			Model based filtering applies methods of machine learning and data mining to learn a pre-computed model which predicts the users' interactions.
+			\item Memory Based Filtering\\
+			Memory based filtering techniques employ the saved interaction history and generate recommendations based on it. In contrast to model based filtering, memory based filtering does not learn a given model but operates directly on the known data.
+			\begin{itemize}
+				\item User Based Filtering\\
+				The user's interactions with items are examied in order to find neighbors that share a similar activity history. Once neighbors are found, the system combines their interaction histories in order to find items to user is likely to appreciate getting recommended.
+				\item Item Based Filtering\\
+				Item based filtering combines all users' interactions and creates a model describing which items are similar to another. This model is then used to recommend items similar to the ones the user has given positive feedback for.
+			\end{itemize}
+		\end{itemize}
+	\item Hybrid Filtering\\
+	Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and/or vice versa.
+\end{itemize}
+
+
+\subsection{Context Data}
+kein user
+a -> b != b -> a
+keine attribute am item
+
+
 
 \subsection{Markov Chains}
 Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is only dependent on the current state which is called the `markov property'. In the context of the skill management application, we assume this to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is skill set of the current search plus one more item.
@@ -141,7 +172,7 @@ can be adjusted accordingly in order to factor the transition into the prospecti
     \label{fig:markovchain}
 \end{figure}
 
-TODO mehr allgemeines zu markov
+TODO mehr allgemeines zu markov / Matrix
 
 \subsection{Proposed Recommendation Algorithm}
 In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
@@ -151,7 +182,7 @@ specific to a single search.
 Another way to implement such a recommendation system would be to only inspect the last entered search item and ignoring all other ones.
 Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
 This solution would disregard the whole context of the search item.
-A usable tradeoff would be to store all known items together with a list of all other items the former hast been searched together with and the count of times this has happened before.
+A usable tradeoff is to store all known items together with a list of all other items the former hast been searched together with and the count of times this has happened before.
 In order to suggest the next skill to search, the recommendation algorithm has to merge the lists of simiar items of every searched item in order to sum up
 the search counts. The resulting list contains skills that users have searched before in combination with the given ones, their counts have been aggregated.
 The item having the highest total count in the list will be suggested.
