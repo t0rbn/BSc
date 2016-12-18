@@ -8,17 +8,22 @@ The application should be as simple as possible and usable for everyone, in orde
 Furthermore, there will not be any different roles with different access rights for employees and their managers, since this application is meant to be a tool enhancing collaboration, not supervision.
 \begin{figure}[!htp]
     \centering
-    \includegraphics[width=0.8\textwidth]{images/wireframe.png}
+    \includegraphics[width=0.5\textwidth]{images/wireframe.png}
     \caption{Wireframe}
     \label{fig:wireframe}
 \end{figure}
 
-TODO: Put UML/BPMN here
+\begin{figure}[!htp]
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/design_home.png}
+    \caption[Home View Design]{Design of the Search View}
+    \label{fig:design_home}
+\end{figure}
 
 
 
 \section{Scoring Algorithm}
-The application should (TODO wording, rein vom Konjunktiv her) sort all found persons by their fitness into the searched skill set.
+The application should sort all found persons by their fitness into the searched skill set.
 This implies there has to be an algorithm that can assign a score describing said fitness to every person found.
 
 \subsection{Requirements}
@@ -152,16 +157,36 @@ As described by \cite{Isinkaye2015261}, there are five basic techniques for filt
 	Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and/or vice versa.
 \end{itemize}
 
+\subsection{Available Data}
+\subsubsection{Distinguishable Users}
+Since it is not planned that users will have to log in before performing a search,
+there is no user context that can be used examine a person's former interactions
+in order to predict their next ones and recommending it.\\
+As the system is designed to be a web application, a cookie holding an unique identifier could be stored on the client device. The application would then use this ID to aggregate interactions made by the same person. Unfortunally, this method cannot itentify a known person using another device as multiple devices will not share the same ID. Furthermore data collected about a user will be unassignable to them if they delete their devices cookies or change browsers.
+This approach would also need the application to inform the user that data will be stored on their devices as stated by Article 15(3) of the Telemediengesetz (TMG).\label{cookie}\\
+There also exist various methods to identify users without the need to store any data on their devices by examining and recognizing their devices attributes. The collected data can include
+factors like language settings, the used browser and its version, and the devices hardware components. All this data combined can be used to form an almost unique fingerprint which can be used to recognize a device. \cite{finger}\\
+Another possibile method would be to recognize users by examining their very own usage behaviour such as typing patterns or mouse strokes. This approach called `user fingerprinting' does not depend on the users device and thus can be used to identify people across multiple devices and browsers. On the downside, this method can only differntiate between users typing the same word and needs a multitude of samples of each user in order to be able to recognize them. \cite{typing}
+Although device and user fingerprinting is not prohibited by law,
+the `Opinion 9/2014 on the application of Directive 2002/58/EC to device
+fingerprinting' by the EU's Article 29 data protection working party states that a user must be informed about the fingerprinting process and be able to deny this.
+To sum up, the described methods to identify unique persons create an exorbitant computational effort and/or have high error rates for not being able to determine a single user across multiple devices. For the further design of the skill search recommender system, it will be assumed that there is no data about unique users, but about their entirety.
 
-\subsection{Context Data}
-kein user
-a -> b != b -> a
-keine attribute am item
+\subsubsection{Skill Attributes}
+The skills are planned to be saved as simple names not enriched with any metainformation. so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to form clusters of related skills. Unfortunally, most of the skills are arbitrarily given names or acronyms, so that this form of analysis will fail to detect any menaingful attributes.\\
+Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
 
+\subsubsection{Aggregated Search History}
+Tracking which skills have been searched together can be implemented easily and generates a fair amount of data to generate potentially useful suggestions. Legally, this is not problematic if the application does neither save personal data about the users (Article 15 Telemediengesetz), nor stores information that could potentially be used to create personal usage profiles that can be matched to specific persons (Article 15(3) Telemediengesetz). Grouping skills that have been searched jointly does not stand in conflict with those regulations and requires no information about distinguishable user, so the application will store the search history.
 
+\subsection{Choosen Appoach}
+Given that no user profiles exist, user based filtering and model based filtering cannot be applied. Due to the lack of metadata about the skills, content based filtering can also be eliminated as a possible approach. Item based filtering, however, does not require any data that is not given, so this approach will be used for the recommender system.
 
-\subsection{Markov Chains}
-Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is only dependent on the current state which is called the `markov property'. In the context of the skill management application, we assume this to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is skill set of the current search plus one more item.
+\subsection{Concept}
+The application has access to the list of skills the user already entered and to a store of all previous searches. Having this information, the system will use a markov chain to predict the next item that will be entered and recommed it.
+
+\subsubsection{Markov Chains}
+Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is only dependent on the current state, which is called the `markov property'. In the context of the skill management application, we assume this to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is skill set of the current search plus one more item.
 The basic concept is to store all possible states of the system and the respective probability of switching between from any state to any other one.
 Knowing the current state one can easily deduct the most probable future state. When a state transistion occurs, the outgoing probabilities of the origin states
 can be adjusted accordingly in order to factor the transition into the prospective projections.
@@ -172,25 +197,17 @@ can be adjusted accordingly in order to factor the transition into the prospecti
     \label{fig:markovchain}
 \end{figure}
 
-TODO mehr allgemeines zu markov / Matrix
-
-\subsection{Proposed Recommendation Algorithm}
+\subsubsection{Data Structure and Algorithm}
 In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
-the next one based on this exact starting point. On the other downside, this would require the system to save a large number of origin states and thus
-consume memory. Furthermore, it would result in a lot of different origin states that contian very few possible future states due to being to
-specific to a single search.
-Another way to implement such a recommendation system would be to only inspect the last entered search item and ignoring all other ones.
-Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
-This solution would disregard the whole context of the search item.
-A usable tradeoff is to store all known items together with a list of all other items the former hast been searched together with and the count of times this has happened before.
-In order to suggest the next skill to search, the recommendation algorithm has to merge the lists of simiar items of every searched item in order to sum up
-the search counts. The resulting list contains skills that users have searched before in combination with the given ones, their counts have been aggregated.
-The item having the highest total count in the list will be suggested.
+the next one based on this exact starting point. On the other downside, this would result in a lot of different origin states that contain very few possible future states due to being to
+specific to a single search. The stored data can only be used if the exact same combination of skills is entered again.\\
+Another way to implement such a recommendation system would be to only inspect the last entered search item and ignoring all other ones. Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
+This solution would disregard the whole context of the search item.\\
+As a tradeoff, the system will generate predictions for each skill in the search query independently and aggretage these predictions afterwards. For each skill, a list of possible recommendations paired with the total count of searches for both will be stored. The recommendation lists of all skills combinded represent the transition matrix. Instead of transition probabilities, the total number of searches is saved in order to simplify the aggreation of multiple suggestions.\\
+The recommender system will concatenate the suggestion lists of all items in the current search query and add up the counts of skills appearing in multiple suggestion lists. Then, all elements of the combined list that are part of the search query will be removed, the result is a list of suggestions for the whole search query.\\
+
 \newpage
 \subsection{Pseudo-Code}
-A possible pseudo-implementation of the propsed algorithm
-could look like this:
-
 \begin{lstlisting}[language=JS]
 var knownSkills = [
   {
@@ -229,7 +246,7 @@ var knownSkills = [
 ]
 \end{lstlisting}
 \newpage
-\begin{lstlisting}
+\begin{lstlisting}[language=JS]
 function suggest(searched) {
   var accumulated = {};
 
@@ -243,7 +260,42 @@ function suggest(searched) {
     }
   }
 
+  for (t in accumulated) {
+    if (searched contains t) {
+      remove t accumulated
+    }
+  }
+
   return accumulated.getHighestCount();
 }
 
 \end{lstlisting}
+
+\subsection{Example}
+Transition Matrix:\\
+\newline
+\begin{tabular}{c | c |c | c | c}
+		  & Java & PHP & CSS & COBOL\\
+	\hline
+	Java  &  -   &  7  &  3  &   1  \\
+	\hline
+	PHP   &  7   &  -  &  9  &   3  \\
+	\hline
+	CSS   &  3   &  9  &  -  &   8  \\
+	\hline
+	COBOL &  1   &  5  &  8  &   -  \\
+\end{tabular}
+\newline
+\newline
+Using the given transition matrix and the seaerch query `Java, PHP', the algorithm would work like this:
+\begin{enumerate}
+	\item Retrieve suggestion lists for each search item\\
+		$\Rightarrow$ (PHP (7), CSS (3), COBOL (1)), (Java (7), CSS (9), COBOL (3))
+	\item Aggregate lists (combine counts)\\
+		$\Rightarrow$ (PHP(7), Java(7), CSS (12), COBOL (4))
+	\item Remove suggestions that are part of the search query\\
+		$\Rightarrow$ (CSS (12), COBOL (4))
+	\item Suggest item with the highest total count\\
+		$\Rightarrow$ CSS
+
+\end{enumerate}
