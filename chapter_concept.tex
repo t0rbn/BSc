@@ -1,11 +1,87 @@
 \chapter{Concept}
 The application should be accessible to all employees of SinnerSchrader. Due to the heterogeneity of the people’s computer setups running Windows, macOS and Linux, creating a native application supported by everyone’s system is a rather complicated task. A web application using standard technologies does not only solve this problem, but can also be used from mobile devices such as smart phones and tablets. Furthermore, there is no need to manually install and update the software so that it can be assumed that all users use the latest version of the application. This is not only a positive factor regarding the overall usability of the system, but also assures bugs and security issues are eliminated the moment a fixed version of the software is deployed. All those advantages compared to native clients and the fact that SinnerSchrader’s expertise lies in the development of web applications lead to the decision, that such an application would be the appropriate solution.
 
-\section{Scoring Algorithm}
+\section{Person Search}
+The central feature of the application is the search function that returns a list of all persons matching the entered set of skills. By default, the results are ordered by a `fitness score' which describes how well a person matches into the set of searched skills. As a consequence of this sorting, the application implicitly recommends the best matching person to the user, thus it falls within the group of `recommender systems'.
+
+\subsection{Recommender Systems}
+Recommender systems `are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information' \cite{Isinkaye2015261}\label{recommender-definition} that are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items
+more prominentely than articles the customer is unlikely to buy. In the context of the skill management application, a recommender system will be used to predict skills a user might want to search for based on the ones they already entered and a the knowledge which skills are more often searched for together.
+When entering an item into the search bar, the user will be offered to select items the recommender system predicts they might want to combine with the already entered ones.
+
+\subsection{Techniques of Content Filtering}
+As described by \cite{Isinkaye2015261}, there are five basic techniques for filtering items to find the ones to recommend to the user:
+
+\subsubsection{Content Based Filtering}
+	The content is filtered by examining its attributes in order to find items that are contentually similar to the one the user is currently or has previously been interacting with.
+\subsubsection{Collaborative Filtering}
+	Collaborative filtering techniques rely on the assumption that users can be divided into groups of `neighbors' that behave similarly, so that reccommendations are decutable from ohter users' former interactions.
+	\begin{itemize}
+		\item Model Based Filtering\\
+		Model based filtering applies methods of machine learning and data mining to learn a pre-computed model which predicts the users' interactions.
+		\item Memory Based Filtering\\
+		Memory based filtering techniques employ the saved interaction history and generate recommendations based on it. In contrast to model based filtering, memory based filtering does not learn a given model but operates directly on the known data.
+		\begin{itemize}
+			\item User Based Filtering\\
+			The user's interactions with items are examied in order to find neighbors that share a similar activity history. Once neighbors are found, the system combines their interaction histories in order to find items to user is likely to appreciate getting recommended.
+			\item Item Based Filtering\\
+			Item based filtering combines all users' interactions and creates a model describing which items are similar to another. This model is then used to recommend items similar to the ones the user has given positive feedback for.
+		\end{itemize}
+	\end{itemize}
+\subsubsection{Hybrid Filtering}
+Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and/or vice versa.
+
+\subsection{Search Algorithm}
+In the context of the search function, all employees are searchable items. Their attributes include name, location and their respective skills structured as pairs of skill level and will level. This data will be used in an content based filtering approach that not only finds suitable employees, but also ranks them by their fitting into the searched skill set. Other users's interactions with search results, for example the opening of a found person's profile, will not be taken into account, since there is no direct connection between these actions and the person's fitness. Furthermore, a system based on the user's former selections would be inadequate, because the application is meant to give managers the ability to find employees they did not already have contact with; recommending persons the searching user had interacted with would thus be counterproductive.
+
+\subsubsection{Outline}
+The basic structure of the search function will be:
+\begin{enumerate}
+  \item Create a list of all employees
+  \item Filter by Skills\\
+    Remove all employees from the list that do not have all skills the user searched for. At this point, only the presence of the skill in the employees' profiles is taken into account; skill/will levels are irgnored.
+  \item Filter by Location\\
+    If the user specified a location to search for, remove all employees from the list that do not match it.
+  \item Assign Fitness Scores\\
+    Assign a fitness score to all remaining employees.
+  \item Sort by fitness score\\
+    The results will be sorted by fitness score. The employee with the best fitness score will be shown first in the list of results, so an implicit recommendation
+    is made by the system.
+  \item Return Results
+\end{enumerate}
+
+\subsubsection{Pseudo-Implementation}
+\begin{lstlisting}[language=JS]
+function search(searchItems, searchLocation) {
+  var results = getAllEmployees()
+
+  for (Employee e in results) {
+    if (e.skills does not contain all elements of searchItems) {
+      results.remove(e)
+    }
+  }
+
+  for (Employee e in results) {
+    if (e.location is not searchLocation) {
+      results.remove(e)
+    }
+  }
+
+  for (Employee e in results) {
+    e.assignFitnessScore()
+  }
+
+  results = results.sortByFitnessScore()
+
+  return results
+}
+\end{lstlisting}
+
+\subsection{Scoring Algorithm}
 The application should sort all found persons by their fitness into the searched skill set.
 This implies there has to be an algorithm that can assign a score describing said fitness to every person found.
 
-\subsection{Requirements}
+\subsubsection{Requirements}
 According to \cite{USN}, an algorithm that matches persons to positions based on their skills has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
 \begin{itemize}
   \item Easy to implement and maintain
@@ -15,7 +91,7 @@ According to \cite{USN}, an algorithm that matches persons to positions based on
 
 These qualities include factors very specific to the US Navy and thus will have to be evaluated and traslated into SinnerSchraders field of operation, but general requirements such an algorithm has to meet can be deducted: It may not be too complex as employees should be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
 
-\subsection{Factors to Include}
+\subsubsection{Factors to Include}
 An Estimation of a concrete person's fitness into a position described by the searched skill set needs not only to take into account the matching of offered and required skills, but also the employees motivation to apply said skills derived from their preferences and their personal specialities and expertise. Latter can be
 described as the skill and will levels that stick out of their overall capabilities. So the important factors to be included in the algorithm are:
 \begin{itemize}
@@ -29,7 +105,7 @@ described as the skill and will levels that stick out of their overall capabilit
 \end{itemize}
 
 
-\subsection{Proposed Fitness Score}
+\subsubsection{Proposed Fitness Score Algorithm}
 Skill and will levels are described as integer values on a scale form zero to three. This scale, called $V$, can be expressed as
 \begin{gather*}
   V = \{ x \in \mathrm{N}_0^+ \ | \  0 \leq x \leq 3\}
@@ -72,9 +148,10 @@ The resulting fitness score $f$ is a weighted mean of the introduced facors. The
   w_{as} + w_{aw} + w_{ss} + w_{sw} = 1
 \end{gather*}
 
-\subsection{Example Caculation}
+\subsubsection{Example Caculation}
 Given are three example employees, Alice, Bob and Charlie, with the same three skills each.
 (Notation: skill level/will level)
+\label{example-fitness}
 \newline
 \newline
 \begin{center}
@@ -102,34 +179,42 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to a sear
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would result in Bob being recommended as the best match, because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, Alice has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in C++. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a design flaw, since the algorithm has been intentionally designed to be customizable to the users' needs.}
 
-\section{Search Suggestions}
-TODO: Definition nach oben ziehen, einleitung wer was warum
-Recommender systems `are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information' \cite{Isinkaye2015261} that are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items
-more prominentely than articles the customer is unlikely to buy. In the context of the skill management application, a recommender system will be used to predict skills a user might want to search for based on the ones they already entered and a the knowledge which skills are more often searched for together.
-When entering an item into the search bar, the user will be offered to select items the recommender system predicts they might want to combine with the already entered ones.
+\subsection{Example}
+For this example, let the set of employees be Alice, Bob, Charlie, Donald, and Erika, and the set of all known skills be Java, Ruby, and C++.
+The assignment of skill/will levels and the respective locations are:
+\newline
+\begin{center}
+\begin{tabular}{r|c|ccc}
+  Person  & Location & Java & Ruby & C++ \\
+  \hline
+  Alice   & Hamburg   & 2/1 & 2/2 & 3/3 \\
+  Bob     & Hamburg   & 2/3 & 0/3 & 0/1 \\
+  Charlie & Hamburg   & 3/3 & 2/1 & 1/2 \\
+  Donald  & Hamburg   & 3/3 &  -  & 2/2 \\
+  Erika   & Frankfurt & 1/1 & 2/3 & 3/1 \\
+\end{tabular}
+\end{center}
 
-\subsection{Techniques of Content Filtering}
-As described by \cite{Isinkaye2015261}, there are five basic techniques for filtering items to find the ones to recommend to the user:
+Applying the algorithm and searching for employees knowing Java and Ruby in Hamburg:\\
+(Let the weights used in the fitness score be $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$)
 \begin{itemize}
-	\item Content Based Filtering\\
-		The content is filtered by examining its attributes in order to find items that are contentually similar to the one the user is currently or has previously been interacting with.
-	\item Collaborative Filtering\\
-		Collaborative filtering techniques rely on the assumption that users can be divided into groups of `neighbors' that behave similarly, so that reccommendations are decutable from ohter users' former interactions.
-		\begin{itemize}
-			\item Model Based Filtering\\
-			Model based filtering applies methods of machine learning and data mining to learn a pre-computed model which predicts the users' interactions.
-			\item Memory Based Filtering\\
-			Memory based filtering techniques employ the saved interaction history and generate recommendations based on it. In contrast to model based filtering, memory based filtering does not learn a given model but operates directly on the known data.
-			\begin{itemize}
-				\item User Based Filtering\\
-				The user's interactions with items are examied in order to find neighbors that share a similar activity history. Once neighbors are found, the system combines their interaction histories in order to find items to user is likely to appreciate getting recommended.
-				\item Item Based Filtering\\
-				Item based filtering combines all users' interactions and creates a model describing which items are similar to another. This model is then used to recommend items similar to the ones the user has given positive feedback for.
-			\end{itemize}
-		\end{itemize}
-	\item Hybrid Filtering\\
-	Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and/or vice versa.
+  \item Create a list of all employees\\
+    $\Rightarrow$ Alice, Bob, Charlie, Donald, Erika
+  \item Filter by skills\\
+    $\Rightarrow$ Alice, Bob, Charlie, Erika
+  \item Filter by location\\
+    $\Rightarrow$ Alice, Bob, Charlie
+  \item Assign fitness scores\footnote{The calculation of the fitness scores can be seen in \ref{example-fitness}}\\
+    $\Rightarrow$ Alice (0.44), Bob (0.71), Charlie(0.69)
+  \item Sort by fitness score\\
+    $\Rightarrow$ Bob (0.71), Charlie(0.69), Alice (0.44)
 \end{itemize}
+
+
+
+\section{Search Suggestions}
+After entering an item into the search bar, the user will be presented other items they are likely to enter next. This minor feature can be seen as another
+recommender system, because it recommends the next item from the set of all available search items and thus matches the definition given in \ref{recommender-definition}. This recommender system has to deal with other limitations than the one used for the main search function. It filters a completely different set of data, namely all skills instead of all persons, and has to deal with other limitations.
 
 \subsection{Available Data}
 \subsubsection{Distinguishable Users}
@@ -246,8 +331,9 @@ function suggest(searched) {
 \end{lstlisting}
 
 \subsection{Example}
-Transition Matrix:\\
-\newline
+Transition Matrix:
+
+\begin{center}
 \begin{tabular}{c | c |c | c | c}
 		  & Java & PHP & CSS & COBOL\\
 	\hline
@@ -259,8 +345,8 @@ Transition Matrix:\\
 	\hline
 	COBOL &  1   &  5  &  8  &   -  \\
 \end{tabular}
-\newline
-\newline
+\end{center}
+
 Using the given transition matrix and the seaerch query `Java, PHP', the algorithm would work like this:
 \begin{enumerate}
 	\item Retrieve suggestion lists for each search item\\

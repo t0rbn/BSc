@@ -29,11 +29,11 @@
 \newblock \url{http://dx.doi.org/10.1108/00251741311326581}. --
 \newblock DOI 10.1108/00251741311326581
 
-\bibitem[DMA13]{mailrep}
+\bibitem[DMA14]{mailrep}
 \textsc{DMA}:
 \newblock \emph{National email benchmarking report 2013}.
-\newblock November 2014.
-\newblock 2013
+\newblock November 2014 Edition.
+\newblock 2014
 
 \bibitem[IFO15]{Isinkaye2015261}
 \textsc{Isinkaye}, F.O. ; \textsc{Folajimi}, Y.O.  ; \textsc{Ojokoh}, B.A.:
@@ -49,6 +49,11 @@
 \textsc{Janet H.~Spoonamore}, Ricky D.~H. H. James~Simien~S. H. James~Simien:
 \newblock \emph{Person-to-Position Matching}.
 \newblock 2007
+
+\bibitem[Leh04]{Marktanalyse}
+\textsc{Lehner}, Franz:
+\newblock \emph{Marktanalyse zum Angebot an Skill-Management-Systemen}.
+\newblock 2004
 
 \bibitem[RD00]{RYAN200054}
 \textsc{Ryan}, Richard~M. ; \textsc{Deci}, Edward~L.:

@@ -3,7 +3,8 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Bachelorarbeit.aux
 A level-1 auxiliary file: _titlepage.aux
 A level-1 auxiliary file: chapter_abstract.aux
-A level-1 auxiliary file: chapter_project.aux
+A level-1 auxiliary file: chapter_motivation.aux
+A level-1 auxiliary file: chapter_relatedwork.aux
 A level-1 auxiliary file: chapter_objectives.aux
 A level-1 auxiliary file: chapter_concept.aux
 A level-1 auxiliary file: chapter_implementation.aux
@@ -15,44 +16,44 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
-You've used 9 entries,
+You've used 10 entries,
             4793 wiz_defined-function locations,
-            961 strings with 7975 characters,
-and the built_in function-call counts, 6742 in all, are:
-= -- 720
-> -- 154
-< -- 211
-+ -- 235
-- -- 63
-* -- 482
-:= -- 1109
-add.period$ -- 17
-call.type$ -- 9
-change.case$ -- 46
-chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 156
-empty$ -- 455
-format.name$ -- 100
-if$ -- 1315
+            968 strings with 8106 characters,
+and the built_in function-call counts, 7108 in all, are:
+= -- 757
+> -- 162
+< -- 219
++ -- 243
+- -- 65
+* -- 500
+:= -- 1174
+add.period$ -- 18
+call.type$ -- 10
+change.case$ -- 50
+chr.to.int$ -- 10
+cite$ -- 10
+duplicate$ -- 169
+empty$ -- 481
+format.name$ -- 106
+if$ -- 1388
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 69
-num.names$ -- 27
-pop$ -- 55
+missing$ -- 46
+newline$ -- 74
+num.names$ -- 30
+pop$ -- 60
 preamble$ -- 1
-purify$ -- 64
+purify$ -- 70
 quote$ -- 0
-skip$ -- 342
+skip$ -- 365
 stack$ -- 0
-substring$ -- 701
-swap$ -- 37
-text.length$ -- 31
-text.prefix$ -- 4
+substring$ -- 719
+swap$ -- 39
+text.length$ -- 33
+text.prefix$ -- 5
 top$ -- 0
-type$ -- 82
+type$ -- 92
 warning$ -- 0
-while$ -- 48
-width$ -- 11
-write$ -- 137
+while$ -- 51
+width$ -- 12
+write$ -- 148
