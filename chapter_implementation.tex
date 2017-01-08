@@ -56,15 +56,40 @@ The used HTTP method is the main indicator of the action to perform: GET is used
 TODO: Swagger Table paste und in text verweisen
 
 
+\section{Backend}
+The backend component ist implemented in Java 8\footnote{https://go.java/} using the Spring Boot framework\footnote{https://projects.spring.io/spring-boot/}. Maven\footnote{https://maven.apache.org/what-is-maven.html} is employed to manage the build process and run unit and integration tests.
+
+\section{Architecture}
+The software architecture consists of three main categories of classes: services handling data manipulation and filtering that hold the business logic, repository objects that wrap the database operations into easy-to-use handlers, and domain specific data types. Additionally, numerous helper classes like custom exception types, comparators and general utilities are implemented.
+
+// TODO UML und paste
+
+\subsection{Spring Boot}
+Spring Boot is a highly sophisticated web framework that provides numerous features to create web applications including, but not limted to, annotations to expose java methods as HTTP request endpoints, an embedded webserver to run the application on, and a modular design to extend its features. It is used because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications structure.\cite[p. 6]{SpringGuide}
+For example, a controller that returns a static response can be created using two annotations:
+`@Controller' to make spring boot identify the class as a resource that will listen to HTTP calls, and `@Request' to specify the URL and HTTP method to use. Unlike most other web frameworks, spring boot does not require any more configuration or dispatching classes.
+
+\begin{lstlisting}[language=Java]
+@Controller
+public class HTCPCPImpl {
+
+	@RequestMapping(path = "/coffee", method = RequestMethod.GET)
+	public ResponseEntity<String> coffee() {
+		StatusJSON json = new StatusJSON("I'm a teapot \u2615");
+		return new ResponseEntity<String>(json.toString(), HttpStatus.I_AM_A_TEAPOT);
+	}
+
+}
+\end{lstlisting}
 
 
 
-% \section{Backend}
-%
-% \section{Backend}
-% \subsection{Spring MVC}
-% \subsection{Spring Data}
+
+
+
+% \subsection{Spring Data Repositories}
 % \subsection{Swagger}
 % \subsection{Testing}
+flapdoodle, unboundid embedded, junit,
 
 % \section{License}

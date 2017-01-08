@@ -35,6 +35,13 @@
 \newblock November 2014 Edition.
 \newblock 2014
 
+\bibitem[Gut16]{SpringGuide}
+\textsc{Gutierrez}, Felipe:
+\newblock \emph{Pro Spring Boot - A no-nonsense guide containing case studies
+  and best practices for Spring Boot}.
+\newblock Springer Science+Business Media, 2016. --
+\newblock ISBN 978--1--4842--1431--2
+
 \bibitem[IFO15]{Isinkaye2015261}
 \textsc{Isinkaye}, F.O. ; \textsc{Folajimi}, Y.O.  ; \textsc{Ojokoh}, B.A.:
 \newblock Recommendation systems: Principles, methods and evaluation.
@@ -44,6 +51,11 @@
   --
 \newblock DOI http://dx.doi.org/10.1016/j.eij.2015.06.005. --
 \newblock ISSN 1110--8665
+
+\bibitem[Inc]{NGINX}
+\textsc{Inc.}, NGINX:
+\newblock \emph{WHAT IS A REVERSE PROXY SERVER?}
+\newblock \url{https://www.nginx.com/resources/glossary/reverse-proxy-server/}
 
 \bibitem[JHS07]{USN}
 \textsc{Janet H.~Spoonamore}, Ricky D.~H. H. James~Simien~S. H. James~Simien:
@@ -56,9 +68,6 @@
 \newblock 2004
 
 \bibitem[Mon]{MongoGuide}
-
-
-\bibitem[NGI]{NGINX}
 
 
 \bibitem[RD00]{RYAN200054}

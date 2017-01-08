@@ -41,14 +41,17 @@
 \BOOKMARK [1][-]{section.5.3}{LDAP}{chapter.5}% 41
 \BOOKMARK [1][-]{section.5.4}{Reverse Proxy}{chapter.5}% 42
 \BOOKMARK [1][-]{section.5.5}{API}{chapter.5}% 43
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 44
-\BOOKMARK [1][-]{section.6.1}{Algorithm vs. Leute \(aka interviews\)}{chapter.6}% 45
-\BOOKMARK [1][-]{section.6.2}{Scores gleichverteilt?}{chapter.6}% 46
-\BOOKMARK [1][-]{section.6.3}{Implementation vs. Algorithm}{chapter.6}% 47
-\BOOKMARK [1][-]{section.6.4}{Meeting the Requirements}{chapter.6}% 48
-\BOOKMARK [2][-]{subsection.6.4.1}{FUntional Requirements}{section.6.4}% 49
-\BOOKMARK [2][-]{subsection.6.4.2}{Nonfuntional Requirements}{section.6.4}% 50
-\BOOKMARK [1][-]{section.6.5}{Misc}{chapter.6}% 51
-\BOOKMARK [1][-]{section.6.6}{Conclusion}{chapter.6}% 52
-\BOOKMARK [0][-]{chapter*.26}{Bibliography}{}% 53
-\BOOKMARK [0][-]{chapter*.28}{Eidesstattliche Versicherung}{}% 54
+\BOOKMARK [1][-]{section.5.6}{Backend}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.7}{Architecture}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.7.1}{Spring Boot}{section.5.7}% 46
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 47
+\BOOKMARK [1][-]{section.6.1}{Algorithm vs. Leute \(aka interviews\)}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.2}{Scores gleichverteilt?}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.3}{Implementation vs. Algorithm}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.4}{Meeting the Requirements}{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.4.1}{FUntional Requirements}{section.6.4}% 52
+\BOOKMARK [2][-]{subsection.6.4.2}{Nonfuntional Requirements}{section.6.4}% 53
+\BOOKMARK [1][-]{section.6.5}{Misc}{chapter.6}% 54
+\BOOKMARK [1][-]{section.6.6}{Conclusion}{chapter.6}% 55
+\BOOKMARK [0][-]{chapter*.26}{Bibliography}{}% 56
+\BOOKMARK [0][-]{chapter*.28}{Eidesstattliche Versicherung}{}% 57

@@ -16,61 +16,50 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
-I was expecting a `,' or a `}'---line 279 of file Bachelorarbeit.bib
- : 
- : author = {NGINX Inc.},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--to sort, need author, editor, or key in MongoGuide
-Warning--to sort, need author or key in NGINX
 Warning--empty author and editor in MongoGuide
 Warning--empty author and editor in MongoGuide
 Warning--empty title in MongoGuide
 Warning--empty publisher in MongoGuide
-Warning--NGINX
-ptr=1, stack=
-
----the literal stack isn't empty for entry NGINX
-while executing---line 2205 of file alphadin.bst
-You've used 12 entries,
+You've used 13 entries,
             4793 wiz_defined-function locations,
-            972 strings with 8136 characters,
-and the built_in function-call counts, 7545 in all, are:
-= -- 796
-> -- 164
-< -- 219
-+ -- 243
-- -- 65
-* -- 530
-:= -- 1229
-add.period$ -- 18
-call.type$ -- 12
-change.case$ -- 56
-chr.to.int$ -- 12
-cite$ -- 21
-duplicate$ -- 189
-empty$ -- 532
-format.name$ -- 106
-if$ -- 1486
+            981 strings with 8421 characters,
+and the built_in function-call counts, 8351 in all, are:
+= -- 874
+> -- 179
+< -- 237
++ -- 260
+- -- 69
+* -- 578
+:= -- 1358
+add.period$ -- 20
+call.type$ -- 13
+change.case$ -- 61
+chr.to.int$ -- 13
+cite$ -- 19
+duplicate$ -- 216
+empty$ -- 608
+format.name$ -- 118
+if$ -- 1664
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 51
-newline$ -- 80
-num.names$ -- 30
-pop$ -- 79
+missing$ -- 60
+newline$ -- 88
+num.names$ -- 36
+pop$ -- 91
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 87
 quote$ -- 0
-skip$ -- 383
+skip$ -- 421
 stack$ -- 0
-substring$ -- 745
-swap$ -- 39
-text.length$ -- 33
-text.prefix$ -- 5
+substring$ -- 820
+swap$ -- 44
+text.length$ -- 38
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 108
-warning$ -- 7
-while$ -- 51
-width$ -- 14
-write$ -- 160
-(There were 2 error messages)
+type$ -- 114
+warning$ -- 5
+while$ -- 58
+width$ -- 15
+write$ -- 178
+(There were 5 warnings)

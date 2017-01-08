@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  8 JAN 2017 11:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  8 JAN 2017 21:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,14 +881,14 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 
 \openout2 = `_titlepage.aux'.
 
-(./_titlepage.tex <images/unilogo.png, id=221, 4944.4725pt x 1600.47937pt>
+(./_titlepage.tex <images/unilogo.png, id=233, 4944.4725pt x 1600.47937pt>
 File: images/unilogo.png Graphic file (type png)
 
 <use images/unilogo.png>
 Package pdftex.def Info: images/unilogo.png used on input line 9.
 (pdftex.def)             Requested size: 176.40707pt x 57.09703pt.
 
-<images/minlogo.png, id=223, 2490.30376pt x 569.12625pt>
+<images/minlogo.png, id=235, 2490.30376pt x 569.12625pt>
 File: images/minlogo.png Graphic file (type png)
 
 <use images/minlogo.png>
@@ -1012,7 +1012,7 @@ tional fric-tion be-tween the discipline-
 
 
 
-] <images/matrixorga.png, id=316, 744.06679pt x 813.19461pt>
+] <images/matrixorga.png, id=332, 744.06679pt x 813.19461pt>
 File: images/matrixorga.png Graphic file (type png)
 
 <use images/matrixorga.png>
@@ -1060,7 +1060,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 86.
 
-<images/skillsbase-dashboard.png, id=359, 2017.5375pt x 1022.82124pt>
+<images/skillsbase-dashboard.png, id=374, 2017.5375pt x 1022.82124pt>
 File: images/skillsbase-dashboard.png Graphic file (type png)
 
 <use images/skillsbase-dashboard.png>
@@ -1068,7 +1068,7 @@ Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 90.
 
 (pdftex.def)             Requested size: 341.43436pt x 173.08134pt.
 
-<images/talent_management_-_skillmanagement_-_skillsuche.png, id=361, 1204.5pt 
+<images/talent_management_-_skillmanagement_-_skillsuche.png, id=376, 1204.5pt 
 x 752.8125pt>
 File: images/talent_management_-_skillmanagement_-_skillsuche.png Graphic file 
 (type png)
@@ -1110,7 +1110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--186
 
  []
 
-[17] [18] <images/markov-chain.png, id=488, 688.28572pt x 325.64517pt>
+[17] [18] <images/markov-chain.png, id=503, 688.28572pt x 325.64517pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
@@ -1122,14 +1122,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--267
  []
 
 [20 <./images/markov-chain.png>] [21]
-<images/wireframe.png, id=545, 1284.8pt x 1216.545pt>
+<images/wireframe.png, id=561, 1284.8pt x 1216.545pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
 Package pdftex.def Info: images/wireframe.png used on input line 368.
 (pdftex.def)             Requested size: 213.39566pt x 202.0578pt.
  [22]
-<images/design_home.png, id=577, 1445.4pt x 1401.235pt>
+<images/design_home.png, id=592, 1445.4pt x 1401.235pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
@@ -1151,17 +1151,24 @@ Overfull \hbox (1.38104pt too wide) in paragraph at lines 17--18
 
 
 
-] [26]) [27]
+] [26] [27] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Overfull \hbox (59.21361pt too wide) in paragraph at lines 79--80
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+) [28]
 \openout2 = `chapter_evaluation.aux'.
 
- (./chapter_evaluation.tex [28
-
-
-
-
-]
+ (./chapter_evaluation.tex
 chapter 6.
-) [29] (./Bachelorarbeit.bbl [30
+) [29
+
+
+
+
+] (./Bachelorarbeit.bbl [30
 
 
 
@@ -1186,25 +1193,25 @@ Underfull \hbox (badness 1946) in paragraph at lines 26--31
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 65--73
+Underfull \hbox (badness 1189) in paragraph at lines 74--82
 []\T1/ppl/m/sc/10.95 Ryan\T1/ppl/m/n/10.95 , Richard M. ; \T1/ppl/m/sc/10.95 De
 ci\T1/ppl/m/n/10.95 , Ed-ward L.:  In-trin-sic and Ex-trin-sic Mo-
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 65--73
+Underfull \hbox (badness 3068) in paragraph at lines 74--82
 \T1/ppl/m/n/10.95 ti-va-tions: Clas-sic Def-i-ni-tions and New Di-rec-tions.  I
 n: \T1/ppl/m/it/10.95 Con-tem-po-
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 65--73
+Underfull \hbox (badness 1975) in paragraph at lines 74--82
 \T1/ppl/m/it/10.95 rary Ed-u-ca-tional Psy-chol-ogy \T1/ppl/m/n/10.95 25 (2000)
 , Nr. 1, 54 - 67.  [][]$\T1/pcr/m/n/10.95 http : / / dx .
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 65--73
+Underfull \hbox (badness 1348) in paragraph at lines 74--82
 \T1/pcr/m/n/10.95 doi . org / http : / / dx . doi . org / 10 . 1006 / ceps . 19
 99 . 1020$[][]\T1/ppl/m/n/10.95 . --  DOI
  []
@@ -1236,13 +1243,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 5748127096B7F155517B32BF2A9AB3F8;3507.
+(rerunfilecheck)             Checksum: F27C77BEFCA7C089E7FE92A318C2B9F0;3685.
  ) 
 Here is how much of TeX's memory you used:
- 12625 strings out of 493013
- 189640 string characters out of 6139316
+ 12718 strings out of 493013
+ 190830 string characters out of 6139316
  413027 words of memory out of 5000000
- 15608 multiletter control sequences out of 15000+600000
+ 15681 multiletter control sequences out of 15000+600000
  48484 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,11n,66p,8825b,1983s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1255,10 +1262,10 @@ type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
 lb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (41 pages, 1087365 bytes).
+Output written on Bachelorarbeit.pdf (41 pages, 1095426 bytes).
 PDF statistics:
- 775 PDF objects out of 1000 (max. 8388607)
- 699 compressed objects within 7 object streams
- 253 named destinations out of 1000 (max. 500000)
- 473 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 817 PDF objects out of 1000 (max. 8388607)
+ 740 compressed objects within 8 object streams
+ 271 named destinations out of 1000 (max. 500000)
+ 497 words of extra memory for PDF output out of 10000 (max. 10000000)
 
