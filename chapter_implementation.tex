@@ -1,19 +1,70 @@
 \chapter{Implementation}
-
 \section{Application Structure}
-\subsection{MongoDB}
-\subsubsection{BSON}
-\subsubsection{Data Structure}
-\subsubsection{Queries}
-\subsection{LDAP}
-\subsection{Reverse Proxy}
-\subsection{API}
+The application consists of two main components: the frontend that presents the user with a graphical interface and the backend that provides data and actions on it to the frontend.
+The user's browser connects to a web server that acts as a reverse proxy and that not only provides static resources like HTML and CSS files which resemble the frontend, but also acts as a SSL endpoint.
+Requests for dynamic data and actions that are handled via the REST API provided by the backend are passed on to it, its response will then be directed through the reverse proxy to the client.
+To store and read data, the backend connects to a Mongo DB Database. User details are synced from the existing LDAP that acts a central repository for personal information of all employees.
+TODO: Bild einfügen
 
-\section{Backend}
-\subsection{Spring Boot MVC}
-\subsection{Spring Data}
-\subsection{Spring LDAP}
-\subsection{Swagger}
-\subsection{Testing}
+\section{MongoDB}
+MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL Database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide acid transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync. \cite[p. 3]{MongoGuide}
 
-\section{License}
+\subsection{BSON}
+\label{BSON}
+In contrast to relational databases that store all data in tables, MongoDB uses a document-orient data structure saving every element in the Binary JSON\footnote{Javascript Object Notation} (BSON) format. This approach allows complex data to be stored as one object rather than having to dissect its elements and storing them in separate tables. As a consequence, retrieving an object from the database is much more efficient than it would be using a RDBMS, as the latter needs to join the tables storing the objects nested sub-objects and compose the requested element whereas MongoDB has it stored in the exact same form it is requested. \cite[p. 10]{MongoGuide}
+
+\subsection{Data Structure}
+The application stores three diffenrent object classes in the Database: Skills that are known to the system, persons with their individual contact data and skills, and sessions used to authenticate users that wish to modify their profiles. In order to instanciate the elements as java objects, Spring Data\footnote{http://projects.spring.io/spring-data/}, the framework used for database access, also stores the class name the object needs to be mapped to as a field inside of it.
+
+\subsubsection{Known Skills}
+Skills known to the system consist of a uniqe name and a list of suggestions that themselves are expressed by a name and a total count of searches of the respectice suggestion together with the skill.
+
+\begin{lstlisting}[language=JS]
+TODO paste
+\end{lstlisting}
+
+\subsubsection{Persons}
+The documents that represent persons contain the respective person's id\footnote{Each employee gets assigned an internal id (`Benutzerkürzel') that is globally used to uniquely identify a person.}, their personal data like first and last name, telephone number, e-mail address, office location, and job title\footnote{The job title data is not maintained consistently in the LDAP, so that, unfortunately, it is not suitable to be used in the person search.}, and a list of the person's skills. Each of those skills consists of a name, a level of skill and a level of will.
+
+\begin{lstlisting}[language=JS]
+TODO paste
+\end{lstlisting}
+
+\subsubsection{Sessions}
+Sessions are used to authenticate users that wish to modify their personal profile. The client has to authenticate the user with their credentials; if this is successful, a new session holding a unique id, the point of time it will expire, and the id of the authenticated user, will be created and stored in the Database.
+
+\begin{lstlisting}[language=JS]
+TODO paste
+\end{lstlisting}
+
+\subsection{Queries}
+As shown in \ref{BSON}, the document based data structure of MongoDB allows the database to efficiently perform complex requests. Furthermore, it provides simple and straightforward search queries to retrieve objects based on their attributes. For example, getting all users who offer the skill `Ruby' from the collection `person' can be done with this query:
+\begin{lstlisting}[language=JS]
+db.person.find({ "skills._id" : "Ruby" })
+\end{lstlisting}
+
+\section{LDAP}
+SinnerSchrader runs a LDAP server which acts as a centralized source of personal information of all employees. The application connects to this server in order to retrieve contact information to display in users' profiles. In comparison with having the users to enter their data manually, this methods has the benefit that the users' data will be kept in sync across all internal services, and that it reduces the effort a user has to spend to create their profile.
+
+\section{Reverse Proxy}
+Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguising between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer. \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting them as one uniform service.
+
+\section{API}
+To exchange data between the backend and the frontend, a Representational State Transfer (REST) API is provided by the backend. Its endpoints are called by the fronted code to either request data or to command the backend to perform modifying operations on it.
+The used HTTP method is the main indicator of the action to perform: GET is used to retrieve data, POST to insert new elements, PUT to modify existing ones and DELETE to remove them. The URLs of the individual action express the entity on which the action will be performed.
+
+TODO: Swagger Table paste und in text verweisen
+
+
+
+
+
+% \section{Backend}
+%
+% \section{Backend}
+% \subsection{Spring MVC}
+% \subsection{Spring Data}
+% \subsection{Swagger}
+% \subsection{Testing}
+
+% \section{License}
