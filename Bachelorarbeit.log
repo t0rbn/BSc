@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  12 JAN 2017 09:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  13 JAN 2017 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -797,8 +797,17 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'american'.
  (./Bachelorarbeit.aux
 (./_titlepage.aux) (./chapter_abstract.aux) (./chapter_motivation.aux)
-(./chapter_relatedwork.aux) (./chapter_objectives.aux) (./chapter_concept.aux)
-(./chapter_implementation.aux
+(./chapter_relatedwork.aux) (./chapter_objectives.aux) (./chapter_concept.aux
+
+LaTeX Warning: Label `fig:wireframe' multiply defined.
+
+) (./chapter_implementation.aux
+
+LaTeX Warning: Label `fig:markovchain' multiply defined.
+
+
+LaTeX Warning: Label `fig:markovchain' multiply defined.
+
 
 LaTeX Warning: Label `fig:markovchain' multiply defined.
 
@@ -883,14 +892,14 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 
 \openout2 = `_titlepage.aux'.
 
-(./_titlepage.tex <images/unilogo.png, id=253, 4944.4725pt x 1600.47937pt>
+(./_titlepage.tex <images/unilogo.png, id=260, 4944.4725pt x 1600.47937pt>
 File: images/unilogo.png Graphic file (type png)
 
 <use images/unilogo.png>
 Package pdftex.def Info: images/unilogo.png used on input line 9.
 (pdftex.def)             Requested size: 176.40707pt x 57.09703pt.
 
-<images/minlogo.png, id=255, 2490.30376pt x 569.12625pt>
+<images/minlogo.png, id=262, 2490.30376pt x 569.12625pt>
 File: images/minlogo.png Graphic file (type png)
 
 <use images/minlogo.png>
@@ -1008,7 +1017,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 
 
 
-] <images/matrixorga.png, id=357, 744.06679pt x 813.19461pt>
+] <images/matrixorga.png, id=366, 744.06679pt x 813.19461pt>
 File: images/matrixorga.png Graphic file (type png)
 
 <use images/matrixorga.png>
@@ -1056,7 +1065,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 87.
 
-<images/skillsbase-dashboard.png, id=399, 2017.5375pt x 1022.82124pt>
+<images/skillsbase-dashboard.png, id=409, 2017.5375pt x 1022.82124pt>
 File: images/skillsbase-dashboard.png Graphic file (type png)
 
 <use images/skillsbase-dashboard.png>
@@ -1067,7 +1076,7 @@ Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 91.
 Underfull \vbox (badness 1117) has occurred while \output is active []
 
  [8 <./images/skillsbase-dashboard.png>]
-<images/talent_management_-_skillmanagement_-_skillsuche.png, id=410, 1204.5pt 
+<images/talent_management_-_skillmanagement_-_skillsuche.png, id=420, 1204.5pt 
 x 752.8125pt>
 File: images/talent_management_-_skillmanagement_-_skillsuche.png Graphic file 
 (type png)
@@ -1082,102 +1091,123 @@ e.png used on input line 101.
 
 (./chapter_concept.tex
 chapter 4.
-
-Underfull \vbox (badness 2285) has occurred while \output is active []
-
- [11
+[11
 
 
 
 
-]
-[12]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 52.
+] [12]
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 53.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 53.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 54.
  [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--154
+Underfull \hbox (badness 10000) in paragraph at lines 152--157
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+Underfull \hbox (badness 10000) in paragraph at lines 183--186
 
  []
 
-[17] [18] <images/markov-chain.png, id=531, 688.28572pt x 325.64517pt>
+[17] [18] <images/markov-chain.png, id=541, 803.0pt x 528.374pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
-Package pdftex.def Info: images/markov-chain.png used on input line 251.
-(pdftex.def)             Requested size: 213.39566pt x 100.9589pt.
+Package pdftex.def Info: images/markov-chain.png used on input line 254.
+(pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
  [19]
-Underfull \hbox (badness 10000) in paragraph at lines 257--264
+Underfull \hbox (badness 10000) in paragraph at lines 260--267
 
  []
 
 [20 <./images/markov-chain.png>] [21]
-<images/wireframe.png, id=590, 1284.8pt x 1216.545pt>
+<images/markov_impl.png, id=600, 803.0pt x 797.379pt>
+File: images/markov_impl.png Graphic file (type png)
+
+<use images/markov_impl.png>
+Package pdftex.def Info: images/markov_impl.png used on input line 372.
+(pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
+
+<images/wireframe.png, id=603, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 365.
-(pdftex.def)             Requested size: 426.79134pt x 404.1156pt.
+Package pdftex.def Info: images/wireframe.png used on input line 382.
+(pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
  [22]
-<images/design_home.png, id=621, 1445.4pt x 1401.235pt>
+<images/design_home.png, id=635, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 372.
-(pdftex.def)             Requested size: 426.79134pt x 413.7456pt.
-) [23] [24 <./images/wireframe.png>] [25 <./images/design_home.png>]
+Package pdftex.def Info: images/design_home.png used on input line 389.
+(pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
+) [23 <./images/markov_impl.png>] [24 <./images/wireframe.png>] [25 <./images/d
+esign_home.png>] [26]
 \openout2 = `chapter_implementation.aux'.
 
- (./chapter_implementation.tex [26
-
-
-
-
-]
+ (./chapter_implementation.tex
 chapter 5.
-[27] [28] [29]
+<images/system_architecture.png, id=660, 1121.18875pt x 644.4075pt>
+File: images/system_architecture.png Graphic file (type png)
 
-LaTeX Warning: Float too large for page by 14.90756pt on input line 120.
+<use images/system_architecture.png>
+Package pdftex.def Info: images/system_architecture.png used on input line 9.
+(pdftex.def)             Requested size: 320.09349pt x 183.97269pt.
+ [27
 
-[30] [31] (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+
+
+
+ <./images/system_architecture.png>]
+[28] [29] [30]
+
+LaTeX Warning: Float too large for page by 14.90756pt on input line 136.
+
+<images/uml.png, id=758, 1285.603pt x 1769.009pt>
+File: images/uml.png Graphic file (type png)
+ <use images/uml.png>
+Package pdftex.def Info: images/uml.png used on input line 147.
+(pdftex.def)             Requested size: 426.79134pt x 587.25687pt.
+ [31]
+[32] [33 <./images/uml.png>]
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [32]
-<images/swagger_ui.png, id=771, 1182.4175pt x 1078.0275pt>
+) [34]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 220.
+
+<images/swagger_ui.png, id=817, 1182.4175pt x 1078.0275pt>
 File: images/swagger_ui.png Graphic file (type png)
 
 <use images/swagger_ui.png>
-Package pdftex.def Info: images/swagger_ui.png used on input line 184.
+Package pdftex.def Info: images/swagger_ui.png used on input line 274.
 (pdftex.def)             Requested size: 426.79134pt x 389.10947pt.
- [33] [34 <./images/swagger_ui.png>]
-Overfull \hbox (10.98242pt too wide) in paragraph at lines 207--208
+ [35] [36] [37 <./images/swagger_ui.png>]
+Overfull \hbox (10.98242pt too wide) in paragraph at lines 297--298
 \T1/ppl/m/n/10.95 WAR-RANTIES OF MER-CHANTABIL-ITY, FIT-NESS FOR A PAR-TIC-U-LA
 R PUR-
  []
 
-) [35]
+) [38]
 \openout2 = `chapter_evaluation.aux'.
 
- (./chapter_evaluation.tex [36
-
-
-
-
-]
+ (./chapter_evaluation.tex
 chapter 6.
-) [37] (./Bachelorarbeit.bbl [38
+) [39
+
+
+
+
+] (./Bachelorarbeit.bbl [40
 
 
 
@@ -1225,14 +1255,16 @@ Underfull \hbox (badness 1348) in paragraph at lines 85--93
 99 . 1020$[][]\T1/ppl/m/n/10.95 . --  DOI
  []
 
-[39]) [40] (./Bachelorarbeit.lof)
+[41]) [42] (./Bachelorarbeit.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorarbeit.lof'.
 
- (./_eidversicherung.tex [41
+ (./_eidversicherung.tex [43
 
 
-] [42
+
+
+] [44
 
 
 ]
@@ -1242,43 +1274,44 @@ beige-fügten Verze-ich-nis angegebe-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 65.
- [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
+ [45]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
  (./Bachelorarbeit.aux (./_titlepage.aux) (./chapter_abstract.aux)
 (./chapter_motivation.aux) (./chapter_relatedwork.aux)
 (./chapter_objectives.aux) (./chapter_concept.aux)
 (./chapter_implementation.aux) (./chapter_evaluation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: FD1B0E4AA243FB8AFC1BD123A91D9DE5;4006.
+(rerunfilecheck)             Checksum: 1F49660EC346D734C7F46CC2A430558E;4129.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12834 strings out of 493013
- 192434 string characters out of 6139317
- 415027 words of memory out of 5000000
- 15712 multiletter control sequences out of 15000+600000
- 48484 words of font info for 109 fonts, out of 8000000 for 9000
+ 12963 strings out of 493013
+ 194432 string characters out of 6139317
+ 431027 words of memory out of 5000000
+ 15766 multiletter control sequences out of 15000+600000
+ 49221 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,12n,66p,8825b,1983s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,11n,66p,8825b,1306s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/sh
 are/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/
-type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
-lb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
+type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucr
+ro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (49 pages, 1208202 bytes).
+pe1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
+ri8a.pfb>
+Output written on Bachelorarbeit.pdf (51 pages, 1883580 bytes).
 PDF statistics:
- 979 PDF objects out of 1000 (max. 8388607)
- 891 compressed objects within 9 object streams
- 355 named destinations out of 1000 (max. 500000)
- 542 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1104 PDF objects out of 1200 (max. 8388607)
+ 1005 compressed objects within 11 object streams
+ 425 named destinations out of 1000 (max. 500000)
+ 573 words of extra memory for PDF output out of 10000 (max. 10000000)
 

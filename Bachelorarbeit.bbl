@@ -91,6 +91,13 @@
 \newblock DOI http://dx.doi.org/10.1006/ceps.1999.1020. --
 \newblock ISSN 0361--476X
 
+\bibitem[Sie]{markprop}
+\textsc{Siegrist}, Kyle:
+\newblock \emph{Markov Chains}.
+\newblock \url{http://www.math.uah.edu/stat/markov/Introduction.html}. --
+\newblock Department of Mathematical Sciences; University of Alabama in
+  Huntsville
+
 \bibitem[WGGK16]{finger}
 \textsc{Wang}, Cliff ; \textsc{Gerdes}, Ryan~M. ; \textsc{Guan}, Yong  ;
   \textsc{Kasera}, Sneha~K.:

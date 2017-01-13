@@ -16,44 +16,47 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
-You've used 14 entries,
+Warning--entry type for "markprop" isn't style-file defined
+--line 321 of file Bachelorarbeit.bib
+You've used 15 entries,
             4793 wiz_defined-function locations,
-            989 strings with 8636 characters,
-and the built_in function-call counts, 9314 in all, are:
-= -- 974
-> -- 217
-< -- 260
-+ -- 291
-- -- 83
-* -- 646
-:= -- 1541
-add.period$ -- 24
-call.type$ -- 14
-change.case$ -- 69
-chr.to.int$ -- 14
-cite$ -- 14
-duplicate$ -- 236
-empty$ -- 662
-format.name$ -- 145
-if$ -- 1852
+            994 strings with 8795 characters,
+and the built_in function-call counts, 9708 in all, are:
+= -- 1015
+> -- 225
+< -- 267
++ -- 298
+- -- 85
+* -- 666
+:= -- 1608
+add.period$ -- 25
+call.type$ -- 15
+change.case$ -- 73
+chr.to.int$ -- 15
+cite$ -- 15
+duplicate$ -- 250
+empty$ -- 693
+format.name$ -- 151
+if$ -- 1937
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 66
-newline$ -- 98
-num.names$ -- 42
-pop$ -- 92
+missing$ -- 72
+newline$ -- 104
+num.names$ -- 45
+pop$ -- 101
 preamble$ -- 1
-purify$ -- 97
+purify$ -- 103
 quote$ -- 0
-skip$ -- 462
+skip$ -- 481
 stack$ -- 0
-substring$ -- 899
-swap$ -- 52
-text.length$ -- 45
-text.prefix$ -- 8
+substring$ -- 916
+swap$ -- 54
+text.length$ -- 47
+text.prefix$ -- 9
 top$ -- 0
-type$ -- 124
+type$ -- 134
 warning$ -- 0
-while$ -- 69
-width$ -- 16
-write$ -- 200
+while$ -- 72
+width$ -- 17
+write$ -- 213
+(There was 1 warning)

@@ -1,0 +1,112 @@
+@startuml
+SkillwillApplication..>SwaggerForward
+SkillwillApplication..>HTCPCPImpl
+SkillwillApplication..>LdapSyncJob
+SkillwillApplication..>SessionCleanupJob
+SkillwillApplication..>LoginController
+SkillwillApplication..>SkillController
+SkillwillApplication..>UserController
+SkillwillApplication ..> MockData
+
+UserController-->FitnessScore
+FitnessScoreComparator-->FitnessScore
+
+UserService --> FitnessScoreComparator
+
+UserController o-- FitnessScoreProperties
+FitnessScoreComparator o-- FitnessScoreProperties
+UserService o-- FitnessScoreProperties
+FitnessScore --> FitnessScoreProperties
+
+UserController --> Person
+MockData --> Person
+LdapService --> Person
+LoginService --> Person
+SkillService --> Person
+UserService --> Person
+FitnessScore --> Person
+FitnessScoreComparator --> Person
+PersonRepository --> Person
+
+Person o-- PersonalLDAPDetails
+LdapService --> PersonalLDAPDetails
+
+SkillService --> KnownSkill
+KnownSkillSuggestionComparator  --> KnownSkill
+SkillsRepository --> KnownSkill
+MockData --> KnownSkill
+SkillService --> KnownSkill
+
+SkillService --> KnownSkillSuggestionComparator
+
+Person o-- PersonalSkill
+SkillService --> PersonalSkill
+FitnessScore --> PersonalSkill
+
+KnownSkill o-- SuggestionSkill
+SkillService --> SuggestionSkill
+
+LoginController --> CredentialsException
+LoginService --> CredentialsException
+
+SkillController --> DuplicateSkillException
+SkillService --> DuplicateSkillException
+
+SkillController --> EmptyArgumentException
+SkillService --> EmptyArgumentException
+UserService --> EmptyArgumentException
+
+UserService --> LevelOutOfRangeException
+
+SkillController --> SkillNotFoundException
+UserService --> SkillNotFoundException
+Person --> SkillNotFoundException
+SkillService --> SkillNotFoundException
+UserService --> SkillNotFoundException
+
+UserController --> UserNotFoundException
+UserService --> UserNotFoundException
+
+LdapService ..> EmbeddedLdap
+
+UserController --> StatusJSON
+HTCPCPImpl --> StatusJSON
+LoginController --> StatusJSON
+UserController --> StatusJSON
+SkillController --> StatusJSON
+
+LdapSyncJob o-- PersonRepository
+MockData o-- PersonRepository
+LdapService o-- PersonRepository
+LoginService o-- PersonRepository
+SkillService o-- PersonRepository
+UserService o-- PersonRepository
+
+SessionService o-- SessionRepository
+
+MockData o-- SkillsRepository
+SkillService o-- SkillsRepository
+UserService o-- SkillsRepository
+
+LdapSyncJob o-- LdapService
+MockData o-- LdapService
+LoginService o-- LdapService
+UserService o-- LdapService
+
+LoginController o-- LoginService
+
+UserController o-- SessionService
+SessionCleanupJob o-- SessionService
+LoginService o-- SessionService
+
+SkillController o-- SkillService
+UserController o-- SkillService
+UserService o-- SkillService
+
+UserController o-- UserService
+
+SessionService --> Session
+SessionRepository --> Session
+
+
+@enduml
