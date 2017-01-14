@@ -42,23 +42,19 @@
 \BOOKMARK [1][-]{section.5.3}{LDAP}{chapter.5}% 42
 \BOOKMARK [1][-]{section.5.4}{Reverse Proxy}{chapter.5}% 43
 \BOOKMARK [1][-]{section.5.5}{API}{chapter.5}% 44
-\BOOKMARK [1][-]{section.5.6}{Backend}{chapter.5}% 45
-\BOOKMARK [1][-]{section.5.7}{Architecture}{chapter.5}% 46
-\BOOKMARK [2][-]{subsection.5.7.1}{Spring Boot}{section.5.7}% 47
-\BOOKMARK [2][-]{subsection.5.7.2}{Spring Data Repositories}{section.5.7}% 48
-\BOOKMARK [2][-]{subsection.5.7.3}{LDAP Connection}{section.5.7}% 49
-\BOOKMARK [2][-]{subsection.5.7.4}{Swagger}{section.5.7}% 50
-\BOOKMARK [2][-]{subsection.5.7.5}{Testing}{section.5.7}% 51
-\BOOKMARK [1][-]{section.5.8}{License}{chapter.5}% 52
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 53
-\BOOKMARK [1][-]{section.6.1}{Algorithm vs. Leute \(aka interviews\)}{chapter.6}% 54
-\BOOKMARK [1][-]{section.6.2}{Scores gleichverteilt?}{chapter.6}% 55
-\BOOKMARK [1][-]{section.6.3}{Implementation vs. Algorithm}{chapter.6}% 56
-\BOOKMARK [1][-]{section.6.4}{Meeting the Requirements}{chapter.6}% 57
-\BOOKMARK [2][-]{subsection.6.4.1}{FUntional Requirements}{section.6.4}% 58
-\BOOKMARK [2][-]{subsection.6.4.2}{Nonfuntional Requirements}{section.6.4}% 59
-\BOOKMARK [1][-]{section.6.5}{Misc}{chapter.6}% 60
-\BOOKMARK [1][-]{section.6.6}{Conclusion}{chapter.6}% 61
-\BOOKMARK [0][-]{chapter*.27}{Bibliography}{}% 62
-\BOOKMARK [0][-]{chapter*.27}{List of Figures}{}% 63
-\BOOKMARK [0][-]{chapter*.29}{Eidesstattliche Versicherung}{}% 64
+\BOOKMARK [2][-]{subsection.5.5.1}{API Responses}{section.5.5}% 45
+\BOOKMARK [1][-]{section.5.6}{Backend}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.7}{Architecture}{chapter.5}% 47
+\BOOKMARK [2][-]{subsection.5.7.1}{Spring Boot}{section.5.7}% 48
+\BOOKMARK [2][-]{subsection.5.7.2}{Spring Data Repositories}{section.5.7}% 49
+\BOOKMARK [2][-]{subsection.5.7.3}{LDAP Connection}{section.5.7}% 50
+\BOOKMARK [2][-]{subsection.5.7.4}{Swagger}{section.5.7}% 51
+\BOOKMARK [2][-]{subsection.5.7.5}{Testing}{section.5.7}% 52
+\BOOKMARK [1][-]{section.5.8}{License}{chapter.5}% 53
+\BOOKMARK [0][-]{chapter.6}{Evaluatiion}{}% 54
+\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 55
+\BOOKMARK [2][-]{subsection.6.1.1}{Scalability}{section.6.1}% 56
+\BOOKMARK [2][-]{subsection.6.1.2}{Conclusion}{section.6.1}% 57
+\BOOKMARK [0][-]{chapter*.31}{Bibliography}{}% 58
+\BOOKMARK [0][-]{chapter*.31}{List of Figures}{}% 59
+\BOOKMARK [0][-]{chapter*.33}{Eidesstattliche Versicherung}{}% 60

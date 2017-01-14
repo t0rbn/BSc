@@ -15,6 +15,12 @@
 \newblock \emph{User Authentication Through Typing Biometrics Features}.
 \newblock 2005
 
+\bibitem[Bea]{hvscale}
+\textsc{Beaumont}, David:
+\newblock \emph{How to explain vertical and horizontal scaling in the cloud}.
+\newblock
+  \url{https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/}
+
 \bibitem[Ber16]{BWL}
 \textsc{Bergmann}, Rainer:
 \newblock \emph{Organisation und Projektmanagement}.
@@ -35,11 +41,21 @@
 \newblock November 2014 Edition.
 \newblock 2014
 
+\bibitem[Fed16]{fedi}
+\textsc{Federrath}, Hannes:
+\newblock \emph{Foliensatz Grundlagen der Systemsoftware SoSe 2016}.
+\newblock 2016
+
+\bibitem[Fou]{ldapscale}
+\textsc{Foundation}, The~O.:
+\newblock \emph{Replication - OpenLDAP Administrator's Guide}.
+\newblock \url{http://www.openldap.org/doc/admin24/replication.html}
+
 \bibitem[Gut16]{SpringGuide}
 \textsc{Gutierrez}, Felipe:
 \newblock \emph{Pro Spring Boot - A no-nonsense guide containing case studies
   and best practices for Spring Boot}.
-\newblock Springer Science+Business Media, 2016. --
+\newblock Apress; Springer Science+Business Media, 2016. --
 \newblock ISBN 978--1--4842--1431--2
 
 \bibitem[HMPH15]{MongoGuide}
@@ -47,7 +63,7 @@
   \textsc{Hawkins}, Tim:
 \newblock \emph{The Definitive Guide to MongoDB}.
 \newblock 3.
-\newblock Springer Science+Business Media, 2015. --
+\newblock Apress; Springer Science+Business Media, 2015. --
 \newblock ISBN 978--1--4842--1183--0
 
 \bibitem[IFO15]{Isinkaye2015261}
@@ -69,6 +85,11 @@
 \textsc{Lehner}, Franz:
 \newblock \emph{Marktanalyse zum Angebot an Skill-Management-Systemen}.
 \newblock 2004
+
+\bibitem[Man]{jsmarket}
+\textsc{Management}, Q-Success Software~Q.:
+\newblock \emph{Usage of JavaScript for websites}.
+\newblock \url{https://w3techs.com/technologies/details/cp-javascript/all/all}
 
 \bibitem[Mas88]{license}
 \textsc{Massachusetts{\ }Institute{\ }of{\ }Technology}:
@@ -97,6 +118,18 @@
 \newblock \url{http://www.math.uah.edu/stat/markov/Introduction.html}. --
 \newblock Department of Mathematical Sciences; University of Alabama in
   Huntsville
+
+\bibitem[Smi15]{json}
+\textsc{Smith}, Ben:
+\newblock \emph{Beginning JSON}.
+\newblock Berkeley, Calif. : Apress, 2015 (The expert's voice in web
+  development). --
+\newblock  324 S.
+
+\bibitem[Str17]{strecker}
+\textsc{Strecker}, Katharina:
+\newblock \emph{Lorem Ipsum}.
+\newblock 2017
 
 \bibitem[WGGK16]{finger}
 \textsc{Wang}, Cliff ; \textsc{Gerdes}, Ryan~M. ; \textsc{Guan}, Yong  ;

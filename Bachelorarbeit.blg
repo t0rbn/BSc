@@ -18,45 +18,51 @@ Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
 Warning--entry type for "markprop" isn't style-file defined
 --line 321 of file Bachelorarbeit.bib
-You've used 15 entries,
+Warning--entry type for "jsmarket" isn't style-file defined
+--line 357 of file Bachelorarbeit.bib
+Warning--entry type for "hvscale" isn't style-file defined
+--line 371 of file Bachelorarbeit.bib
+Warning--entry type for "ldapscale" isn't style-file defined
+--line 397 of file Bachelorarbeit.bib
+You've used 21 entries,
             4793 wiz_defined-function locations,
-            994 strings with 8795 characters,
-and the built_in function-call counts, 9708 in all, are:
-= -- 1015
-> -- 225
-< -- 267
-+ -- 298
-- -- 85
-* -- 666
-:= -- 1608
-add.period$ -- 25
-call.type$ -- 15
-change.case$ -- 73
-chr.to.int$ -- 15
-cite$ -- 15
-duplicate$ -- 250
-empty$ -- 693
-format.name$ -- 151
-if$ -- 1937
+            1020 strings with 9442 characters,
+and the built_in function-call counts, 12356 in all, are:
+= -- 1288
+> -- 277
+< -- 347
++ -- 380
+- -- 102
+* -- 796
+:= -- 2056
+add.period$ -- 32
+call.type$ -- 21
+change.case$ -- 97
+chr.to.int$ -- 21
+cite$ -- 21
+duplicate$ -- 337
+empty$ -- 886
+format.name$ -- 187
+if$ -- 2472
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 72
-newline$ -- 104
-num.names$ -- 45
-pop$ -- 101
+missing$ -- 102
+newline$ -- 135
+num.names$ -- 63
+pop$ -- 148
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 139
 quote$ -- 0
-skip$ -- 481
+skip$ -- 646
 stack$ -- 0
-substring$ -- 916
-swap$ -- 54
-text.length$ -- 47
-text.prefix$ -- 9
+substring$ -- 1071
+swap$ -- 67
+text.length$ -- 61
+text.prefix$ -- 15
 top$ -- 0
-type$ -- 134
+type$ -- 190
 warning$ -- 0
-while$ -- 72
-width$ -- 17
-write$ -- 213
-(There was 1 warning)
+while$ -- 92
+width$ -- 23
+write$ -- 282
+(There were 4 warnings)
