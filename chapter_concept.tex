@@ -50,7 +50,7 @@ The basic structure of the search function will be:
 
 \subsubsection{Pseudo-Implementation}
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 function search(searchItems, searchLocation) {
   var results = getAllEmployees()
 
@@ -79,6 +79,7 @@ function search(searchItems, searchLocation) {
 \end{figure}
 
 \subsection{Scoring Algorithm}
+\label{fitscorealg}
 The application will sort all found persons by their fitness into the searched skill set; so there has to be an algorithm that can assign a score describing said fitness to every person.
 
 \subsubsection{Requirements}
@@ -268,7 +269,7 @@ The recommender system will concatenate the suggestion lists of all items in the
 \newpage
 \subsection{Pseudo-Code}
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 var knownSkills = [
   {
     name: "java",
@@ -311,7 +312,7 @@ var knownSkills = [
 \newpage
 
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 function suggest(searched) {
   var accumulated = {};
 
@@ -395,3 +396,5 @@ Furthermore, there will not be any different roles with different access rights 
 Nearly all of data fall into the category of personal data (\textit{Personenbezogene Daten}), which is defined as ``any information concerning the personal or material circumstances of an identified or identifiable individual (the data subject)'' (BDSG, 3(1)). The personal data will be collected (BDSG, 3(3)), processed (BDSG, 3(4)) and transfered (BDSG, 3(3)) to other employees of SinnerSchrader.
 Generally, this does not violate any law, since the ``collection, storage, modification or transfer of personal data or their use as a means of fulfilling one’s own business purposes shall be admissible'' (BDSG, 28(1)), but some restrictions apply: the data subjects have to be informed about the processing of their personal data, must be able to deny their consent (BDSG, Section 4a), and the personal data shall not be made public.
 To ensure the latter, the application must not be accessible to persons that do not work for or on behalf of SinnerSchrader. Technically, this will be arragned by making the application attainable from SinnerSchrader's internal network only, which can only be used by employees and authorized persons.
+
+TODO: Betriebsrat

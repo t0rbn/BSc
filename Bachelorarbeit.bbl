@@ -21,6 +21,13 @@
 \newblock
   \url{https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/}
 
+\bibitem[Bec03]{beck}
+\textsc{Beck}, Simon:
+\newblock Skill and Competence Management as a Base of an Integrated Personnel
+  Development (IPD) - A Pilot Project in the Putzmeister, Inc./Germany.
+\newblock {In: }\emph{Journal of Universal Computer Science} 9 (2003), Nr. 12,
+  S. 1381 -- 1287
+
 \bibitem[Ber16]{BWL}
 \textsc{Bergmann}, Rainer:
 \newblock \emph{Organisation und Projektmanagement}.
@@ -34,6 +41,14 @@
 \newblock {In: }\emph{Management Decision} 51 (2013), Nr. 4, 813-823.
 \newblock \url{http://dx.doi.org/10.1108/00251741311326581}. --
 \newblock DOI 10.1108/00251741311326581
+
+\bibitem[DAQ13]{darvish}
+\textsc{Darvish}, Hassan ; \textsc{Ahmadnia}, Hadi  ; \textsc{Qryshyan},
+  Seyed~A.:
+\newblock Studying the Personal Knowledge Management Profile: a Case Study at
+  Payame Noor University.
+\newblock {In: }\emph{Economic Insights – Trends and Challenges} 4/2013
+  (2013), Nr. 1, S. 1 -- 12
 
 \bibitem[DMA14]{mailrep}
 \textsc{DMA}:
@@ -76,20 +91,10 @@
 \newblock DOI http://dx.doi.org/10.1016/j.eij.2015.06.005. --
 \newblock ISSN 1110--8665
 
-\bibitem[JHS07]{USN}
-\textsc{Janet H.~Spoonamore}, Ricky D.~H. H. James~Simien~S. H. James~Simien:
-\newblock \emph{Person-to-Position Matching}.
-\newblock 2007
-
 \bibitem[Leh04]{Marktanalyse}
 \textsc{Lehner}, Franz:
 \newblock \emph{Marktanalyse zum Angebot an Skill-Management-Systemen}.
 \newblock 2004
-
-\bibitem[Man]{jsmarket}
-\textsc{Management}, Q-Success Software~Q.:
-\newblock \emph{Usage of JavaScript for websites}.
-\newblock \url{https://w3techs.com/technologies/details/cp-javascript/all/all}
 
 \bibitem[Mas88]{license}
 \textsc{Massachusetts{\ }Institute{\ }of{\ }Technology}:
@@ -101,6 +106,11 @@
 \textsc{NGINX{\ }Inc.}:
 \newblock \emph{WHAT IS A REVERSE PROXY SERVER?}
 \newblock \url{https://www.nginx.com/resources/glossary/reverse-proxy-server/}
+
+\bibitem[QS]{jsmarket}
+\textsc{Q-Success{\ }Software{\ }Quality{\ }Management}:
+\newblock \emph{Usage of JavaScript for websites}.
+\newblock \url{https://w3techs.com/technologies/details/cp-javascript/all/all}
 
 \bibitem[RD00]{RYAN200054}
 \textsc{Ryan}, Richard~M. ; \textsc{Deci}, Edward~L.:
@@ -125,6 +135,12 @@
 \newblock Berkeley, Calif. : Apress, 2015 (The expert's voice in web
   development). --
 \newblock  324 S.
+
+\bibitem[SSH07]{USN}
+\textsc{Spoonamore}, Janet~H. ; \textsc{Simien}, H.~J.  ; \textsc{Hall},
+  Ricky~D.:
+\newblock \emph{Person-to-Position Matching}.
+\newblock 2007
 
 \bibitem[Str17]{strecker}
 \textsc{Strecker}, Katharina:

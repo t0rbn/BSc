@@ -9,25 +9,28 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Pseudo-Implementation of the search algorithm}}{14}{figure.4.1}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Markov Chain}}{20}{figure.4.2}
-\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Skill Data Structure (Pseudo-Implementation)}}{21}{figure.4.3}
-\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Skill Suggestion Algorithm (Pseudo-Implementation)}}{22}{figure.4.4}
-\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Search Suggestion Markov Model}}{23}{figure.4.5}
-\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Search Result Page (Wireframe)}}{24}{figure.4.6}
-\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Search Page (Concept)}}{25}{figure.4.7}
+\contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Skill Data Structure (Pseudo-Implementation)}}{23}{figure.4.3}
+\contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Skill Suggestion Algorithm (Pseudo-Implementation)}}{24}{figure.4.4}
+\contentsline {figure}{\numberline {\relax 4.5}{\ignorespaces Search Suggestion Markov Model}}{25}{figure.4.5}
+\contentsline {figure}{\numberline {\relax 4.6}{\ignorespaces Search Result Page (Wireframe)}}{26}{figure.4.6}
+\contentsline {figure}{\numberline {\relax 4.7}{\ignorespaces Search Page (Concept)}}{27}{figure.4.7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces System Architecture}}{27}{figure.5.1}
-\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Skill (DB Data Structure)}}{29}{figure.5.2}
-\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Person (DB Data Structure)}}{29}{figure.5.3}
-\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Session (DB Data Structure)}}{30}{figure.5.4}
-\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Example Database Query}}{30}{figure.5.5}
-\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Person API Response}}{33}{figure.5.6}
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Status API Response}}{33}{figure.5.7}
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Backend Class Diagramm}}{34}{figure.5.8}
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Example Controller}}{35}{figure.5.9}
-\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Example Repository Interface}}{36}{figure.5.10}
-\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Spring Data Config}}{36}{figure.5.11}
-\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces LDAP User Authentication (Code)}}{37}{figure.5.12}
-\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Swagger Interactive Documentation}}{38}{figure.5.13}
+\contentsline {figure}{\numberline {\relax 5.1}{\ignorespaces System Architecture}}{29}{figure.5.1}
+\contentsline {figure}{\numberline {\relax 5.2}{\ignorespaces Skill (DB Data Structure)}}{31}{figure.5.2}
+\contentsline {figure}{\numberline {\relax 5.3}{\ignorespaces Person (DB Data Structure)}}{31}{figure.5.3}
+\contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Session (DB Data Structure)}}{32}{figure.5.4}
+\contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Example Database Query}}{32}{figure.5.5}
+\contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Person API Response}}{35}{figure.5.6}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Status API Response}}{35}{figure.5.7}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Backend Class Diagramm}}{36}{figure.5.8}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Example Controller}}{37}{figure.5.9}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Example Repository Interface}}{38}{figure.5.10}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Spring Data Config}}{38}{figure.5.11}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces LDAP User Authentication (Code)}}{39}{figure.5.12}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Swagger Interactive Documentation}}{40}{figure.5.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces System Architecture (scaled up)}}{41}{figure.6.1}
+\contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Raw Scores}}{45}{figure.6.1}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Average Scores}}{45}{figure.6.2}
+\contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Score Errors}}{46}{figure.6.3}
+\contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces System Architecture (scaled up)}}{47}{figure.6.4}
 \addvspace {10\p@ }

@@ -24,7 +24,7 @@ The application stores three diffenrent object classes in the database: Skills t
 \subsubsection{Known Skills}
 Skills known to the system consist of a uniqe name and a list of suggestions that themselves are expressed by a name and a total count of searches of the respectice suggestion together with the skill.
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 {
   "_id" : "Java",
   "_class" : "com.sinnerschrader.skillwill.domain.skills.KnownSkill",
@@ -48,7 +48,7 @@ Skills known to the system consist of a uniqe name and a list of suggestions tha
 The documents that represent persons contain the respective person's id\footnote{Each employee gets assigned an internal id (``Benutzerkürzel'') that is globally used to uniquely identify a person.}, their personal data like first and last name, telephone number, e-mail address, office location, job title\footnote{The job title data is not maintained consistently in the LDAP, so that, unfortunately, it is not suitable to be used in the person search.}, and a list of the person's skills. Each of those skills consists of a name, a level of skill and a level of will.
 
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 {
   "_id" : "foobar",
   "_class" : "com.sinnerschrader.skillwill.domain.person.Person",
@@ -81,7 +81,7 @@ The documents that represent persons contain the respective person's id\footnote
 Sessions are used to authenticate users that wish to modify their personal profile. The client has to authenticate the user with their credentials; if this is successful, a new session holding a unique id, the point of time it will expire, and the id of the authenticated user, will be created and stored in the database.
 
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 {
 	"_id" : "87163f310f124830bac677fe31484262",
 	"_class" : "com.sinnerschrader.skillwill.session.Session",
@@ -96,7 +96,7 @@ Sessions are used to authenticate users that wish to modify their personal profi
 \subsection{Queries}
 As shown in \ref{BSON}, the document based data structure of MongoDB allows the database to efficiently perform complex requests. Furthermore, it provides simple and straightforward search queries to retrieve objects based on their attributes. For example, getting all users who offer the skill \textit{Ruby} from the collection \textit{person} can be done with this straightforward query:
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 db.person.find({ "skills._id" : "Ruby" })
 \end{lstlisting}
 \caption[Example Database Query]{MongoDB query to retrieve all users with the skill \textit{Ruby}}
@@ -141,7 +141,7 @@ The API returns data in the JSON format, which is one of the two de-facto standa
 For every HTTP request, the backend will return a JSON response, notwithstanding the request may not demand data to be returned. In this case, the response will contain status information about the success of the requested action.
 
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 {
 	"id" : "foobar",
 	"firstName" : "Fooberius",
@@ -168,7 +168,7 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 
 
 \begin{figure}
-\begin{lstlisting}[language=JS]
+\begin{lstlisting}[language=Java]
 {
 	"message" : "logout successful"
 }

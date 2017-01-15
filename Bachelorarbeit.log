@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  14 JAN 2017 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  15 JAN 2017 22:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -790,6 +790,9 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -892,14 +895,14 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 
 \openout2 = `_titlepage.aux'.
 
-(./_titlepage.tex <images/unilogo.png, id=244, 4944.4725pt x 1600.47937pt>
+(./_titlepage.tex <images/unilogo.png, id=256, 4944.4725pt x 1600.47937pt>
 File: images/unilogo.png Graphic file (type png)
 
 <use images/unilogo.png>
 Package pdftex.def Info: images/unilogo.png used on input line 9.
 (pdftex.def)             Requested size: 176.40707pt x 57.09703pt.
 
-<images/minlogo.png, id=246, 2490.30376pt x 569.12625pt>
+<images/minlogo.png, id=258, 2490.30376pt x 569.12625pt>
 File: images/minlogo.png Graphic file (type png)
 
 <use images/minlogo.png>
@@ -1017,7 +1020,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 
 
 
-] <images/matrixorga.png, id=346, 744.06679pt x 813.19461pt>
+] <images/matrixorga.png, id=361, 744.06679pt x 813.19461pt>
 File: images/matrixorga.png Graphic file (type png)
 
 <use images/matrixorga.png>
@@ -1044,46 +1047,43 @@ chapter 2.
 
 ]
 chapter 3.
-[5]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 51.
+[5] [6]
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 52.
  (/usr/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 51.
- [6] [7]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 52.
+ [7]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 87.
+(Font)              scaled to size 9.37807pt on input line 88.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 87.
+(Font)              scaled to size 7.29405pt on input line 88.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 87.
+(Font)              scaled to size 5.21004pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 87.
+(Font)              scaled to size 9.37807pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 87.
+(Font)              scaled to size 7.29405pt on input line 88.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 87.
+(Font)              scaled to size 5.21004pt on input line 88.
 
-<images/skillsbase-dashboard.png, id=389, 2017.5375pt x 1022.82124pt>
+<images/skillsbase-dashboard.png, id=419, 2017.5375pt x 1022.82124pt>
 File: images/skillsbase-dashboard.png Graphic file (type png)
 
 <use images/skillsbase-dashboard.png>
-Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 91.
+Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 92.
 
 (pdftex.def)             Requested size: 426.79134pt x 216.3595pt.
-
-Underfull \vbox (badness 1117) has occurred while \output is active []
-
  [8 <./images/skillsbase-dashboard.png>]
-<images/talent_management_-_skillmanagement_-_skillsuche.png, id=400, 1204.5pt 
+<images/talent_management_-_skillmanagement_-_skillsuche.png, id=429, 1204.5pt 
 x 752.8125pt>
 File: images/talent_management_-_skillmanagement_-_skillsuche.png Graphic file 
 (type png)
 
 <use images/talent_management_-_skillmanagement_-_skillsuche.png>
 Package pdftex.def Info: images/talent_management_-_skillmanagement_-_skillsuch
-e.png used on input line 101.
+e.png used on input line 102.
 (pdftex.def)             Requested size: 426.79134pt x 266.75061pt.
  [9 <./images/talent_management_-_skillmanagement_-_skillsuche.png>]) [10]
 \openout2 = `chapter_concept.aux'.
@@ -1101,191 +1101,259 @@ LaTeX Font Info:    Try loading font information for T1+pcr on input line 53.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 57.
  [13] [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 152--157
+Underfull \hbox (badness 10000) in paragraph at lines 153--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--157
+Underfull \hbox (badness 10000) in paragraph at lines 153--158
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 183--186
+Underfull \hbox (badness 10000) in paragraph at lines 184--187
 
  []
 
-[17] [18] <images/markov-chain.png, id=521, 803.0pt x 528.374pt>
+[17] [18] [19] <images/markov-chain.png, id=555, 803.0pt x 528.374pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
-Package pdftex.def Info: images/markov-chain.png used on input line 254.
+Package pdftex.def Info: images/markov-chain.png used on input line 255.
 (pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
- [19]
-Underfull \hbox (badness 10000) in paragraph at lines 260--267
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--268
 
  []
 
-[20 <./images/markov-chain.png>] [21]
-<images/markov_impl.png, id=580, 803.0pt x 797.379pt>
+[20 <./images/markov-chain.png>] [21] [22] [23]
+<images/markov_impl.png, id=615, 803.0pt x 797.379pt>
 File: images/markov_impl.png Graphic file (type png)
 
 <use images/markov_impl.png>
-Package pdftex.def Info: images/markov_impl.png used on input line 372.
+Package pdftex.def Info: images/markov_impl.png used on input line 373.
 (pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
 
-<images/wireframe.png, id=583, 1314.9125pt x 1246.6575pt>
+<images/wireframe.png, id=618, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 382.
+Package pdftex.def Info: images/wireframe.png used on input line 383.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
- [22]
-<images/design_home.png, id=615, 1475.5125pt x 1431.3475pt>
+ [24]
+<images/design_home.png, id=650, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 389.
+Package pdftex.def Info: images/design_home.png used on input line 390.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
-) [23 <./images/markov_impl.png>] [24 <./images/wireframe.png>] [25 <./images/d
-esign_home.png>] [26]
+ [25 <./images/markov_impl.png>] [26 <./images/wireframe.png>] [27 <./images/de
+sign_home.png>]) [28]
 \openout2 = `chapter_implementation.aux'.
 
  (./chapter_implementation.tex
 chapter 5.
-<images/system_architecture.png, id=640, 1217.54875pt x 662.475pt>
+<images/system_architecture.png, id=675, 1217.54875pt x 662.475pt>
 File: images/system_architecture.png Graphic file (type png)
 
 <use images/system_architecture.png>
 Package pdftex.def Info: images/system_architecture.png used on input line 9.
 (pdftex.def)             Requested size: 320.09349pt x 174.16006pt.
- [27
+ [29
 
 
 
 
  <./images/system_architecture.png>]
-[28] [29] [30]
+Overfull \hbox (26.54233pt too wide) in paragraph at lines 30--31
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][] 
+ []
+
+[30] [31] [32]
 
 LaTeX Warning: Float too large for page by 14.90756pt on input line 137.
 
-<images/uml.png, id=743, 1285.603pt x 1769.009pt>
+<images/uml.png, id=779, 1285.603pt x 1769.009pt>
 File: images/uml.png Graphic file (type png)
  <use images/uml.png>
 Package pdftex.def Info: images/uml.png used on input line 188.
 (pdftex.def)             Requested size: 426.79134pt x 587.25687pt.
- [31]
-[32] [33] [34 <./images/uml.png>]
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [35]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 261.
+ [33]
+[34] [35] [36 <./images/uml.png>]
+Underfull \vbox (badness 3668) has occurred while \output is active []
 
-<images/swagger_ui.png, id=825, 1182.4175pt x 1078.0275pt>
+ [37]
+Overfull \hbox (33.11238pt too wide) in paragraph at lines 287--288
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.97227pt too wide) in paragraph at lines 289--290
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.54233pt too wide) in paragraph at lines 291--292
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (46.25249pt too wide) in paragraph at lines 292--293
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (6.83217pt too wide) in paragraph at lines 299--300
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 60.93416pt on input line 306.
+
+<images/swagger_ui.png, id=861, 1182.4175pt x 1078.0275pt>
 File: images/swagger_ui.png Graphic file (type png)
 
 <use images/swagger_ui.png>
 Package pdftex.def Info: images/swagger_ui.png used on input line 315.
 (pdftex.def)             Requested size: 426.79134pt x 389.10947pt.
-
-Underfull \vbox (badness 1308) has occurred while \output is active []
-
- [36]
-[37] [38 <./images/swagger_ui.png>]
+ [38] [39] [40 <./images/swagger_ui.png>]
 Overfull \hbox (10.98242pt too wide) in paragraph at lines 338--339
 \T1/ppl/m/n/10.95 WAR-RANTIES OF MER-CHANTABIL-ITY, FIT-NESS FOR A PAR-TIC-U-LA
 R PUR-
  []
 
-) [39]
+) [41] [42]
 \openout2 = `chapter_evaluation.aux'.
 
- (./chapter_evaluation.tex [40
-
-
-
-
-]
+ (./chapter_evaluation.tex
 chapter 6.
-<images/system_architecture_scaled.png, id=933, 1286.8075pt x 766.865pt>
+
+Overfull \hbox (36.00835pt too wide) in paragraph at lines 29--68
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 28.95778pt on input line 69.
+
+<images/dist_raw.png, id=966, 1204.5pt x 744.7825pt>
+File: images/dist_raw.png Graphic file (type png)
+ <use images/dist_raw.png>
+Package pdftex.def Info: images/dist_raw.png used on input line 73.
+(pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
+
+<images/dist_avg.png, id=967, 1204.5pt x 744.7825pt>
+File: images/dist_avg.png Graphic file (type png)
+ <use images/dist_avg.png>
+Package pdftex.def Info: images/dist_avg.png used on input line 80.
+(pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
+
+<images/dist_error.png, id=968, 1204.5pt x 744.7825pt>
+File: images/dist_error.png Graphic file (type png)
+
+<use images/dist_error.png>
+Package pdftex.def Info: images/dist_error.png used on input line 87.
+(pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
+ [43
+
+
+
+
+] [44] [45 <./images/dist_raw.png> <./images/dist_avg.png>]
+<images/system_architecture_scaled.png, id=995, 1286.8075pt x 766.865pt>
 File: images/system_architecture_scaled.png Graphic file (type png)
 
 <use images/system_architecture_scaled.png>
 Package pdftex.def Info: images/system_architecture_scaled.png used on input li
-ne 23.
+ne 105.
 (pdftex.def)             Requested size: 320.09349pt x 190.75626pt.
 
-Underfull \vbox (badness 1609) has occurred while \output is active []
+Underfull \vbox (badness 2680) has occurred while \output is active []
 
- [41 <./images/system_architecture_scaled.png>]) [42] [43] (./Bachelorarbeit.bb
-l [44
-
-
-
-]
+ [46 <./images/dist_error.png>] [47 <./images/system_architecture_scaled.png>])
+ [48]
+(./Bachelorarbeit.bbl
 chapter without number
 
-Underfull \hbox (badness 2012) in paragraph at lines 25--30
+Underfull \hbox (badness 2012) in paragraph at lines 32--37
 []\T1/ppl/m/sc/10.95 Bergmann\T1/ppl/m/n/10.95 , Rainer:  \T1/ppl/m/it/10.95 Or
 -gan-i-sa-tion und Pro-jek-t-man-age-ment\T1/ppl/m/n/10.95 .  2. Aufl.
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 32--37
+Underfull \hbox (badness 2368) in paragraph at lines 39--44
 []\T1/ppl/m/sc/10.95 Canós-Darós\T1/ppl/m/n/10.95 , Lour-des:  An al-go-rithm t
 o iden-tify the most mo-
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 32--37
+Underfull \hbox (badness 1946) in paragraph at lines 39--44
 \T1/ppl/m/n/10.95 ti-vated em-ploy-ees.  In: \T1/ppl/m/it/10.95 Man-age-ment De
 -ci-sion \T1/ppl/m/n/10.95 51 (2013), Nr. 4, 813-
  []
 
-[45]
-Underfull \hbox (badness 10000) in paragraph at lines 90--93
-[][]$\T1/pcr/m/n/10.95 https : / / w3techs . com / technologies / details / cp-
-[]javascript /
+[49
+
+
+
+]
+Underfull \hbox (badness 1226) in paragraph at lines 111--114
+[]\T1/ppl/m/sc/10.95 Q-Success Soft-ware Qual-ity Man-age-ment\T1/ppl/m/n/10.95
+ :  \T1/ppl/m/it/10.95 Us-age of JavaScript
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 106--114
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
+\T1/ppl/m/it/10.95 for web-sites\T1/ppl/m/n/10.95 .  [][]$\T1/pcr/m/n/10.95 htt
+ps : / / w3techs . com / technologies / details /
+ []
+
+
+Underfull \hbox (badness 1189) in paragraph at lines 116--124
 []\T1/ppl/m/sc/10.95 Ryan\T1/ppl/m/n/10.95 , Richard M. ; \T1/ppl/m/sc/10.95 De
 ci\T1/ppl/m/n/10.95 , Ed-ward L.:  In-trin-sic and Ex-trin-sic Mo-
  []
 
 
-Underfull \hbox (badness 3068) in paragraph at lines 106--114
+Underfull \hbox (badness 3068) in paragraph at lines 116--124
 \T1/ppl/m/n/10.95 ti-va-tions: Clas-sic Def-i-ni-tions and New Di-rec-tions.  I
 n: \T1/ppl/m/it/10.95 Con-tem-po-
  []
 
 
-Underfull \hbox (badness 1975) in paragraph at lines 106--114
+Underfull \hbox (badness 1975) in paragraph at lines 116--124
 \T1/ppl/m/it/10.95 rary Ed-u-ca-tional Psy-chol-ogy \T1/ppl/m/n/10.95 25 (2000)
 , Nr. 1, 54 - 67.  [][]$\T1/pcr/m/n/10.95 http : / / dx .
  []
 
 
-Underfull \hbox (badness 1348) in paragraph at lines 106--114
+Underfull \hbox (badness 1348) in paragraph at lines 116--124
 \T1/pcr/m/n/10.95 doi . org / http : / / dx . doi . org / 10 . 1006 / ceps . 19
 99 . 1020$[][]\T1/ppl/m/n/10.95 . --  DOI
  []
 
-) [46] (./Bachelorarbeit.lof)
+) [50] (./Bachelorarbeit.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorarbeit.lof'.
 
- (./_eidversicherung.tex [47
+ [51
 
 
 
 
-] [48
+] [52
+
+
+] (./Bachelorarbeit.lot)
+\tf@lot=\write6
+\openout6 = `Bachelorarbeit.lot'.
+
+
+(./_eidversicherung.tex [53] [54
 
 
 ]
@@ -1295,44 +1363,43 @@ beige-fügten Verze-ich-nis angegebe-
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
- [49]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 75.
+ [55]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 75.
  (./Bachelorarbeit.aux (./_titlepage.aux) (./chapter_abstract.aux)
 (./chapter_motivation.aux) (./chapter_relatedwork.aux)
 (./chapter_objectives.aux) (./chapter_concept.aux)
 (./chapter_implementation.aux) (./chapter_evaluation.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 75.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 75.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 04C8F74B03E151BD3A5165D4034B9577;3824.
+(rerunfilecheck)             Checksum: 1D162A1547155A8DB3C520BDCF52A3E6;4036.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13018 strings out of 493013
- 195265 string characters out of 6139316
- 436027 words of memory out of 5000000
- 15776 multiletter control sequences out of 15000+600000
- 50774 words of font info for 113 fonts, out of 8000000 for 9000
+ 13024 strings out of 493013
+ 195558 string characters out of 6139316
+ 437950 words of memory out of 5000000
+ 15764 multiletter control sequences out of 15000+600000
+ 48485 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,11n,66p,8825b,1306s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,11n,66p,8825b,1275s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/sh
 are/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/
-type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucr
-ro8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share
+type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
+lb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/upl
-ri8a.pfb>
-Output written on Bachelorarbeit.pdf (55 pages, 2090850 bytes).
+pe1/urw/palatino/uplri8a.pfb>
+Output written on Bachelorarbeit.pdf (61 pages, 2382453 bytes).
 PDF statistics:
- 1181 PDF objects out of 1200 (max. 8388607)
- 1075 compressed objects within 11 object streams
- 468 named destinations out of 1000 (max. 500000)
- 546 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1254 PDF objects out of 1440 (max. 8388607)
+ 1136 compressed objects within 12 object streams
+ 483 named destinations out of 1000 (max. 500000)
+ 585 words of extra memory for PDF output out of 10000 (max. 10000000)
 

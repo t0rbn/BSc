@@ -52,9 +52,12 @@
 \BOOKMARK [2][-]{subsection.5.7.5}{Testing}{section.5.7}% 52
 \BOOKMARK [1][-]{section.5.8}{License}{chapter.5}% 53
 \BOOKMARK [0][-]{chapter.6}{Evaluatiion}{}% 54
-\BOOKMARK [1][-]{section.6.1}{Implementation}{chapter.6}% 55
-\BOOKMARK [2][-]{subsection.6.1.1}{Scalability}{section.6.1}% 56
-\BOOKMARK [2][-]{subsection.6.1.2}{Conclusion}{section.6.1}% 57
-\BOOKMARK [0][-]{chapter*.31}{Bibliography}{}% 58
-\BOOKMARK [0][-]{chapter*.31}{List of Figures}{}% 59
-\BOOKMARK [0][-]{chapter*.33}{Eidesstattliche Versicherung}{}% 60
+\BOOKMARK [1][-]{section.6.1}{Fitness Score Algorithm}{chapter.6}% 55
+\BOOKMARK [2][-]{subsection.6.1.1}{Uniform Distribution of Score Values}{section.6.1}% 56
+\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 57
+\BOOKMARK [2][-]{subsection.6.2.1}{Scalability}{section.6.2}% 58
+\BOOKMARK [2][-]{subsection.6.2.2}{Conclusion}{section.6.2}% 59
+\BOOKMARK [0][-]{chapter*.31}{Bibliography}{}% 60
+\BOOKMARK [0][-]{chapter*.31}{List of Figures}{}% 61
+\BOOKMARK [0][-]{chapter*.32}{List of Tables}{}% 62
+\BOOKMARK [0][-]{chapter*.34}{Eidesstattliche Versicherung}{}% 63
