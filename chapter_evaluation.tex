@@ -1,4 +1,4 @@
-\chapter{Evaluatiion}
+\chapter{Evaluation}
 
 % Requirements
 % * Functional
@@ -15,18 +15,46 @@
 % Conclusion
 
 \section{Fitness Score Algorithm}
-The algorithm described in \ref{fitscorealg} has to meet certain requirements in order to be suitable for the application.
 
 \subsection{Uniform Distribution of Score Values}
 The scores calculated by the algorithm should be distributed uniformly in the complete range of possible values, because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
-To test this, one hundred persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each. A search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed, because those have the highest number of results (33 each). Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result value is:
+To test this, one hundred persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each. A search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed, because those have the highest number of results (33 each); all results can be found in table \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result value is:
 \[
 	v_{Ideal}(n) = 1 - \frac{n}{33}
 \]
 
-\begin{table}[!htp]
+The distribution of the score values for every respective search is shown in figure \ref{fig:dist-raw}.
+Figure \ref{fig:dist-avg} illustrates the average of all eight scores for each postion in the search result lists, the maximum value found at this position, and the respective minimum value.
+It shows that the average score declines linearily, which means that the score values are distributed uniformly thorough the result lists. In figure \ref{fig:dist-raw}, every result function shows a variance from the ideal value; the average value in figure \ref{fig:dist-avg}, however, deviates signifitantly less from the ideal than any of the isolated data rows. This leads to the conclusion that the drift from the ideal that occurs when observering one single set of data for one specific search is based on the small amount of examined values (33 data points). The average fitness score shows an average error of approx. 6\% (see figure \ref{fig:dist-err}). The maximum error in the given set of data is 27\%.
+This leads to the conclusion that the fitness score algorithm generates uniformly distributed score values with an acceptable error.\\
+Interestingly, the maximum error seems to have a declining trend; the small amount of examined data does not provide a solid basis for assumptions about whether there is a systematic reason for this, and, if so, whether it could have a negative impact on the proper working of the system. Unfortunately, there is no authentic usage data yet, so that this question will remain unanswered and might be subject to further research.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/dist_raw.png}
+    \caption[Raw Scores]{All search results and the ideal value.}
+    \label{fig:dist-raw}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/dist_avg.png}
+    \caption[Average Scores]{Average, maximum and minimum score for earch position in the respective search result list.}
+    \label{fig:dist-avg}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/dist_error.png}
+    \caption[Score Errors]{Average and maximum error (Difference between respective score value and the ideal value)}
+    \label{fig:dist-err}
+\end{figure}
+
+\begin{table}[H]
+
 \centering
-\rotatebox{90}{
+\resizebox{\textwidth}{!}{
+\rotatebox{-90}{
   \begin{tabular}{l||c|c|c|c|c|c|c|c|c||c|c|c||c|c}
 	  No. & $v_{Ideal}$ & A.D. & DBs & Funk. & hybris & Kom. & MySQL & Sketch & Text & Avg. Val. & Min. Val. & Max. Val. & Avg. Err. & Max. Err.\\
 	  \hline
@@ -64,37 +92,12 @@ To test this, one hundred persons have been fed into the system. Each test perso
  	 32 & 0.03125 & 0.05 & 0.06 & 0.06 & 0.06 & 0.16 & 0.16 & 0.05 & 0.15  &  0.09375 & 0.05 & 0.16  &  0.0625 & 0.12875\\
  	 33 & 0 & 0.05 & 0.05 & 0.06 & 0.05 & 0.04 & 0.06 & 0.05 & 0.05  &  0.05125 & 0.04 & 0.06  &  0.05125 & 0.06\\
   \end{tabular}
-}
+}}
 \caption[Fitness Score Test Distribution (Raw)]{Fitness score values that have been selected for this test.}
+\label{alldatatable}
 \end{table}
 
-\begin{figure}[!htp]
-    \centering
-    \includegraphics[width=\textwidth]{images/dist_raw.png}
-    \caption[Raw Scores]{All search results and the ideal value.}
-    \label{fig:dist-raw}
-\end{figure}
-
-\begin{figure}[!htp]
-    \centering
-    \includegraphics[width=\textwidth]{images/dist_avg.png}
-    \caption[Average Scores]{Average, maximum and minimum score for earch position in the respective search result list.}
-    \label{fig:dist-avg}
-\end{figure}
-
-\begin{figure}[!htp]
-    \centering
-    \includegraphics[width=\textwidth]{images/dist_error.png}
-    \caption[Score Errors]{Average and maximum error (Difference between respective score value and the ideal value)}
-    \label{fig:dist-err}
-\end{figure}
-
-The distribution of the score values for every respective search is shown in figure \ref{fig:dist-raw}.
-Figure \ref{fig:dist-avg} illustrates the average of all eight scores for each postion in the search result lists, the maximum value found at this position, and the respective minimum value.
-It shows that the average score declines linearily, which means that the score values are distributed uniformly thorough the result lists. In figure \ref{fig:dist-raw}, every result function shows a variance from the ideal value; the average value in figure \ref{fig:dist-avg}, however, deviates signifitantly less from the ideal than any of the isolated data rows. This leads to the conclusion that the drift from the ideal that occurs when observering one single set of data for one specific search is based on the small amount of examined values (33 data points). The average fitness score shows an average error of approx. 6\% (see figure \ref{fig:dist-err}). The maximum error in the given set of data is 27\%.
-This leads to the conclusion that the fitness score algorithm generates uniformly distributed score values with an acceptable error.\\
-Interestingly, the maximum error seems to have a declining trend; the small amount of examined data does not provide a solid basis for assumptions about whether there is a systematic reason for this, and, if so, whether it could have a negative impact on the proper working of the system. Unfortunately, there is no authentic usage data yet, so that this question will remain unanswered and might be subject to further research.
-
+\newpage
 
 \section{Implementation}
 \subsection{Scalability}
@@ -107,6 +110,7 @@ A software system has to be able to scale according to the number of its users i
     \label{scaleup}
 \end{figure}
 
+\newpage
 \subsubsection{MongoDB}
 MongoDB is meant to be scaled horizontally and supports the adding of new instances to a running cluster of databases out-of-the-box \cite[p. 19]{MongoGuide}. So, new machines running the database as a cluster will be created, if needed. As shown in \ref{scaleup}, the backend servers can be connected to any of the database servers in order to request data. If the demanded document is not found on the instance the backend is connected to, MongoDB will handle the lookup in the cluster; to the application, the cluster is completely transparent and appear as if it was one machine.
 
@@ -119,6 +123,8 @@ served by the reverse proxy web server. In the event of an increasing number of 
 
 \subsubsection{Backend}
 The backend application itself does not save any data on the machine it is running on, but connects a database server (see \ref{impl:be}). As a result, any number of backend instances can be set up. In contrast to the other services, the backend servers do not have to synchronize. In order to receive HTTP requests, the reverse proxy must be configured so that it redirects API calls to the backend servers. This is called \textit{load balancing} and is supported by many modern web servers such as \textit{nginx}, \textit{Apache} and \textit{Tomcat}.
+
+\newpage
 
 \subsection{Conclusion}
 In theory, the application should be able to scale according to the number of its users. Practically, only the running of multiple backend and LDAP servers has been tested successfully. Running multiple database instances has not been tested; since MongoDB has been designed to be horizontally scalable and comes to use in various companies like

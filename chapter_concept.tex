@@ -7,6 +7,7 @@ The central feature of the application is the search function that returns a lis
 \subsection{Recommender Systems}
 Recommender systems ``are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information'' \cite{Isinkaye2015261}\label{recommender-definition} which are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items more prominentely than articles the customer is unlikely to buy. In this application's context, the recommender system will filter the set of all employees and recommend better results by showing them first.
 
+\newpage
 \subsection{Techniques of Content Filtering}
 As described by Isinkaye et al., filtering techniques used in recommender systems are divided in three classes: model based, memory based and hybrid. Each of this classes relies on a different approach for gaining data to filter the information by \cite{Isinkaye2015261}.
 
@@ -48,8 +49,9 @@ The basic structure of the search function will be:
   \item Return Results
 \end{enumerate}
 
+\newpage
 \subsubsection{Pseudo-Implementation}
-\begin{figure}
+\begin{figure}[h]
 \begin{lstlisting}[language=Java]
 function search(searchItems, searchLocation) {
   var results = getAllEmployees()
@@ -83,12 +85,12 @@ function search(searchItems, searchLocation) {
 The application will sort all found persons by their fitness into the searched skill set; so there has to be an algorithm that can assign a score describing said fitness to every person.
 
 \subsubsection{Requirements}
-According to Spoonamore et al., an algorithm that matches persons to positions based on their skills has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
+According to Spoonamore et al., an algorithm that matches persons to positions based on their skills has to meet more demands than solely the functional ones \cite[P. 14]{USN}. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
 \begin{itemize}
   \item Easy to implement and maintain
   \item Fast to execute, so as not to become a computational bottleneck
   \item Takes into account factors: rating, pay grade and NECs\footnote{Navy Enlisted Classifications} and future taxonomies characterizing required knowledge, skills and abilities
-\end{itemize}\cite[P. 14]{USN}
+\end{itemize}
 
 \label{customizable}
 These qualities include factors very specific to the US Navy and thus will have to be evaluated and traslated into SinnerSchraders field of operation, but general requirements such an algorithm has to meet can be deducted: It may not be too complex as employees must be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
@@ -149,6 +151,7 @@ The resulting fitness score $f$ is a weighted mean of the introduced facors. The
   w_{as} + w_{aw} + w_{ss} + w_{sw} = 1
 \end{gather*}
 
+\newpage
 \subsubsection{Example Caculation}
 Let there be three example employees, Alice, Bob, and Charlie, having the same three skills each.
 (Notation: skill level/will level)
@@ -180,6 +183,7 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to a sear
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would result in Bob being recommended as the best match, because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, Alice has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in C++. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a design flaw, since the algorithm has been intentionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
 
+\newpage
 \subsection{Example Search}
 For this example, let the set of employees be Alice, Bob, Charlie, Donald, and Erika, and the set of all known skills be Java, Ruby, and C++.
 The assignment of skill/will levels and the respective locations are:
@@ -232,6 +236,7 @@ the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
 To sum up, the described methods to identify unique persons create an exorbitant computational effort and/or have high error rates for not being able to determine a single user across multiple devices. For the further design of the skill search recommender system, it will be assumed that there is no data about unique users, but about their entirety.
 
+\newpage
 \subsubsection{Skill Attributes}
 The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to form clusters of related skills. Unfortunally, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any menaingful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
@@ -268,7 +273,7 @@ The recommender system will concatenate the suggestion lists of all items in the
 
 \newpage
 \subsection{Pseudo-Code}
-\begin{figure}
+\begin{figure}[h]
 \begin{lstlisting}[language=Java]
 var knownSkills = [
   {
@@ -377,24 +382,24 @@ Using the given transition matrix and the seaerch query ``Java, PHP'', the algor
 
 \section{Visual Concept \& Wireframes}
 The application should be as simple as possible and usable for everyone, in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a people search that provides a way to input the skills needed and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via Email or Google Hangouts\footnote{https://support.google.com/hangouts/answer/2944865}. Unlike the considered commercial solutions (see \ref{commercial}), this tool will not include features like creating statistics, assessments, applicant management, or any dashboard other than the basic search view.
-Furthermore, there will not be any different roles with different access rights for employees and their managers, since this application is meant to be a tool enhancing collaboration, not supervision.
-\begin{figure}[!htp]
+Furthermore, there will not be any different roles with different access rights for employees and their managers, since this application is meant to be a tool enhancing collaboration, not supervision. More information about the concept behind the visual design and the frontend's implementation is provided by \cite{strecker}.
+\newpage
+\begin{figure}[hp]
     \centering
     \includegraphics[width=\textwidth]{images/wireframe.png}
     \caption[Search Result Page (Wireframe)]{Wireframe of the search result view}
     \label{fig:wireframe}
 \end{figure}
-
-\begin{figure}[!htp]
+\newpage
+\begin{figure}[hp]
     \centering
     \includegraphics[width=\textwidth]{images/design_home.png}
-    \caption[Search Page (Concept)]{An early prototypical designs for the search view}
+    \caption[Search Page (Concept)]{An early prototypical design for the search view}
     \label{fig:design_home}
 \end{figure}
+\newpage
 
 \section{Legal Concerns}
 Nearly all of data fall into the category of personal data (\textit{Personenbezogene Daten}), which is defined as ``any information concerning the personal or material circumstances of an identified or identifiable individual (the data subject)'' (BDSG, 3(1)). The personal data will be collected (BDSG, 3(3)), processed (BDSG, 3(4)) and transfered (BDSG, 3(3)) to other employees of SinnerSchrader.
 Generally, this does not violate any law, since the ``collection, storage, modification or transfer of personal data or their use as a means of fulfilling one’s own business purposes shall be admissible'' (BDSG, 28(1)), but some restrictions apply: the data subjects have to be informed about the processing of their personal data, must be able to deny their consent (BDSG, Section 4a), and the personal data shall not be made public.
 To ensure the latter, the application must not be accessible to persons that do not work for or on behalf of SinnerSchrader. Technically, this will be arragned by making the application attainable from SinnerSchrader's internal network only, which can only be used by employees and authorized persons.
-
-TODO: Betriebsrat
