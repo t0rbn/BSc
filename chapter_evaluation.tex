@@ -51,7 +51,6 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 \end{figure}
 
 \begin{table}[H]
-
 \centering
 \resizebox{\textwidth}{!}{
 \rotatebox{-90}{
@@ -99,6 +98,40 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 
 \newpage
 
+\subsection{Survey}
+A random group of employees has been presented an online survery using \textit{Google Forms}\footnote{https://forms.google.com}. The form shows five finctional persons, \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of this persons has different skill and will levels for the
+abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}.
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{l||c|c|c|c}
+		Person  & Java & AEM & Ruby & .NET \\
+		\hline
+		Alice   & 3, 3   & 2, 3  & 0, 1   & 2, 2 \\
+		Bob     & 2, 1   & 3, 0  & 2, 0   & 3, 3 \\
+		Charlie & 1, 3   & 0, 2  & 1, 2   & 2, 3 \\
+		Donald  & 1, 2   & 2, 1  & 1, 2   & 2, 1 \\
+		Erika   & 1, 0   & 0, 1  & 3, 2   & 3, 1 \\
+  \end{tabular}
+\caption[Survey Test Persons]{Skill and will levels of the persons presented in the survey. Notation: skill level, will level}
+\end{table}
+
+The participants were asked to give each of these persons a rating on how well they fit into the searched skill set \textit{Java} and \textit{AEM} on a scale from one (does not fit at all) to five (fits perfectly). The ratings can easily be translated into a fitness score:
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l||c|c|c|c|c}
+	Survey Rating & 1 & 2    & 3   & 4    & 5\\
+	\hline
+	Fitness Score & 0 & 0.25 & 0.5 & 0.75 & 1\\
+\end{tabular}
+\caption[Surver Rating to Fitness Score]{Conversion from survey rating to fitness score.}
+\end{table}
+
+Furthermore, the participants were asked to sort the four factors included in the fitness score calculation algorithm, namely the examined person's average in the skill levels of the searched items, their average in the wkill levels of the searched items, their specialization in knowledge about the searched abilities, and their preference of the searched items over others (see \ref{fitscorealg}).
+
+
+
 \section{Implementation}
 \subsection{Scalability}
 A software system has to be able to scale according to the number of its users in order to be future-proof, as the current trend to dynamically scalable cloud solutions and server-less web architecture approaches highlights. There are two concepts or preparing an application for an higher workload: vertical scaling and horizontal scaling. Vertical scaling is done by providing more resources, e.g. Memory and CPU power, to the machines running the applicaions. Horziontal scaling, however, means setting up more machines providing the same service, so that workload can be distributed between them \cite{hvscale}. In contrast to vertical scaling, horizontal scaling has vital advantages: the application will be more robust since the crashing of one machine can be compensated by others \cite{fedi}, the capacity of the system can, theoretically, be unlimited, and it is cheaper, because instances can be created dynamically if needed and then be destroyed in times of low workload, whereas the resources given to a machine that has been scaled vertically will remain unused.
@@ -126,9 +159,33 @@ The backend application itself does not save any data on the machine it is runni
 
 \newpage
 
-\subsection{Conclusion}
+\subsubsection{Conclusion}
 In theory, the application should be able to scale according to the number of its users. Practically, only the running of multiple backend and LDAP servers has been tested successfully. Running multiple database instances has not been tested; since MongoDB has been designed to be horizontally scalable and comes to use in various companies like
 \textit{Github}\footnote{https://www.mongodb.com/presentations/mongosv-2012/mongodb-analytics-github},
 \textit{eBay}\footnote{https://www.mongodb.com/presentations/mongodb-ebay}, and
 \textit{Otto}\footnote{https://www.mongodb.com/industries/retail}, it can be assumed that this can be done successfully for this application, too.
-Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend was not part of this thesis, but has been worked on by \cite{strecker}.
+Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend was not part of this thesis, but has been worked on by Strecker \cite{strecker}.
+
+\subsection{Response Times}
+As defined in \ref{require_times}, the application should need less than one second of response time between the user pressing the search button and the
+displaying of the search results. The response times of the corresponding API endpoint have been measured an can be found in table \ref{tab:responsetimes}.
+The average response time of the backend is 28ms, the maximum is 44ms.
+
+\begin{table}[H]
+\centering
+  \begin{tabular}{l|c|c|}
+		Request Parameters                    & Response Times (in ms)                & Average\\
+		\hline
+		No parameters               & 26, 28, 27, 40, 27, 33, 28, 29, 26, 29 & 29\\
+		Specific Skill              & 32, 40, 30, 32, 26, 24, 28, 44, 33, 32 & 32\\
+		Specific Location           & 27, 26, 26, 25, 26, 36, 26, 22, 21, 25 & 26\\
+		Specific Skill and Location & 36, 24, 23, 21, 22, 24, 33, 20, 30, 21 & 25\\
+  \end{tabular}
+
+\caption[API Response Times]{Measured response times of the api endpoint for the search function.}
+\label{tab:responsetimes}
+\end{table}
+
+Measurements of a prototypical stage of the frontend using \textit{Google Chrome's} built-in profiling tools showed a total response-time, that is sending the HTTP request to the API, waiting for the response, parsing the response, and rendering the results, of approximately 90ms on average. The maximum response time was 106ms.
+
+Those results show that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users percieving the interaction with the system as immediate \cite{responsetimes}, which enhances the overall user expierience.

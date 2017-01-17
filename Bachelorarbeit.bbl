@@ -91,6 +91,15 @@
 \newblock DOI http://dx.doi.org/10.1016/j.eij.2015.06.005. --
 \newblock ISSN 1110--8665
 
+\bibitem[IIK13]{ivanovska}
+\textsc{Ivanovska}, Sashka ; \textsc{Ivanovska}, Ilinka  ;
+  \textsc{Kalajdziski}, Slobodan:
+\newblock Algorithms for Effective Team Building, 2013 (The 10th Conference for
+  Informatics and Information Technology (CIIT 2013))
+
+\bibitem[Kea17]{RAIL}
+\url{https://developers.google.com/web/fundamentals/performance/rail}
+
 \bibitem[Leh04]{Marktanalyse}
 \textsc{Lehner}, Franz:
 \newblock \emph{Marktanalyse zum Angebot an Skill-Management-Systemen}.
@@ -129,6 +138,12 @@
 \newblock Department of Mathematical Sciences; University of Alabama in
   Huntsville
 
+\bibitem[Sin17]{quartalsbericht}
+\textsc{SinnerSchrader}:
+\newblock \emph{Quartalsbericht 1 2016/2017}.
+\newblock \url{https://sinnerschrader.ag/de/berichte/}.
+\newblock \,Version:\,2017
+
 \bibitem[Smi15]{json}
 \textsc{Smith}, Ben:
 \newblock \emph{Beginning JSON}.
@@ -142,9 +157,17 @@
 \newblock \emph{Person-to-Position Matching}.
 \newblock 2007
 
+\bibitem[Sta]{allthemobile}
+\textsc{Statista}:
+\newblock \emph{Share of users with mobile or stationary internet access in
+  Germany in 2014}.
+\newblock
+  \url{https://www.statista.com/statistics/432146/internet-access-devices-used-germany/}
+
 \bibitem[Str17]{strecker}
 \textsc{Strecker}, Katharina:
-\newblock \emph{Lorem Ipsum}.
+\newblock \emph{Front-End Konzeption und Umsetzung eines unternehmensinternen
+  Webtools für Skillmanagement}.
 \newblock 2017
 
 \bibitem[WGGK16]{finger}

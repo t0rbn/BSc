@@ -9,7 +9,7 @@ enabling employees to find someone who can help in order to answer questions and
 
 \subsection{Finding Potential Team Members}
 Team managers constantly face the problem of reassembling parts of their teams, forming new teams for new projects, and
-disbanding teams whose projects have ended. As there is no unified source of information about all employees, managers often
+disbanding teams whose projects have ended. As there is no unified source of information about all employees at SinnerSchrader, managers often
 do not find the best suitable team member to fill an open position because they simply do not know each other yet.
 The tool will give managers the opportunity to search the entirety of employees at SinnerSchrader and find one
 meeting all requirements of the open position, thus making collocating teams easier and more efficient.
@@ -70,12 +70,19 @@ there also exist intrinsic motivations to do so. Being motivated intrinsically i
 \end{itemize}
 
 \subsection{Non Functional Requirements}
-TODO: Klären und formulieren
 \begin{itemize}
-	\item Desktop/Devices
-	\item Browsers
-	\item Scalability
+	\item Device Types\\
+		Even tough smart phones are gaining more and more share in terms of total internet traffic \cite{allthemobile},
+		the application will be optimized for desktop use. Every employee has permanent access to their computer and uses it
+		for their work, so it is assumed, that the very same machines will be used to access the skill management application.
+	\item Browsers\\
+		Every employee is allowed and encouraged to install their favorite software on their personal computer, so nearly every web browser can be found.
+		The application should run on \textit{Google Chrome}\footnote{https://www.google.com/chrome/browser/desktop/index.html}, \textit{Mozilla Firefox}\footnote{https://www.mozilla.org/en-US/firefox/products/} and \textit{Safari}\footnote{http://www.apple.com/lae/safari/} in their latest versions. \textit{Internet Explorer}\footnote{https://www.microsoft.com/en-us/download/internet-explorer.aspx} and \textit{Edge}\footnote{https://www.microsoft.com/en-us/windows/microsoft-edge} will not be supported.
+	\item Scalability\\
+		SinnerSchrader has 459 full-time employees \cite{quartalsbericht}, so the application will be designed for approximately 500 users. In the event of a rapid growth in the userbase, e.g. due to the opening of another office, the system will have to scale up to handle the larger number of users.
 	\item Load/Response Times
+	\label{require_times}
+		According to \textit{Google's} RAIL model, a website needs to respond to the user's input within 100ms to offer a fluent user expierience; the triggered action should be finished within one second after the user's interaction \cite{RAIL}. In the context of the application's search function, this means that the system will show the user that their input has been acknowledged within 100ms. Within one second after the submission of the search request, the result list will be rendered completelty.
 \end{itemize}
 
 
@@ -83,7 +90,7 @@ TODO: Klären und formulieren
 \section{Commercial Solutions}
 \label{commercial}
 Three commercial skills management applications have been picked randomly for further examination: \textit{Skills Base}, \textit{engage! Talent Management} and \textit{SkillsDB Pro}.
-A more detailed analysis by Lehner shows that most tools, provide a spectrum of features and limitationss very similar to the examined solutions, so that the selection is assumed to be representative to the market \cite{Marktanalyse}.
+A more detailed analysis by Lehner shows that most tools provide a spectrum of features and limitations very similar to the examined solutions \cite{Marktanalyse}, so that the selection is assumed to be representative to the market.
 
 \subsection{Skills Base}
 Skills Base\footnote{http://http://www.skills-base.com/} offers the required features, but also includes a large number of functionality SinnerSchrader does not need and ist not willing to use. This includes assessments, the categorization of skills, and a role model for advanced access rights configuration.
