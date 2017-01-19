@@ -9,6 +9,7 @@ A level-1 auxiliary file: chapter_objectives.aux
 A level-1 auxiliary file: chapter_concept.aux
 A level-1 auxiliary file: chapter_implementation.aux
 A level-1 auxiliary file: chapter_evaluation.aux
+A level-1 auxiliary file: chapter_discussion_outlook.aux
 The style file: alphadin.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -35,7 +36,7 @@ Warning--empty booktitle in ivanovska
 Warning--empty pages in ivanovska
 You've used 27 entries,
             4793 wiz_defined-function locations,
-            1051 strings with 10500 characters,
+            1052 strings with 10529 characters,
 and the built_in function-call counts, 15213 in all, are:
 = -- 1569
 > -- 373

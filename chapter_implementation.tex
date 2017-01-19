@@ -13,14 +13,14 @@ To store and read data, the backend connects to a MongoDB Database. User details
 
 \newpage
 \section{MongoDB}
-MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL Database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{(Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}.
+MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}.
 
 \subsection{BSON}
 \label{BSON}
 In contrast to relational databases that store all data in tables, MongoDB uses a document-orient data structure saving every element in the Binary JSON\footnote{Javascript Object Notation} (BSON) format. This approach allows complex data to be stored as one object rather than having to dissect its elements and storing them in separate tables. As a consequence, retrieving an object from the database is much more efficient than it would be using a RDBMS, as the latter needs to join the tables storing the object's nested sub-objects and compose the requested element whereas MongoDB has it stored in the exact same form it is requested \cite[p. 10]{MongoGuide}.
 
 \subsection{Data Structure}
-The application stores three diffenrent object classes in the database: Skills that are known to the system, persons with their individual contact data and skills, and sessions used to authenticate users that wish to modify their profiles. In order to instanciate the elements as java objects, Spring Data\footnote{http://projects.spring.io/spring-data/}, the framework used for database access, also stores the class name the object needs to be mapped to as a field inside of it. Furthermore, every item has the field \textit{version} which holds a version number used to resolve writing conflicts that may occur when multiple threads access the same object simultaneously.
+The application stores three diffenrent object classes in the database: skills that are known to the system, persons with their individual contact data and skills, and sessions used to authenticate users that wish to modify their profiles. In order to instanciate the elements as java objects, Spring Data\footnote{http://projects.spring.io/spring-data/}, the framework used for database access, also stores the class name the object needs to be mapped to as a field inside of it. Furthermore, every item has the field \textit{version} which holds a version number used to resolve writing conflicts that may occur when multiple threads access the same object simultaneously.
 
 \newpage
 \subsubsection{Known Skills}
@@ -64,7 +64,7 @@ Sessions are used to authenticate users that wish to modify their personal profi
 
 \subsubsection{Persons}
 \label{db:person}
-The documents that represent persons contain the respective person's id\footnote{Each employee gets assigned an internal id (``Benutzerkürzel'') that is globally used to uniquely identify a person.}, their personal data like first and last name, telephone number, e-mail address, office location, job title\footnote{The job title data is not maintained consistently in the LDAP, so that, unfortunately, it is not suitable to be used in the person search.}, and a list of the person's skills. Each of those skills consists of a name, a level of skill and a level of will.
+The documents that represent persons contain the respective person's id\footnote{Each employee gets assigned an internal id (\textit{Benutzerkürzel}) that is globally used to uniquely identify a person.}, their personal data like first and last name, telephone number, e-mail address, office location, job title\footnote{The job title data is not maintained consistently in the LDAP, so that, unfortunately, it is not suitable to be used in the person search.}, and a list of the person's skills. Each of those skills consists of a name, a level of skill and a level of will.
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
 {
@@ -112,10 +112,10 @@ db.person.find({ "skills._id" : "Ruby" })
 SinnerSchrader runs a LDAP server which acts as a centralized source of personal information of all employees. The application connects to this server in order to retrieve contact information to display in users' profiles. In comparison with having the users to enter their data manually, this methods has the benefit that the users' data will be kept in sync across all internal services, and that it reduces the effort a user has to spend to create their profile.
 
 \section{Reverse Proxy}
-Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguising between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting them as one uniform service.
+Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguishing between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting one uniform service to the outside.
 
 \section{API}
-To exchange data between the backend and the frontend, a Representational State Transfer (REST) API is provided by the backend. Its endpoints are called by the fronted code to either request data or to command the backend to perform modifying operations on it.
+To exchange data between the backend and the frontend, a \textit{Representational State Transfer} (REST) API is provided by the backend. Its endpoints are called by the fronted code to either request data or to command the backend to perform modifying operations on it.
 The used HTTP method is the main indicator of the action to perform: GET is used to retrieve data, POST to insert new elements, PUT to modify existing ones and DELETE to remove them. The URLs of the individual action express the entity on which the action will be performed. All API endpoints are listed in table \ref{swaggertable}.
 
 \begin{table}[p]
@@ -169,7 +169,7 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 	]
 }
 \end{lstlisting}
-\caption[Person API Response]{Example JSON response by the api for the request \textit{/users/foobar}. For comparison, the corresponding database entry is shown in \ref{db:person}.}
+\caption[Person API Response]{Example JSON response by the API for the request \textit{/users/foobar}. For comparison, the corresponding database entry is shown in \ref{db:person}.}
 \end{figure}
 
 
@@ -188,7 +188,7 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 The backend component ist implemented in Java 8\footnote{https://go.java/} using the Spring Boot framework\footnote{https://projects.spring.io/spring-boot/}. Maven\footnote{https://maven.apache.org/what-is-maven.html} is employed to manage the build process and run unit and integration tests.
 
 \section{Architecture}
-The software architecture consists of three main categories of classes: services handling data manipulation and filtering that hold the business logic, repository objects that wrap the database operations into easy-to-use handlers, and domain specific data types. Additionally, numerous helper classes like custom exception types, comparators and general utilities are implemented.
+The software architecture consists of three main categories of classes: services handling data manipulation and filtering that hold the business logic, repository objects that wrap the database operations into easy to use handlers, and domain specific data types. Additionally, numerous helper classes like custom exception types, comparators and general utilities are implemented.
 \begin{figure}[!h]
     \centering
     \includegraphics[height=0.55\textheight]{images/uml.png}
@@ -198,9 +198,9 @@ The software architecture consists of three main categories of classes: services
 \newpage
 
 \subsection{Spring Boot}
-Spring Boot is a highly sophisticated web framework that provides numerous features to create web applications including, but not limted to, annotations to expose java methods as HTTP request endpoints, an embedded webserver to run the application on, a modular design to extend its features, and annotation based dependency injection. It is used because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications structure \cite[p. 6]{SpringGuide}.
+\textit{Spring Boot} is a highly sophisticated web framework that provides numerous features to create web applications including, but not limted to, annotations to expose java methods as HTTP request endpoints, an embedded webserver to run the application on, a modular design to extend its features, and dependency injection. It is used because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
 For example, a controller that returns a static response can be created using two annotations:
-\textit{@Controller} to make spring boot identify the class as a resource that will listen to HTTP calls, and \textit{@Request} to specify the URL and HTTP method to use. Unlike most other web frameworks, spring boot does not require any more configuration or dispatching classes.
+\textit{@Controller} to make Spring Boot identify the class as a resource that will listen to HTTP calls, and \textit{@Request} to specify the URL and HTTP method to use. Unlike most other web frameworks, spring boot does not require any more configuration or dispatching classes.
 
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
@@ -223,8 +223,8 @@ public class HTCPCPImpl {
 
 \newpage
 \subsection{Spring Data Repositories}
-Spring Data\footnote{http://projects.spring.io/spring-data/} is a module for Spring Boot that streamlines the way elements can be accessed from a database.
-The component mainly used in this application are CRUD\footnote{Create, Read, Update, Delete} repository objects that enclose the database connections and serve
+\textit{Spring Data}\footnote{http://projects.spring.io/spring-data/} is a module for Spring Boot that streamlines the way elements can be accessed from a database.
+The components mainly used in this application are CRUD\footnote{Create, Read, Update, Delete} repository objects that enclose the database connections and serve
 simple java methods as an interface. To create such a repository, a java interface defining the stored data type and custom database queries has to be constructed.
 No actual implementation of the interface has to be created since it will be generated automatically by Spring Data.
 The parameters needed to connect to the database have to be configured in any source of properties known to Spring Boot, e.g. in \textit{src/main/resources/application.properties}.
@@ -232,7 +232,7 @@ The parameters needed to connect to the database have to be configured in any so
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
 public interface PersonRepository
-    extends MongoRepository<Person, String> {
+		extends MongoRepository<Person, String> {
 
 	Person findById(String id);
 
@@ -241,7 +241,7 @@ public interface PersonRepository
 
 }
 \end{lstlisting}
-\caption[Example Repository Interface]{Example for a repository interface managing person objects stored in the database}
+\caption[Example Repository Interface]{Example for a repository interface managing person objects stored in the database.}
 \end{figure}
 
 \begin{figure}[h]
@@ -294,6 +294,7 @@ public class LdapService {
 		}
 		return false;
 	}
+
 }
 \end{lstlisting}
 \caption[LDAP User Authentication (Code)]{LDAP user authentiction using the unboundid library. Note: parts of the code have been removed for this example.}
@@ -301,9 +302,9 @@ public class LdapService {
 
 
 \subsection{Swagger}
-Swagger\footnote{http://swagger.io/} is an open-source framework for creating documentations of REST APIs.
+\textit{Swagger}\footnote{http://swagger.io/} is an open source framework for creating documentations of REST APIs.
 Its annotation based java integration is heavily used to generate an interactive overview of the API endpoints provided by the
-backend. This overview is automatically served by spring boot and contains a list of all URLs to make requests to, HTTP response codes to expect, the content type of the response and an built-in form to make example requests. The main advantage of this approach is that the code and its documentation are located at the very same place and that parts of the documentation are automatically gernerated, so that the both are maintained synchronously, thus avoiding the documentation differing from the implementation.
+backend. This overview is automatically served by spring boot and contains a list of all URLs to make requests to, HTTP response codes to expect, the content type of the response and a built in form to make example requests. The main advantage of this approach is that the code and its documentation are located at the very same place and that parts of the documentation are automatically gernerated, so that both are maintained synchronously, thus avoiding the documentation differing from the implementation.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/swagger_ui.png}
@@ -312,7 +313,7 @@ backend. This overview is automatically served by spring boot and contains a lis
 \end{figure}
 
 \subsection{Testing}
-As a part of the build process, automatic tests are run using the JUnit\footnote{http://junit.org} framework. Two types of tests are employed to ensure the proper working of the software: unit tests that validate isolated segments (java classes), and integration tests that simulate calls to the controllers and test the
+As a part of the build process, automatic tests are run using the \textit{JUnit}\footnote{http://junit.org} framework. Two types of tests are employed to ensure the proper working of the software: unit tests that validate isolated segments (java classes), and integration tests that simulate calls to the controllers and test the
 interplay of the individual components.
 
 \begin{figure}[h]
@@ -357,7 +358,8 @@ public class KnownSkillSuggestionComparatorTest {
 
 \subsubsection{Embedded Services}
 During the integration test phase, external services like LDAP and a database have to be accessed in order to ensure the proper working of the interfaces connecting to them. Using the real services, however, is not an option as it cannot be assumed that the machine that runs the tests has a connection to them, and because the tests have to take control over the state of the services. To solve this, a LDAP server and a MongoDB are embedded into the application and will be used during testing.
-The embedded database is the MongoDB implementation by \textit{flapdoodle}\footnote{https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo}, which has the advantage of being effortlessly deployed by importing it; all further configuration and setup happen automatically. As an embedded LDAP, the implementation created for the \textit{unboundid} framework\footnote{https://www.ldap.com/unboundid-ldap-sdk-for-java} is used.
+The embedded database is the MongoDB implementation by \textit{flapdoodle}\footnote{https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo}, which has the advantage of being effortlessly deployed by importing it; all further configuration and setup happen automatically.
+To embed an LDAP service, the \textit{unboundid} framework\footnote{https://www.ldap.com/unboundid-ldap-sdk-for-java} is used.
 
 \section{License}
 The software is licensed under the MIT license \cite{license} which is considered one of the most popular open source licenses, mainly because it grants a high level of freedom to modify and use the software under the sole condition that a copy of the original license is distributed algonside the software.

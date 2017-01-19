@@ -37,7 +37,7 @@ As a result, supervisors can identify appropriate moments for reevaluating the s
 For example, according to Tuckman's team development model, the so called \textit{adjourning} phase of a project is an occasion for ``recognition of individual achievements and reflection on how far the team has come'' \cite[P. 3]{Wilson} and thus is a convenient chance to add new skills acquired during the project and to refine the existing data.
 
 \subsubsection{Automatic Notifications}
-In contrast to the supervisor, the application cannot be able to find the best situations to notify employees to maintain their skill profile, so sending automatic notifications will not be nearly as effective as being reminded by the supervisor. Furthermore, according to the Direct Marketing Association (UK), only
+In contrast to the supervisor, the application cannot be able to find the best situations to notify employees to maintain their skill profile, so sending automatic notifications will not be nearly as effective as being reminded by the supervisor. Furthermore, according to the \textit{Direct Marketing Association (UK)}\footnote{https://dma.org.uk/}, only
 about one in five automatically generated e-mails will be opened \cite{mailrep}, which reflects SinnerSchraders
 expieriences with email reminders. Those facts justify the decision, that the system will not send any notification to its users.
 
@@ -48,25 +48,26 @@ there also exist intrinsic motivations to do so. Being motivated intrinsically i
 
 
 \section{Requirements}
+\label{requirements}
 \subsection{Functional Requirements}
 \begin{itemize}
  	\item Accessible to all Employees\\
-	Every employee must be able to use the application regardless of their equipment or used operating system.
+	Every employee must be able to use the application regardless of their equipment or preferred operating system.
 	\item User Profiles \\
-	Anyone can see another user’s profile consisting of basic information about the user such as name, location, e-mail and personal skills. Personal skills are composed of a name, a skill level and a will level, both on a scale from one to four.
+	Anyone can see another user’s profile consisting of basic information about the user such as name, location, e-mail and personal skills. Personal skills are composed of a name, a skill level and a will level, both on a scale from one (worst) to four (best).
 	\item Provide/Edit skills\\
 	Users can add new skills from a pool of known skills to their own profile. Already added skills can be edited and removed from the profile.
 	\item Search\\
 	A search function can be used to find people who have added one or more specific skills to their profile. When searching for multiple skills, only persons matching all of them will will be displayed.
 	\begin{itemize}
 		\item Ranking\\
-			By default, the search results order should be defined by a score aggregating the individual employee's skill level, will level and grade of spezialization in the searched skills.
+			By default, the search results' order should be defined by a score aggregating the individual employee's skill level, will level and grade of spezialization in the searched skills.
 		\item Sorting\\
 			The user should be able to sort the search results not only by said score
 			but also by knowledge and will level.
 	\end{itemize}
-	\item Management of known skills\\
-	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users' personal skills are automatically updated when a skill has been edited so that the integrity of the user profiles is maintained at all times.
+	\item Management of Known Skills\\
+	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users' personal skills are automatically updated when a skill has been edited, so that the integrity of the users' profiles is maintained at all times.
 \end{itemize}
 
 \subsection{Non Functional Requirements}
@@ -80,7 +81,7 @@ there also exist intrinsic motivations to do so. Being motivated intrinsically i
 		The application should run on \textit{Google Chrome}\footnote{https://www.google.com/chrome/browser/desktop/index.html}, \textit{Mozilla Firefox}\footnote{https://www.mozilla.org/en-US/firefox/products/} and \textit{Safari}\footnote{http://www.apple.com/lae/safari/} in their latest versions. \textit{Internet Explorer}\footnote{https://www.microsoft.com/en-us/download/internet-explorer.aspx} and \textit{Edge}\footnote{https://www.microsoft.com/en-us/windows/microsoft-edge} will not be supported.
 	\item Scalability\\
 		SinnerSchrader has 459 full-time employees \cite{quartalsbericht}, so the application will be designed for approximately 500 users. In the event of a rapid growth in the userbase, e.g. due to the opening of another office, the system will have to scale up to handle the larger number of users.
-	\item Load/Response Times
+	\item Load/Response Times\\
 	\label{require_times}
 		According to \textit{Google's} RAIL model, a website needs to respond to the user's input within 100ms to offer a fluent user expierience; the triggered action should be finished within one second after the user's interaction \cite{RAIL}. In the context of the application's search function, this means that the system will show the user that their input has been acknowledged within 100ms. Within one second after the submission of the search request, the result list will be rendered completelty.
 \end{itemize}
@@ -93,7 +94,7 @@ Three commercial skills management applications have been picked randomly for fu
 A more detailed analysis by Lehner shows that most tools provide a spectrum of features and limitations very similar to the examined solutions \cite{Marktanalyse}, so that the selection is assumed to be representative to the market.
 
 \subsection{Skills Base}
-Skills Base\footnote{http://http://www.skills-base.com/} offers the required features, but also includes a large number of functionality SinnerSchrader does not need and ist not willing to use. This includes assessments, the categorization of skills, and a role model for advanced access rights configuration.
+Skills Base\footnote{http://http://www.skills-base.com/} offers the required features, but also includes a large number of functionality SinnerSchrader does not need and is not willing to use. This includes assessments, the categorization of skills, and a role model for advanced access rights configuration.
 The search function does not provide searching for multiple skills. Furthermore, the sorting of results found cannot be customized. A central point of the application are dashboards displaying information about the most popular skills in the organisation and long term statistics.
 \begin{figure}[!htp]
     \centering
@@ -116,15 +117,15 @@ Talent Management\footnote{http://www.infoniqa.com/hr-software/skill-management}
 SkillsDB Pro\footnote{http://www.skillsdbpro.com} is an application designed to serve as a database in an organization providing an overview about every person’s own skills and and trainings only to themselves and their manager. The search function is capable of searching for multiple skills combined with different logical operators which enables users to enter very sophisticated queries.
 Not only can users provide information about their skills, but managers can also do this with the limitation that no employee can see their manager’s rating about themselves.
 Furthermore, only managers can search for persons. Taking into consideration that SinnerSchrader needs a tool to enable everyone to find someone with a specific skillset, this is a serious disadvantage.
-SkillsDB also offers features SinnerSchrader does not intent to use including, but not limited to, the automatic generation of project reports based on plan succession and demands for assessments.
+SkillsDB also offers features SinnerSchrader does not intent to use including the automatic generation of project reports based on plan succession and demands for assessments.
 
 \subsection{Conclusion}
 None of the analyzed softwares offers all features required, but all of them include various functions SinnerSchrader does not intend to use, which brings undesired complexity into the applications.
-One of the most critical features, sorting the search results by best match, is not offered by any of the commercial solutions.
+One of the most critical features, sorting the search results by both knowledge and motivation is not offered by any of the commercial solutions.
 Furthermore, all those systems differentiate between employees and their supervisors and thus restrain transparency. The application is not supposed to be used for monitoring and rating employees, but should give employees the possibility to find each other; categorizing them would clearly defeat this purpose.
 
 \subsubsection{Pain Point Fitness Scoring}
 As shown by Canós‐Darós, motivation is a vital factor regarding any employee's performance and quality of work \cite{CanosDaros2013}.
 Although motivation is a complex construct of many highly diverse dimensions, the overlap of a person's interests and their duties is a key aspect to it.
 Assuming that every member of the company has some skills they prefer to employ over others, matching people to tasks that require the exact same abilities they are interested in employing will lead to more motivated employees and thus have a positive impact on the overall productivity.
-Consequentely, when searching for persons having specific skills, the application should not only take into acount the employees' skills but only their preferences in order not to find the most skilled, but the best fitting one. Unfortunally, none of the examined applications does provide a way to aggregate both, skills and preferences, into a single score indicating the overall grade suitability of a person relative to the searched skills.
+Consequentely, when searching for persons having specific skills, the application should not only take into acount the employees' skills but also their preferences in order not to find the most skilled, but the best fitting one. Unfortunally, none of the examined applications does provide a way to aggregate both skills and preferences into a single score indicating the overall grade suitability of a person relative to the searched skills.
