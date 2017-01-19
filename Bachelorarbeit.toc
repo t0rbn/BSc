@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.1}Motivation}{1}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}SinnerSchrader}{1}{subsection.1.1.1}
 \contentsline {subsubsection}{\nonumberline Project-Driven Business}{1}{section*.3}
-\contentsline {subsubsection}{\nonumberline Matrix Organisation}{2}{section*.4}
+\contentsline {subsubsection}{\nonumberline Matrix organization}{2}{section*.4}
 \contentsline {section}{\numberline {1.2}Leading Goals}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}
 \contentsline {chapter}{\numberline {3}Functional Objectives and Exisiting Solutions}{5}{chapter.3}
@@ -39,14 +39,14 @@
 \contentsline {subsubsection}{\nonumberline Requirements}{16}{section*.14}
 \contentsline {subsubsection}{\nonumberline Factors to Include}{17}{section*.15}
 \contentsline {subsubsection}{\nonumberline Proposed Fitness Score Algorithm}{17}{section*.16}
-\contentsline {subsubsection}{\nonumberline Example Caculation}{19}{section*.17}
+\contentsline {subsubsection}{\nonumberline Example Calculation}{19}{section*.17}
 \contentsline {subsection}{\numberline {4.1.5}Example Search}{20}{subsection.4.1.5}
 \contentsline {section}{\numberline {4.2}Search Suggestions}{20}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Available Data}{21}{subsection.4.2.1}
 \contentsline {subsubsection}{\nonumberline Distinguishable Users}{21}{section*.18}
 \contentsline {subsubsection}{\nonumberline Skill Attributes}{22}{section*.19}
 \contentsline {subsubsection}{\nonumberline Aggregated Search History}{22}{section*.20}
-\contentsline {subsection}{\numberline {4.2.2}Choosen Appoach}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Choosen Approach}{22}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Concept}{22}{subsection.4.2.3}
 \contentsline {subsubsection}{\nonumberline Markov Chains}{22}{section*.21}
 \contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{23}{section*.22}
