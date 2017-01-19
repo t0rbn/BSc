@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  19 JAN 2017 18:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  19 JAN 2017 19:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1499,9 +1499,9 @@ chapter 7.
 ]
 chapter without number
 
-Underfull \hbox (badness 2012) in paragraph at lines 32--37
-[]\T1/ppl/m/sc/10.95 Bergmann\T1/ppl/m/n/10.95 , Rainer:  \T1/ppl/m/it/10.95 Or
--gan-i-sa-tion und Pro-jek-t-man-age-ment\T1/ppl/m/n/10.95 .  2. Aufl.
+Underfull \hbox (badness 2384) in paragraph at lines 32--37
+[]\T1/ppl/m/sc/10.95 Bergmann\T1/ppl/m/n/10.95 , Rainer:  \T1/ppl/m/it/10.95 or
+-ga-ni-za-tion und Pro-jek-t-man-age-ment\T1/ppl/m/n/10.95 .  2. Aufl.
  []
 
 
@@ -1610,7 +1610,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 78.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 2B344DFD9B6F46AD5B8A319FC2CAF9BA;4242.
+(rerunfilecheck)             Checksum: 6C113DBC91E2577C7780D666C2D7D769;4241.
 
 
 LaTeX Warning: There were undefined references.
@@ -1636,7 +1636,7 @@ type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
 lb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share
 /texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/ty
 pe1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (71 pages, 2385251 bytes).
+Output written on Bachelorarbeit.pdf (71 pages, 2385209 bytes).
 PDF statistics:
  1396 PDF objects out of 1440 (max. 8388607)
  1267 compressed objects within 13 object streams

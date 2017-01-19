@@ -7,7 +7,7 @@
 \contentsline {subsubsection}{\nonumberline Matrix organization}{2}{section*.4}
 \contentsline {section}{\numberline {1.2}Leading Goals}{2}{section.1.2}
 \contentsline {chapter}{\numberline {2}Related Work}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}Functional Objectives and Exisiting Solutions}{5}{chapter.3}
+\contentsline {chapter}{\numberline {3}Functional Objectives and Existing Solutions}{5}{chapter.3}
 \contentsline {section}{\numberline {3.1}Usage Scenarios}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Asking for Help}{5}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Finding Potential Team Members}{5}{subsection.3.1.2}
@@ -18,7 +18,7 @@
 \contentsline {subsubsection}{\nonumberline Intrinsic Motivations}{7}{section*.7}
 \contentsline {section}{\numberline {3.2}Requirements}{7}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Functional Requirements}{7}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Non Functional Requirements}{8}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Non-Functional Requirements}{8}{subsection.3.2.2}
 \contentsline {section}{\numberline {3.3}Commercial Solutions}{8}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Skills Base}{9}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Talent Management (engage!)}{9}{subsection.3.3.2}
@@ -46,7 +46,7 @@
 \contentsline {subsubsection}{\nonumberline Distinguishable Users}{21}{section*.18}
 \contentsline {subsubsection}{\nonumberline Skill Attributes}{22}{section*.19}
 \contentsline {subsubsection}{\nonumberline Aggregated Search History}{22}{section*.20}
-\contentsline {subsection}{\numberline {4.2.2}Choosen Approach}{22}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Chosen Approach}{22}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Concept}{22}{subsection.4.2.3}
 \contentsline {subsubsection}{\nonumberline Markov Chains}{22}{section*.21}
 \contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{23}{section*.22}
