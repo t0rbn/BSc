@@ -32,21 +32,21 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/dist_raw.png}
-    \caption[Raw Scores]{All search results and the ideal value.}
+    \caption[Diagram: Fitness Score Distribution (Raw)]{All search results and the ideal value.}
     \label{fig:dist-raw}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/dist_avg.png}
-    \caption[Average Scores]{Average, maximum and minimum score for earch position in the respective search result list.}
+    \caption[Diagram: Fitness Score Distribution (Processed)]{Average, maximum and minimum score for earch position in the respective search result list.}
     \label{fig:dist-avg}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/dist_error.png}
-    \caption[Score Errors]{Average and maximum error (Difference between respective score value and the ideal value).}
+    \caption[Diagram: Fitness Score Distribution (Error Rates)]{Average and maximum error (Difference between respective score value and the ideal value).}
     \label{fig:dist-err}
 \end{figure}
 
@@ -55,7 +55,7 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 \resizebox{\textwidth}{!}{
 \rotatebox{-90}{
   \begin{tabular}{l||c|c|c|c|c|c|c|c|c||c|c|c||c|c}
-	  No. & $v_{Ideal}$ & A.D. & DBs & Funk. & hybris & Kom. & MySQL & Sketch & Text & Avg. Val. & Min. Val. & Max. Val. & Avg. Err. & Max. Err.\\
+	  No. & $v_{Ideal}$ & A.D. & DBs & Funk. & hybris & Kom. & MySQL & Sketch & Text & Mean Value & Min. Val. & Max. Val. & Mean Error & Max. Error\\
 	  \hline
 	  1 & 1 & 0.94 & 0.93 & 0.94 & 0.95 & 0.83 & 0.94 & 0.93 & 0.94  &  0.925 & 0.83 & 0.95  &  0.075 & 0.17\\
  	 2 & 0.96875 & 0.93 & 0.75 & 0.84 & 0.94 & 0.82 & 0.93 & 0.93 & 0.76  &  0.8625 & 0.75 & 0.94  &  0.10625 & 0.21875\\
@@ -92,20 +92,23 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
  	 33 & 0 & 0.05 & 0.05 & 0.06 & 0.05 & 0.04 & 0.06 & 0.05 & 0.05  &  0.05125 & 0.04 & 0.06  &  0.05125 & 0.06\\
   \end{tabular}
 }}
-\caption[Fitness Score Test Distribution (Raw)]{Fitness score values that have been selected for this test.}
+\caption[Fitness Score Distribution (Raw Test Data)]{Fitness score values that have been selected for this test.}
 \label{alldatatable}
 \end{table}
 
 \newpage
 
-\subsection{Survey}
-A random group of employees has been presented an online survery using \textit{Google Forms}\footnote{https://forms.google.com}. The form shows five finctional persons, \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of this persons has different skill and will levels for the
-abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}.
+\subsection{Fitness Score Algorithm vs. Human Estimations}
+The algorithm is supposed to calculate a person's fitness so that its results match the ratings estimated by other employees. To validate that
+the cosen approach is capable of this, a set of fictional employees has been rated by both the algorithm and human beings. The respective estimations have been compared to analyze if there is a configuration of weigthing parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ that make the algorithm produce scores that are
+congruent to the estimations made by rating persons.
 
+\subsubsection{Examined Test Records}
+For this test, five test persons will be examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of this persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that will be collected and examined focus on the scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
 \begin{table}[H]
 \centering
   \begin{tabular}{l||c|c|c|c}
-		Person  & Java & AEM & Ruby & .NET \\
+		Test Record  & Java & AEM & Ruby & .NET\\
 		\hline
 		Alice   & 3, 3   & 2, 3  & 0, 1   & 2, 2 \\
 		Bob     & 2, 1   & 3, 0  & 2, 0   & 3, 3 \\
@@ -113,11 +116,14 @@ abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}.
 		Donald  & 1, 2   & 2, 1  & 1, 2   & 2, 1 \\
 		Erika   & 1, 0   & 0, 1  & 3, 2   & 3, 1 \\
   \end{tabular}
-\caption[Survey Test Persons]{Skill and will levels of the persons presented in the survey. Notation: skill level, will level}
+\caption[Survey: Test Record Overview]{Skill and will levels of the persons presented in the survey. Notation: skill level, will level}
 \end{table}
 
-The participants were asked to give each of these persons a rating on how well they fit into the searched skill set \textit{Java} and \textit{AEM} on a scale from one (does not fit at all) to five (fits perfectly). The ratings can easily be translated into a fitness score:
-
+\newpage
+\subsubsection{Survey}
+A random group of 161 employees (35\% of SinnerSchrader's staff) have been presented a survey using \textit{Google Forms}\footnote{https://forms.google.com}.
+In total, 41 persons have given their responses in a timeframe of 72 hours.
+The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented Lickert Items using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
@@ -125,15 +131,104 @@ The participants were asked to give each of these persons a rating on how well t
 	\hline
 	Fitness Score & 0 & 0.25 & 0.5 & 0.75 & 1\\
 \end{tabular}
-\caption[Surver Rating to Fitness Score]{Conversion from survey rating to fitness score.}
+\caption[Survey: Rating to Fitness Score]{Conversion from survey rating to fitness score.}
+\label{tab:scoretrans}
 \end{table}
 
-Furthermore, the participants were asked to sort the four factors included in the fitness score calculation algorithm, namely the examined person's average in the skill levels of the searched items, their average in the wkill levels of the searched items, their specialization in knowledge about the searched abilities, and their preference of the searched items over others (see \ref{fitscorealg}).
+\begin{table}[H]
+\centering
+\begin{tabular}{l||c|c|c|c|c|c||c|c}
+Test Record & 1  & 2  & 3  & 4  & 5  & - & Mean & $f$ \\
+\hline
+Alice       & 0  & 0  & 0  & 15 & 26 & 0 & 4.63 & 0.91 \\
+Bob         & 5  & 26 & 9  & 1  & 0  & 0 & 2.15 & 0.27 \\
+Charlie     & 1  & 14 & 23 & 3  & 0  & 0 & 2.68 & 0.42 \\
+Donald      & 0  & 10 & 27 & 3  & 0  & 1 & 2.83 & 0.46 \\
+Erika       & 32 & 70 & 0  & 2  & 0  & 0 & 1.31 & 0.08 \\
+\end{tabular}
+\caption[Survey: Estimated Fitness Scores]{Fitness scores estimated by 41 test subjects}
+\label{tab:survey_raw}
+\end{table}
 
-TODO auswerten
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/survey_raw.png}
+    \caption[Diagram: Survey Data]{Data collected in the survey.}
+    \label{survey_raw}
+\end{figure}
+
+Furthermore, the participants were asked to rate the importance of the four factors included in the algorithm (see \ref{fitscorealg}), namely the person's average level of skill and will in the searched items, and their respective specialization in the items, on a scale from one (``not important'') to five (``very important''). The results illustrated in table \ref{tab:survey_weight} show that all factors are valued nearly equally important.
+\begin{table}[H]
+\centering
+\begin{tabular}{l||c|c|c|c|c|c||c}
+Factor & 1  & 2  & 3  & 4  & 5  & -\footnote{No Response} & Mean \\
+\hline
+Avgerage Skill Level in Searched Items & 1 & 3 & 10 & 16 & 11 & 0 & 3.80\\
+Avgerage Will Level in Searched Items & 0 & 1 & 8 & 16 & 16 & 0 & 4.15\\
+Specialization in Searched Items (Skill Levels) & 3 & 5 & 17 & 12 & 4 & 0 & 3.22\\
+Specialization in Searched Items (Will Levels) & 1 & 0 & 11 & 22 & 5 & 2 & 3.77\\
+\end{tabular}
+\caption[Survey: Estimated Importance of Weighting Factors]{The importance of the four factors included in the fitness score algorithm as estimated by 41 test subjects.}
+\label{tab:survey_weight}
+\end{table}
 
 
+Using this data to calculate the weighting parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ results in the following values:
+\begin{table}[H]
+\centering
+\begin{tabular}{l||c|c|c|c}
+Parameter & $w_{as}$ & $w_{aw}$ & $w_{ss}$ & $w_{sw}$\\
+\hline
+Weight & 25.44\% & 27.78\% & 21.55\% & 25.23\% \\
+\end{tabular}
+\caption[Survey: Resulting Weighting Parameters]{Weighting parameters based on the collected data.}
+\end{table}
 
+\subsubsection{Comparison}
+To benchmark its results, the fitness score algorithm has been configured to use the weighting score parameters based on the data collected in the survey.
+The fitness rated by the algorithm will be called $f_a$; $f_s$ is the fitness estimated by the test subjects.
+The results illustrated in table \ref{tab:survey_raw} and figure \ref{survey:compare} show that the scores correlate with an average error of 9.4\% and a maximum error of 11.1\%. Since the data colleced in the survey is likely to be inaccurate because of the scale's low resolution of five distinct options and the small number of test records, these results should be taken with a grain of salt.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{l||c|c|c}
+Test Record & $f_a$ & $f_s$ & $\Delta_{f}$ \\
+\hline
+Alice       & 0.82 & 0.91 & 0.09\\
+Bob         & 0.45 & 0.27 & 0.18\\
+Charlie     & 0.47 & 0.42 & 0.05\\
+Donald      & 0.5  & 0.46 & 0.04\\
+Erika       & 0.19 & 0.08 & 0.11\\
+\end{tabular}
+\caption[Survey: Comparison of Algorithm and Survey]{Comparison of the algorithms results and the scores collected in the survey.}
+\label{tab:survey_raw}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{images/survey_vs_alg.png}
+    \caption[Diagram: Comparison of Survey and Algorithm]{Comparison of estimated scores collected in the survey and generated by the algorithm.}
+    \label{survey:compare}
+\end{figure}
+
+\subsubsection{Refining the Fitness Score Algorithm}
+The weighting parameters generated from the survey data are all in the range of 25\%; in fact, setting all parameters to 0.25 will not cause any significant change in the algorithms error rate\footnote{It would reduce the average error from 9.46\% to 9.43\% and the maximum error from 11.07\% to 10.7\%.}, but it will result in all factors being considered equally important and thus reduce the algorithm's complexity.
+Furthermore, the factors could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
+
+\begin{gather*}
+  f = \frac{w_{as} \cdot a_s}{|V|} + \frac{w_{aw} \cdot a_w}{|V|} + w_{ss} \cdot s_s + w_{sw} \cdot s_w \\
+  w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25\\
+\end{gather*}
+\begin{gather*}
+	\Rightarrow f = \left( \frac{a_s + a_w}{|V|} + s_s + s_w \right) \cdot \frac{1}{4}
+\end{gather*}
+
+\subsubsection{Conclusion}
+Comparing the algorithm's results with the values collected in the survey has shown that the algorithmic approach can be used to generate
+suitable ratings of an employee's fitness into a specific set of searched skills. The analysis of the collected data has also demonstrated that the algorithm
+does not need to include weighting parameters since the test subjects perceive all factors to be equally important. Nonetheless, the factors will not be excluded from the algorithm's implemenation since having the possibility to tweak its working might come in handy if the future day to day use of the application reveals other requirements for the weighting.
+
+\newpage
 \section{Implementation}
 \subsection{Scalability}
 \label{scale}
@@ -142,7 +237,7 @@ A software system has to be able to scale according to the number of its users i
 \begin{figure}[!htp]
     \centering
     \includegraphics[width=0.75\textwidth]{images/system_architecture_scaled.png}
-    \caption[System Architecture (scaled up)]{A possible approach to scale the system using multiple backend servers, a CDN, and multiple clustered database and ldap servers. Created with \textit{https://cloudcraft.co}.}
+    \caption[Illustration: Scaled System Architecture]{A possible approach to scale the system using multiple backend servers, a CDN, and multiple clustered database and ldap servers. Created with \textit{https://cloudcraft.co}.}
     \label{scaleup}
 \end{figure}
 
@@ -178,7 +273,7 @@ The average response time of the backend is 28ms, the maximum is 44ms.
 \begin{table}[H]
 \centering
   \begin{tabular}{l|c|c|}
-		Request Parameters                    & Response Times (in ms)                & Average\\
+		Request Parameters                    & Response Times (in ms)                & Mean\\
 		\hline
 		No parameters               & 26, 28, 27, 40, 27, 33, 28, 29, 26, 29 & 29\\
 		Specific Skill              & 32, 40, 30, 32, 26, 24, 28, 44, 33, 32 & 32\\
@@ -193,6 +288,8 @@ The average response time of the backend is 28ms, the maximum is 44ms.
 Measurements of a prototypical stage of the frontend using \textit{Google Chrome's} built-in profiling tools showed a total response-time, that is sending the HTTP request to the API, waiting for the response, parsing the response, and rendering the results, of approximately 90ms on average. The maximum response time was 106ms.
 
 Those results show that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users percieving the interaction with the system as immediate \cite{responsetimes}, which enhances the overall user experience.
+
+\newpage
 
 \section{Meeting the Requirements}
 In \ref{requirements}, a set of functional and non functional requirements has been defined. The backend application that has been designed and implemented has to meet those requirements, and it does: the API supports the creation of user profiles that then can be retrieved, the skills in those profiles can be edited by the profile's owner only, everybody can search for profiles of persons that offer specific skills (see table \ref{swaggertable}). The application was designed to be accessible to all employees, thus it is implemented as a web application that can be opened by any internet enabled device. New skills can be fed into the system so that people can add them to their profiles. \newline

@@ -54,13 +54,13 @@
 \BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 54
 \BOOKMARK [1][-]{section.6.1}{Fitness Score Algorithm}{chapter.6}% 55
 \BOOKMARK [2][-]{subsection.6.1.1}{Uniform Distribution of Score Values}{section.6.1}% 56
-\BOOKMARK [2][-]{subsection.6.1.2}{Survey}{section.6.1}% 57
+\BOOKMARK [2][-]{subsection.6.1.2}{Fitness Score Algorithm vs. Human Estimations}{section.6.1}% 57
 \BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 58
 \BOOKMARK [2][-]{subsection.6.2.1}{Scalability}{section.6.2}% 59
 \BOOKMARK [2][-]{subsection.6.2.2}{Response Times}{section.6.2}% 60
 \BOOKMARK [1][-]{section.6.3}{Meeting the Requirements}{chapter.6}% 61
 \BOOKMARK [0][-]{chapter.7}{Discussion and Outlook}{}% 62
-\BOOKMARK [0][-]{chapter*.32}{Bibliography}{}% 63
-\BOOKMARK [0][-]{chapter*.32}{List of Figures}{}% 64
-\BOOKMARK [0][-]{chapter*.33}{List of Tables}{}% 65
-\BOOKMARK [0][-]{chapter*.35}{Affidavit \(Eidesstattliche Versicherung\)}{}% 66
+\BOOKMARK [0][-]{chapter*.37}{Bibliography}{}% 63
+\BOOKMARK [0][-]{chapter*.37}{List of Figures}{}% 64
+\BOOKMARK [0][-]{chapter*.38}{List of Tables}{}% 65
+\BOOKMARK [0][-]{chapter*.40}{Affidavit \(Eidesstattliche Versicherung\)}{}% 66

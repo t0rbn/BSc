@@ -7,9 +7,13 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 5.1}{\ignorespaces API Endpoints}}{36}{table.5.1}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Fitness Score Test Distribution (Raw)}}{48}{table.6.1}
-\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces Survey Test Persons}}{49}{table.6.2}
-\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Surver Rating to Fitness Score}}{49}{table.6.3}
-\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces API Response Times}}{52}{table.6.4}
+\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Fitness Score Distribution (Raw Test Data)}}{48}{table.6.1}
+\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces Survey: Test Record Overview}}{49}{table.6.2}
+\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Survey: Rating to Fitness Score}}{50}{table.6.3}
+\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces Survey: Estimated Fitness Scores}}{50}{table.6.4}
+\contentsline {table}{\numberline {\relax 6.5}{\ignorespaces Survey: Estimated Importance of Weighting Factors}}{51}{table.6.5}
+\contentsline {table}{\numberline {\relax 6.6}{\ignorespaces Survey: Resulting Weighting Parameters}}{51}{table.6.6}
+\contentsline {table}{\numberline {\relax 6.7}{\ignorespaces Survey: Comparison of Algorithm and Survey}}{52}{table.6.7}
+\contentsline {table}{\numberline {\relax 6.8}{\ignorespaces API Response Times}}{56}{table.6.8}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

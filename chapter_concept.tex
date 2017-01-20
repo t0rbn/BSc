@@ -77,7 +77,7 @@ function search(searchItems, searchLocation) {
   return results
 }
 \end{lstlisting}
-\caption{Pseudo-Implementation of the search algorithm}
+\caption[Pseudocode: Search Algorithm]{Pseudo-Implementation of the search algorithm}
 \end{figure}
 
 \subsection{Scoring Algorithm}
@@ -122,6 +122,8 @@ defined as $Q$.
   E = \{x \in S \ | \ \textrm{employee has skill x}\} \\
   Q = \{x \in S \ | \ \textrm{user searches for skill x}\} \\
 \end{gather*}
+
+\newpage
 
 The function $v_s$ assigns a value of skill to any item in $E$; the function $v_w$ assigns the respective level of will to any item in $E$.
 \begin{gather*}
@@ -259,7 +261,7 @@ can be adjusted accordingly in order to factor the transition into the prospecti
 \begin{figure}[!htp]
     \centering
     \includegraphics[width=0.33\textwidth]{images/markov-chain.png}
-    \caption[Markov Chain]{A simple markov chain displayed as a graph. The states are represented as vertices. All possible transitions between states are denoted as edges. The edge weights define the probability of the transition relative to all other outgoing edges of a node.}
+    \caption[Diagram: Markov Chain]{A simple markov chain displayed as a graph. The states are represented as vertices. All possible transitions between states are denoted as edges. The edge weights define the probability of the transition relative to all other outgoing edges of a node.}
     \label{fig:markovchain}
 \end{figure}
 
@@ -311,7 +313,7 @@ var knownSkills = [
   }
 ]
 \end{lstlisting}
-\caption[Skill Data Structure (Pseudo-Implementation)]{Pseudo-Implementation of the known skills' data structure}
+\caption[Data Structure: Known Skill]{Pseudo-Implementation of the known skills' data structure}
 \end{figure}
 
 \newpage
@@ -341,7 +343,7 @@ function suggest(searched) {
 }
 
 \end{lstlisting}
-\caption[Skill Suggestion Algorithm (Pseudo-Implementation)]{Pseudo-Implementation for the suggestion of a known skill based on a set of already searched items.}
+\caption[Pseudocode: Skill Suggestion Algorithm]{Pseudo-Implementation of the suggestion of a known skill based on a set of already searched items.}
 \end{figure}
 
 \subsection{Example}
@@ -376,7 +378,7 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
 \begin{figure}[!htp]
     \centering
     \includegraphics[width=0.33\textwidth]{images/markov_impl.png}
-    \caption[Search Suggestion Markov Model]{Markov Model used in the example. The two origin states and the transitions that form the end result are highlighted red.}
+    \caption[Diagram: Search Suggestion Markov Model]{Markov Model used in the example. The two origin states and the transitions that form the end result are highlighted red.}
     \label{fig:wireframe}
 \end{figure}
 
@@ -387,14 +389,14 @@ Furthermore, there will not be any roles with different access rights for employ
 \begin{figure}[hp]
     \centering
     \includegraphics[width=\textwidth]{images/wireframe.png}
-    \caption[Search Result Page (Wireframe)]{Wireframe of the search result view}
+    \caption[Illustration: Search Result Page (Wireframe)]{Wireframe of the search result view}
     \label{fig:wireframe}
 \end{figure}
 \newpage
 \begin{figure}[hp]
     \centering
     \includegraphics[width=\textwidth]{images/design_home.png}
-    \caption[Search Page (Concept)]{An early prototypical design for the search view}
+    \caption[Illustration: Search Page (Concept)]{An early prototypical design for the search view}
     \label{fig:design_home}
 \end{figure}
 \newpage
