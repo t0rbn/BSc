@@ -98,7 +98,11 @@
   Informatics and Information Technology (CIIT 2013))
 
 \bibitem[Kea17]{RAIL}
-\url{https://developers.google.com/web/fundamentals/performance/rail}
+\textsc{Kearney}, Meggin:
+\newblock \emph{Measure Peformance with the RAIL Model}.
+\newblock
+  \url{https://developers.google.com/web/fundamentals/performance/rail}.
+\newblock \,Version:\,2017
 
 \bibitem[Leh04]{Marktanalyse}
 \textsc{Lehner}, Franz:
@@ -110,6 +114,12 @@
 \newblock \emph{MIT License}.
 \newblock \url{https://opensource.org/licenses/MIT}.
 \newblock \,Version:\,1988
+
+\bibitem[Mü15]{allthecloud}
+\textsc{Münzl}, Gerald:
+\newblock \emph{Cloud Computing als neue Herausforderung für Management und
+  IT}.
+\newblock Berlin : Springer Vieweg, 2015 (essentials)
 
 \bibitem[NGI]{NGINX}
 \textsc{NGINX{\ }Inc.}:

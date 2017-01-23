@@ -9,7 +9,7 @@ Recommender systems ``are information filtering systems that deal with the probl
 
 \newpage
 \subsection{Techniques of Content Filtering}
-As described by Isinkaye et al., filtering techniques used in recommender systems are divided in three classes: model based, memory based and hybrid. Each of this classes relies on a different approach for gaining data by which the information is filtered \cite{Isinkaye2015261}.
+As described by Isinkaye et al., filtering techniques used in recommender systems are divided in three classes: content based, collaborative, and hybrid. Each of this classes relies on a different approach for gaining data by which the information is filtered \cite{Isinkaye2015261}.
 
 \subsubsection{Content Based Filtering}
 	The content is filtered by examining its attributes in order to find items that are contentually similar to the one the user is currently or has previously been interacting with.
@@ -82,7 +82,8 @@ function search(searchItems, searchLocation) {
 
 \subsection{Scoring Algorithm}
 \label{fitscorealg}
-The application will sort all found persons by their fitness into the searched skill set; so there has to be an algorithm that can assign a score describing said fitness to every person.
+The application will sort all found persons by their fitness into the searched skill set; this fitness will be scored on a scale from zero (worst) to one (best).
+The requirements of the algorithm calculating this fitness and its design will be explained in this section.
 
 \subsubsection{Requirements}
 According to Spoonamore et al., an algorithm that matches persons to positions based on their skills has to meet more demands than solely the functional ones \cite[P. 14]{USN}. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
@@ -93,7 +94,7 @@ According to Spoonamore et al., an algorithm that matches persons to positions b
 \end{itemize}
 
 \label{customizable}
-These qualities include factors very specific to the US Navy and thus will have to be evaluated and translated into SinnerSchraders' field of operation, but general requirements such an algorithm has to meet can be deduced: it may not be too complex as employees must be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
+These qualities include factors very specific to the \textit{US Navy} and thus will have to be evaluated and translated into SinnerSchraders' field of operation, but general requirements such an algorithm has to meet can be deduced: it may not be too complex as employees must be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
 
 \subsubsection{Factors to Include}
 An estimation of a concrete person's fitness into a position described by the searched skill set needs not only to take into account the matching of offered and required skills, but also the employees' motivation to apply said skills derived from their preferences and their personal specialities and expertise. The latter can be described as the skill and will levels that are higher than the person's average level. So the important factors to be included in the algorithm are:
@@ -111,14 +112,14 @@ An estimation of a concrete person's fitness into a position described by the se
 \subsubsection{Proposed Fitness Score Algorithm}
 Skill and will levels are described as integer values on a scale from zero to three. This scale, called $V$, can be expressed as
 \begin{gather*}
-  V = \{ x \in \mathrm{N}_0^+ \ | \  0 \leq x \leq 3\}
+  V = \{ x \in \mathbb{N}_0^+ \ | \  0 \leq x \leq 3\}
 \end{gather*}
 
 All existing skills are accumulated in the set $S$. The employee's skills are represented by $E$ which is a subset of $S$. The search items are
 defined as $Q$.
 
 \begin{gather*}
-  S = \{java, ruby, ...\} \\
+  S = \{Java, Ruby, C++, ...\} \\
   E = \{x \in S \ | \ \textrm{employee has skill x}\} \\
   Q = \{x \in S \ | \ \textrm{user searches for skill x}\} \\
 \end{gather*}
@@ -134,8 +135,7 @@ The function $v_s$ assigns a value of skill to any item in $E$; the function $v_
 The averages of the employees' skill/will values of the searched skills are defined as $a_s$ and $a_w$.
 The variables $s_s$ and $s_w$ describe the employee's specialization in the searched items and are defined as the difference
 of the average skill/will level of the searched items and the average level of all other items.
-A person with maximal interest and knowledge in all searched items and an infinite number of skills with the minimal
-value of zero would have the greatest specialization possible and thus get assigned a value of one.
+A person with maximal interest and knowledge in all searched items and the lowest ratings in their other items would have the greatest specialization possible and thus get assigned a value of one.
 
 \begin{gather*}
   a_s = \left( \sum_{x \in E \cap Q} v_s(x) \right) \cdot \frac{1}{|E \cap Q|} \\
@@ -155,7 +155,7 @@ The resulting fitness score $f$ is a weighted mean of the introduced factors. Th
 
 \newpage
 \subsubsection{Example Calculation}
-Let there be three example employees, Alice, Bob, and Charlie, having the same three skills each.
+Let there be three example employees, \textit{Alice}, \textit{Bob} and \textit{Charlie}, having the same three skills each.
 (Notation: skill level/will level)
 \label{example-fitness}
 \newline
@@ -183,11 +183,11 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to search
 \end{tabular}
 \end{center}
 
-Ranking the employees only by the average value of skill regarding the two searched items would result in Charlie being preferred to Alice and Alice being preferred to Bob. Sorting them using the proposed fitness score, however, would result in Bob being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, Alice has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a design flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
+Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
 
 \newpage
 \subsection{Example Search}
-For this example, let the set of employees be Alice, Bob, Charlie, Donald, and Erika, and the set of all known skills be \textit{Java}, \textit{Ruby}, and \textit{C++}.
+For this example, let the set of employees be \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, and the set of all known skills be \textit{Java}, \textit{Ruby}, and \textit{C++}.
 The assignment of skill/will levels and the respective locations are:
 \newline
 \begin{center}
@@ -203,7 +203,7 @@ The assignment of skill/will levels and the respective locations are:
 \end{center}
 
 Let the weights used in the fitness score be $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$.
-Applying the algorithm and searching for employees knowing Java and Ruby in Hamburg:\\
+Applying the algorithm and searching for employees knowing \textit{Java} and \textit{Ruby} in \textit{Hamburg}:\\
 
 \begin{itemize}
   \item Create a list of all employees\\
@@ -221,6 +221,7 @@ Applying the algorithm and searching for employees knowing Java and Ruby in Hamb
 
 
 \section{Search Suggestions}
+\label{autocomplete}
 After entering an item into the search bar, the user will be presented other items they are likely to enter next. This minor feature can be seen as another
 recommender system because it recommends the next item from the set of all available search items and thus matches the definition given in \ref{recommender-definition}. This recommender system has to deal with other limitations than the one used for the main search function. It filters a completely different set of data, namely all skills instead of all persons, and uses a different filtering approach.
 
@@ -228,12 +229,12 @@ recommender system because it recommends the next item from the set of all avail
 \subsubsection{Distinguishable Users}
 Since it is not planned that users will have to log in before performing a search,
 there is no user context that can be used to examine a person's former interactions
-in order to predict their next ones and recommending it.\\
+in order to predict and recommend their next one.\\
 As the system is designed to be a web application, a cookie holding a unique identifier could be stored on the client device. The application would then use this ID to aggregate interactions made by the same person. Unfortunately, this method cannot identify a known person using another device because multiple devices will not share the same ID. Furthermore, data collected about a user will be discarded if they delete their devices' cookies or switch browsers.
 This approach would also need the application to inform the user that data will be stored on their devices as stated by Article 15(3) of the Telemediengesetz (TMG). The user has to give their approval and must be able to refuse the saving of their data (BDSG, Section 4a).\\
 There also are various methods to identify users without the need to store any data on their devices by examining and recognizing their devices' attributes. The collected data can include
-factors like language settings, the used browser and its version, and the hardware components of the device. All this data combined can be used to form an almost unique fingerprint in order to recognize a device \cite{finger}.\\
-Another possible method would be to recognize users by examining their very own behaviour such as typing patterns or mouse strokes. This approach called \textit{user fingerprinting} does not depend on the user's device and thus can be used to identify people across multiple devices and browsers. On the downside, this method can only differentiate between users typing the same word and needs a multitude of samples of each user in order to be able to recognize them \cite{typing}.
+factors like language settings, the used browser and its version, and the hardware components of the device. All this data combined can be used to form an almost unique fingerprint suitable to recognize a device \cite{finger}.\\
+Another possible method would be to recognize users by examining their very own behavior such as typing patterns or mouse strokes. This approach called \textit{user fingerprinting} does not depend on the user's device and thus can be used to identify people across multiple devices and browsers. On the downside, this method can only differentiate between users typing the same word, it needs a multitude of samples of each user in order to be able to recognize them, and it is very failure-prone \cite{typing}.
 Although device and user fingerprinting are not prohibited by law,
 the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
@@ -254,7 +255,7 @@ Assuming that no user profiles exist, user based filtering and model based filte
 The application has access to the list of skills the user already entered and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next item that the user is likely to enter and recommend it to them.
 
 \subsubsection{Markov Chains}
-Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is exclusively dependent on the current state, which is called the \textit{markov property} \cite{markprop}. In the context of the skill management application, this is assumed to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is skill set of the current search plus the item the user is going to enter next.
+Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is exclusively dependent on the current state, which is called the \textit{markov property} \cite{markprop}. In the context of the skill management application, this is assumed to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is the skill set of the current search plus the item the user is going to enter next.
 The basic concept is to store all possible states of the system and the respective probability of switching from any state to any other one.
 Knowing the current state one can easily deduce the most probable future state. When a state transistion occurs, the outgoing probabilities of the origin states
 can be adjusted accordingly in order to factor the transition into the prospective projections.
@@ -267,7 +268,7 @@ can be adjusted accordingly in order to factor the transition into the prospecti
 
 \subsubsection{Data Structure and Algorithm}
 In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
-the next one based on this exact starting point. On the downside, this would result in a lot of different origin states that contain very few possible future states due to being too specific to a single search. The stored data can only be used if the exact same combination of skills is entered again.\\
+the next one based on this exact starting point. On the downside, this would result in a lot of different origin states that contain very few possible future states due to being overly specific to a single search. The stored data can only be used if the exact same combination of skills is entered again.\\
 Another way to implement such a recommendation engine would be to only inspect the last entered search item and ignoring all other ones. Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
 This solution would disregard the whole context of the search item.\\
 As a tradeoff, the system will generate predictions for each skill in the search query independently and aggregate these predictions afterward. For each skill, a list of possible recommendations paired with the total count of searches for both will be stored. The recommendation lists of all skills combined represent the transition matrix. Instead of transition probabilities, the total number of searches is saved in order to simplify the aggreation of multiple suggestions.\\
@@ -384,7 +385,7 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
 
 \section{Visual Concept \& Wireframes}
 The application should be as simple as possible and usable for everyone in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a search function that provides a way to input the skills needed and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via e-mail or \textit{Google Hangouts}\footnote{https://hangouts.google.com}. Unlike the considered commercial solutions (see \ref{commercial}), this tool will not include features like creating statistics, assessments, applicant management, or any dashboard other than the basic search view.
-Furthermore, there will not be any roles with different access rights for employees and their managers, since this application is meant to be a tool enhancing collaboration, not supervision. More information about the concept behind the visual design and the frontend's implementation is provided by Strecker \cite{strecker}.
+Furthermore, there will not be any role model to differentiate between ``regular'' employees and managers since this application is meant to be a tool enhancing collaboration, not supervision. More information about the concept behind the visual design and the frontend's implementation is provided by Strecker \cite{strecker}.
 \newpage
 \begin{figure}[hp]
     \centering

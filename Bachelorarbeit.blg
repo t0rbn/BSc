@@ -11,68 +11,54 @@ A level-1 auxiliary file: chapter_implementation.aux
 A level-1 auxiliary file: chapter_evaluation.aux
 A level-1 auxiliary file: chapter_discussion_outlook.aux
 The style file: alphadin.bst
+A level-1 auxiliary file: medium.aux
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
-Warning--entry type for "markprop" isn't style-file defined
---line 321 of file Bachelorarbeit.bib
-Warning--entry type for "jsmarket" isn't style-file defined
---line 357 of file Bachelorarbeit.bib
-Warning--entry type for "hvscale" isn't style-file defined
---line 371 of file Bachelorarbeit.bib
-Warning--entry type for "ldapscale" isn't style-file defined
---line 397 of file Bachelorarbeit.bib
-Warning--entry type for "allthemobile" isn't style-file defined
---line 489 of file Bachelorarbeit.bib
-Warning--entry type for "quartalsbericht" isn't style-file defined
---line 503 of file Bachelorarbeit.bib
-Warning--entry type for "RAIL" isn't style-file defined
---line 519 of file Bachelorarbeit.bib
-Warning--I didn't find a database entry for "responsetimes"
 Warning--empty booktitle in ivanovska
 Warning--empty pages in ivanovska
-You've used 27 entries,
+You've used 28 entries,
             4793 wiz_defined-function locations,
-            1052 strings with 10529 characters,
-and the built_in function-call counts, 15213 in all, are:
-= -- 1569
-> -- 373
-< -- 384
-+ -- 433
-- -- 136
-* -- 1008
-:= -- 2555
-add.period$ -- 37
-call.type$ -- 27
-change.case$ -- 127
-chr.to.int$ -- 27
-cite$ -- 29
-duplicate$ -- 430
-empty$ -- 1101
-format.name$ -- 250
-if$ -- 3060
+            1059 strings with 10682 characters,
+and the built_in function-call counts, 15828 in all, are:
+= -- 1625
+> -- 384
+< -- 401
++ -- 450
+- -- 139
+* -- 1040
+:= -- 2656
+add.period$ -- 40
+call.type$ -- 28
+change.case$ -- 131
+chr.to.int$ -- 28
+cite$ -- 30
+duplicate$ -- 455
+empty$ -- 1163
+format.name$ -- 259
+if$ -- 3192
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 130
-newline$ -- 163
-num.names$ -- 80
-pop$ -- 192
+missing$ -- 137
+newline$ -- 171
+num.names$ -- 84
+pop$ -- 203
 preamble$ -- 1
-purify$ -- 181
+purify$ -- 187
 quote$ -- 0
-skip$ -- 772
+skip$ -- 812
 stack$ -- 0
-substring$ -- 1218
-swap$ -- 86
-text.length$ -- 77
-text.prefix$ -- 18
+substring$ -- 1244
+swap$ -- 90
+text.length$ -- 80
+text.prefix$ -- 19
 top$ -- 0
-type$ -- 250
+type$ -- 256
 warning$ -- 2
-while$ -- 119
-width$ -- 29
-write$ -- 348
-(There were 10 warnings)
+while$ -- 124
+width$ -- 30
+write$ -- 366
+(There were 2 warnings)

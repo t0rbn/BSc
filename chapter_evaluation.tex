@@ -100,8 +100,8 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 
 \subsection{Fitness Score Algorithm vs. Human Estimations}
 The algorithm is supposed to calculate a person's fitness so that its results match the ratings estimated by other employees. To validate that
-the cosen approach is capable of this, a set of fictional employees has been rated by both the algorithm and human beings. The respective estimations have been compared to analyze if there is a configuration of weigthing parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ that make the algorithm produce scores that are
-congruent to the estimations made by rating persons.
+the chosen approach is capable of this, a set of fictional employees has been rated by both the algorithm and human beings. The respective estimations have been compared to analyze if there is a configuration of weigthing parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ that make the algorithm produce scores that are
+congruent to the estimations made by the rating persons.
 
 \subsubsection{Examined Test Records}
 For this test, five test persons will be examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of this persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that will be collected and examined focus on the scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
@@ -123,7 +123,7 @@ For this test, five test persons will be examined: \textit{Alice}, \textit{Bob},
 \subsubsection{Survey}
 A random group of 161 employees (35\% of SinnerSchrader's staff) have been presented a survey using \textit{Google Forms}\footnote{https://forms.google.com}.
 In total, 41 persons have given their responses in a timeframe of 72 hours.
-The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented Lickert Items using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
+The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented \textit{Lickert Items} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
@@ -186,8 +186,8 @@ Weight & 25.44\% & 27.78\% & 21.55\% & 25.23\% \\
 
 \subsubsection{Comparison}
 To benchmark its results, the fitness score algorithm has been configured to use the weighting score parameters based on the data collected in the survey.
-The fitness rated by the algorithm will be called $f_a$; $f_s$ is the fitness estimated by the test subjects.
-The results illustrated in table \ref{tab:survey_raw} and figure \ref{survey:compare} show that the scores correlate with an average error of 9.4\% and a maximum error of 11.1\%. Since the data colleced in the survey is likely to be inaccurate because of the scale's low resolution of five distinct options and the small number of test records, these results should be taken with a grain of salt.
+The fitness rated by the algorithm will be called $f_a$; the fitness estimated by the test subjects will called $f_s$.
+The results illustrated in table \ref{tab:survey_raw} and figure \ref{survey:compare} show that the estimated and the calculated scores correlate with an average error of 9.4\% and a maximum error of 11.1\%. Since the data colleced in the survey is likely to be inaccurate because of the scale's low resolution of five distinct options and due to the small number of test records, these results should be taken with a grain of salt.
 
 \begin{table}[H]
 \centering
@@ -212,14 +212,11 @@ Erika       & 0.19 & 0.08 & 0.11\\
 \end{figure}
 
 \subsubsection{Refining the Fitness Score Algorithm}
-The weighting parameters generated from the survey data are all in the range of 25\%; in fact, setting all parameters to 0.25 will not cause any significant change in the algorithms error rate\footnote{It would reduce the average error from 9.46\% to 9.43\% and the maximum error from 11.07\% to 10.7\%.}, but it will result in all factors being considered equally important and thus reduce the algorithm's complexity.
-Furthermore, the factors could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
+The weighting parameters generated from the survey data are all in the order of 25\%; in fact, setting all parameters to 0.25 will not cause any significant change in the algorithms error rate\footnote{It would reduce the average error from 9.46\% to 9.43\% and the maximum error from 11.07\% to 10.7\%.}, but it will result in all factors being considered equally important and thus reduce the algorithm's complexity.
+Furthermore, settings the factors to $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ means they could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
 
 \begin{gather*}
   f = \frac{w_{as} \cdot a_s}{|V|} + \frac{w_{aw} \cdot a_w}{|V|} + w_{ss} \cdot s_s + w_{sw} \cdot s_w
-\end{gather*}
-\begin{gather*}
-  w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25
 \end{gather*}
 \begin{gather*}
 	\Rightarrow f = \frac{a_s + a_w}{4 \cdot |V|} + \frac{s_s + s_w}{4}
@@ -234,7 +231,7 @@ does not need to include weighting parameters since the test subjects perceive a
 \section{Implementation}
 \subsection{Scalability}
 \label{scale}
-A software system has to be able to scale according to the number of its users in order to be future-proof, as the current trend to dynamically scalable cloud solutions and server-less web architecture approaches highlights. There are two concepts or preparing an application for an higher workload: vertical scaling and horizontal scaling. Vertical scaling is done by providing more resources, e.g. memory and CPU power, to the machines running the application. Horziontal scaling, however, means setting up more machines providing the same service, so that workload can be distributed between them \cite{hvscale}. In contrast to vertical scaling, horizontal scaling has vital advantages: the application will be more robust since the crashing of one machine can be compensated by others \cite{fedi}, the capacity of the system can, theoretically, be unlimited, and it is cheaper because virutal machines running the service can be created dynamically if needed and then be destroyed in times of low workload, whereas the resources given to a machine that has been scaled vertically will remain unused.
+A software system has to be able to scale according to the number of its users in order to be future-proof, as the current trend to dynamically scalable cloud solutions and server-less web architectures highlights \cite{allthecloud}. There are two concepts of preparing an application for a higher workload: vertical scaling and horizontal scaling. Vertical scaling is done by providing more resources, e.g. memory and CPU power, to the machines running the application. Horziontal scaling, however, means setting up more machines providing the same service, so that the workload can be distributed between them \cite{hvscale}. In contrast to vertical scaling, horizontal scaling has vital advantages: the application will be more robust since the crashing of one machine can be compensated by others \cite{fedi}, the capacity of the system can, theoretically, be unlimited, and it is cheaper because virutal machines running the service can be created dynamically if needed and then be destroyed in times of low workload, whereas the resources given to a machine that has been scaled vertically will remain unused.
 
 \begin{figure}[!htp]
     \centering
@@ -245,10 +242,10 @@ A software system has to be able to scale according to the number of its users i
 
 \newpage
 \subsubsection{MongoDB}
-MongoDB is meant to be scaled horizontally and supports the adding of new instances to a running cluster of databases out of the box \cite[p. 19]{MongoGuide}. So, new machines running the database as a cluster will be created, if needed. As shown in \ref{scaleup}, the backend servers can be connected to any of the database servers in order to request data. If the demanded document is not found on the instance the backend is connected to, MongoDB will handle the lookup in the cluster; to the application, the cluster is completely transparent and appears as if it was one machine.
+MongoDB is meant to be scaled horizontally and supports the adding of new instances to a running cluster of databases out of the box \cite[p. 19]{MongoGuide}. So, new machines running the database as a cluster will be created, if needed. As shown in \ref{scaleup}, the backend servers can be connected to any of the database servers in order to request data. If the demanded document is not found on the instance the backend is connected to, MongoDB will handle the lookup in the cluster. To the application, the cluster is completely transparent and appears as if it was one machine.
 
 \subsubsection{LDAP}
-The LDAP servers\footnote{SinnerSchrader is running \textit{OpenLDAP} (http://www.openldap.org)} can also be run as a cluster in order to improve response times and prevent data loss by replicating the stored information \cite{ldapscale}. In fact, the LDAP is currently being provided by six servers that represent the service. As illustrated in \ref{scaleup}, the backend servers can connect to any of the LDAP servers; the data replication and synchronization is handled transparently.
+The LDAP servers\footnote{SinnerSchrader is running \textit{OpenLDAP} (http://www.openldap.org)} can also be run as a cluster in order to improve response times and prevent data loss by replicating the stored information \cite{ldapscale}. In fact, the LDAP is currently being provided by six servers that represent the service. As illustrated in figure \ref{scaleup}, the backend servers can connect to any of the LDAP servers; the data replication and synchronization is handled transparently.
 
 \subsubsection{Static Content}
 The static content like HTML, CSS and JS files, that altogether represent the frontend, are
@@ -269,8 +266,8 @@ Deploying a CDN that serves the static content has not been evaluated, as the im
 \subsection{Response Times}
 \label{resptime}
 As defined in \ref{require_times}, the application should need less than one second of response time between the user pressing the search button and the
-displaying of the search results. The response times of the corresponding API endpoint have been measured an can be found in table \ref{tab:responsetimes}.
-The average response time of the backend is 28ms, the maximum is 44ms.
+displaying of the search results. The response times of the corresponding API endpoint have been measured and can be found in table \ref{tab:responsetimes}.
+The average response time of the backend is 28ms, the maximum in the test data is 44ms.
 
 \begin{table}[H]
 \centering
@@ -287,14 +284,14 @@ The average response time of the backend is 28ms, the maximum is 44ms.
 \label{tab:responsetimes}
 \end{table}
 
-Measurements of a prototypical stage of the frontend using \textit{Google Chrome's} built-in profiling tools showed a total response-time, that is sending the HTTP request to the API, waiting for the response, parsing the response, and rendering the results, of approximately 90ms on average. The maximum response time was 106ms.
+Measurements of a prototypical stage of the frontend using \textit{Google Chrome's} built-in profiling tools showed a total response time, that is sending the HTTP request to the API, waiting for the response, parsing the response, and rendering the results, of approximately 90ms on average. The maximum response time was 106ms.
 
-Those results show that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users percieving the interaction with the system as immediate \cite{responsetimes}, which enhances the overall user experience.
+Those results show that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users percieving the interaction with the system as immediate \cite{RAIL}, which enhances the overall user experience.
 
 \newpage
 
 \section{Meeting the Requirements}
 In \ref{requirements}, a set of functional and non functional requirements has been defined. The backend application that has been designed and implemented has to meet those requirements, and it does: the API supports the creation of user profiles that then can be retrieved, the skills in those profiles can be edited by the profile's owner only, everybody can search for profiles of persons that offer specific skills (see table \ref{swaggertable}). The application was designed to be accessible to all employees, thus it is implemented as a web application that can be opened by any internet enabled device. New skills can be fed into the system so that people can add them to their profiles. \newline
-The nonfunctional requirements included scalability, low response times, the supported devices and browsers.
+The non functional requirements included scalability, low response times, the supported devices and browsers.
 As shown in \ref{scale}, scalability has been partially evaluated, whereas services that the application relies on such as MongoDB and LDAP were assumed to be scalable in this architecture as comparable systems have already shown. The response times have been evaluated in \ref{resptime}; the results and tests with and prototypical stage of the frontend show that the application is capable of delivering the requested inforamtion in significantely less time than defined.
 The requirements for supported devices and browsers, however, could not be evaluated since the determinative factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}.
