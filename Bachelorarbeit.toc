@@ -94,7 +94,7 @@
 \contentsline {subsubsection}{\nonumberline Conclusion}{56}{section*.36}
 \contentsline {subsection}{\numberline {6.2.2}Response Times}{56}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}Meeting the Requirements}{57}{section.6.3}
-\contentsline {chapter}{\numberline {7}Discussion and Outlook}{59}{chapter.7}
+\contentsline {chapter}{\numberline {7}R\IeC {\'e}sum\IeC {\'e} and Outlook}{59}{chapter.7}
 \contentsline {chapter}{\nonumberline Bibliography}{61}{chapter*.37}
 \contentsline {chapter}{List of Figures}{65}{chapter*.37}
 \contentsline {chapter}{List of Tables}{65}{chapter*.38}

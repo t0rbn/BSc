@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  23 JAN 2017 20:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  24 JAN 2017 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1155,22 +1155,22 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 116
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 158--163
+Underfull \hbox (badness 10000) in paragraph at lines 170--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 158--163
+Underfull \hbox (badness 10000) in paragraph at lines 170--175
 
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 190--193
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 217--219
 
  []
 
@@ -1178,10 +1178,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 205--207
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
-Package pdftex.def Info: images/markov-chain.png used on input line 264.
+Package pdftex.def Info: images/markov-chain.png used on input line 276.
 (pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 270--276
+Underfull \hbox (badness 10000) in paragraph at lines 282--288
 
  []
 
@@ -1190,58 +1190,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--276
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.277 \newpage
+l.289 \newpage
                <./images/markov-chain.png>] [24pdfTeX warning (ext4): destinati
 on with the same identifier (name{figure.4.3}) has been already used, duplicate
  ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.320 \newpage
+l.332 \newpage
               ] <images/markov_impl.png, id=655, 803.0pt x 797.379pt>
 File: images/markov_impl.png Graphic file (type png)
 
 <use images/markov_impl.png>
-Package pdftex.def Info: images/markov_impl.png used on input line 381.
+Package pdftex.def Info: images/markov_impl.png used on input line 393.
 (pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
  [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.384 \end{figure}
+l.396 \end{figure}
                   ] [26pdfTeX warning (ext4): destination with the same identif
 ier (name{figure.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.389 \newpage
+l.401 \newpage
                <./images/markov_impl.png>]
 <images/wireframe.png, id=699, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 392.
+Package pdftex.def Info: images/wireframe.png used on input line 404.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
  [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.396 \newpage
+l.408 \newpage
                <./images/wireframe.png>]
 <images/design_home.png, id=706, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 399.
+Package pdftex.def Info: images/design_home.png used on input line 411.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
  [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.403 \newpage
+l.415 \newpage
                <./images/design_home.png>]) [29]
 \openout2 = `chapter_implementation.aux'.
 
@@ -1675,9 +1675,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
 (./chapter_discussion_outlook.aux) (./medium.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
-Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 2F4203440D9906F340FFB53A52E54DB8;4280.
 
+
+Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
+(rerunfilecheck)             Before: 2F4203440D9906F340FFB53A52E54DB8;4280
+(rerunfilecheck)             After:  324F90EB3AC774E9B29CA380D86319C2;4282.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1703,7 +1709,7 @@ crr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on Bachelorarbeit.pdf (77 pages, 2464263 bytes).
+Output written on Bachelorarbeit.pdf (77 pages, 2466943 bytes).
 PDF statistics:
  1473 PDF objects out of 1728 (max. 8388607)
  1332 compressed objects within 14 object streams
