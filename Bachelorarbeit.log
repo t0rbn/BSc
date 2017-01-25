@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  24 JAN 2017 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  25 JAN 2017 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1675,15 +1675,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
 (./chapter_discussion_outlook.aux) (./medium.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
+Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: 324F90EB3AC774E9B29CA380D86319C2;4282.
 
-
-Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
-(rerunfilecheck)             Before: 2F4203440D9906F340FFB53A52E54DB8;4280
-(rerunfilecheck)             After:  324F90EB3AC774E9B29CA380D86319C2;4282.
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1709,7 +1703,7 @@ crr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on Bachelorarbeit.pdf (77 pages, 2466943 bytes).
+Output written on Bachelorarbeit.pdf (77 pages, 2467746 bytes).
 PDF statistics:
  1473 PDF objects out of 1728 (max. 8388607)
  1332 compressed objects within 14 object streams
