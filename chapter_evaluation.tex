@@ -216,10 +216,10 @@ The weighting parameters generated from the survey data are all in the order of 
 Furthermore, settings the factors to $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ means they could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
 
 \begin{gather*}
-  f = \frac{w_{as} \cdot a_s}{|V|} + \frac{w_{aw} \cdot a_w}{|V|} + w_{ss} \cdot s_s + w_{sw} \cdot s_w
+  f = \frac{w_{as} \cdot a_s}{max(V)} + \frac{w_{aw} \cdot a_w}{max(V)} + w_{ss} \cdot s_s + w_{sw} \cdot s_w
 \end{gather*}
 \begin{gather*}
-	\Rightarrow f = \frac{a_s + a_w}{4 \cdot |V|} + \frac{s_s + s_w}{4}
+	\Rightarrow f = \frac{a_s + a_w}{4 max(V)} + \frac{s_s + s_w}{4}
 \end{gather*}
 
 \subsubsection{Conclusion}
