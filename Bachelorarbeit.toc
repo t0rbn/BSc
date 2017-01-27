@@ -83,17 +83,17 @@
 \contentsline {subsubsection}{\nonumberline Examined Test Records}{49}{section*.27}
 \contentsline {subsubsection}{\nonumberline Survey}{50}{section*.28}
 \contentsline {subsubsection}{\nonumberline Comparison}{52}{section*.29}
-\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{53}{section*.30}
-\contentsline {subsubsection}{\nonumberline Conclusion}{53}{section*.31}
-\contentsline {section}{\numberline {6.2}Implementation}{54}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Scalability}{54}{subsection.6.2.1}
-\contentsline {subsubsection}{\nonumberline MongoDB}{55}{section*.32}
-\contentsline {subsubsection}{\nonumberline LDAP}{55}{section*.33}
-\contentsline {subsubsection}{\nonumberline Static Content}{55}{section*.34}
-\contentsline {subsubsection}{\nonumberline Backend}{55}{section*.35}
-\contentsline {subsubsection}{\nonumberline Conclusion}{56}{section*.36}
-\contentsline {subsection}{\numberline {6.2.2}Response Times}{56}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Meeting the Requirements}{57}{section.6.3}
+\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{54}{section*.30}
+\contentsline {subsubsection}{\nonumberline Conclusion}{54}{section*.31}
+\contentsline {section}{\numberline {6.2}Implementation}{55}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Scalability}{55}{subsection.6.2.1}
+\contentsline {subsubsection}{\nonumberline MongoDB}{56}{section*.32}
+\contentsline {subsubsection}{\nonumberline LDAP}{56}{section*.33}
+\contentsline {subsubsection}{\nonumberline Static Content}{56}{section*.34}
+\contentsline {subsubsection}{\nonumberline Backend}{56}{section*.35}
+\contentsline {subsubsection}{\nonumberline Conclusion}{57}{section*.36}
+\contentsline {subsection}{\numberline {6.2.2}Response Times}{57}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Meeting the Requirements}{58}{section.6.3}
 \contentsline {chapter}{\numberline {7}R\IeC {\'e}sum\IeC {\'e} and Outlook}{59}{chapter.7}
 \contentsline {chapter}{\nonumberline Bibliography}{61}{chapter*.37}
 \contentsline {chapter}{List of Figures}{65}{chapter*.37}

@@ -20,7 +20,7 @@
 The scores calculated by the fitness score algorithm (see \ref{fitscorealg}) should be distributed uniformly in the complete range of possible values because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
 To test this, one hundred persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each. A search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in table \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result value is:
 \[
-	v_{Ideal}(n) = 1 - \frac{n}{33}
+	v_{Ideal}(n) = 1.00 - \frac{n}{33}
 \]
 
 The distribution of the score values for every respective search is shown in figure \ref{fig:dist-raw}.
@@ -57,7 +57,7 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
   \begin{tabular}{l||c|c|c|c|c|c|c|c|c||c|c|c||c|c}
 	  No. & $v_{Ideal}$ & A.D. & DBs & Funk. & hybris & Kom. & MySQL & Sketch & Text & Mean Value & Min. Val. & Max. Val. & Mean Error & Max. Error\\
 	  \hline
-	  1 & 1 & 0.94 & 0.93 & 0.94 & 0.95 & 0.83 & 0.94 & 0.93 & 0.94  &  0.925 & 0.83 & 0.95  &  0.075 & 0.17\\
+	  1.00 & 1.00 & 0.94 & 0.93 & 0.94 & 0.95 & 0.83 & 0.94 & 0.93 & 0.94  &  0.925 & 0.83 & 0.95  &  0.075 & 0.17\\
  	 2 & 0.96875 & 0.93 & 0.75 & 0.84 & 0.94 & 0.82 & 0.93 & 0.93 & 0.76  &  0.8625 & 0.75 & 0.94  &  0.10625 & 0.21875\\
  	 3 & 0.9375 & 0.84 & 0.74 & 0.84 & 0.93 & 0.82 & 0.93 & 0.84 & 0.75  &  0.83625 & 0.74 & 0.93  &  0.10125 & 0.1975\\
  	 4 & 0.90625 & 0.84 & 0.64 & 0.83 & 0.93 & 0.75 & 0.93 & 0.83 & 0.75  &  0.8125 & 0.64 & 0.93  &  0.09375 & 0.26625\\
@@ -110,11 +110,11 @@ For this test, five test persons will be examined: \textit{Alice}, \textit{Bob},
   \begin{tabular}{l||c|c|c|c}
 		Test Record  & Java & AEM & Ruby & .NET\\
 		\hline
-		Alice   & 3, 3   & 2, 3  & 0, 1   & 2, 2 \\
-		Bob     & 2, 1   & 3, 0  & 2, 0   & 3, 3 \\
+		Alice   & 3, 3   & 2, 3  & 0, 1.00   & 2, 2 \\
+		Bob     & 2, 1.00   & 3, 0  & 2, 0   & 3, 3 \\
 		Charlie & 1, 3   & 0, 2  & 1, 2   & 2, 3 \\
-		Donald  & 1, 2   & 2, 1  & 1, 2   & 2, 1 \\
-		Erika   & 1, 0   & 0, 1  & 3, 2   & 3, 1 \\
+		Donald  & 1, 2   & 2, 1.00  & 1, 2   & 2, 1.00 \\
+		Erika   & 1, 0   & 0, 1.00  & 3, 2   & 3, 1.00 \\
   \end{tabular}
 \caption[Survey: Test Record Overview]{Skill and will levels of the persons presented in the survey. Notation: skill level, will level}
 \end{table}
@@ -127,7 +127,7 @@ The survey consisted of two sections: the estimation of the test persons' fitnes
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
-	Survey Rating & 1 & 2    & 3   & 4    & 5\\
+	Survey Rating & 1.00 & 2    & 3   & 4    & 5\\
 	\hline
 	Fitness Score & 0 & 0.25 & 0.5 & 0.75 & 1\\
 \end{tabular}
@@ -138,12 +138,12 @@ The survey consisted of two sections: the estimation of the test persons' fitnes
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c|c||c|c}
-Test Record & 1  & 2  & 3  & 4  & 5  & - & Mean & $f$ \\
+Test Record & 1.00  & 2  & 3  & 4  & 5  & - & Mean & $f$ \\
 \hline
 Alice       & 0  & 0  & 0  & 15 & 26 & 0 & 4.63 & 0.91 \\
-Bob         & 5  & 26 & 9  & 1  & 0  & 0 & 2.15 & 0.27 \\
-Charlie     & 1  & 14 & 23 & 3  & 0  & 0 & 2.68 & 0.42 \\
-Donald      & 0  & 10 & 27 & 3  & 0  & 1 & 2.83 & 0.46 \\
+Bob         & 5  & 26 & 9  & 1.00  & 0  & 0 & 2.15 & 0.29 \\
+Charlie     & 1.00  & 14 & 23 & 3  & 0  & 0 & 2.68 & 0.42 \\
+Donald      & 0  & 10 & 27 & 3  & 0  & 1.00 & 2.83 & 0.44 \\
 Erika       & 32 & 70 & 0  & 2  & 0  & 0 & 1.31 & 0.08 \\
 \end{tabular}
 \caption[Survey: Estimated Fitness Scores]{Fitness scores estimated by 41 test subjects}
@@ -161,12 +161,12 @@ Furthermore, the participants were asked to rate the importance of the four fact
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c|c||c}
-Factor & 1  & 2  & 3  & 4  & 5  & -\footnote{No Response} & Mean \\
+Factor & 1.00  & 2  & 3  & 4  & 5  & - & Mean \\
 \hline
-Avgerage Skill Level in Searched Items & 1 & 3 & 10 & 16 & 11 & 0 & 3.80\\
-Avgerage Will Level in Searched Items & 0 & 1 & 8 & 16 & 16 & 0 & 4.15\\
+Avgerage Skill Level in Searched Items & 1.00 & 3 & 10 & 16 & 11 & 0 & 3.80\\
+Avgerage Will Level in Searched Items & 0 & 1.00 & 8 & 16 & 16 & 0 & 4.15\\
 Specialization in Searched Items (Skill Levels) & 3 & 5 & 17 & 12 & 4 & 0 & 3.22\\
-Specialization in Searched Items (Will Levels) & 1 & 0 & 11 & 22 & 5 & 2 & 3.77\\
+Specialization in Searched Items (Will Levels) & 1.00 & 0 & 11 & 22 & 5 & 2 & 3.77\\
 \end{tabular}
 \caption[Survey: Estimated Importance of Weighting Factors]{The importance of the four factors included in the fitness score algorithm as estimated by 41 test subjects.}
 \label{tab:survey_weight}
@@ -185,23 +185,22 @@ Weight & 25.44\% & 27.78\% & 21.55\% & 25.23\% \\
 \end{table}
 
 \subsubsection{Comparison}
-To benchmark its results, the fitness score algorithm has been configured to use the weighting score parameters based on the data collected in the survey.
-The fitness rated by the algorithm will be called $f_a$; the fitness estimated by the test subjects will called $f_s$.
-The results illustrated in table \ref{tab:survey_raw} and figure \ref{survey:compare} show that the estimated and the calculated scores correlate with an average error of 9.4\% and a maximum error of 11.1\%. Since the data colleced in the survey is likely to be inaccurate because of the scale's low resolution of five distinct options and due to the small number of test records, these results should be taken with a grain of salt.
+The fitness score algorithm has been configured to use the aforesaid parameters. Its results for the five test records have been compared to the test subjects'
+estimations using a two-tailed heteroscedastic T-Test with a significance level of 0.05 in order to show if the persons' estimations deviate significantly from the results calculated using the algorithm. Table \ref{tab:survey_ttest} lists the algorithm's result $f_a$, the average fitness score $f_s$ estimated by the test subjects, the standard deviation in the collected data, and the values of the T-Test for each test row. As shown, there is a significant difference between the algorithm's result and the subjects' estimations for the test record \textit{Charlie}. For the other four records, however, the algorithm's results do not deviate significantly from the values collected in the survey.
 
 \begin{table}[H]
 \centering
-\begin{tabular}{l||c|c|c}
-Test Record & $f_a$ & $f_s$ & $\Delta_{f}$ \\
+\begin{tabular}{l||c||c|c||c|c}
+Test Record & $f_a$ & $f_s$ & Standard Dev. & $p$ & $p \ge 0.05$\\
 \hline
-Alice       & 0.82 & 0.91 & 0.09\\
-Bob         & 0.45 & 0.27 & 0.18\\
-Charlie     & 0.47 & 0.42 & 0.05\\
-Donald      & 0.5  & 0.46 & 0.04\\
-Erika       & 0.19 & 0.08 & 0.11\\
+Alice       & 0.82 & 0.91 & 0.12 & 0.0000358436701 & No\\
+Bob         & 0.45 & 0.29 & 0.16 & 0.0000001306616949 & No\\
+Charlie     & 0.47 & 0.42 & 0.16 & 0.05912471945 & Yes\\
+Donald      & 0.5  & 0.44 & 0.17 & 0.03119080301 & No\\
+Erika       & 0.19 & 0.08 & 0.18 & 0.0003324460113 & No\\
 \end{tabular}
 \caption[Survey: Comparison of Algorithm and Survey]{Comparison of the algorithms results and the scores collected in the survey.}
-\label{tab:survey_raw}
+\label{tab:survey_ttest}
 \end{table}
 
 \begin{figure}[H]
@@ -211,9 +210,65 @@ Erika       & 0.19 & 0.08 & 0.11\\
     \label{survey:compare}
 \end{figure}
 
+
+\begin{table}[H]
+\centering
+\resizebox*{!}{\textheight}{
+\begin{tabular}{l||c|c|c|c|c}
+          & Alice & Bob & Charlie & Donald & Erika \\
+\hline
+Subject 1 & 0.75 & 0.25 & 0.00 & 0.25 & 0.00 \\
+Subject 2 & 1.00 & 0.50 & 0.50 & 0.50 & 0.00 \\
+Subject 3 & 1.00 & 0.00 & 0.50 & - & 0.00 \\
+Subject 4 & 1.00 & 0.25 & 0.50 & 0.50 & 0.25 \\
+Subject 5 & 0.75 & 0.50 & 0.25 & 0.25 & 0.25 \\
+Subject 6 & 0.75 & 0.25 & 0.25 & 0.75 & 0.75 \\
+Subject 7 & 1.00 & 0.25 & 0.25 & 0.50 & 0.00 \\
+Subject 8 & 0.75 & 0.25 & 0.50 & 0.25 & 0.25 \\
+Subject 9 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 10 & 1.00 & 0.50 & 0.50 & 0.50 & 0.00 \\
+Subject 11 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 12 & 0.75 & 0.25 & 0.25 & 0.25 & 0.00 \\
+Subject 13 & 1.00 & 0.50 & 0.25 & 0.50 & 0.00 \\
+Subject 14 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 15 & 0.75 & 0.00 & 0.25 & 0.50 & 0.00 \\
+Subject 16 & 1.00 & 0.00 & 0.50 & 0.25 & 0.25 \\
+Subject 17 & 1.00 & 0.25 & 0.50 & 0.50 & 0.25 \\
+Subject 18 & 1.00 & 0.25 & 0.50 & 0.25 & 0.00 \\
+Subject 19 & 1.00 & 0.25 & 0.75 & 0.50 & 0.00 \\
+Subject 20 & 1.00 & 0.50 & 0.50 & 0.50 & 0.25 \\
+Subject 21 & 1.00 & 0.50 & 0.50 & 0.50 & 0.00 \\
+Subject 22 & 0.75 & 0.00 & 0.25 & 0.50 & 0.00 \\
+Subject 23 & 1.00 & 0.25 & 0.25 & 0.75 & 0.75 \\
+Subject 24 & 0.75 & 0.25 & 0.25 & 0.25 & 0.00 \\
+Subject 25 & 1.00 & 0.25 & 0.25 & 0.50 & 0.00 \\
+Subject 26 & 1.00 & 0.50 & 0.50 & 0.75 & 0.00 \\
+Subject 27 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 28 & 0.75 & 0.50 & 0.50 & 0.50 & 0.00 \\
+Subject 29 & 0.75 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 30 & 0.75 & 0.25 & 0.25 & 0.50 & 0.00 \\
+Subject 31 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 32 & 0.75 & 0.25 & 0.25 & 0.50 & 0.00 \\
+Subject 33 & 1.00 & 0.25 & 0.75 & 0.50 & 0.00 \\
+Subject 34 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 35 & 1.00 & 0.25 & 0.50 & 0.50 & 0.00 \\
+Subject 36 & 0.75 & 0.50 & 0.25 & 0.25 & 0.00 \\
+Subject 37 & 0.75 & 0.00 & 0.50 & 0.50 & 0.00 \\
+Subject 38 & 1.00 & 0.25 & 0.75 & 0.50 & 0.00 \\
+Subject 39 & 0.75 & 0.25 & 0.50 & 0.25 & 0.00 \\
+Subject 40 & 1.00 & 0.75 & 0.25 & 0.50 & 0.25 \\
+Subject 41 & 1.00 & 0.25 & 0.50 & 0.25 & 0.00 \\
+\end{tabular}
+}
+\caption[Survey: Raw Data]{All test subjects' responses in the survey.}
+\label{tab:survey_ttest}
+\end{table}
+
+
+
 \subsubsection{Refining the Fitness Score Algorithm}
-The weighting parameters generated from the survey data are all in the order of 25\%; in fact, setting all parameters to 0.25 will not cause any significant change in the algorithms error rate\footnote{It would reduce the average error from 9.46\% to 9.43\% and the maximum error from 11.07\% to 10.7\%.}, but it will result in all factors being considered equally important and thus reduce the algorithm's complexity.
-Furthermore, settings the factors to $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ means they could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
+The weighting parameters generated from the survey data are all in the order of 25\%; in fact, setting all parameters to 0.25 will not cause any significant change in the algorithms error rate\footnote{It would reduce the average difference between the algorithm and the test subjects' estimations from 9.46\% to 9.43\% and the maximum error from 11.07\% to 10.7\%.}, but it will result in all factors being considered equally important and thus reduce the algorithm's complexity.
+Furthermore, setting the factors to $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ means they could be eliminated in the fitness score function\footnote{Definitions can be found in \ref{fitscorealg}.}:
 
 \begin{gather*}
   f = \frac{w_{as} \cdot a_s}{max(V)} + \frac{w_{aw} \cdot a_w}{max(V)} + w_{ss} \cdot s_s + w_{sw} \cdot s_w
