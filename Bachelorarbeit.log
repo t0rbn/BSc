@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  26 JAN 2017 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  27 JAN 2017 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1286,20 +1286,20 @@ name{figure.5.4}) has been already used, duplicate ignored
 l.98 \newpage
              ]
 
-LaTeX Warning: Float too large for page by 11.82751pt on input line 142.
+LaTeX Warning: Float too large for page by 11.82751pt on input line 143.
 
 [35pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.143 \newpage
+l.144 \newpage
               ] [36pdfTeX warning (ext4): destination with the same identifier 
 (name{table.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.143 \newpage
+l.144 \newpage
               ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1308,31 +1308,31 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.190 \section
+l.191 \section
               {Architecture}pdfTeX warning (ext4): destination with the same id
 entifier (name{figure.5.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.190 \section
+l.191 \section
               {Architecture}]
 <images/uml.png, id=872, 1285.603pt x 1769.009pt>
 File: images/uml.png Graphic file (type png)
  <use images/uml.png>
-Package pdftex.def Info: images/uml.png used on input line 194.
+Package pdftex.def Info: images/uml.png used on input line 195.
 (pdftex.def)             Requested size: 272.94672pt x 375.57845pt.
  [38pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.198 \newpage
+l.199 \newpage
                <./images/uml.png>] [39pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.224 \newpage
+l.225 \newpage
               ]
 Underfull \vbox (badness 5985) has occurred while \output is active []
 
@@ -1341,13 +1341,13 @@ Underfull \vbox (badness 5985) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
+l.303 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 5.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
+l.303 
       ]
 Overfull \vbox (14.69682pt too high) has occurred while \output is active []
 
@@ -1357,12 +1357,12 @@ Overfull \vbox (14.69682pt too high) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
+l.303 
       ] <images/swagger_ui.png, id=975, 1182.4175pt x 1078.0275pt>
 File: images/swagger_ui.png Graphic file (type png)
 
 <use images/swagger_ui.png>
-Package pdftex.def Info: images/swagger_ui.png used on input line 310.
+Package pdftex.def Info: images/swagger_ui.png used on input line 311.
 (pdftex.def)             Requested size: 426.79134pt x 389.10947pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1372,7 +1372,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.318 
+l.319 
        <./images/swagger_ui.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1381,9 +1381,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.363 
+l.364 
       ]
-Overfull \hbox (10.98242pt too wide) in paragraph at lines 374--375
+Overfull \hbox (10.98242pt too wide) in paragraph at lines 375--376
 \T1/ppl/m/n/10.95 WAR-RANTIES OF MER-CHANTABIL-ITY, FIT-NESS FOR A PAR-TIC-U-LA
 R PUR-
  []
@@ -1703,7 +1703,7 @@ crr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
 lri8a.pfb>
-Output written on Bachelorarbeit.pdf (77 pages, 2467717 bytes).
+Output written on Bachelorarbeit.pdf (77 pages, 2467710 bytes).
 PDF statistics:
  1473 PDF objects out of 1728 (max. 8388607)
  1332 compressed objects within 14 object streams

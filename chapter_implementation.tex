@@ -131,7 +131,8 @@ The used HTTP method is the main indicator of the action to perform: \textit{GET
   /skills/next         & GET    & search                                      & 200, 400, 500           & Suggest a skill based on\\ & & & & the comma separated list of\\ & & & &   skills (parameter: search)\\ \hline
   /skills/\{skill\}      & DELETE &                                             & 200, 400, 401, 404, 500 & Remove the skill\\ & & & &  with the given name\\ \hline
   /skills/\{skill\}      & PUT    & name                                        & 200, 400, 401, 404, 500 & Rename the skill\\
-  /users               & GET    & skills, location                            & 200, 400, 500           & Get all users\\ & & & &  matching the searched\\ & & & & skills in the given location\\ & & & & (parameters may be empty)\\ \hline
+	\hline
+	/users               & GET    & skills, location                            & 200, 400, 500           & Get all users\\ & & & &  matching the searched\\ & & & & skills in the given location\\ & & & & (parameters may be empty)\\ \hline
   /users/\{user\}        & GET    &                                             & 200, 404, 500           & Return the specified user\\ \hline
   /users/\{user\}/skills & POST   & session, skill, skill\_level, will\_level & 200, 400, 401, 404, 500 & Create new skill/modifiy existing\\ & & & & personal skill\\ \hline
   /users/\{user\}/skills & DELETE & session, skill                              & 200, 400, 401, 404, 501 & Remove the skill\\ & & & & from the users profile\\
