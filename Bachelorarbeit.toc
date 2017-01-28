@@ -83,7 +83,7 @@
 \contentsline {subsubsection}{\nonumberline Examined Test Records}{49}{section*.27}
 \contentsline {subsubsection}{\nonumberline Survey}{50}{section*.28}
 \contentsline {subsubsection}{\nonumberline Comparison}{52}{section*.29}
-\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{54}{section*.30}
+\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{52}{section*.30}
 \contentsline {subsubsection}{\nonumberline Conclusion}{54}{section*.31}
 \contentsline {section}{\numberline {6.2}Implementation}{55}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Scalability}{55}{subsection.6.2.1}
