@@ -39,21 +39,21 @@
 \contentsline {subsubsection}{\nonumberline Requirements}{16}{section*.14}
 \contentsline {subsubsection}{\nonumberline Factors to Include}{17}{section*.15}
 \contentsline {subsubsection}{\nonumberline Proposed Fitness Score Algorithm}{17}{section*.16}
-\contentsline {subsubsection}{\nonumberline Example Calculation}{19}{section*.17}
-\contentsline {subsection}{\numberline {4.1.5}Example Search}{20}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Search Suggestions}{20}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Available Data}{21}{subsection.4.2.1}
-\contentsline {subsubsection}{\nonumberline Distinguishable Users}{21}{section*.18}
-\contentsline {subsubsection}{\nonumberline Skill Attributes}{22}{section*.19}
-\contentsline {subsubsection}{\nonumberline Aggregated Search History}{22}{section*.20}
-\contentsline {subsection}{\numberline {4.2.2}Chosen Approach}{22}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Concept}{22}{subsection.4.2.3}
-\contentsline {subsubsection}{\nonumberline Markov Chains}{22}{section*.21}
-\contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{23}{section*.22}
-\contentsline {subsection}{\numberline {4.2.4}Pseudo-Code}{24}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Example}{25}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Visual Concept \& Wireframes}{26}{section.4.3}
-\contentsline {section}{\numberline {4.4}Legal Concerns}{29}{section.4.4}
+\contentsline {subsubsection}{\nonumberline Example Calculation}{20}{section*.17}
+\contentsline {subsection}{\numberline {4.1.5}Example Search}{21}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Search Suggestions}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Available Data}{22}{subsection.4.2.1}
+\contentsline {subsubsection}{\nonumberline Distinguishable Users}{22}{section*.18}
+\contentsline {subsubsection}{\nonumberline Skill Attributes}{23}{section*.19}
+\contentsline {subsubsection}{\nonumberline Aggregated Search History}{23}{section*.20}
+\contentsline {subsection}{\numberline {4.2.2}Chosen Approach}{23}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Concept}{23}{subsection.4.2.3}
+\contentsline {subsubsection}{\nonumberline Markov Chains}{23}{section*.21}
+\contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{24}{section*.22}
+\contentsline {subsection}{\numberline {4.2.4}Pseudo-Code}{25}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Example}{26}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Visual Concept \& Wireframes}{27}{section.4.3}
+\contentsline {section}{\numberline {4.4}Legal Concerns}{30}{section.4.4}
 \contentsline {chapter}{\numberline {5}Implementation}{31}{chapter.5}
 \contentsline {section}{\numberline {5.1}Application Structure}{31}{section.5.1}
 \contentsline {section}{\numberline {5.2}MongoDB}{32}{section.5.2}
@@ -83,7 +83,7 @@
 \contentsline {subsubsection}{\nonumberline Examined Test Records}{49}{section*.27}
 \contentsline {subsubsection}{\nonumberline Survey}{50}{section*.28}
 \contentsline {subsubsection}{\nonumberline Comparison}{52}{section*.29}
-\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{52}{section*.30}
+\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{54}{section*.30}
 \contentsline {subsubsection}{\nonumberline Conclusion}{54}{section*.31}
 \contentsline {section}{\numberline {6.2}Implementation}{55}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Scalability}{55}{subsection.6.2.1}

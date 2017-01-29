@@ -158,11 +158,12 @@ A person with maximal interest and knowledge in all searched items and the lowes
   s_w = \frac{max(V) \ + a_w - \left( \left( \sum_{x \in E \setminus Q} v_w(x)\right) \cdot \frac{1}{|E \setminus Q|} \right)}{2 max(V)}
 \end{gather*}
 
-The resulting fitness score $f$ is a weighted mean of the introduced factors. The weights $w_{as}$, $w_{aw}$, $w_{ss}$, $w_{sw}$ sum up to one.\footnote{Mathematically, this is not necessary, but it results in much more human readable fitness score values between zero and one.}
+The resulting fitness score $f$ is a weighted mean of the introduced factors. The weights $w_{as}$, $w_{aw}$, $w_{ss}$, $w_{sw}$ are positive real numbers and sum up to one.\footnote{Mathematically, this is not necessary, but it results in much more human readable fitness score values between zero and one.}
 
 \begin{gather*}
   f = \frac{w_{as} \cdot a_s}{max(V)} + \frac{w_{aw} \cdot a_w}{ max(V)} + w_{ss} \cdot s_s + w_{sw} \cdot s_w \\
-  w_{as} + w_{aw} + w_{ss} + w_{sw} = 1
+  w_{as} + w_{aw} + w_{ss} + w_{sw} = 1 \\
+  w_{as}, w_{aw}, w_{ss}, w_{sw} \in \mathbb{R}^{+} \cup \{0\}
 \end{gather*}
 
 \newpage

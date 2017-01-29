@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  28 JAN 2017 12:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.11.22)  28 JAN 2017 20:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1154,104 +1154,102 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 116
  (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-[17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 170--175
+[17]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 170--175
-
- []
-
+ [18]
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 202--205
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--219
+Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
-[20] [21] <images/markov-chain.png, id=598, 803.0pt x 528.374pt>
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 203--206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--220
+
+ []
+
+[21] [22] <images/markov-chain.png, id=602, 803.0pt x 528.374pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
-Package pdftex.def Info: images/markov-chain.png used on input line 276.
+Package pdftex.def Info: images/markov-chain.png used on input line 277.
 (pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
- [22]
-Underfull \hbox (badness 10000) in paragraph at lines 282--288
+ [23]
+Underfull \hbox (badness 10000) in paragraph at lines 283--289
 
  []
 
-[23pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+[24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.289 \newpage
-               <./images/markov-chain.png>] [24pdfTeX warning (ext4): destinati
+l.290 \newpage
+               <./images/markov-chain.png>] [25pdfTeX warning (ext4): destinati
 on with the same identifier (name{figure.4.3}) has been already used, duplicate
  ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.332 \newpage
-              ] <images/markov_impl.png, id=655, 803.0pt x 797.379pt>
+l.333 \newpage
+              ] <images/markov_impl.png, id=660, 803.0pt x 797.379pt>
 File: images/markov_impl.png Graphic file (type png)
 
 <use images/markov_impl.png>
-Package pdftex.def Info: images/markov_impl.png used on input line 393.
+Package pdftex.def Info: images/markov_impl.png used on input line 394.
 (pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
- [25pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.396 \end{figure}
-                  ] [26pdfTeX warning (ext4): destination with the same identif
+l.397 \end{figure}
+                  ] [27pdfTeX warning (ext4): destination with the same identif
 ier (name{figure.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.401 \newpage
+l.402 \newpage
                <./images/markov_impl.png>]
-<images/wireframe.png, id=699, 1314.9125pt x 1246.6575pt>
+<images/wireframe.png, id=703, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 404.
+Package pdftex.def Info: images/wireframe.png used on input line 405.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.408 \newpage
+l.409 \newpage
                <./images/wireframe.png>]
-<images/design_home.png, id=706, 1475.5125pt x 1431.3475pt>
+<images/design_home.png, id=710, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 411.
+Package pdftex.def Info: images/design_home.png used on input line 412.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.415 \newpage
-               <./images/design_home.png>]) [29]
+l.416 \newpage
+               <./images/design_home.png>]) [30]
 \openout2 = `chapter_implementation.aux'.
 
  (./chapter_implementation.tex
-[30
-
-
-
-
-]
 chapter 5.
 <images/system_architecture.png, id=721, 1217.54875pt x 662.475pt>
 File: images/system_architecture.png Graphic file (type png)
@@ -1259,8 +1257,13 @@ File: images/system_architecture.png Graphic file (type png)
 <use images/system_architecture.png>
 Package pdftex.def Info: images/system_architecture.png used on input line 9.
 (pdftex.def)             Requested size: 426.79134pt x 232.21341pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-1}) has been already used, duplicate ignored
+ [31
+
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) 
+has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
@@ -1501,28 +1504,26 @@ Package pdftex.def Info: images/survey_vs_alg.png used on input line 195.
 
 LaTeX Warning: Float too large for page by 24.64256pt on input line 252.
 
-
-Underfull \vbox (badness 2707) has occurred while \output is active []
-
- [52pdfTeX warning (ext4): destination with the same identifier (name{table.6.7
+[52pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.273 
-      ] [53pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.6.8}) has been already used, duplicate ignored
+l.259 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.6
+.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.273 
-      ] [54pdfTeX warning (ext4): destination with the same identifier (name{fi
-gure.6.5}) has been already used, duplicate ignored
+l.259 
+       <./images/survey_vs_alg.png>] [53pdfTeX warning (ext4): destination with
+ the same identifier (name{table.6.8}) has been already used, duplicate ignored
+
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.274 \newpage
-               <./images/survey_vs_alg.png>]
+l.259 
+      ] [54]
 <images/system_architecture_scaled.png, id=1131, 1286.8075pt x 766.865pt>
 File: images/system_architecture_scaled.png Graphic file (type png)
 
@@ -1707,7 +1708,7 @@ nts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier
 are/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts
 /type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/
 uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (77 pages, 2498673 bytes).
+Output written on Bachelorarbeit.pdf (77 pages, 2507342 bytes).
 PDF statistics:
  1472 PDF objects out of 1728 (max. 8388607)
  1331 compressed objects within 14 object streams

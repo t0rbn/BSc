@@ -6,7 +6,7 @@
 The scores calculated by the fitness score algorithm (see \ref{fitscorealg}) should be distributed uniformly in the complete range of possible values because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
 To test this, one hundred persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each. A search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in table \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result value is:
 \[
-	v_{Ideal}(n) = 1 - \frac{n}{33}
+	f_{Ideal}(n) = 1 - \frac{n}{33}
 \]
 
 The distribution of the score values for every respective search is shown in figure \ref{fig:dist-raw}.
@@ -109,7 +109,7 @@ For this test, five test persons will be examined: \textit{Alice}, \textit{Bob},
 \subsubsection{Survey}
 A random group of 161 employees (35\% of SinnerSchrader's staff) have been presented a survey using \textit{Google Forms}\footnote{https://forms.google.com}.
 In total, 41 persons have given their responses in a timeframe of 72 hours.
-The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented \textit{Lickert Items} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
+The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented \textit{Likert Items} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
@@ -173,17 +173,17 @@ Weight & 25.44\% & 27.78\% & 21.55\% & 25.23\% \\
 \newpage
 \subsubsection{Comparison}
 The fitness score algorithm has been configured to use the aforesaid parameters. Its results for the five test records have been compared to the test subjects'
-estimations using a two-tailed heteroscedastic T-Test with a significance level of 0.05 in order to show if the persons' estimations deviate significantly from the results calculated using the algorithm. Table \ref{tab:survey_ttest} lists the algorithm's result $f_a$, the average fitness score $f_s$ estimated by the test subjects, the standard deviation in the collected data, and the values of the T-Test for each test row. As shown, there is a statistically significant difference between the algorithm's result and the subjects' estimations for the test record \textit{Charlie}. For the other four records, however, the algorithm's results do not deviate significantly from the values collected in the survey. As the scale used in the survey has a relatively low resolution (five possible values) and due to the small sample size, these results should be taken with a grain of salt.
+estimations using a two-tailed heteroscedastic T-Test with a significance level of 0.1 in order to show if the persons' estimations deviate significantly from the results calculated using the algorithm. Table \ref{tab:survey_ttest} lists the algorithm's result $f_a$, the average fitness score $f_s$ estimated by the test subjects, the standard deviation in the collected data, and the values of the T-Test for each test row. As shown, the algorithm's results do not deviate significantly from the values collected in the survey. Using the more common significance level of 0.05, however, would show significant deviations for \textit{Charlie} and \textit{Donald} but the low resolution of the scale used in the survey (five possible values) and the small sample size do not justify such a precise analysis.
 
 \begin{table}[htp]
 \centering
 \begin{tabular}{l||c||c|c||c|c}
-Test Record & $f_a$ & $f_s$ & Standard Dev. & $p$ & $p \ge 0.05$\\
+Test Record & $f_a$ & $f_s$ & Standard Dev. & $p$ & $p \ge 0.1$\\
 \hline
 Alice       & 0.82 & 0.91 & 0.12 & 0.0000358436701 & No\\
 Bob         & 0.45 & 0.29 & 0.16 & 0.0000001306616949 & No\\
-Charlie     & 0.47 & 0.42 & 0.16 & 0.05912471945 & Yes\\
-Donald      & 0.5  & 0.44 & 0.17 & 0.03119080301 & No\\
+Charlie     & 0.47 & 0.42 & 0.16 & 0.05912471945 & No\\
+Donald      & 0.5  & 0.44 & 0.17 & 0.05091395 & No\\
 Erika       & 0.19 & 0.08 & 0.18 & 0.0003324460113 & No\\
 \end{tabular}
 \caption[Survey: Comparison of Algorithm and Survey]{Comparison of the algorithms results and the scores collected in the survey.}
