@@ -1,6 +1,7 @@
 \chapter{Functional Objectives and Existing Solutions}
 
 \section{Usage Scenarios}
+\label{usecases}
 \subsection{Asking for Help}
 Having the possibility to ask for help is a vital part of the working culture in many knowledge driven
 businesses, so collaboration and the sharing of ideas are a major factor in the company guidelines
@@ -48,6 +49,21 @@ there also exist intrinsic motivations to do so. Being motivated intrinsically i
 
 
 \section{Requirements}
+\subsection{Collecting the Requirements}
+As shown in \ref{usecases}, the application is supposed to provide help for two target audiences: project managers staffing their teams and employees looking for help with a certain problem. Semi structured interviews have been conducted in order to collect the end users' wishes and expectations towards the application and to define requirements resulting thereof. In addition to solely gathering the asked persons' general anticipations, the interviews aimed to give answers to these concrete questions:
+\begin{itemize}
+	\item What should be range of the scale to measure knowledge and motivation with?
+	\item Should certificates and trainings be included in the system? If so, should those be modelled as skills or as a separate entity?
+	\item Should the overall expierience of the employees' be captured by the system?
+	\item Should the system differntiate between short-term and long-term motivation?
+	\item Should colleagues be able to rate an employees' skills?
+	\item Should the system be able to automatically form project teams?
+\end{itemize}
+
+
+
+
+
 \label{requirements}
 \subsection{Functional Requirements}
 \begin{itemize}
@@ -115,7 +131,7 @@ Talent Management\footnote{http://www.infoniqa.com/hr-software/skill-management}
 \subsection{SkillsDB Pro}
 SkillsDB Pro\footnote{http://www.skillsdbpro.com} is an application designed to serve as a database in an organization, providing an overview of every person’s own skills and training only to themselves and their supervisor. The search function is capable of searching for multiple skills combined with different logical operators which enables users to enter very sophisticated queries.
 Not only can users provide information about their skills but supervisors can also do this with the limitation that no employee can see their supervisor's rating about themselves. Information about motivation, like in the other examined systems, cannot be captured.
-Furthermore, only privileged like supervisors can search for persons. Taking into consideration that SinnerSchrader needs a tool to enable everyone to find someone with a specific skillset, this is a serious disadvantage.
+Furthermore, only privileged like supervisors can search for persons. Taking into consideration that SinnerSchrader needs a tool to enable everyone to find someone with a specific skill set, this is a serious disadvantage.
 SkillsDB Pro also offers features SinnerSchrader does not intend to use including the automatic generation of project reports based on plan succession and demands for assessments.
 
 \newpage

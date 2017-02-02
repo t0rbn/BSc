@@ -11,56 +11,57 @@
 \BOOKMARK [2][-]{subsection.3.1.3}{Collecting Information}{section.3.1}% 11
 \BOOKMARK [2][-]{subsection.3.1.4}{Notifications by Supervisors}{section.3.1}% 12
 \BOOKMARK [1][-]{section.3.2}{Requirements}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.2.1}{Functional Requirements}{section.3.2}% 14
-\BOOKMARK [2][-]{subsection.3.2.2}{Non-Functional Requirements}{section.3.2}% 15
-\BOOKMARK [1][-]{section.3.3}{Commercial Solutions}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.3.1}{Skills Base}{section.3.3}% 17
-\BOOKMARK [2][-]{subsection.3.3.2}{Talent Management \(engage!\)}{section.3.3}% 18
-\BOOKMARK [2][-]{subsection.3.3.3}{SkillsDB Pro}{section.3.3}% 19
-\BOOKMARK [2][-]{subsection.3.3.4}{Conclusion}{section.3.3}% 20
-\BOOKMARK [0][-]{chapter.4}{Concept}{}% 21
-\BOOKMARK [1][-]{section.4.1}{Person Search}{chapter.4}% 22
-\BOOKMARK [2][-]{subsection.4.1.1}{Recommender Systems}{section.4.1}% 23
-\BOOKMARK [2][-]{subsection.4.1.2}{Techniques of Content Filtering}{section.4.1}% 24
-\BOOKMARK [2][-]{subsection.4.1.3}{Search Algorithm}{section.4.1}% 25
-\BOOKMARK [2][-]{subsection.4.1.4}{Scoring Algorithm}{section.4.1}% 26
-\BOOKMARK [2][-]{subsection.4.1.5}{Example Search}{section.4.1}% 27
-\BOOKMARK [1][-]{section.4.2}{Search Suggestions}{chapter.4}% 28
-\BOOKMARK [2][-]{subsection.4.2.1}{Available Data}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.2}{Chosen Approach}{section.4.2}% 30
-\BOOKMARK [2][-]{subsection.4.2.3}{Concept}{section.4.2}% 31
-\BOOKMARK [2][-]{subsection.4.2.4}{Pseudo-Code}{section.4.2}% 32
-\BOOKMARK [2][-]{subsection.4.2.5}{Example}{section.4.2}% 33
-\BOOKMARK [1][-]{section.4.3}{Visual Concept \046 Wireframes}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.4}{Legal Concerns}{chapter.4}% 35
-\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 36
-\BOOKMARK [1][-]{section.5.1}{Application Structure}{chapter.5}% 37
-\BOOKMARK [1][-]{section.5.2}{MongoDB}{chapter.5}% 38
-\BOOKMARK [2][-]{subsection.5.2.1}{BSON}{section.5.2}% 39
-\BOOKMARK [2][-]{subsection.5.2.2}{Data Structure}{section.5.2}% 40
-\BOOKMARK [2][-]{subsection.5.2.3}{Queries}{section.5.2}% 41
-\BOOKMARK [1][-]{section.5.3}{LDAP}{chapter.5}% 42
-\BOOKMARK [1][-]{section.5.4}{Reverse Proxy}{chapter.5}% 43
-\BOOKMARK [1][-]{section.5.5}{API}{chapter.5}% 44
-\BOOKMARK [2][-]{subsection.5.5.1}{API Responses}{section.5.5}% 45
-\BOOKMARK [1][-]{section.5.6}{Backend}{chapter.5}% 46
-\BOOKMARK [1][-]{section.5.7}{Architecture}{chapter.5}% 47
-\BOOKMARK [2][-]{subsection.5.7.1}{Spring Boot}{section.5.7}% 48
-\BOOKMARK [2][-]{subsection.5.7.2}{Spring Data Repositories}{section.5.7}% 49
-\BOOKMARK [2][-]{subsection.5.7.3}{LDAP Connection}{section.5.7}% 50
-\BOOKMARK [2][-]{subsection.5.7.4}{Swagger}{section.5.7}% 51
-\BOOKMARK [2][-]{subsection.5.7.5}{Testing}{section.5.7}% 52
-\BOOKMARK [1][-]{section.5.8}{License}{chapter.5}% 53
-\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 54
-\BOOKMARK [1][-]{section.6.1}{Fitness Score Algorithm}{chapter.6}% 55
-\BOOKMARK [2][-]{subsection.6.1.1}{Uniform Distribution of Score Values}{section.6.1}% 56
-\BOOKMARK [2][-]{subsection.6.1.2}{Fitness Score Algorithm vs. Human Estimations}{section.6.1}% 57
-\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 58
-\BOOKMARK [2][-]{subsection.6.2.1}{Scalability}{section.6.2}% 59
-\BOOKMARK [2][-]{subsection.6.2.2}{Response Times}{section.6.2}% 60
-\BOOKMARK [1][-]{section.6.3}{Meeting the Requirements}{chapter.6}% 61
-\BOOKMARK [0][-]{chapter.7}{R\351sum\351 and Outlook}{}% 62
-\BOOKMARK [0][-]{chapter*.37}{Bibliography}{}% 63
-\BOOKMARK [0][-]{chapter*.37}{List of Figures}{}% 64
-\BOOKMARK [0][-]{chapter*.38}{List of Tables}{}% 65
-\BOOKMARK [0][-]{chapter*.40}{Affidavit \(Eidesstattliche Versicherung\)}{}% 66
+\BOOKMARK [2][-]{subsection.3.2.1}{Collecting the Requirements}{section.3.2}% 14
+\BOOKMARK [2][-]{subsection.3.2.2}{Functional Requirements}{section.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.2.3}{Non-Functional Requirements}{section.3.2}% 16
+\BOOKMARK [1][-]{section.3.3}{Commercial Solutions}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.1}{Skills Base}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.2}{Talent Management \(engage!\)}{section.3.3}% 19
+\BOOKMARK [2][-]{subsection.3.3.3}{SkillsDB Pro}{section.3.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.4}{Conclusion}{section.3.3}% 21
+\BOOKMARK [0][-]{chapter.4}{Concept}{}% 22
+\BOOKMARK [1][-]{section.4.1}{Person Search}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.1.1}{Recommender Systems}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.2}{Techniques of Content Filtering}{section.4.1}% 25
+\BOOKMARK [2][-]{subsection.4.1.3}{Search Algorithm}{section.4.1}% 26
+\BOOKMARK [2][-]{subsection.4.1.4}{Scoring Algorithm}{section.4.1}% 27
+\BOOKMARK [2][-]{subsection.4.1.5}{Example Search}{section.4.1}% 28
+\BOOKMARK [1][-]{section.4.2}{Search Suggestions}{chapter.4}% 29
+\BOOKMARK [2][-]{subsection.4.2.1}{Available Data}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Chosen Approach}{section.4.2}% 31
+\BOOKMARK [2][-]{subsection.4.2.3}{Concept}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.4}{Pseudo-Code}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.5}{Example}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{Visual Concept \046 Wireframes}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Legal Concerns}{chapter.4}% 36
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 37
+\BOOKMARK [1][-]{section.5.1}{Application Structure}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.2}{MongoDB}{chapter.5}% 39
+\BOOKMARK [2][-]{subsection.5.2.1}{BSON}{section.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.2.2}{Data Structure}{section.5.2}% 41
+\BOOKMARK [2][-]{subsection.5.2.3}{Queries}{section.5.2}% 42
+\BOOKMARK [1][-]{section.5.3}{LDAP}{chapter.5}% 43
+\BOOKMARK [1][-]{section.5.4}{Reverse Proxy}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.5}{API}{chapter.5}% 45
+\BOOKMARK [2][-]{subsection.5.5.1}{API Responses}{section.5.5}% 46
+\BOOKMARK [1][-]{section.5.6}{Backend}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.7}{Architecture}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.7.1}{Spring Boot}{section.5.7}% 49
+\BOOKMARK [2][-]{subsection.5.7.2}{Spring Data Repositories}{section.5.7}% 50
+\BOOKMARK [2][-]{subsection.5.7.3}{LDAP Connection}{section.5.7}% 51
+\BOOKMARK [2][-]{subsection.5.7.4}{Swagger}{section.5.7}% 52
+\BOOKMARK [2][-]{subsection.5.7.5}{Testing}{section.5.7}% 53
+\BOOKMARK [1][-]{section.5.8}{License}{chapter.5}% 54
+\BOOKMARK [0][-]{chapter.6}{Evaluation}{}% 55
+\BOOKMARK [1][-]{section.6.1}{Fitness Score Algorithm}{chapter.6}% 56
+\BOOKMARK [2][-]{subsection.6.1.1}{Uniform Distribution of Score Values}{section.6.1}% 57
+\BOOKMARK [2][-]{subsection.6.1.2}{Fitness Score Algorithm vs. Human Estimations}{section.6.1}% 58
+\BOOKMARK [1][-]{section.6.2}{Implementation}{chapter.6}% 59
+\BOOKMARK [2][-]{subsection.6.2.1}{Scalability}{section.6.2}% 60
+\BOOKMARK [2][-]{subsection.6.2.2}{Response Times}{section.6.2}% 61
+\BOOKMARK [1][-]{section.6.3}{Meeting the Requirements}{chapter.6}% 62
+\BOOKMARK [0][-]{chapter.7}{R\351sum\351 and Outlook}{}% 63
+\BOOKMARK [0][-]{chapter*.37}{Bibliography}{}% 64
+\BOOKMARK [0][-]{chapter*.37}{List of Figures}{}% 65
+\BOOKMARK [0][-]{chapter*.38}{List of Tables}{}% 66
+\BOOKMARK [0][-]{chapter*.40}{Affidavit \(Eidesstattliche Versicherung\)}{}% 67
