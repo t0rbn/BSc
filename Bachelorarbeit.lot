@@ -7,14 +7,16 @@
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {\relax 5.1}{\ignorespaces API Endpoints}}{38}{table.5.1}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Fitness Score Distribution (Raw Test Data)}}{50}{table.6.1}
-\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces Survey: Test Record Overview}}{51}{table.6.2}
-\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Survey: Rating to Fitness Score}}{52}{table.6.3}
-\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces Survey: Estimated Fitness Scores}}{52}{table.6.4}
-\contentsline {table}{\numberline {\relax 6.5}{\ignorespaces Survey: Estimated Importance of Weighting Factors}}{52}{table.6.5}
-\contentsline {table}{\numberline {\relax 6.6}{\ignorespaces Survey: Resulting Weighting Parameters}}{53}{table.6.6}
-\contentsline {table}{\numberline {\relax 6.7}{\ignorespaces Survey: Comparison of Algorithm and Survey}}{54}{table.6.7}
-\contentsline {table}{\numberline {\relax 6.8}{\ignorespaces Survey: Raw Data}}{55}{table.6.8}
-\contentsline {table}{\numberline {\relax 6.9}{\ignorespaces API Response Times}}{59}{table.6.9}
+\contentsline {table}{\numberline {\relax 6.1}{\ignorespaces Survey: Test Record Overview}}{50}{table.6.1}
+\contentsline {table}{\numberline {\relax 6.2}{\ignorespaces Survey: Rating to Fitness Score}}{51}{table.6.2}
+\contentsline {table}{\numberline {\relax 6.3}{\ignorespaces Survey: Estimated Fitness Scores}}{51}{table.6.3}
+\contentsline {table}{\numberline {\relax 6.4}{\ignorespaces Survey: Estimated Importance of Weighting Factors}}{51}{table.6.4}
+\contentsline {table}{\numberline {\relax 6.5}{\ignorespaces Survey: Resulting Weighting Parameters}}{52}{table.6.5}
+\contentsline {table}{\numberline {\relax 6.6}{\ignorespaces Survey: Comparison of Algorithm and Survey}}{53}{table.6.6}
+\contentsline {table}{\numberline {\relax 6.7}{\ignorespaces API Response Times}}{57}{table.6.7}
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {\relax B.1}{\ignorespaces Fitness Score Distribution (Raw Test Data)}}{65}{table.B.1}
+\contentsline {table}{\numberline {\relax B.2}{\ignorespaces Survey: Raw Data}}{66}{table.B.2}
 \addvspace {10\p@ }
