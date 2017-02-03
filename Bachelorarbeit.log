@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  2 FEB 2017 12:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  3 FEB 2017 11:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -909,14 +909,14 @@ Package scrpage2 Warning: seems you are using a very small headheight.
 
 \openout2 = `_titlepage.aux'.
 
-(./_titlepage.tex <images/unilogo.png, id=272, 4944.4725pt x 1600.47937pt>
+(./_titlepage.tex <images/unilogo.png, id=276, 4944.4725pt x 1600.47937pt>
 File: images/unilogo.png Graphic file (type png)
 
 <use images/unilogo.png>
 Package pdftex.def Info: images/unilogo.png used on input line 9.
 (pdftex.def)             Requested size: 176.40707pt x 57.09703pt.
 
-<images/minlogo.png, id=274, 2490.30376pt x 569.12625pt>
+<images/minlogo.png, id=278, 2490.30376pt x 569.12625pt>
 File: images/minlogo.png Graphic file (type png)
 
 <use images/minlogo.png>
@@ -1019,7 +1019,10 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 \tf@toc=\write4
 \openout4 = `Bachelorarbeit.toc'.
 
- [4]
+ [4] [5] [6
+
+
+]
 \openout2 = `chapter_motivation.aux'.
 
  (./chapter_motivation.tex
@@ -1032,9 +1035,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 
 
 
-
-
-] <images/matrixorga.png, id=381, 744.06679pt x 813.19461pt>
+] <images/matrixorga.png, id=394, 744.06679pt x 813.19461pt>
 File: images/matrixorga.png Graphic file (type png)
 
 <use images/matrixorga.png>
@@ -1067,75 +1068,81 @@ chapter 2.
 
 ]
 chapter 3.
-[5]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 41.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 41.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 41.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 41.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 41.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 41.
- [6]
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 55.
- (/usr/share/texmf-dist/tex/latex/psnfss/omsppl.fd
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 25.
+(/usr/share/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 55.
- [7] [8]
-<images/skillsbase-dashboard.png, id=463, 2017.5375pt x 1022.82124pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
+ [5]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 34.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 34.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 34.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 34.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 34.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 34.
+ [6] [7] [8] [9]
+<images/skillsbase-dashboard.png, id=480, 2017.5375pt x 1022.82124pt>
 File: images/skillsbase-dashboard.png Graphic file (type png)
 
 <use images/skillsbase-dashboard.png>
-Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 116
+Package pdftex.def Info: images/skillsbase-dashboard.png used on input line 141
 .
 (pdftex.def)             Requested size: 426.79134pt x 216.3595pt.
 
-<images/talent_management_-_skillmanagement_-_skillsuche.png, id=466, 1204.5pt 
+Underfull \vbox (badness 1377) has occurred while \output is active []
+
+ [10]
+<images/talent_management_-_skillmanagement_-_skillsuche.png, id=496, 1204.5pt 
 x 752.8125pt>
 File: images/talent_management_-_skillmanagement_-_skillsuche.png Graphic file 
 (type png)
 
 <use images/talent_management_-_skillmanagement_-_skillsuche.png>
 Package pdftex.def Info: images/talent_management_-_skillmanagement_-_skillsuch
-e.png used on input line 126.
+e.png used on input line 151.
 (pdftex.def)             Requested size: 426.79134pt x 266.75061pt.
- [9] [10pdfTeX warning (ext4): destination with the same identifier (name{figur
-e.3.1}) has been already used, duplicate ignored
+
+Underfull \vbox (badness 1389) has occurred while \output is active []
+
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.136 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3.2}) has been already used, duplicate ignored
+l.161 
+       <./images/skillsbase-dashboard.png>] [12pdfTeX warning (ext4): destinati
+on with the same identifier (name{figure.3.2}) has been already used, duplicate
+ ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.136 
-       <./images/skillsbase-dashboard.png> <./images/talent_management_-_skillm
-anagement_-_skillsuche.png>] [11]) [12]
+l.162 \newpage
+               <./images/talent_management_-_skillmanagement_-_skillsuche.png>]
+) [13]
 \openout2 = `chapter_concept.aux'.
 
- (./chapter_concept.tex
+ (./chapter_concept.tex [14
+
+
+
+
+]
 chapter 4.
-[13
-
-
-
-
-] [14] [15]
+[15] [16] [17]
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 55.
  (/usr/share/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/pcr/b/n' tried instead on input line 59.
- [16pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1147,11 +1154,11 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 116
  (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-[17]
+[19]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [18]
-[19]
+ [20]
+[21]
 Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
@@ -1161,7 +1168,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--176
 
  []
 
-[20]
+[22]
 Underfull \hbox (badness 10000) in paragraph at lines 203--206
 
  []
@@ -1171,86 +1178,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--220
 
  []
 
-[21] [22] <images/markov-chain.png, id=608, 803.0pt x 528.374pt>
+[23] [24] <images/markov-chain.png, id=641, 803.0pt x 528.374pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
 Package pdftex.def Info: images/markov-chain.png used on input line 277.
 (pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
- [23]
+ [25]
 Underfull \hbox (badness 10000) in paragraph at lines 283--289
 
  []
 
-[24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
+[26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.290 \newpage
-               <./images/markov-chain.png>] [25pdfTeX warning (ext4): destinati
+               <./images/markov-chain.png>] [27pdfTeX warning (ext4): destinati
 on with the same identifier (name{figure.4.3}) has been already used, duplicate
  ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.333 \newpage
-              ] <images/markov_impl.png, id=666, 803.0pt x 797.379pt>
+              ] <images/markov_impl.png, id=699, 803.0pt x 797.379pt>
 File: images/markov_impl.png Graphic file (type png)
 
 <use images/markov_impl.png>
 Package pdftex.def Info: images/markov_impl.png used on input line 394.
 (pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
- [26pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.397 \end{figure}
-                  ] [27pdfTeX warning (ext4): destination with the same identif
+                  ] [29pdfTeX warning (ext4): destination with the same identif
 ier (name{figure.4.5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.402 \newpage
                <./images/markov_impl.png>]
-<images/wireframe.png, id=709, 1314.9125pt x 1246.6575pt>
+<images/wireframe.png, id=742, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
 Package pdftex.def Info: images/wireframe.png used on input line 405.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.409 \newpage
                <./images/wireframe.png>]
-<images/design_home.png, id=716, 1475.5125pt x 1431.3475pt>
+<images/design_home.png, id=749, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
 Package pdftex.def Info: images/design_home.png used on input line 412.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.416 \newpage
-               <./images/design_home.png>]) [30]
+               <./images/design_home.png>]) [32]
 \openout2 = `chapter_implementation.aux'.
 
  (./chapter_implementation.tex
 chapter 5.
-<images/system_architecture.png, id=727, 1217.54875pt x 662.475pt>
+<images/system_architecture.png, id=760, 1217.54875pt x 662.475pt>
 File: images/system_architecture.png Graphic file (type png)
 
 <use images/system_architecture.png>
 Package pdftex.def Info: images/system_architecture.png used on input line 9.
 (pdftex.def)             Requested size: 426.79134pt x 232.21341pt.
- [31
+ [33
 
 
 
@@ -1261,7 +1268,7 @@ has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.14 \newpage
-              <./images/system_architecture.png>] [32] [33pdfTeX warning (ext4)
+              <./images/system_architecture.png>] [34] [35pdfTeX warning (ext4)
 : destination with the same identifier (name{figure.5.2}) has been already used
 , duplicate ignored
 
@@ -1274,7 +1281,7 @@ figure.5.3}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.63 \newpage
-             ] [34pdfTeX warning (ext4): destination with the same identifier (
+             ] [36pdfTeX warning (ext4): destination with the same identifier (
 name{figure.5.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1284,13 +1291,13 @@ l.98 \newpage
 
 LaTeX Warning: Float too large for page by 11.82751pt on input line 143.
 
-[35pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5
+[37pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.144 \newpage
-              ] [36pdfTeX warning (ext4): destination with the same identifier 
+              ] [38pdfTeX warning (ext4): destination with the same identifier 
 (name{table.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1299,7 +1306,7 @@ l.144 \newpage
               ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1312,18 +1319,18 @@ entifier (name{figure.5.7}) has been already used, duplicate ignored
                                                   \fi \fi 
 l.191 \section
               {Architecture}]
-<images/uml.png, id=878, 1285.603pt x 1769.009pt>
+<images/uml.png, id=910, 1285.603pt x 1769.009pt>
 File: images/uml.png Graphic file (type png)
  <use images/uml.png>
 Package pdftex.def Info: images/uml.png used on input line 195.
 (pdftex.def)             Requested size: 272.94672pt x 375.57845pt.
- [38pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.199 \newpage
-               <./images/uml.png>] [39pdfTeX warning (ext4): destination with t
+               <./images/uml.png>] [41pdfTeX warning (ext4): destination with t
 he same identifier (name{figure.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1332,7 +1339,7 @@ l.225 \newpage
               ]
 Underfull \vbox (badness 5985) has occurred while \output is active []
 
- [40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [42pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1348,13 +1355,13 @@ l.303
 Overfull \vbox (14.69682pt too high) has occurred while \output is active []
 
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.303 
-      ] <images/swagger_ui.png, id=981, 1182.4175pt x 1078.0275pt>
+      ] <images/swagger_ui.png, id=1014, 1182.4175pt x 1078.0275pt>
 File: images/swagger_ui.png Graphic file (type png)
 
 <use images/swagger_ui.png>
@@ -1363,7 +1370,7 @@ Package pdftex.def Info: images/swagger_ui.png used on input line 311.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [44pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1372,7 +1379,7 @@ l.319
        <./images/swagger_ui.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [45pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1384,31 +1391,31 @@ Overfull \hbox (10.98242pt too wide) in paragraph at lines 375--376
 R PUR-
  []
 
-) [44]
+) [46]
 \openout2 = `chapter_evaluation.aux'.
 
  (./chapter_evaluation.tex
 chapter 6.
-<images/dist_raw.png, id=1049, 1204.5pt x 744.7825pt>
+<images/dist_raw.png, id=1081, 1204.5pt x 744.7825pt>
 File: images/dist_raw.png Graphic file (type png)
 
 <use images/dist_raw.png>
 Package pdftex.def Info: images/dist_raw.png used on input line 20.
 (pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
- [45
+ [47
 
 
 
 
 ]
-<images/dist_avg.png, id=1058, 1204.5pt x 744.7825pt>
+<images/dist_avg.png, id=1091, 1204.5pt x 744.7825pt>
 File: images/dist_avg.png Graphic file (type png)
 
 <use images/dist_avg.png>
 Package pdftex.def Info: images/dist_avg.png used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
 
-<images/dist_error.png, id=1059, 1204.5pt x 744.7825pt>
+<images/dist_error.png, id=1092, 1204.5pt x 744.7825pt>
 File: images/dist_error.png Graphic file (type png)
 
 <use images/dist_error.png>
@@ -1417,7 +1424,7 @@ Package pdftex.def Info: images/dist_error.png used on input line 34.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1432,31 +1439,31 @@ l.38
       <./images/dist_raw.png> <./images/dist_avg.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [49pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.84 
-      <./images/dist_error.png>] [48pdfTeX warning (ext4): destination with the
+      <./images/dist_error.png>] [50pdfTeX warning (ext4): destination with the
  same identifier (name{table.6.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.85 \newpage
-             ] [49pdfTeX warning (ext4): destination with the same identifier (
+             ] [51pdfTeX warning (ext4): destination with the same identifier (
 name{table.6.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.108 \newpage
-              ] <images/survey_raw.png, id=1087, 1053.9375pt x 651.43375pt>
+              ] <images/survey_raw.png, id=1119, 1053.9375pt x 651.43375pt>
 File: images/survey_raw.png Graphic file (type png)
 
 <use images/survey_raw.png>
 Package pdftex.def Info: images/survey_raw.png used on input line 141.
 (pdftex.def)             Requested size: 426.79134pt x 263.7994pt.
- [50pdfTeX warning (ext4): destination with the same identifier (name{table.6.3
+ [52pdfTeX warning (ext4): destination with the same identifier (name{table.6.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1474,7 +1481,7 @@ ame{table.6.5}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.171 \end{table}
-                 ] [51pdfTeX warning (ext4): destination with the same identifi
+                 ] [53pdfTeX warning (ext4): destination with the same identifi
 er (name{figure.6.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1487,7 +1494,7 @@ l.173 \newpage
                                                   \fi \fi 
 l.173 \newpage
                <./images/survey_raw.png>]
-<images/survey_vs_alg.png, id=1108, 1204.5pt x 744.7825pt>
+<images/survey_vs_alg.png, id=1142, 1204.5pt x 744.7825pt>
 File: images/survey_vs_alg.png Graphic file (type png)
 
 <use images/survey_vs_alg.png>
@@ -1497,7 +1504,7 @@ Package pdftex.def Info: images/survey_vs_alg.png used on input line 195.
 
 LaTeX Warning: Float too large for page by 24.64256pt on input line 252.
 
-[52pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5
+[54pdfTeX warning (ext4): destination with the same identifier (name{figure.6.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1509,28 +1516,28 @@ l.259
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.259 
-       <./images/survey_vs_alg.png>] [53pdfTeX warning (ext4): destination with
+       <./images/survey_vs_alg.png>] [55pdfTeX warning (ext4): destination with
  the same identifier (name{table.6.8}) has been already used, duplicate ignored
 
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.259 
-      ] [54]
-<images/system_architecture_scaled.png, id=1137, 1286.8075pt x 766.865pt>
+      ] [56]
+<images/system_architecture_scaled.png, id=1170, 1286.8075pt x 766.865pt>
 File: images/system_architecture_scaled.png Graphic file (type png)
 
 <use images/system_architecture_scaled.png>
 Package pdftex.def Info: images/system_architecture_scaled.png used on input li
 ne 282.
 (pdftex.def)             Requested size: 320.09349pt x 190.75626pt.
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [57pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.287 \newpage
-               <./images/system_architecture_scaled.png>] [56] [57pdfTeX warnin
+               <./images/system_architecture_scaled.png>] [58] [59pdfTeX warnin
 g (ext4): destination with the same identifier (name{table.6.9}) has been alrea
 dy used, duplicate ignored
 
@@ -1543,17 +1550,17 @@ Overfull \hbox (0.92183pt too wide) in paragraph at lines 338--51
 ity has been par-tially eval-u-ated, whereas
  []
 
-[58]
+[60]
 \openout2 = `chapter_discussion_outlook.aux'.
 
  (./chapter_discussion_outlook.tex
 chapter 7.
-) [59
+) [61
 
 
 
 
-] (./Bachelorarbeit.bbl [60
+] (./Bachelorarbeit.bbl [62
 
 
 
@@ -1577,7 +1584,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 39--44
 -ci-sion \T1/ppl/m/n/10.95 51 (2013), Nr. 4, 813-
  []
 
-[61]
+[63]
 Underfull \hbox (badness 10000) in paragraph at lines 101--106
 \T1/pcr/m/n/10.95 developers . google . com / web / fundamentals / performance 
 / rail$[][]\T1/ppl/m/n/10.95 .
@@ -1626,23 +1633,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 152--156
 /
  []
 
-[62]
+[64]
 Underfull \hbox (badness 1092) in paragraph at lines 178--182
 []\T1/ppl/m/sc/10.95 Strecker\T1/ppl/m/n/10.95 , Katha-rina:  \T1/ppl/m/it/10.9
 5 Front-End Konzep-tion und Um-set-zung eines un-
  []
 
-) [63] [64
+) [65] [66
 
 
 ] (./Bachelorarbeit.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorarbeit.lof'.
 
- [65
+ [67
 
 
-] [66
+] [68
 
 
 ] (./Bachelorarbeit.lot)
@@ -1650,7 +1657,7 @@ Underfull \hbox (badness 1092) in paragraph at lines 178--182
 \openout6 = `Bachelorarbeit.lot'.
 
 
-(./_eidversicherung.tex [67] [68
+(./_eidversicherung.tex [69] [70
 
 
 ]
@@ -1659,52 +1666,76 @@ Overfull \hbox (20.01782pt too wide) in paragraph at lines 5--8
 beige-fügten Verze-ich-nis angegebe-
  []
 
-) [69]
+[71] [72
+
+
+]) [73]
 \openout2 = `medium.aux'.
 
- (./medium.tex [70
+ (./medium.tex [74
 
 
 
-]) [71]
+]) [75]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
- (./Bachelorarbeit.aux (./_titlepage.aux)
-(./chapter_abstract.aux) (./chapter_motivation.aux) (./chapter_relatedwork.aux)
-(./chapter_objectives.aux) (./chapter_concept.aux)
+ (./Bachelorarbeit.aux
+(./_titlepage.aux) (./chapter_abstract.aux) (./chapter_motivation.aux)
+(./chapter_relatedwork.aux) (./chapter_objectives.aux) (./chapter_concept.aux)
 (./chapter_implementation.aux) (./chapter_evaluation.aux)
 (./chapter_discussion_outlook.aux) (./medium.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
-Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: A0D21C55434F5114005C15FB918D5774;4363.
 
+
+Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
+(rerunfilecheck)             Before: 07F04146A23DD14E9A6F81ADB517B794;4399
+(rerunfilecheck)             After:  353733D3FE4952ACAAA9D681CE22E1AA;4392.
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13237 strings out of 493013
- 198715 string characters out of 6139317
+ 13256 strings out of 493013
+ 198931 string characters out of 6139317
  454950 words of memory out of 5000000
- 15876 multiletter control sequences out of 15000+600000
+ 15878 multiletter control sequences out of 15000+600000
  49187 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,12n,66p,8825b,1277s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier
-/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/sh
-are/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts
-/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/
-uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (77 pages, 2509291 bytes).
+pdfTeX warning (dest): name{subsection.3.4.4} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.4.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/sha
+re/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/font
+s/type1/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/u
+crr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/shar
+e/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/t
+ype1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/up
+lri8a.pfb>
+Output written on Bachelorarbeit.pdf (83 pages, 2505195 bytes).
 PDF statistics:
- 1478 PDF objects out of 1728 (max. 8388607)
- 1337 compressed objects within 14 object streams
- 560 named destinations out of 1000 (max. 500000)
- 627 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1524 PDF objects out of 1728 (max. 8388607)
+ 1377 compressed objects within 14 object streams
+ 577 named destinations out of 1000 (max. 500000)
+ 635 words of extra memory for PDF output out of 10000 (max. 10000000)
 

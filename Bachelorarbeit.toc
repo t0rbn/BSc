@@ -11,92 +11,96 @@
 \contentsline {section}{\numberline {3.1}Usage Scenarios}{5}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Asking for Help}{5}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Finding Potential Team Members}{5}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Collecting Information}{5}{subsection.3.1.3}
-\contentsline {subsubsection}{\nonumberline Biannual Feedback Meetings}{6}{section*.5}
-\contentsline {subsection}{\numberline {3.1.4}Notifications by Supervisors}{6}{subsection.3.1.4}
-\contentsline {subsubsection}{\nonumberline Automatic Notifications}{6}{section*.6}
-\contentsline {subsubsection}{\nonumberline Intrinsic Motivations}{7}{section*.7}
-\contentsline {section}{\numberline {3.2}Requirements}{7}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Collecting the Requirements}{7}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Functional Requirements}{7}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Non-Functional Requirements}{8}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Commercial Solutions}{9}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Skills Base}{9}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Talent Management (engage!)}{9}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}SkillsDB Pro}{11}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Conclusion}{12}{subsection.3.3.4}
-\contentsline {subsubsection}{\nonumberline Pain Point Fitness Scoring}{12}{section*.8}
-\contentsline {chapter}{\numberline {4}Concept}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Person Search}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Recommender Systems}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Techniques of Content Filtering}{14}{subsection.4.1.2}
-\contentsline {subsubsection}{\nonumberline Content Based Filtering}{14}{section*.9}
-\contentsline {subsubsection}{\nonumberline Collaborative Filtering}{14}{section*.10}
-\contentsline {subsubsection}{\nonumberline Hybrid Filtering}{14}{section*.11}
-\contentsline {subsection}{\numberline {4.1.3}Search Algorithm}{15}{subsection.4.1.3}
-\contentsline {subsubsection}{\nonumberline Outline}{15}{section*.12}
-\contentsline {subsubsection}{\nonumberline Pseudo-Implementation}{16}{section*.13}
-\contentsline {subsection}{\numberline {4.1.4}Scoring Algorithm}{16}{subsection.4.1.4}
-\contentsline {subsubsection}{\nonumberline Requirements}{16}{section*.14}
-\contentsline {subsubsection}{\nonumberline Factors to Include}{17}{section*.15}
-\contentsline {subsubsection}{\nonumberline Proposed Fitness Score Algorithm}{17}{section*.16}
-\contentsline {subsubsection}{\nonumberline Example Calculation}{20}{section*.17}
-\contentsline {subsection}{\numberline {4.1.5}Example Search}{21}{subsection.4.1.5}
-\contentsline {section}{\numberline {4.2}Search Suggestions}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Available Data}{22}{subsection.4.2.1}
-\contentsline {subsubsection}{\nonumberline Distinguishable Users}{22}{section*.18}
-\contentsline {subsubsection}{\nonumberline Skill Attributes}{23}{section*.19}
-\contentsline {subsubsection}{\nonumberline Aggregated Search History}{23}{section*.20}
-\contentsline {subsection}{\numberline {4.2.2}Chosen Approach}{23}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Concept}{23}{subsection.4.2.3}
-\contentsline {subsubsection}{\nonumberline Markov Chains}{23}{section*.21}
-\contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{24}{section*.22}
-\contentsline {subsection}{\numberline {4.2.4}Pseudo-Code}{25}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Example}{26}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Visual Concept \& Wireframes}{27}{section.4.3}
-\contentsline {section}{\numberline {4.4}Legal Concerns}{30}{section.4.4}
-\contentsline {chapter}{\numberline {5}Implementation}{31}{chapter.5}
-\contentsline {section}{\numberline {5.1}Application Structure}{31}{section.5.1}
-\contentsline {section}{\numberline {5.2}MongoDB}{32}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}BSON}{32}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Data Structure}{32}{subsection.5.2.2}
-\contentsline {subsubsection}{\nonumberline Known Skills}{33}{section*.23}
-\contentsline {subsubsection}{\nonumberline Sessions}{33}{section*.24}
-\contentsline {subsubsection}{\nonumberline Persons}{34}{section*.25}
-\contentsline {subsection}{\numberline {5.2.3}Queries}{35}{subsection.5.2.3}
-\contentsline {section}{\numberline {5.3}LDAP}{35}{section.5.3}
-\contentsline {section}{\numberline {5.4}Reverse Proxy}{35}{section.5.4}
-\contentsline {section}{\numberline {5.5}API}{35}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}API Responses}{37}{subsection.5.5.1}
-\contentsline {section}{\numberline {5.6}Backend}{38}{section.5.6}
-\contentsline {section}{\numberline {5.7}Architecture}{38}{section.5.7}
-\contentsline {subsection}{\numberline {5.7.1}Spring Boot}{39}{subsection.5.7.1}
-\contentsline {subsection}{\numberline {5.7.2}Spring Data Repositories}{40}{subsection.5.7.2}
-\contentsline {subsection}{\numberline {5.7.3}LDAP Connection}{40}{subsection.5.7.3}
-\contentsline {subsection}{\numberline {5.7.4}Swagger}{42}{subsection.5.7.4}
-\contentsline {subsection}{\numberline {5.7.5}Testing}{43}{subsection.5.7.5}
-\contentsline {subsubsection}{\nonumberline Embedded Services}{44}{section*.26}
-\contentsline {section}{\numberline {5.8}License}{44}{section.5.8}
-\contentsline {chapter}{\numberline {6}Evaluation}{45}{chapter.6}
-\contentsline {section}{\numberline {6.1}Fitness Score Algorithm}{45}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Uniform Distribution of Score Values}{45}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Fitness Score Algorithm vs. Human Estimations}{49}{subsection.6.1.2}
-\contentsline {subsubsection}{\nonumberline Examined Test Records}{49}{section*.27}
-\contentsline {subsubsection}{\nonumberline Survey}{50}{section*.28}
-\contentsline {subsubsection}{\nonumberline Comparison}{52}{section*.29}
-\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{54}{section*.30}
-\contentsline {subsubsection}{\nonumberline Conclusion}{54}{section*.31}
-\contentsline {section}{\numberline {6.2}Implementation}{55}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Scalability}{55}{subsection.6.2.1}
-\contentsline {subsubsection}{\nonumberline MongoDB}{56}{section*.32}
-\contentsline {subsubsection}{\nonumberline LDAP}{56}{section*.33}
-\contentsline {subsubsection}{\nonumberline Static Content}{56}{section*.34}
-\contentsline {subsubsection}{\nonumberline Backend}{56}{section*.35}
-\contentsline {subsubsection}{\nonumberline Conclusion}{57}{section*.36}
-\contentsline {subsection}{\numberline {6.2.2}Response Times}{57}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Meeting the Requirements}{58}{section.6.3}
-\contentsline {chapter}{\numberline {7}R\IeC {\'e}sum\IeC {\'e} and Outlook}{59}{chapter.7}
-\contentsline {chapter}{\nonumberline Bibliography}{61}{chapter*.37}
-\contentsline {chapter}{List of Figures}{65}{chapter*.37}
-\contentsline {chapter}{List of Tables}{65}{chapter*.38}
-\contentsline {chapter}{Affidavit (Eidesstattliche Versicherung)}{69}{chapter*.40}
+\contentsline {section}{\numberline {3.2}Collecting the Required Featues}{5}{section.3.2}
+\contentsline {subsubsection}{\nonumberline Interview Procedure}{6}{section*.5}
+\contentsline {subsubsection}{\nonumberline Interviewees}{6}{section*.6}
+\contentsline {subsubsection}{\nonumberline Results}{7}{section*.7}
+\contentsline {section}{\numberline {3.3}Workflows}{7}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Collecting Information}{7}{subsection.3.3.1}
+\contentsline {subsubsection}{\nonumberline Biannual Feedback Meetings}{7}{section*.8}
+\contentsline {subsection}{\numberline {3.3.2}Notifications by Supervisors}{7}{subsection.3.3.2}
+\contentsline {subsubsection}{\nonumberline Automatic Notifications}{8}{section*.9}
+\contentsline {subsubsection}{\nonumberline Intrinsic Motivations}{9}{section*.10}
+\contentsline {section}{\numberline {3.4}Requirements}{9}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Functional Requirements}{9}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Non-Functional Requirements}{10}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Commercial Solutions}{10}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Skills Base}{11}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Talent Management (engage!)}{11}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}SkillsDB Pro}{12}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Conclusion}{13}{subsection.3.5.4}
+\contentsline {subsubsection}{\nonumberline Pain Point Fitness Scoring}{13}{section*.11}
+\contentsline {chapter}{\numberline {4}Concept}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Person Search}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Recommender Systems}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Techniques of Content Filtering}{16}{subsection.4.1.2}
+\contentsline {subsubsection}{\nonumberline Content Based Filtering}{16}{section*.12}
+\contentsline {subsubsection}{\nonumberline Collaborative Filtering}{16}{section*.13}
+\contentsline {subsubsection}{\nonumberline Hybrid Filtering}{16}{section*.14}
+\contentsline {subsection}{\numberline {4.1.3}Search Algorithm}{17}{subsection.4.1.3}
+\contentsline {subsubsection}{\nonumberline Outline}{17}{section*.15}
+\contentsline {subsubsection}{\nonumberline Pseudo-Implementation}{18}{section*.16}
+\contentsline {subsection}{\numberline {4.1.4}Scoring Algorithm}{18}{subsection.4.1.4}
+\contentsline {subsubsection}{\nonumberline Requirements}{18}{section*.17}
+\contentsline {subsubsection}{\nonumberline Factors to Include}{19}{section*.18}
+\contentsline {subsubsection}{\nonumberline Proposed Fitness Score Algorithm}{19}{section*.19}
+\contentsline {subsubsection}{\nonumberline Example Calculation}{22}{section*.20}
+\contentsline {subsection}{\numberline {4.1.5}Example Search}{23}{subsection.4.1.5}
+\contentsline {section}{\numberline {4.2}Search Suggestions}{23}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Available Data}{24}{subsection.4.2.1}
+\contentsline {subsubsection}{\nonumberline Distinguishable Users}{24}{section*.21}
+\contentsline {subsubsection}{\nonumberline Skill Attributes}{25}{section*.22}
+\contentsline {subsubsection}{\nonumberline Aggregated Search History}{25}{section*.23}
+\contentsline {subsection}{\numberline {4.2.2}Chosen Approach}{25}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Concept}{25}{subsection.4.2.3}
+\contentsline {subsubsection}{\nonumberline Markov Chains}{25}{section*.24}
+\contentsline {subsubsection}{\nonumberline Data Structure and Algorithm}{26}{section*.25}
+\contentsline {subsection}{\numberline {4.2.4}Pseudo-Code}{27}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Example}{28}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Visual Concept \& Wireframes}{29}{section.4.3}
+\contentsline {section}{\numberline {4.4}Legal Concerns}{32}{section.4.4}
+\contentsline {chapter}{\numberline {5}Implementation}{33}{chapter.5}
+\contentsline {section}{\numberline {5.1}Application Structure}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}MongoDB}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}BSON}{34}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Data Structure}{34}{subsection.5.2.2}
+\contentsline {subsubsection}{\nonumberline Known Skills}{35}{section*.26}
+\contentsline {subsubsection}{\nonumberline Sessions}{35}{section*.27}
+\contentsline {subsubsection}{\nonumberline Persons}{36}{section*.28}
+\contentsline {subsection}{\numberline {5.2.3}Queries}{37}{subsection.5.2.3}
+\contentsline {section}{\numberline {5.3}LDAP}{37}{section.5.3}
+\contentsline {section}{\numberline {5.4}Reverse Proxy}{37}{section.5.4}
+\contentsline {section}{\numberline {5.5}API}{37}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}API Responses}{39}{subsection.5.5.1}
+\contentsline {section}{\numberline {5.6}Backend}{40}{section.5.6}
+\contentsline {section}{\numberline {5.7}Architecture}{40}{section.5.7}
+\contentsline {subsection}{\numberline {5.7.1}Spring Boot}{41}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.2}Spring Data Repositories}{42}{subsection.5.7.2}
+\contentsline {subsection}{\numberline {5.7.3}LDAP Connection}{42}{subsection.5.7.3}
+\contentsline {subsection}{\numberline {5.7.4}Swagger}{44}{subsection.5.7.4}
+\contentsline {subsection}{\numberline {5.7.5}Testing}{45}{subsection.5.7.5}
+\contentsline {subsubsection}{\nonumberline Embedded Services}{46}{section*.29}
+\contentsline {section}{\numberline {5.8}License}{46}{section.5.8}
+\contentsline {chapter}{\numberline {6}Evaluation}{47}{chapter.6}
+\contentsline {section}{\numberline {6.1}Fitness Score Algorithm}{47}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Uniform Distribution of Score Values}{47}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Fitness Score Algorithm vs. Human Estimations}{51}{subsection.6.1.2}
+\contentsline {subsubsection}{\nonumberline Examined Test Records}{51}{section*.30}
+\contentsline {subsubsection}{\nonumberline Survey}{52}{section*.31}
+\contentsline {subsubsection}{\nonumberline Comparison}{54}{section*.32}
+\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{56}{section*.33}
+\contentsline {subsubsection}{\nonumberline Conclusion}{56}{section*.34}
+\contentsline {section}{\numberline {6.2}Implementation}{57}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Scalability}{57}{subsection.6.2.1}
+\contentsline {subsubsection}{\nonumberline MongoDB}{58}{section*.35}
+\contentsline {subsubsection}{\nonumberline LDAP}{58}{section*.36}
+\contentsline {subsubsection}{\nonumberline Static Content}{58}{section*.37}
+\contentsline {subsubsection}{\nonumberline Backend}{58}{section*.38}
+\contentsline {subsubsection}{\nonumberline Conclusion}{59}{section*.39}
+\contentsline {subsection}{\numberline {6.2.2}Response Times}{59}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Meeting the Requirements}{60}{section.6.3}
+\contentsline {chapter}{\numberline {7}R\IeC {\'e}sum\IeC {\'e} and Outlook}{61}{chapter.7}
+\contentsline {chapter}{\nonumberline Bibliography}{63}{chapter*.40}
+\contentsline {chapter}{List of Figures}{67}{chapter*.40}
+\contentsline {chapter}{List of Tables}{67}{chapter*.41}
+\contentsline {chapter}{Formalities (DE)}{69}{chapter*.42}
