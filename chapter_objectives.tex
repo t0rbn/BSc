@@ -23,18 +23,17 @@ As shown in \ref{usecases}, the application is supposed to provide help for two 
 The actual features the system should include have been collected by the \textit{Flow Team}, a group of project managers who coordinate and monitor project team staffing and personnel development on a higher level. The flow team has also initated and supervises the development of the skills management application. To validate that the requirements asked by the Flow Team reflect the end users' needs, and to obatin a better impression thereof, semi structured interviews have been conducted. In addition to solely gathering the asked persons' general anticipations, the interviews aimed to give answers to these concrete questions:
 \begin{itemize}
 	\item What should be range of the scale to measure knowledge and motivation with?
-	\item Should certificates and trainings be included in the system? If so, should those be modelled as skills or as a separate entity?
 	\item Should the overall expierience of the employees' be captured by the system?
 	\item Should the system differntiate between short-term and long-term motivation?
 	\item Should colleagues be able to rate an employees' skills?
 	\item Should the system be able to automatically form project teams?
 \end{itemize}
 
-\subsubsection{Interview Procedure}
-The interviews consist of a 10 minutes long\footnote{The actual timeframe may vary depending on the interviewees' answers.} open discussion between the interviewer and the interviewees, so that if the interviewee gives an extraordinate answer brings up a new idea, the interviewer may ask the interviewee to give further explanations. The questions listed in \ref{interviewquestions} will provide a guideline to structure the interviews. Before the interview, the interviewees have been informed about the procedure, the personal data that will be collected for the interview, and its purpose and have to give their written consent. (TODO verweis auf Zustimmung)
-In order to extract all information from the interviewees' answers, audio recordings have been taped during the interviews; transcipts of those recordings can be found in TODO verweis auf Appendix.
+\subsection{Interview Procedure}
+The interviews consist of a 10 minutes long\footnote{The actual timeframe may vary depending on the interviewees' answers.} open discussion between the interviewer and the interviewees, so that if the interviewee gives an extraordinate answer brings up a new idea, the interviewer may ask the interviewee to give further explanations. The questions listed in \ref{interviewquestions} will provide a guideline to structure the interviews. Before the interview, the interviewees have been informed about the procedure, the personal data that will be collected for the interview, and its purpose and have to give their written consent (see \ref{consentform}).
+In order to extract all information from the interviewees' answers, audio recordings have been taped during the interviews; transcipts of those recordings can be found in \ref{transcripts}.
 
-\subsubsection{Interviewees}
+\subsection{Interviewees}
 As described, there are three main groups of stakeholders regarding the application: the Flow Team that supervises its development, project managers whom the tool is supposed to help finding new team members, and general employees looking for help. For each of these groups, one representative has been interviewed:
 \begin{itemize}
 	\item Ms. Spranger\\
@@ -48,10 +47,37 @@ As described, there are three main groups of stakeholders regarding the applicat
 \end{itemize}
 Other than Ms. Spranger, Mr. Warnholz and Mr. Gruber have not been in contact with the devlopment of the skills management application, so that their opinions should not be influenced by internal decisions made about the tool's design.
 
-\subsubsection{Results}
-TODO verweils auf rohdaten
+\subsection{Results}
+The interview recordings have been transcripted (see \ref{transcripts}) to extract information about the interviewees' opinions to decide wheter or not the respective feature should be included in the application, and if so, how it should be designed.
+
+\subsubsection{General Expectations}
+Popular features requested by the interviewees are the ability to see how motivated employees are regarding specific skills in order increase employee satisfaction and to deduce a certain employee's development of interest. Furthermore, one of the most desired features is that project managers get a tool to find suitable members for their teams. Qualitative factors the interviewees requested are that the tool is easy to use and that the interface is simple.
+
+\subsubsection{Scale}
+Asked for a rough estimation of how the scale on which knowledge and motivation will be measured should be designed, all interviewees replied that they prefer a simple scale between four and six values. Mr. Gruber and Mr. Warnholz proposed to use five step \textit{Likert Items}. Since those items base on the idea to estimate the difference to a neutral element in both directions (e.g. better or worse), this type of scale is not applicable for the measurement of knowledge because the concept of ``negative knowledge'' relative to a neutral element is counterintuitive and impractial. The chosen approach will include a scale of four items for both types of values:
+\begin{center}
+\begin{tabular}{c|c}
+	Knowledge & Motivation \\
+	\hline
+	novice & uninterested\\
+	basic knowledge & indifferent\\
+	advanced knowledge & somewhat interested\\
+	expert & highly interested\\
+\end{tabular}
+\end{center}
 
 
+\subsubsection{Overall Expierience}
+All interviewees agree that the overall expierience of the employees should not be included in the search function because the skill specific expierience is significantly more meaningful in this context. The general grade of expierience that is reflected by the employees title (e.g. \textit{Junior}, \textit{Intermediate} or \textit{Senior}) should be shown in the result list but it must not influence the working of the search and rating.
+
+\subsubsection{Duration of Motivation}
+Regarding whether the duration of a will, that is how long the interest in a specific skill will persist, should be captured in the system, the interviewees agree that this should not be the case. The system is supposed to present a snapshot of the present situation and should not be used for long term assumptions. Another important factor stated by the interviewees is that forecasts about one's motivation will be highly inaccurate.
+
+\subsubsection{Peer Rating}
+None of the interviewees answerd that they want employees to be able to rate each other's skills because they fear that subjective impressions might blur the professional view so that ratings are heavily influenced by sympathy. Furthermore, the Works Council prohibits the introduction of such a feature (see TODO statement einfügen) because multiple employees raised concerns about this feature and whish it not to be included. To respect this wish, users of the application will not be able to rate someone other than themselves.
+
+\subsubsection{Generating Teams}
+The application will not save which projects each employee works on or has previously worked on, because this information is managed by another internal service which will not be replaced by this application, so that this data would have to be updated in both systems manually, which is impractical. Under this condition, no interviewee wants the application to automatically compose project teams. Reasons that have been mentioned are that this task is too complex to be automated, and that composing complete teams is not a popular use case for it. Project teams at SinnerSchrader grow organically, so it is much more common for project managers to look for one single potential member to add to their team instead of composing a completely new one. Based on this insights, the application will not be able to compose teams.
 
 \section{Workflows}
 
@@ -62,9 +88,6 @@ doing the implicitly linked activity or working with the tool described by said 
 As employees continually enlarge their knowledge while their fields of interest shift towards new technologies, tools, or even
 functional divisions, providing data about their skills and preference once will lead to the system being filled with obsolete
 information. The quality of the search results and suggestions heavily relies on the fidelity and volume of the underlying data about the employees, hence keeping said information up to date is crucial to the performance of the application.
-
-\subsubsection{Auslastung}
-TODO schreiben, warum Auslastung nicht erfasst, und deswegen auch nicht im Interview.
 
 \subsubsection{Biannual Feedback Meetings}
 Every employee has biannual meetings with their respective supervisor to interchange
@@ -110,6 +133,8 @@ there also exist intrinsic motivations to do so. Being motivated intrinsically i
 		\item Sorting\\
 			The user should be able to sort the search results not only by said score
 			but also by knowledge and will level.
+	\item Provide Additional Information
+			Employees should be able to add comments to their profile to give extra information about working hours, special contracts, certificates they own, etc.
 	\end{itemize}
 	\item Management of Known Skills\\
 	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users' personal skills are automatically updated when a skill has been edited, so that the integrity of the users' profiles is maintained at all times.

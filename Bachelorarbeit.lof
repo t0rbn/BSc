@@ -4,8 +4,8 @@
 \contentsline {figure}{\numberline {\relax 1.1}{\ignorespaces Diagram: Matrix organization}}{2}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Screenshot: SkillsBase Dashboard}}{11}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Screenshot: Talent Management Search}}{12}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Screenshot: SkillsBase Dashboard}}{12}{figure.3.1}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Screenshot: Talent Management Search}}{13}{figure.3.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Pseudocode: Search Algorithm}}{18}{figure.4.1}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Diagram: Markov Chain}}{26}{figure.4.2}
@@ -21,14 +21,13 @@
 \contentsline {figure}{\numberline {\relax 5.4}{\ignorespaces Data Structure: Person}}{36}{figure.5.4}
 \contentsline {figure}{\numberline {\relax 5.5}{\ignorespaces Code: Example Database Query}}{37}{figure.5.5}
 \contentsline {figure}{\numberline {\relax 5.6}{\ignorespaces Data Structure: Person API Response}}{39}{figure.5.6}
-\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Data Structure: Status API Response}}{39}{figure.5.7}
-\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Diagram: Backend Classes}}{40}{figure.5.8}
-\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Code: Example Controller}}{41}{figure.5.9}
-\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Code: Example Repository Interface}}{42}{figure.5.10}
-\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Code: Spring Data Config}}{42}{figure.5.11}
-\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Code: LDAP User Authentication}}{43}{figure.5.12}
-\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Screenshot: Swagger Interactive Documentation}}{44}{figure.5.13}
-\contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Code: Example Unit Test}}{45}{figure.5.14}
+\contentsline {figure}{\numberline {\relax 5.7}{\ignorespaces Diagram: Backend Classes}}{40}{figure.5.7}
+\contentsline {figure}{\numberline {\relax 5.8}{\ignorespaces Code: Example Controller}}{41}{figure.5.8}
+\contentsline {figure}{\numberline {\relax 5.9}{\ignorespaces Code: Example Repository Interface}}{42}{figure.5.9}
+\contentsline {figure}{\numberline {\relax 5.10}{\ignorespaces Code: Spring Data Config}}{42}{figure.5.10}
+\contentsline {figure}{\numberline {\relax 5.11}{\ignorespaces Code: LDAP User Authentication}}{43}{figure.5.11}
+\contentsline {figure}{\numberline {\relax 5.12}{\ignorespaces Screenshot: Swagger Interactive Documentation}}{44}{figure.5.12}
+\contentsline {figure}{\numberline {\relax 5.13}{\ignorespaces Code: Example Unit Test}}{45}{figure.5.13}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Diagram: Fitness Score Distribution (Raw)}}{48}{figure.6.1}
 \contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Diagram: Fitness Score Distribution (Processed)}}{48}{figure.6.2}
@@ -38,5 +37,7 @@
 \contentsline {figure}{\numberline {\relax 6.6}{\ignorespaces Illustration: Scaled System Architecture}}{55}{figure.6.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {\relax A.1}{\ignorespaces Interview Consent Form (Page 1)}}{61}{figure.A.1}
+\contentsline {figure}{\numberline {\relax A.2}{\ignorespaces Interview Consent Form (Page 2)}}{62}{figure.A.2}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -25,7 +25,7 @@ Interestingly, the maximum error seems to have a declining trend; the small amou
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/dist_avg.png}
-    \caption[Diagram: Fitness Score Distribution (Processed)]{Average, maximum and minimum score for earch position in the respective search result list.}
+    \caption[Diagram: Fitness Score Distribution (Processed)]{Average, maximum and minimum score for each position in the respective search result list.}
     \label{fig:dist-avg}
 \end{figure}
 
@@ -234,7 +234,7 @@ Those results show that the API is capable of serving the requests quickly enoug
 \newpage
 
 \section{Meeting the Requirements}
-In \ref{requirements}, a set of functional and non functional requirements has been defined. The backend application that has been designed and implemented has to meet those requirements, and it does: the API supports the creation of user profiles that then can be retrieved, the skills in those profiles can be edited by the profile's owner only, everybody can search for profiles of persons that offer specific skills (see table \ref{swaggertable}). The application was designed to be accessible to all employees, thus it is implemented as a web application that can be opened by any internet enabled device. New skills can be fed into the system so that people can add them to their profiles. \newline
+In \ref{requirements}, a set of functional and non functional requirements has been defined. The backend application that has been designed and implemented has to meet those requirements, and it does: the API supports the creation of user profiles that then can be retrieved, the skills in those profiles can be edited by the profile's owner only, and everybody can search for profiles of persons that offer specific skills (see table \ref{swaggertable}). Extra information about the employee can be added by them into their profile's comment section. The application was designed to be accessible to all employees, thus it is implemented as a web application that can be opened by any internet enabled device. New skills can be fed into the system so that people can add them to their profiles. \newline
 The non functional requirements included scalability, low response times, the supported devices and browsers.
 As shown in \ref{scale}, scalability has been partially evaluated, whereas services that the application relies on such as MongoDB and LDAP were assumed to be scalable in this architecture as comparable systems have already shown. The response times have been evaluated in \ref{resptime}; the results and tests with and prototypical stage of the frontend show that the application is capable of delivering the requested inforamtion in significantely less time than defined.
 The requirements for supported devices and browsers, however, could not be evaluated since the determinative factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}.
