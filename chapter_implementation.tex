@@ -10,8 +10,6 @@ To store and read data, the backend connects to a MongoDB Database. User details
     \caption[Illustration: System Architecture]{The system's architecture. Created with \textit{https://cloudcraft.co}.}
     \label{fig:markovchain}
 \end{figure}
-
-\newpage
 \section{MongoDB}
 MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}.
 
@@ -60,8 +58,6 @@ Sessions are used to authenticate users that wish to modify their personal profi
 \end{lstlisting}
 \caption[Data Structure: Session]{Data structure of a session stored in the DB}
 \end{figure}
-\newpage
-
 \subsubsection{Persons}
 \label{db:person}
 The documents that represent persons contain the respective person's id\footnote{Each employee gets assigned an internal ID (\textit{Benutzerkürzel}) that is globally used to uniquely identify a person.}, their personal data like first and last name, telephone number, e-mail address, office location, job title\footnote{The job title data is not maintained consistently in the LDAP, so that, unfortunately, it is not suitable to be used in the person search.} (e.g. "Senior Java Developer"), and a list of the person's skills. Each of those skills consists of a name, a level of skill and a level of will.
@@ -96,9 +92,8 @@ The documents that represent persons contain the respective person's id\footnote
 \caption[Data Structure: Person]{Data structure of a person stored in the DB}
 \end{figure}
 
+
 \newpage
-
-
 
 \subsection{Queries}
 As shown in \ref{BSON}, the document based data structure of MongoDB allows the database to efficiently perform complex requests. Furthermore, it provides simple and straightforward search queries to retrieve objects based on their attributes. For example, getting all users who offer the skill \textit{Ruby} from the collection \textit{person} can be done with this straightforward query:
@@ -143,8 +138,6 @@ The used HTTP method is the main indicator of the action to perform: \textit{GET
 \caption[API Endpoints]{All API endpoints provided by the backend}
 \label{swaggertable}
 \end{table}
-\newpage
-
 \subsection{API Responses}
 The API returns data in the JSON format, which is one of the two de-facto standards for data exchange on the web\footnote{The other one is \textit{XML} used by the \textit{Simple Object Access Protocol}} because it is part of the Javascript (JS) language \cite[p. 37]{json}. Approximately 94\% of all websites use JS \cite{jsmarket}; since JSON directly represents JS objects and is both easy to parse and human-readable, it became the leading data format for web applications.
 For every HTTP request, the backend will return a JSON response, notwithstanding the request may not demand data to be returned. In this case, the response will contain status information about the success of the requested action.
@@ -177,15 +170,16 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 \end{figure}
 
 
-% \begin{figure}[h]
-% \begin{lstlisting}[language=Java]
-% {
-% 	"message" : "logout successful"
-% }
-% \end{lstlisting}
-% \caption[Data Structure: Status API Response]{Example JSON response for a request that does not demand any data.}
-% \end{figure}
+\begin{figure}[h]
+\begin{lstlisting}[language=Java]
+{
+	"message" : "logout successful"
+}
+\end{lstlisting}
+\caption[Data Structure: Status API Response]{Example JSON response for a request that does not demand any data.}
+\end{figure}
 
+\newpage
 
 \section{Backend}
 \label{impl:be}
@@ -199,8 +193,6 @@ The software architecture consists of three main categories of classes: services
     \caption[Diagram: Backend Classes]{UML class diagram of the backend to illustrate its dimensions.}
     \label{fig:markovchain}
 \end{figure}
-\newpage
-
 \subsection{Spring Boot}
 \textit{Spring Boot} is a highly sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose java methods as HTTP request endpoints, an embedded webserver to run the application on, a modular design to extend its features, and dependency injection. It comes to use because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
 For example, a controller that returns a static response can be created using two annotations:
@@ -226,6 +218,8 @@ public class HTCPCPImpl {
 \end{figure}
 
 \newpage
+
+
 \subsection{Spring Data Repositories}
 \textit{Spring Data}\footnote{http://projects.spring.io/spring-data/} is a module for Spring Boot that streamlines the way elements can be accessed from a database.
 The components mainly used in this application are CRUD\footnote{Create, Read, Update, Delete} repository objects that enclose the database connections and serve

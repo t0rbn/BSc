@@ -8,6 +8,7 @@ The central feature of the application is the search function that returns a lis
 Recommender systems ``are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information'' \cite{Isinkaye2015261}\label{recommender-definition} and are commonly used to recommend an item to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items more prominently than articles the customer is unlikely to fancy. In this application's context, the recommender system will filter the set of all employees and recommend better matching results by showing them first.
 
 \newpage
+
 \subsection{Techniques of Content Filtering}
 As described by Isinkaye et al., filtering techniques used in recommender systems are divided in three classes: content based, collaborative, and hybrid. Each of these classes relies on a different approach for gaining data by which the information is filtered \cite{Isinkaye2015261}.
 
@@ -49,9 +50,9 @@ The basic structure of the search function will be:
   \item Return Results
 \end{enumerate}
 
-\newpage
+
 \subsubsection{Pseudo-Implementation}
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{lstlisting}[language=Java]
 function search(searchItems, searchLocation) {
   var results = getAllEmployees()
@@ -79,6 +80,8 @@ function search(searchItems, searchLocation) {
 \end{lstlisting}
 \caption[Pseudocode: Search Algorithm]{Pseudo-Implementation of the search algorithm}
 \end{figure}
+
+\newpage
 
 \subsection{Scoring Algorithm}
 \label{fitscorealg}
@@ -124,7 +127,7 @@ defined as $Q$.
   Q = \{x \in S \ | \ \textrm{user searches for skill x}\} \\
 \end{gather*}
 
-\newpage
+\
 
 The function $v_s$ assigns a value of skill to any item in $E$; the function $v_w$ assigns the respective level of will to any item in $E$.
 \begin{gather*}
@@ -143,6 +146,8 @@ Those values map to defined terms that describe the person's knowledge or intere
 	3 & expert & highly interested\\
 \end{tabular}
 \end{center}
+
+\newpage
 
 The averages of the employees' skill/will values of the searched skills are defined as $a_s$ and $a_w$.
 The variables $s_s$ and $s_w$ describe the employee's specialization in the searched items and are defined as the difference
@@ -167,6 +172,7 @@ The resulting fitness score $f$ is a weighted mean of the introduced factors. Th
 \end{gather*}
 
 \newpage
+
 \subsubsection{Example Calculation}
 Let there be three example employees, \textit{Alice}, \textit{Bob} and \textit{Charlie}, having the same three skills each.
 (Notation: skill level/will level)
@@ -198,7 +204,7 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to search
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
 
-\newpage
+\
 \subsection{Example Search}
 For this example, let the set of employees be \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, and the set of all known skills be \textit{Java}, \textit{Ruby}, and \textit{C++}.
 The assignment of skill/will levels and the respective locations are:
@@ -253,7 +259,7 @@ the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
 To sum up, the described methods to identify unique persons create an exorbitant computational effort and/or have high error rates for not being able to determine a single user across multiple devices. For the further design of the skill search recommender system, it will be assumed that there is no data about unique users, but about their entirety.
 
-\newpage
+\
 \subsubsection{Skill Attributes}
 The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
@@ -279,6 +285,8 @@ can be adjusted accordingly in order to factor the transition into the prospecti
     \label{fig:markovchain}
 \end{figure}
 
+\newpage
+
 \subsubsection{Data Structure and Algorithm}
 In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
 the next one based on this exact starting point. On the downside, this would result in a lot of different origin states that contain very few possible future states due to being overly specific to a single search. The stored data can only be used if the exact same combination of skills is entered again.\\
@@ -288,8 +296,9 @@ As a tradeoff, the system will generate predictions for each skill in the search
 The recommender system will concatenate the suggestion lists of all items in the current search query and add up the counts of skills appearing in multiple suggestion lists. Then, all elements of the combined list that are part of the search query will be removed, the result is a list of suggestions for the whole search query.\\
 
 \newpage
+
 \subsection{Pseudo-Code}
-\begin{figure}[h]
+\begin{figure}[!htp]
 \begin{lstlisting}[language=Java]
 var knownSkills = [
   {
@@ -399,20 +408,21 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
 \section{Visual Concept \& Wireframes}
 The application should be as simple as possible and usable for everyone in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a search function that provides a way to input the skills needed and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via e-mail or \textit{Google Hangouts}\footnote{https://hangouts.google.com}. Unlike the considered commercial solutions (see \ref{commercial}), this tool will not include features like creating statistics, assessments, applicant management, or any dashboard other than the basic search view.
 Furthermore, there will not be any role model to differentiate between ``regular'' employees and managers since this application is meant to be a tool enhancing collaboration, not supervision. More information about the concept behind the visual design and the frontend's implementation is provided by Strecker \cite{strecker}.
-\newpage
-\begin{figure}[hp]
+
+\begin{figure}[p]
     \centering
     \includegraphics[width=\textwidth]{images/wireframe.png}
     \caption[Illustration: Search Result Page (Wireframe)]{Wireframe of the search result view}
     \label{fig:wireframe}
 \end{figure}
-\newpage
-\begin{figure}[hp]
+
+\begin{figure}[p]
     \centering
     \includegraphics[width=\textwidth]{images/design_home.png}
     \caption[Illustration: Search Page (Concept)]{An early prototypical design for the search view}
     \label{fig:design_home}
 \end{figure}
+
 \newpage
 
 \section{Legal Concerns}
