@@ -32,6 +32,7 @@ As described by Isinkaye et al., filtering techniques used in recommender system
 Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and vice versa.
 
 \subsection{Search Algorithm}
+\label{Search_Algo_Main}
 In the context of the search function, all employees are searchable items. Their attributes include name, location and their respective skills structured as pairs of skill level and will level. This data will be used in a content based filtering approach that not only finds suitable employees, but also ranks them by their fitting into the searched skill set. Other users' interactions with search results, e.g. the opening of a found person's profile, will not be taken into account since there is no direct connection between these actions and the person's fitness. Furthermore, a system based on the user's former selections would be inadequate because the application is meant to give managers the ability to find employees they did not already have contact with; recommending persons the searching user had interacted with would thus be counterproductive.
 
 \subsubsection{Outline}
@@ -113,6 +114,7 @@ An estimation of a concrete person's fitness into a position described by the se
 
 
 \subsubsection{Proposed Fitness Score Algorithm}
+\label{fitnessscore_impl}
 Skill and will levels are described as integer values on a scale from zero to three. This scale, called $V$, can be expressed as
 \begin{gather*}
   V = \{ x \in \mathbb{N}_0^+ \ | \  0 \leq x \leq 3\}
@@ -126,8 +128,6 @@ defined as $Q$.
   E = \{x \in S \ | \ \textrm{employee has skill x}\} \\
   Q = \{x \in S \ | \ \textrm{user searches for skill x}\} \\
 \end{gather*}
-
-\
 
 The function $v_s$ assigns a value of skill to any item in $E$; the function $v_w$ assigns the respective level of will to any item in $E$.
 \begin{gather*}
@@ -203,8 +203,6 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to search
 \end{center}
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
-
-\
 \subsection{Example Search}
 For this example, let the set of employees be \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, and the set of all known skills be \textit{Java}, \textit{Ruby}, and \textit{C++}.
 The assignment of skill/will levels and the respective locations are:
@@ -258,8 +256,6 @@ Although device and user fingerprinting are not prohibited by law,
 the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
 To sum up, the described methods to identify unique persons create an exorbitant computational effort and/or have high error rates for not being able to determine a single user across multiple devices. For the further design of the skill search recommender system, it will be assumed that there is no data about unique users, but about their entirety.
-
-\
 \subsubsection{Skill Attributes}
 The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
@@ -405,7 +401,76 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
     \label{fig:wireframe}
 \end{figure}
 
-\section{Visual Concept \& Wireframes}
+\section{Recommending Similar Users}
+Additionally to the required features, the backend will provide the possibility to find users that are similar to a reference person.
+In the application, this feature could be used to show recommended persons when viewing one specific employee's profile. As this functionality filters the entirety of
+employees to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
+For the very same as reasons described in \ref{Search_Algo_Main}, a content based filtering approach will be used to identify the most related profiles.
+The recommender algorithm will contain three straightforward steps:
+\begin{itemize}
+	\item Get a list of all users except the reference one
+	\item Sort the list by similarity with the reference user
+	\item Recommend the first $n$ items in the list ($n$ = number of recommendations to make)
+\end{itemize}
+
+\subsection{Calculating Users' Similarity}
+As shown in \ref{fitnessscore_impl}, users can be described as sets of skills they have, so the task of measuring the similarity between users can be reduced to estimating the correlation between their skill sets. A popular approach to this problem is using the \textit{Jaccard Similarity Coefficient}, a relatively simple method to determine the similitude of two sets by dividing the size of their intersection with the size of their union. The resulting value describes how similar the sets are, and thus represents how similar the respective users are. The results maximum value is one (users are identical); the minimum value is zero (users to not share any similar skills).
+
+\subsubsection{Jaccard Similarity Coefficient}
+Let $S$ be the set of all skills existing in the system. $E$ is the employee whose distance to a the reference user $R$ will be estimated. Both persons are
+described as the set of skills they have.
+\begin{gather*}
+	S = \{Java, Ruby, C++, ...\} \\
+	E = \{x \in S \ | \ \textrm{examined employee has skill x}\} \\
+	R = \{x \in S \ | \ \textrm{reference employee has skill x}\} \\
+\end{gather*}
+The Jaccard Similarity Coefficient $j$ is defined as the size of the intersection if $E$ and $R$ divided by their union:
+\begin{gather*}
+	j = \frac{|E \cap R|}{|E \cup R|}
+\end{gather*}
+
+\subsection{Example}
+In this example, \textit{Alice} will be the the reference employee. Four other employees. \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}, will be the set of persons to pick recommendations from. The set of existing skills will be \textit{Java}, \textit{Ruby}, \textit{PHP}, \textit{.NET}, and \textit{CSS}.
+The goal will be to find two persons to recommend to a user who is viewing \textit{Alice's} profile.\\
+
+\begin{center}
+\begin{tabular}{l||c|c|c|c|c}
+	Employee & Java & Ruby & PHP & .NET & CSS \\
+	\hline
+	Alice    & \checkmark & \checkmark &            & \checkmark &            \\
+	Bob      & \checkmark &            &            & \checkmark & \checkmark \\
+	Charlie  &            & \checkmark & \checkmark & \checkmark &            \\
+	Donald   & \checkmark &            & \checkmark &            &            \\
+	Erika    & \checkmark & \checkmark & \checkmark &            & \checkmark \\
+\end{tabular}
+\end{center}
+
+The aforesaid definitions can be applied; since the goal is to find two people similar to \textit{Alice}, her skills are represented by $R$.
+\begin{gather*}
+	S = \{Java, Ruby, PHP, .NET, CSS\} \\
+	R = \{x \in S \ | \ \textrm{Alice has skill x}\} = \{ Java, Ruby, .NET \}\\
+\end{gather*}
+
+\newpage
+
+For each employee, the Jaccard Similarity Coefficient can be calculated based on the union and intersection of their respective skill set and \textit{Alice's} skills.
+\begin{center}
+\begin{tabular}{l||c|c||c}
+	Employee ($E$) & $E \cap R$ & $E \cup R$ & $j_E$ \\
+	\hline
+	Bob            & $\{Java, .NET\}$ & $\{Java, Ruby, .NET, CSS\}$ & 0.50 \\
+	Charlie        & $\{Ruby, .NET\}$ & $\{Java, Ruby, PHP, .NET\}$ & 0.50 \\
+	Donald         & $\{Java\}$ & $\{Java, Ruby, PHP, .NET\}$ & 0.25\\
+	Erika          & $\{Java, Ruby\}$ & $\{Java, Ruby, PHP, .NET, CSS\}$ & 0.40\\
+\end{tabular}
+\end{center}
+
+Given the task to recommend two persons that are similar to \textit{Alice}, the recommender system would choose \textit{Bob} and \textit{Charlie}.
+
+\subsection{Drawbacks}
+The described recommender system inspects how many skills the examined persons have and how many they share. The levels of knowledge and motivation regarding those skills are not taken into account, so that the recommendations might be inaccurate. Unfortunately, there is no real life user feedback yet, so that the evaluation of this factor and the creation of a implemenation that includes those aspects will stay subject to further research.
+
+\section{Visual Concept}
 The application should be as simple as possible and usable for everyone in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a search function that provides a way to input the skills needed and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via e-mail or \textit{Google Hangouts}\footnote{https://hangouts.google.com}. Unlike the considered commercial solutions (see \ref{commercial}), this tool will not include features like creating statistics, assessments, applicant management, or any dashboard other than the basic search view.
 Furthermore, there will not be any role model to differentiate between ``regular'' employees and managers since this application is meant to be a tool enhancing collaboration, not supervision. More information about the concept behind the visual design and the frontend's implementation is provided by Strecker \cite{strecker}.
 
@@ -430,3 +495,5 @@ Nearly all of data fall into the category of personal data (\textit{Personenbezo
 Generally, this does not violate any law, since the ``collection, storage, modification or transfer of personal data or their use as a means of fulfilling one’s own business purposes shall be admissible'' (BDSG, 28(1)), but some restrictions apply: the data subjects have to be informed about the processing of their personal data, they must be able to deny their consent (BDSG, 4a), and the personal data shall not be made public.
 To ensure the latter, the application must not be accessible to persons that do not work for or on behalf of SinnerSchrader. Technically, this will be arranged by making the application attainable from SinnerSchrader's internal network only, which can exclusively be used by employees and authorized persons.\\
 Furthermore, the Works Constitution Act (\textit{Betriebsverfassungsgesetz}) defines the rights and roles of the works council (\textit{Betriebsrat}) which have an impact on the design of the application. It states that ``the works council shall have a right of co-determination in the introduction and use of technical devices designed to monitor the behaviour or performance of the employees'' (BetrVG, 87(6)); since the application describes the employees' knowledge which is a key factor to their performance, this definition applies to it, so that the works council had to be involved in the design process.
+
+TODO Betriebsrat sagt nein
