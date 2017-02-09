@@ -56,6 +56,12 @@
 \newblock November 2014 Edition.
 \newblock 2014
 
+\bibitem[DS15]{jaccard}
+\textsc{Dharavath}, Ramesh ; \textsc{Singh}, Abhishek~K.:
+\newblock Entity Resolution-Based Jaccard Similarity Coefficient for
+  Heterogeneous Distributed Databases, 2015 (Proceedings of the Second
+  International Conference on Computer and Communication Technologies)
+
 \bibitem[Fed16]{fedi}
 \textsc{Federrath}, Hannes:
 \newblock \emph{Foliensatz Grundlagen der Systemsoftware SoSe 2016}.

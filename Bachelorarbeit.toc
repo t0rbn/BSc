@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Results}{7}{subsection.3.2.3}
 \contentsline {subsubsection}{\nonumberline General Expectations}{7}{section*.5}
 \contentsline {subsubsection}{\nonumberline Scale}{8}{section*.6}
-\contentsline {subsubsection}{\nonumberline Overall Expierience}{8}{section*.7}
+\contentsline {subsubsection}{\nonumberline Overall experience}{8}{section*.7}
 \contentsline {subsubsection}{\nonumberline Duration of Motivation}{8}{section*.8}
 \contentsline {subsubsection}{\nonumberline Peer Rating}{8}{section*.9}
 \contentsline {subsubsection}{\nonumberline Generating Teams}{9}{section*.10}
@@ -64,9 +64,8 @@
 \contentsline {subsection}{\numberline {4.2.4}Pseudo-Code}{29}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Example}{30}{subsection.4.2.5}
 \contentsline {section}{\numberline {4.3}Recommending Similar Users}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Calculating Users' Similarity}{31}{subsection.4.3.1}
-\contentsline {subsubsection}{\nonumberline Jaccard Similarity Coefficient}{32}{section*.29}
-\contentsline {subsection}{\numberline {4.3.2}Example}{32}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.1}Jaccard Similarity Coefficient}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Example Calculation}{32}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Drawbacks}{33}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Visual Concept}{33}{section.4.4}
 \contentsline {section}{\numberline {4.5}Legal Concerns}{36}{section.4.5}
@@ -75,9 +74,9 @@
 \contentsline {section}{\numberline {5.2}MongoDB}{38}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}BSON}{38}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Data Structure}{38}{subsection.5.2.2}
-\contentsline {subsubsection}{\nonumberline Known Skills}{39}{section*.30}
-\contentsline {subsubsection}{\nonumberline Sessions}{39}{section*.31}
-\contentsline {subsubsection}{\nonumberline Persons}{40}{section*.32}
+\contentsline {subsubsection}{\nonumberline Known Skills}{39}{section*.29}
+\contentsline {subsubsection}{\nonumberline Sessions}{39}{section*.30}
+\contentsline {subsubsection}{\nonumberline Persons}{40}{section*.31}
 \contentsline {subsection}{\numberline {5.2.3}Queries}{41}{subsection.5.2.3}
 \contentsline {section}{\numberline {5.3}LDAP}{41}{section.5.3}
 \contentsline {section}{\numberline {5.4}Reverse Proxy}{41}{section.5.4}
@@ -90,24 +89,24 @@
 \contentsline {subsection}{\numberline {5.7.3}LDAP Connection}{46}{subsection.5.7.3}
 \contentsline {subsection}{\numberline {5.7.4}Swagger}{48}{subsection.5.7.4}
 \contentsline {subsection}{\numberline {5.7.5}Testing}{49}{subsection.5.7.5}
-\contentsline {subsubsection}{\nonumberline Embedded Services}{49}{section*.33}
+\contentsline {subsubsection}{\nonumberline Embedded Services}{49}{section*.32}
 \contentsline {section}{\numberline {5.8}License}{50}{section.5.8}
 \contentsline {chapter}{\numberline {6}Evaluation}{51}{chapter.6}
 \contentsline {section}{\numberline {6.1}Fitness Score Algorithm}{51}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Uniform Distribution of Score Values}{51}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Fitness Score Algorithm vs. Human Estimations}{54}{subsection.6.1.2}
-\contentsline {subsubsection}{\nonumberline Examined Test Records}{54}{section*.34}
-\contentsline {subsubsection}{\nonumberline Survey}{54}{section*.35}
-\contentsline {subsubsection}{\nonumberline Comparison}{57}{section*.36}
-\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{58}{section*.37}
-\contentsline {subsubsection}{\nonumberline Conclusion}{58}{section*.38}
+\contentsline {subsubsection}{\nonumberline Examined Test Records}{54}{section*.33}
+\contentsline {subsubsection}{\nonumberline Survey}{54}{section*.34}
+\contentsline {subsubsection}{\nonumberline Comparison}{57}{section*.35}
+\contentsline {subsubsection}{\nonumberline Refining the Fitness Score Algorithm}{58}{section*.36}
+\contentsline {subsubsection}{\nonumberline Conclusion}{58}{section*.37}
 \contentsline {section}{\numberline {6.2}Implementation}{59}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Scalability}{59}{subsection.6.2.1}
-\contentsline {subsubsection}{\nonumberline MongoDB}{60}{section*.39}
-\contentsline {subsubsection}{\nonumberline LDAP}{60}{section*.40}
-\contentsline {subsubsection}{\nonumberline Static Content}{60}{section*.41}
-\contentsline {subsubsection}{\nonumberline Backend}{60}{section*.42}
-\contentsline {subsubsection}{\nonumberline Conclusion}{61}{section*.43}
+\contentsline {subsubsection}{\nonumberline MongoDB}{60}{section*.38}
+\contentsline {subsubsection}{\nonumberline LDAP}{60}{section*.39}
+\contentsline {subsubsection}{\nonumberline Static Content}{60}{section*.40}
+\contentsline {subsubsection}{\nonumberline Backend}{60}{section*.41}
+\contentsline {subsubsection}{\nonumberline Conclusion}{61}{section*.42}
 \contentsline {subsection}{\numberline {6.2.2}Response Times}{61}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}Meeting the Requirements}{62}{section.6.3}
 \contentsline {chapter}{\numberline {7}R\IeC {\'e}sum\IeC {\'e} and Outlook}{63}{chapter.7}
@@ -118,6 +117,6 @@
 \contentsline {subsection}{\numberline {A.2.2}Mr. Warnholz}{69}{subsection.A.2.2}
 \contentsline {subsection}{\numberline {A.2.3}Ms. Spranger}{71}{subsection.A.2.3}
 \contentsline {chapter}{\numberline {B}Evaluation Data}{73}{appendix.B}
-\contentsline {chapter}{\nonumberline Bibliography}{75}{chapter*.44}
-\contentsline {chapter}{List of Figures}{79}{chapter*.44}
-\contentsline {chapter}{Formalities (DE)}{79}{chapter*.45}
+\contentsline {chapter}{\nonumberline Bibliography}{75}{chapter*.43}
+\contentsline {chapter}{List of Figures}{79}{chapter*.43}
+\contentsline {chapter}{Formalities (DE)}{79}{chapter*.44}

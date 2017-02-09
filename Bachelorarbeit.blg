@@ -10,6 +10,7 @@ A level-1 auxiliary file: chapter_concept.aux
 A level-1 auxiliary file: chapter_implementation.aux
 A level-1 auxiliary file: chapter_evaluation.aux
 A level-1 auxiliary file: chapter_discussion_outlook.aux
+A level-1 auxiliary file: chapter_appendix.aux
 The style file: alphadin.bst
 A level-1 auxiliary file: medium.aux
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -18,47 +19,49 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
+Warning--empty booktitle in jaccard
+Warning--empty pages in jaccard
 Warning--empty booktitle in ivanovska
 Warning--empty pages in ivanovska
-You've used 28 entries,
+You've used 29 entries,
             4793 wiz_defined-function locations,
-            1059 strings with 10682 characters,
-and the built_in function-call counts, 15828 in all, are:
-= -- 1625
-> -- 384
-< -- 401
-+ -- 450
-- -- 139
-* -- 1040
-:= -- 2656
+            1064 strings with 10937 characters,
+and the built_in function-call counts, 16452 in all, are:
+= -- 1699
+> -- 403
+< -- 425
++ -- 478
+- -- 146
+* -- 1078
+:= -- 2767
 add.period$ -- 40
-call.type$ -- 28
-change.case$ -- 131
-chr.to.int$ -- 28
-cite$ -- 30
-duplicate$ -- 455
-empty$ -- 1163
-format.name$ -- 259
-if$ -- 3192
+call.type$ -- 29
+change.case$ -- 136
+chr.to.int$ -- 29
+cite$ -- 33
+duplicate$ -- 471
+empty$ -- 1198
+format.name$ -- 270
+if$ -- 3312
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 137
-newline$ -- 171
-num.names$ -- 84
-pop$ -- 203
+missing$ -- 138
+newline$ -- 175
+num.names$ -- 87
+pop$ -- 210
 preamble$ -- 1
-purify$ -- 187
+purify$ -- 194
 quote$ -- 0
-skip$ -- 812
+skip$ -- 852
 stack$ -- 0
-substring$ -- 1244
-swap$ -- 90
-text.length$ -- 80
+substring$ -- 1280
+swap$ -- 92
+text.length$ -- 82
 text.prefix$ -- 19
 top$ -- 0
-type$ -- 256
-warning$ -- 2
-while$ -- 124
-width$ -- 30
-write$ -- 366
-(There were 2 warnings)
+type$ -- 266
+warning$ -- 4
+while$ -- 129
+width$ -- 31
+write$ -- 377
+(There were 4 warnings)

@@ -37,8 +37,8 @@
 \BOOKMARK [2][-]{subsection.4.2.4}{Pseudo-Code}{section.4.2}% 37
 \BOOKMARK [2][-]{subsection.4.2.5}{Example}{section.4.2}% 38
 \BOOKMARK [1][-]{section.4.3}{Recommending Similar Users}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.3.1}{Calculating Users' Similarity}{section.4.3}% 40
-\BOOKMARK [2][-]{subsection.4.3.2}{Example}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.1}{Jaccard Similarity Coefficient}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.2}{Example Calculation}{section.4.3}% 41
 \BOOKMARK [2][-]{subsection.4.3.3}{Drawbacks}{section.4.3}% 42
 \BOOKMARK [1][-]{section.4.4}{Visual Concept}{chapter.4}% 43
 \BOOKMARK [1][-]{section.4.5}{Legal Concerns}{chapter.4}% 44
@@ -76,6 +76,6 @@
 \BOOKMARK [2][-]{subsection.A.2.2}{Mr. Warnholz}{section.A.2}% 76
 \BOOKMARK [2][-]{subsection.A.2.3}{Ms. Spranger}{section.A.2}% 77
 \BOOKMARK [0][-]{appendix.B}{Evaluation Data}{}% 78
-\BOOKMARK [0][-]{chapter*.44}{Bibliography}{}% 79
-\BOOKMARK [0][-]{chapter*.44}{List of Figures}{}% 80
-\BOOKMARK [0][-]{chapter*.45}{Formalities \(DE\)}{}% 81
+\BOOKMARK [0][-]{chapter*.43}{Bibliography}{}% 79
+\BOOKMARK [0][-]{chapter*.43}{List of Figures}{}% 80
+\BOOKMARK [0][-]{chapter*.44}{Formalities \(DE\)}{}% 81

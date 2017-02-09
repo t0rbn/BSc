@@ -267,7 +267,7 @@ Tracking which skills have been searched together can be implemented easily and 
 Assuming that no user profiles exist, user based filtering and model based filtering cannot be applied. Due to the lack of metadata about the skills, content based filtering can also be eliminated as a possible approach. Item based filtering, however, does not require any data that is not available, so this approach will be used for the recommender system.
 
 \subsection{Concept}
-The application has access to the list of skills the user already entered and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next item that the user is likely to enter and recommend it to them.
+The application has access to the list of skills the user already entered and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next items that the user is likely to enter and recommend it to them.
 
 \subsubsection{Markov Chains}
 Markov chains are a relatively simple tool for predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is exclusively dependent on the current state, which is called the \textit{markov property} \cite{markprop}. In the context of the skill management application, this is assumed to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is the skill set of the current search plus the item the user is going to enter next.
@@ -286,10 +286,10 @@ can be adjusted accordingly in order to factor the transition into the prospecti
 \subsubsection{Data Structure and Algorithm}
 In order to get the best results, the recommender system should save all combinations of items that have previously been searched for together and then recommend
 the next one based on this exact starting point. On the downside, this would result in a lot of different origin states that contain very few possible future states due to being overly specific to a single search. The stored data can only be used if the exact same combination of skills is entered again.\\
-Another way to implement such a recommendation engine would be to only inspect the last entered search item and ignoring all other ones. Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
+Another way to implement such an engine would be to only inspect the last entered search item and ignoring all other ones. Given $n$ known skill items, all probabilities for the future state could be saved in one single $n \times n$ matrix saving only $n^2$ values.
 This solution would disregard the whole context of the search item.\\
 As a tradeoff, the system will generate predictions for each skill in the search query independently and aggregate these predictions afterward. For each skill, a list of possible recommendations paired with the total count of searches for both will be stored. The recommendation lists of all skills combined represent the transition matrix. Instead of transition probabilities, the total number of searches is saved in order to simplify the aggreation of multiple suggestions.\\
-The recommender system will concatenate the suggestion lists of all items in the current search query and add up the counts of skills appearing in multiple suggestion lists. Then, all elements of the combined list that are part of the search query will be removed, the result is a list of suggestions for the whole search query.\\
+The recommender system will concatenate the suggestion lists of all items in the current search query and add up the count numbers of skills appearing in multiple suggestion lists. Then, all elements of the combined list that are part of the search query will be removed, the result is a list of suggestions for the whole search query. The items will then be sorted by said search count. The first $n$ elements, where $n$ ist the number of items to recommend, will be returned.\\
 
 \newpage
 
@@ -339,7 +339,7 @@ var knownSkills = [
 
 \begin{figure}
 \begin{lstlisting}[language=Java]
-function suggest(searched) {
+function suggest(searched, n) {
   var accumulated = {};
 
   for (s in searched) {
@@ -358,7 +358,7 @@ function suggest(searched) {
     }
   }
 
-  return accumulated.getHighestCount();
+  return accumulated.sortByCount().getSubList(0, n)
 }
 
 \end{lstlisting}
@@ -382,7 +382,7 @@ Let there be the following transition matrix:
 \end{tabular}
 \end{center}
 
-Using the given transition matrix and the search query ``Java, PHP'', the algorithm works like this:
+In this example, the query ``Java, PHP'' has already been entered. Based on those elements, one more item shall be recommended to the user ($n = 1$).
 \begin{enumerate}
 	\item Retrieve suggestion lists for each search item\\
 		$\Rightarrow$ PHP (7), CSS (3), COBOL (1), Java (7), CSS (9), COBOL (5)
@@ -390,7 +390,9 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
 		$\Rightarrow$ PHP (7), Java (7), CSS (12), COBOL (6)
 	\item Remove suggestions that are part of the search query\\
 		$\Rightarrow$ CSS (12), COBOL (6)
-	\item Suggest item with the highest total count\\
+	\item Sort by count\\
+		$\Rightarrow$ CSS (12), COBOL (6)
+	\item Suggest the first $n$ items ($n = 1$)\\
 		$\Rightarrow$ CSS
 \end{enumerate}
 
@@ -402,6 +404,7 @@ Using the given transition matrix and the search query ``Java, PHP'', the algori
 \end{figure}
 
 \section{Recommending Similar Users}
+\label{similar}
 Additionally to the required features, the backend will provide the possibility to find users that are similar to a reference person.
 In the application, this feature could be used to show recommended persons when viewing one specific employee's profile. As this functionality filters the entirety of
 employees to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
@@ -413,25 +416,23 @@ The recommender algorithm will contain three straightforward steps:
 	\item Recommend the first $n$ items in the list ($n$ = number of recommendations to make)
 \end{itemize}
 
-\subsection{Calculating Users' Similarity}
-As shown in \ref{fitnessscore_impl}, users can be described as sets of skills they have, so the task of measuring the similarity between users can be reduced to estimating the correlation between their skill sets. A popular approach to this problem is using the \textit{Jaccard Similarity Coefficient}, a relatively simple method to determine the similitude of two sets by dividing the size of their intersection with the size of their union. The resulting value describes how similar the sets are, and thus represents how similar the respective users are. The results maximum value is one (users are identical); the minimum value is zero (users to not share any similar skills).
+\subsection{Jaccard Similarity Coefficient}
+As shown in \ref{fitnessscore_impl}, users can be described as sets of skills they have, so the task of measuring the similarity between users can be reduced to estimating the correlation between their skill sets. A popular approach to this problem is using the \textit{Jaccard Similarity Coefficient}, a relatively simple method to determine the similitude of two finite sets by dividing the size of their intersection with the size of their union \cite{jaccard}. The resulting value describes how similar the sets are, and thus represents how similar the respective users are. The results maximum value is one (users are identical); the minimum value is zero (users to not share any similar skills).\\
+Let $S$ be the set of all skills existing in the system. Persons will be described as the sets of skills they have: the employee based on whom the recommendations shall be made will be called $R$ (\textit{reference employee}). The employee whose similarity with $R$ is to be measured will be called $E$.
 
-\subsubsection{Jaccard Similarity Coefficient}
-Let $S$ be the set of all skills existing in the system. $E$ is the employee whose distance to a the reference user $R$ will be estimated. Both persons are
-described as the set of skills they have.
 \begin{gather*}
 	S = \{Java, Ruby, C++, ...\} \\
 	E = \{x \in S \ | \ \textrm{examined employee has skill x}\} \\
 	R = \{x \in S \ | \ \textrm{reference employee has skill x}\} \\
 \end{gather*}
-The Jaccard Similarity Coefficient $j$ is defined as the size of the intersection if $E$ and $R$ divided by their union:
+The Jaccard Similarity Coefficient $j$ is defined as the size of the intersection of $E$ and $R$ divided by their union:
 \begin{gather*}
 	j = \frac{|E \cap R|}{|E \cup R|}
 \end{gather*}
 
-\subsection{Example}
-In this example, \textit{Alice} will be the the reference employee. Four other employees. \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}, will be the set of persons to pick recommendations from. The set of existing skills will be \textit{Java}, \textit{Ruby}, \textit{PHP}, \textit{.NET}, and \textit{CSS}.
-The goal will be to find two persons to recommend to a user who is viewing \textit{Alice's} profile.\\
+\subsection{Example Calculation}
+In this example, \textit{Alice} will be the the reference employee. Four other employees, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, will be the set of persons to pick recommendations from. The set of existing skills will be \textit{Java}, \textit{Ruby}, \textit{PHP}, \textit{.NET}, and \textit{CSS}.
+The goal is to recommend two persons to a user who is inspecting \textit{Alice's} profile.\\
 
 \begin{center}
 \begin{tabular}{l||c|c|c|c|c}
@@ -465,7 +466,7 @@ For each employee, the Jaccard Similarity Coefficient can be calculated based on
 \end{tabular}
 \end{center}
 
-Given the task to recommend two persons that are similar to \textit{Alice}, the recommender system would choose \textit{Bob} and \textit{Charlie}.
+Given the task to recommend two persons that are similar to \textit{Alice}, the recommender system would choose \textit{Bob} and \textit{Charlie} because they have the highest Jaccard Similarity Coefficient in the set of given employees.
 
 \subsection{Drawbacks}
 The described recommender system inspects how many skills the examined persons have and how many they share. The levels of knowledge and motivation regarding those skills are not taken into account, so that the recommendations might be inaccurate. Unfortunately, there is no real life user feedback yet, so that the evaluation of this factor and the creation of a implemenation that includes those aspects will stay subject to further research.

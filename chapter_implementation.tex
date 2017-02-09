@@ -22,12 +22,13 @@ The application stores three different object classes in the database: skills th
 
 \newpage
 \subsubsection{Known Skills}
-Skills known to the system consist of a unique name and a list of suggestions that themselves are expressed by a name and a total count of searches of the respective suggestion together with the skill. This list will be used to predict the next item a user is likely to enter as described in \ref{autocomplete}.
+Skills known to the system consist of a unique name and a list of suggestions that themselves are expressed by a name, the total count of searches of the respective suggestion together with the skill, and a descriptor that will be used to generate a unique icon for earch skill. This list will be used to predict the next item a user is likely to enter as described in \ref{autocomplete}.
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
 {
   "_id" : "Java",
   "_class" : "[...].skills.KnownSkill",
+	"iconDescriptor": "some icon",
   "suggestions" : [
     {
       "name" : "AEM",
@@ -124,13 +125,14 @@ The used HTTP method is the main indicator of the action to perform: \textit{GET
   /logout              & POST   & session                                     & 200, 401, 500           & Logout a session\\ \hline
   /skills              & GET    & search                                      & 200, 500                & Search for autocompletion;\\ & & & & returns all skills if search is empty\\ \hline
   /skills              & POST   & name                                        & 200, 400, 401, 500      & Add new skill with\\ & & & & the given name\\ \hline
-  /skills/next         & GET    & search                                      & 200, 400, 500           & Suggest a skill based on\\ & & & & the comma separated list of\\ & & & &   skills (parameter: search)\\ \hline
+  /skills/next         & GET    & search, count                               & 200, 400, 500           & Suggest skills based on\\ & & & & the comma separated list of\\ & & & &   skills (parameter: search)\\ \hline
   /skills/\{skill\}      & DELETE &                                             & 200, 400, 401, 404, 500 & Remove the skill\\ & & & &  with the given name\\ \hline
   /skills/\{skill\}      & PUT    & name                                        & 200, 400, 401, 404, 500 & Rename the skill\\
 	\hline
 	/users               & GET    & skills, location                            & 200, 400, 500           & Get all users\\ & & & &  matching the searched\\ & & & & skills in the given location\\ & & & & (parameters may be empty)\\ \hline
   /users/\{user\}        & GET    &                                             & 200, 404, 500           & Return the specified user\\ \hline
-  /users/\{user\}/details        & PUT    &                                             & 200, 404, 500           & Modify the user's\\ & & & & details that are not\\ & & & & synced with the LDAP\\ \hline
+	/users/\{user\}/similar        & GET    &                                             & 200, 400, 404, 500           & Get similar users\\ \hline
+  /users/\{user\}/details        & PUT    &                                             & 200, 400, 404, 500           & Modify the user's\\ & & & & details that are not\\ & & & & synced with the LDAP\\ \hline
   /users/\{user\}/skills & POST   & session, skill, skill\_level, will\_level & 200, 400, 401, 404, 500 & Create new skill/modifiy existing\\ & & & & personal skill\\ \hline
   /users/\{user\}/skills & DELETE & session, skill                              & 200, 400, 401, 404, 501 & Remove the skill\\ & & & & from the users profile\\
   \end{tabular}
@@ -318,20 +320,19 @@ interplay of the individual components.
 \begin{lstlisting}[language=Java]
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest
-public class KnownSkillSuggestionComparatorTest {
+public class UserControllerTest {
 
 	@Test
-	public void testNoneStarts() {
-		KnownSkill a = new KnownSkill("notsoemptystring");
-		KnownSkill b = new KnownSkill("foo");
-
-		List<KnownSkill> toSort = new ArrayList<KnownSkill>();
-		toSort.add(a);
-		toSort.add(b);
-		toSort.sort(new KnownSkillSuggestionComparator("42"));
-
-		assertEquals(a, toSort.get(0));
-		assertEquals(b, toSort.get(1));
+	public void testGetUsersValid() throws JSONException {
+		logger.debug("Testing UserController: get valid users");
+		ResponseEntity<String> res =
+			userController.getUsers("Java", "Hamburg");
+		assertTrue(res.getStatusCode() == HttpStatus.OK);
+		assertTrue(new JSONArray(res.getBody()).length() == 1);
+		assertTrue(new JSONArray(res.getBody())
+			.getJSONObject(0).has("id"));
+		assertEquals("foobar", new JSONArray(res.getBody())
+			.getJSONObject(0).getString("id"));
 	}
 
 }
