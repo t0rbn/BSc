@@ -203,6 +203,8 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to search
 \end{center}
 
 Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has the best average skill level but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted so that the average skill plays a bigger role in the resulting score.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
+
+\newpage
 \subsection{Example Search}
 For this example, let the set of employees be \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, and the set of all known skills be \textit{Java}, \textit{Ruby}, and \textit{C++}.
 The assignment of skill/will levels and the respective locations are:
@@ -236,7 +238,7 @@ Applying the algorithm and searching for employees knowing \textit{Java} and \te
 \end{itemize}
 
 
-
+\newpage
 \section{Search Suggestions}
 \label{autocomplete}
 After entering an item into the search bar, the user will be presented other items they are likely to enter next. This minor feature can be seen as another
@@ -255,7 +257,7 @@ Another possible method would be to recognize users by examining their very own 
 Although device and user fingerprinting are not prohibited by law,
 the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
-To sum up, the described methods to identify unique persons create an exorbitant computational effort and/or have high error rates for not being able to determine a single user across multiple devices. For the further design of the skill search recommender system, it will be assumed that there is no data about unique users, but about their entirety.
+Due to those reasons, it will be assumed that there is no data about unique users, but about their entirety.
 \subsubsection{Skill Attributes}
 The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
@@ -337,7 +339,7 @@ var knownSkills = [
 
 \newpage
 
-\begin{figure}
+\begin{figure}[!htp]
 \begin{lstlisting}[language=Java]
 function suggest(searched, n) {
   var accumulated = {};
@@ -364,6 +366,8 @@ function suggest(searched, n) {
 \end{lstlisting}
 \caption[Pseudocode: Skill Suggestion Algorithm]{Pseudo-Implementation of the suggestion of a known skill based on a set of already searched items.}
 \end{figure}
+
+\newpage
 
 \subsection{Example}
 Let there be the following transition matrix:
@@ -402,6 +406,8 @@ In this example, the query ``Java, PHP'' has already been entered. Based on thos
     \caption[Diagram: Search Suggestion Markov Model]{Markov Model used in the example. The two origin states and the transitions that form the end result are highlighted red.}
     \label{fig:wireframe}
 \end{figure}
+
+\newpage
 
 \section{Recommending Similar Users}
 \label{similar}
@@ -451,8 +457,6 @@ The aforesaid definitions can be applied; since the goal is to find two people s
 	S = \{Java, Ruby, PHP, .NET, CSS\} \\
 	R = \{x \in S \ | \ \textrm{Alice has skill x}\} = \{ Java, Ruby, .NET \}\\
 \end{gather*}
-
-\newpage
 
 For each employee, the Jaccard Similarity Coefficient can be calculated based on the union and intersection of their respective skill set and \textit{Alice's} skills.
 \begin{center}

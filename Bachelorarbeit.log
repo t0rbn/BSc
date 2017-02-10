@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  9 FEB 2017 17:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  10 FEB 2017 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1158,103 +1158,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--182
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--224
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 209--212
 
  []
 
-[24] [25] [26] <images/markov-chain.png, id=715, 803.0pt x 528.374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 224--226
+
+ []
+
+[25] [26] <images/markov-chain.png, id=713, 803.0pt x 528.374pt>
 File: images/markov-chain.png Graphic file (type png)
 
 <use images/markov-chain.png>
-Package pdftex.def Info: images/markov-chain.png used on input line 279.
+Package pdftex.def Info: images/markov-chain.png used on input line 281.
 (pdftex.def)             Requested size: 140.84192pt x 92.66838pt.
- [27pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
-2}) has been already used, duplicate ignored
+ [27] [28pdfTeX warning (ext4): destination with the same identifier (name{figu
+re.4.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.284 \newpage
+l.286 \newpage
                <./images/markov-chain.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 287--293
+Underfull \hbox (badness 10000) in paragraph at lines 289--295
 
  []
 
-[28] [29pdfTeX warning (ext4): destination with the same identifier (name{figur
+[29] [30pdfTeX warning (ext4): destination with the same identifier (name{figur
 e.4.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.338 \newpage
-              ] [30pdfTeX warning (ext4): destination with the same identifier 
+l.340 \newpage
+              ] [31pdfTeX warning (ext4): destination with the same identifier 
 (name{figure.4.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.397 \end{enumerate}
-                     ] <images/markov_impl.png, id=802, 803.0pt x 797.379pt>
+l.370 \newpage
+              ] <images/markov_impl.png, id=802, 803.0pt x 797.379pt>
 File: images/markov_impl.png Graphic file (type png)
 
 <use images/markov_impl.png>
-Package pdftex.def Info: images/markov_impl.png used on input line 401.
+Package pdftex.def Info: images/markov_impl.png used on input line 405.
 (pdftex.def)             Requested size: 140.84192pt x 139.84758pt.
- [31pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+ [32pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.422 
-       <./images/markov_impl.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 434--436
+l.410 \newpage
+               <./images/markov_impl.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 440--442
 
  []
 
-[32] <images/wireframe.png, id=823, 1314.9125pt x 1246.6575pt>
+[33] [34] <images/wireframe.png, id=831, 1314.9125pt x 1246.6575pt>
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 480.
+Package pdftex.def Info: images/wireframe.png used on input line 484.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
 
-<images/design_home.png, id=824, 1475.5125pt x 1431.3475pt>
+<images/design_home.png, id=832, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 487.
+Package pdftex.def Info: images/design_home.png used on input line 491.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
- [33] [34pdfTeX warning (ext4): destination with the same identifier (name{figu
+ [35] [36pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.492 \newpage
-               <./images/wireframe.png>] [35pdfTeX warning (ext4): destination 
+l.496 \newpage
+               <./images/wireframe.png>] [37pdfTeX warning (ext4): destination 
 with the same identifier (name{figure.4.7}) has been already used, duplicate ig
 nored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.492 \newpage
-               <./images/design_home.png>]) [36]
+l.496 \newpage
+               <./images/design_home.png>]) [38]
 \openout2 = `chapter_implementation.aux'.
 
  (./chapter_implementation.tex
 chapter 5.
-<images/system_architecture.png, id=847, 1217.54875pt x 662.475pt>
+<images/system_architecture.png, id=855, 1217.54875pt x 662.475pt>
 File: images/system_architecture.png Graphic file (type png)
 
 <use images/system_architecture.png>
 Package pdftex.def Info: images/system_architecture.png used on input line 9.
 (pdftex.def)             Requested size: 426.79134pt x 232.21341pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37
+ [39
 
 
 
@@ -1264,154 +1261,154 @@ has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.15 
-      <./images/system_architecture.png>] [38]
+l.14 \newpage
+              <./images/system_architecture.png>] [40]
 Underfull \vbox (badness 2837) has occurred while \output is active []
 
- [39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.95 
+l.98 
      pdfTeX warning (ext4): destination with the same identifier (name{figure.5
 .3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.95 
-     ] [40pdfTeX warning (ext4): destination with the same identifier (name{fig
+l.98 
+     ] [42pdfTeX warning (ext4): destination with the same identifier (name{fig
 ure.5.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.97 \newpage
-             ]
+l.100 \newpage
+              ]
 
-LaTeX Warning: Float too large for page by 20.56558pt on input line 142.
+LaTeX Warning: Float too large for page by 20.56558pt on input line 145.
 
-[41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5
+[43pdfTeX warning (ext4): destination with the same identifier (name{figure.5.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.146 
-      ] [42pdfTeX warning (ext4): destination with the same identifier (name{ta
+l.149 
+      ] [44pdfTeX warning (ext4): destination with the same identifier (name{ta
 ble.5.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.146 
-      ] [43pdfTeX warning (ext4): destination with the same identifier (name{fi
+l.149 
+      ] [45pdfTeX warning (ext4): destination with the same identifier (name{fi
 gure.5.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.184 \newpage
+l.187 \newpage
               pdfTeX warning (ext4): destination with the same identifier (name
 {figure.5.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.184 \newpage
-              ] <images/uml.png, id=1000, 1285.603pt x 1769.009pt>
+l.187 \newpage
+              ] <images/uml.png, id=1008, 1285.603pt x 1769.009pt>
 File: images/uml.png Graphic file (type png)
 
 <use images/uml.png>
-Package pdftex.def Info: images/uml.png used on input line 194.
+Package pdftex.def Info: images/uml.png used on input line 197.
 (pdftex.def)             Requested size: 272.94672pt x 375.57845pt.
- [44pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [46pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.202 
-       <./images/uml.png>] [45pdfTeX warning (ext4): destination with the same 
+l.205 
+       <./images/uml.png>] [47pdfTeX warning (ext4): destination with the same 
 identifier (name{figure.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.222 \newpage
+l.225 \newpage
               ]
 Underfull \vbox (badness 5985) has occurred while \output is active []
 
- [46pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 10}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
+l.305 
       pdfTeX warning (ext4): destination with the same identifier (name{figure.
 5.11}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
+l.305 
       ]
 Overfull \vbox (14.69682pt too high) has occurred while \output is active []
 
 
-[47pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[49pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 
-      ] <images/swagger_ui.png, id=1104, 1182.4175pt x 1078.0275pt>
+l.305 
+      ] <images/swagger_ui.png, id=1112, 1182.4175pt x 1078.0275pt>
 File: images/swagger_ui.png Graphic file (type png)
 
 <use images/swagger_ui.png>
-Package pdftex.def Info: images/swagger_ui.png used on input line 310.
+Package pdftex.def Info: images/swagger_ui.png used on input line 313.
 (pdftex.def)             Requested size: 426.79134pt x 389.10947pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [50pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 13}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.318 
+l.321 
        <./images/swagger_ui.png>]
 Underfull \vbox (badness 5817) has occurred while \output is active []
 
- [49pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [51pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 14}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.351 
+l.354 
       ]
-Overfull \hbox (10.98242pt too wide) in paragraph at lines 359--360
+Overfull \hbox (10.98242pt too wide) in paragraph at lines 362--363
 \T1/ppl/m/n/10.95 WAR-RANTIES OF MER-CHANTABIL-ITY, FIT-NESS FOR A PAR-TIC-U-LA
 R PUR-
  []
 
-) [50]
+) [52]
 \openout2 = `chapter_evaluation.aux'.
 
  (./chapter_evaluation.tex
 chapter 6.
-<images/dist_raw.png, id=1156, 1204.5pt x 744.7825pt>
+<images/dist_raw.png, id=1164, 1204.5pt x 744.7825pt>
 File: images/dist_raw.png Graphic file (type png)
 
 <use images/dist_raw.png>
 Package pdftex.def Info: images/dist_raw.png used on input line 20.
 (pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
- [51
+ [53
 
 
 
 
 ]
-<images/dist_avg.png, id=1165, 1204.5pt x 744.7825pt>
+<images/dist_avg.png, id=1174, 1204.5pt x 744.7825pt>
 File: images/dist_avg.png Graphic file (type png)
 
 <use images/dist_avg.png>
 Package pdftex.def Info: images/dist_avg.png used on input line 27.
 (pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
 
-<images/dist_error.png, id=1166, 1204.5pt x 744.7825pt>
+<images/dist_error.png, id=1175, 1204.5pt x 744.7825pt>
 File: images/dist_error.png Graphic file (type png)
 
 <use images/dist_error.png>
@@ -1420,7 +1417,7 @@ Package pdftex.def Info: images/dist_error.png used on input line 34.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [54pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1432,7 +1429,7 @@ l.38
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.38 
-      <./images/dist_raw.png> <./images/dist_avg.png>] [53pdfTeX warning (ext4)
+      <./images/dist_raw.png> <./images/dist_avg.png>] [55pdfTeX warning (ext4)
 : destination with the same identifier (name{figure.6.3}) has been already used
 , duplicate ignored
 
@@ -1442,19 +1439,19 @@ l.39 \newpage
               <./images/dist_error.png>]
 Underfull \vbox (badness 2005) has occurred while \output is active []
 
- [54pdfTeX warning (ext4): destination with the same identifier (name{table.6.1
+ [56pdfTeX warning (ext4): destination with the same identifier (name{table.6.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.75 
-     ] <images/survey_raw.png, id=1196, 1053.9375pt x 651.43375pt>
+     ] <images/survey_raw.png, id=1204, 1053.9375pt x 651.43375pt>
 File: images/survey_raw.png Graphic file (type png)
 
 <use images/survey_raw.png>
 Package pdftex.def Info: images/survey_raw.png used on input line 93.
 (pdftex.def)             Requested size: 426.79134pt x 263.7994pt.
- [55pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [57pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1472,7 +1469,7 @@ table.6.3}) has been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.98 \newpage
-              <./images/survey_raw.png>] [56pdfTeX warning (ext4): destination 
+              <./images/survey_raw.png>] [58pdfTeX warning (ext4): destination 
 with the same identifier (name{table.6.4}) has been already used, duplicate ign
 ored
 
@@ -1485,13 +1482,13 @@ l.127 \newpage
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.127 \newpage
-              ] <images/survey_vs_alg.png, id=1211, 1204.5pt x 744.7825pt>
+              ] <images/survey_vs_alg.png, id=1219, 1204.5pt x 744.7825pt>
 File: images/survey_vs_alg.png Graphic file (type png)
 
 <use images/survey_vs_alg.png>
 Package pdftex.def Info: images/survey_vs_alg.png used on input line 150.
 (pdftex.def)             Requested size: 426.79134pt x 263.90529pt.
- [57pdfTeX warning (ext4): destination with the same identifier (name{table.6.6
+ [59pdfTeX warning (ext4): destination with the same identifier (name{table.6.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1503,21 +1500,21 @@ l.156 \newpage
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.156 \newpage
-               <./images/survey_vs_alg.png>] [58]
-<images/system_architecture_scaled.png, id=1235, 1286.8075pt x 766.865pt>
+               <./images/survey_vs_alg.png>] [60]
+<images/system_architecture_scaled.png, id=1245, 1286.8075pt x 766.865pt>
 File: images/system_architecture_scaled.png Graphic file (type png)
 
 <use images/system_architecture_scaled.png>
 Package pdftex.def Info: images/system_architecture_scaled.png used on input li
 ne 186.
 (pdftex.def)             Requested size: 320.09349pt x 190.75626pt.
- [59pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
+ [61pdfTeX warning (ext4): destination with the same identifier (name{figure.6.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.191 \newpage
-               <./images/system_architecture_scaled.png>] [60])
+               <./images/system_architecture_scaled.png>] [62])
 Overfull \hbox (0.92183pt too wide) in paragraph at lines 241--52
 \T1/ppl/m/n/10.95 de-vices and browsers. As shown in [][]6.2.1[][], scal-a-bil-
 ity has been par-tially eval-u-ated, whereas
@@ -1526,18 +1523,18 @@ ity has been par-tially eval-u-ated, whereas
 
 Underfull \vbox (badness 1769) has occurred while \output is active []
 
- [61pdfTeX warning (ext4): destination with the same identifier (name{table.6.7
+ [63pdfTeX warning (ext4): destination with the same identifier (name{table.6.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.52 \include{chapter_evaluation}
-                                 ] [62]
+                                 ] [64]
 \openout2 = `chapter_discussion_outlook.aux'.
 
  (./chapter_discussion_outlook.tex
 chapter 7.
-) [63
+) [65
 
 
 
@@ -1545,14 +1542,14 @@ chapter 7.
 ]
 \openout2 = `chapter_appendix.aux'.
 
- (./chapter_appendix.tex [64
+ (./chapter_appendix.tex [66
 
 
 
 
 ]
 chapter A.
-<images/Interview_Consent.pdf, id=1304, page=1, 614.295pt x 794.97pt>
+<images/Interview_Consent.pdf, id=1314, page=1, 614.295pt x 794.97pt>
 File: images/Interview_Consent.pdf Graphic file (type pdf)
 
 <use images/Interview_Consent.pdf, page 1>
@@ -1560,14 +1557,14 @@ Package pdftex.def Info: images/Interview_Consent.pdf, page1 used on input line
  12.
 (pdftex.def)             Requested size: 384.10959pt x 497.08551pt.
 
-<images/Interview_Consent.pdf, id=1305, page=2, 614.295pt x 794.97pt>
+<images/Interview_Consent.pdf, id=1315, page=2, 614.295pt x 794.97pt>
 File: images/Interview_Consent.pdf Graphic file (type pdf)
 
 <use images/Interview_Consent.pdf, page 2>
 Package pdftex.def Info: images/Interview_Consent.pdf, page2 used on input line
  17.
 (pdftex.def)             Requested size: 384.10959pt x 497.08551pt.
- [65
+ [67
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.A.1}) 
@@ -1581,7 +1578,7 @@ l.19 \end{figure}
 pdfTeX warning: pdflatex (file ./images/Interview_Consent.pdf): PDF inclusion: 
 invalid other resource which is no dict (key 'ProcSets', type <array>); ignored
 .
->] [66pdfTeX warning (ext4): destination with the same identifier (name{figure.
+>] [68pdfTeX warning (ext4): destination with the same identifier (name{figure.
 A.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1598,7 +1595,7 @@ Overfull \hbox (2.01643pt too wide) in paragraph at lines 30--31
 ter, ihre Wün-sche in Bezug
  []
 
-[67] [68]
+[69] [70]
 Overfull \hbox (27.20132pt too wide) in paragraph at lines 73--74
 []\T1/ppl/m/n/10.95 Auf je-den Fall glaube ich sollte ir-gendwo durch eine spät
 ere, oder durch eine regelmäÿige
@@ -1610,21 +1607,21 @@ Overfull \hbox (4.85289pt too wide) in paragraph at lines 73--74
 ro-ni-sa-tion er-fol-gen. Weil,
  []
 
-[69]
+[71]
 Overfull \hbox (6.07932pt too wide) in paragraph at lines 82--83
 \T1/ppl/m/n/10.95 eine sin-nvolle Zusam-men-stel-lung da rauskommt, als Ergeb-n
 is. Bei der Ressourcensi-
  []
 
-[70]
+[72]
 Overfull \hbox (5.23654pt too wide) in paragraph at lines 96--97
 \T1/ppl/m/n/10.95 wollen eine ganz unge-fähre Ten-denz bekom-men, und genauer k
 riegt man es sowieso
  []
 
-[71] [72]
+[73] [74]
 chapter B.
-) [73
+) [75
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.B.1}) h
@@ -1633,7 +1630,7 @@ as been already used, duplicate ignored
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.54 \include{chapter_appendix}
-                               ] [74pdfTeX warning (ext4): destination with the
+                               ] [76pdfTeX warning (ext4): destination with the
  same identifier (name{table.B.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -1659,7 +1656,7 @@ Underfull \hbox (badness 1946) in paragraph at lines 39--44
 -ci-sion \T1/ppl/m/n/10.95 51 (2013), Nr. 4, 813-
  []
 
-[75
+[77
 
 
 
@@ -1712,23 +1709,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--162
 /
  []
 
-[76]
+[78]
 Underfull \hbox (badness 1092) in paragraph at lines 184--188
 []\T1/ppl/m/sc/10.95 Strecker\T1/ppl/m/n/10.95 , Katha-rina:  \T1/ppl/m/it/10.9
 5 Front-End Konzep-tion und Um-set-zung eines un-
  []
 
-) [77] [78
+) [79] [80
 
 
 ] (./Bachelorarbeit.lof)
 \tf@lof=\write5
 \openout5 = `Bachelorarbeit.lof'.
 
- (./_eidversicherung.tex [79
+ (./_eidversicherung.tex [81
 
 
-] [80
+] [82
 
 
 ]
@@ -1737,17 +1734,17 @@ Overfull \hbox (20.01782pt too wide) in paragraph at lines 5--8
 beige-fügten Verze-ich-nis angegebe-
  []
 
-[81] [82
-
-
-]) [83]
-\openout2 = `medium.aux'.
-
- (./medium.tex [84
-
+[83] [84
 
 
 ]) [85]
+\openout2 = `medium.aux'.
+
+ (./medium.tex [86
+
+
+
+]) [87]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
  (./Bachelorarbeit.aux
@@ -1758,15 +1755,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: 4F8DE5CB5A51227F1B0FB93A1AFA6B57;5238.
+(rerunfilecheck)             Checksum: 60B1FB1F8F4D48F3157F8D38E15A0A84;5259.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 13514 strings out of 493013
- 201716 string characters out of 6139317
+ 13516 strings out of 493013
+ 201730 string characters out of 6139317
  465950 words of memory out of 5000000
  16116 multiletter control sequences out of 15000+600000
  49187 words of font info for 114 fonts, out of 8000000 for 9000
@@ -1777,16 +1774,16 @@ ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1
-/urw/courier/ucrb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.p
-fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf
--dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
-fb>
-Output written on Bachelorarbeit.pdf (93 pages, 2524690 bytes).
+nts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrb
+8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
+xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1
+/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a
+.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on Bachelorarbeit.pdf (95 pages, 2524355 bytes).
 PDF statistics:
- 1638 PDF objects out of 1728 (max. 8388607)
- 1475 compressed objects within 15 object streams
- 590 named destinations out of 1000 (max. 500000)
+ 1650 PDF objects out of 1728 (max. 8388607)
+ 1484 compressed objects within 15 object streams
+ 592 named destinations out of 1000 (max. 500000)
  744 words of extra memory for PDF output out of 10000 (max. 10000000)
 

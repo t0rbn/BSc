@@ -4,12 +4,15 @@ The application consists of two main components: the frontend that presents the 
 The user's browser connects to a web server that acts as a reverse proxy and not only provides static resources like HTML and CSS files which resemble the frontend, but also acts as an SSL endpoint.
 Requests for dynamic data and actions that are handled via the REST API provided by the backend are passed on to it, its response will then be directed through the reverse proxy to the client.
 To store and read data, the backend connects to a MongoDB Database. User details are synced from the existing LDAP server which acts a central repository for personal information of all employees.
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/system_architecture.png}
     \caption[Illustration: System Architecture]{The system's architecture. Created with \textit{https://cloudcraft.co}.}
     \label{fig:markovchain}
 \end{figure}
+
+\newpage
+
 \section{MongoDB}
 MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}.
 
@@ -140,7 +143,7 @@ The used HTTP method is the main indicator of the action to perform: \textit{GET
 \caption[API Endpoints]{All API endpoints provided by the backend}
 \label{swaggertable}
 \end{table}
-\subsection{API Responses}
+\subsection{API Response Format}
 The API returns data in the JSON format, which is one of the two de-facto standards for data exchange on the web\footnote{The other one is \textit{XML} used by the \textit{Simple Object Access Protocol}} because it is part of the Javascript (JS) language \cite[p. 37]{json}. Approximately 94\% of all websites use JS \cite{jsmarket}; since JSON directly represents JS objects and is both easy to parse and human-readable, it became the leading data format for web applications.
 For every HTTP request, the backend will return a JSON response, notwithstanding the request may not demand data to be returned. In this case, the response will contain status information about the success of the requested action.
 
@@ -183,7 +186,7 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 
 \newpage
 
-\section{Backend}
+\section{Backend Implementation}
 \label{impl:be}
 The backend component is implemented in Java 8\footnote{https://go.java/} using the Spring Boot framework\footnote{https://projects.spring.io/spring-boot/}. Maven\footnote{https://maven.apache.org/what-is-maven.html} is employed to manage the build process and run unit and integration tests.
 
