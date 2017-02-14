@@ -15,6 +15,12 @@
 \newblock \emph{User Authentication Through Typing Biometrics Features}.
 \newblock 2005
 
+\bibitem[Bal]{mit_stats}
+\textsc{Balter}, Ben:
+\newblock \emph{Open source license usage on GitHub.com}.
+\newblock
+  \url{https://github.com/blog/1964-open-source-license-usage-on-github-com}
+
 \bibitem[Bea]{hvscale}
 \textsc{Beaumont}, David:
 \newblock \emph{How to explain vertical and horizontal scaling in the cloud}.
@@ -30,7 +36,7 @@
 
 \bibitem[Ber16]{BWL}
 \textsc{Bergmann}, Rainer:
-\newblock \emph{organization und Projektmanagement}.
+\newblock \emph{Organisation und Projektmanagement}.
 \newblock 2. Aufl. 2016.
 \newblock Springer Gabler, 2016 (BA KOMPAKT).
 \newblock \url{https://beluga.sub.uni-hamburg.de/vufind/Record/866785566}
@@ -132,6 +138,13 @@
 \newblock \emph{WHAT IS A REVERSE PROXY SERVER?}
 \newblock \url{https://www.nginx.com/resources/glossary/reverse-proxy-server/}
 
+\bibitem[PRG{\etalchar{+}}17]{MongoLock}
+\textsc{Pollack}, Mark ; \textsc{Risberg}, Thomas ; \textsc{Gierke}, Oliver ;
+  \textsc{Leau}, Costin ; \textsc{Brisbin}, Jon ; \textsc{Darimont}, Thomas ;
+  \textsc{Strobl}, Christoph  ; \textsc{Paluch}, Mark:
+\newblock \emph{Spring Data MongoDB - Reference Documentation}.
+\newblock 2017
+
 \bibitem[QS]{jsmarket}
 \textsc{Q-Success{\ }Software{\ }Quality{\ }Management}:
 \newblock \emph{Usage of JavaScript for websites}.
@@ -153,6 +166,11 @@
 \newblock \url{http://www.math.uah.edu/stat/markov/Introduction.html}. --
 \newblock Department of Mathematical Sciences; University of Alabama in
   Huntsville
+
+\bibitem[Sin01]{IR}
+\textsc{Singhal}, Amit:
+\newblock Modern Information Retrieval: {A} Brief Overview.
+\newblock {In: }\emph{{IEEE} Data Eng. Bull.} 24 (2001), Nr. 4, S. 35--43
 
 \bibitem[Sin17]{quartalsbericht}
 \textsc{SinnerSchrader}:

@@ -14,34 +14,34 @@ To store and read data, the backend connects to a MongoDB Database. User details
 \newpage
 
 \section{MongoDB}
-MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}.
+MongoDB\footnote{https://www.mongodb.com} is a popular non-relational NoSQL database that aims to be fast and easy to use \cite[p. 10]{MongoGuide}. To increase performance, like many NoSQL databases, it does not provide ACID\footnote{Atomicity, Consistency, Isolation, Durability} transactions which are a well-known feature of relational database management systems (RDBMS). This, however, simplifies horizontal scaling since new machines can easily be inserted into an existing cluster of database servers without the need to be in sync \cite[p. 3]{MongoGuide}. To compensate the lack of atomic operations, optimistic locking can be used to prevent concurrent writing operations \cite{MongoLock}.
 
 \subsection{BSON}
 \label{BSON}
 In contrast to relational databases that store all data in tables, MongoDB uses a document-orient data structure saving every element in the Binary JSON\footnote{Javascript Object Notation} (BSON) format. This approach allows complex data to be stored as one object rather than having to dissect its elements and storing them in separate tables. As a consequence, retrieving an object from the database is much more efficient than it would be using an RDBMS, as the latter needs to join the tables storing the object's nested sub-objects and compose the requested element whereas MongoDB has it stored in the exact same form it is requested \cite[p. 10]{MongoGuide}.
 
 \subsection{Data Structure}
-The application stores three different object classes in the database: skills that are known to the system, persons with their individual contact data and personal skills, and sessions used to authenticate users that wish to modify their profiles. In order to instantiate the elements as java objects, Spring Data\footnote{http://projects.spring.io/spring-data/}, the framework used for database access, also stores the class name the object needs to be mapped to as a field inside of it. Furthermore, every item has the field \textit{version} which holds a version number used to resolve writing conflicts that may occur when multiple threads access the same object simultaneously.
+The application stores three different object classes in the database: skills that are known to the system, persons with their individual contact data and personal skills, and sessions used to authenticate users that wish to modify their profiles. In order to instantiate the elements as Java objects, Spring Data\footnote{http://projects.spring.io/spring-data/}, the framework used for database access, also stores the class name the object needs to be mapped to as a field inside of it. Furthermore, every item has the field \textit{version} which is created and managed by Spring Boot and holds a version number used to resolve writing conflicts that may occur when multiple threads access the same object simultaneously.
 
 \newpage
 \subsubsection{Known Skills}
-Skills known to the system consist of a unique name and a list of suggestions that themselves are expressed by a name, the total count of searches of the respective suggestion together with the skill, and a descriptor that will be used to generate a unique icon for earch skill. This list will be used to predict the next item a user is likely to enter as described in \ref{autocomplete}.
+Skills known to the system consist of a unique name, a descriptor that will be used to generate a unique icon for each skill, and a list of suggestions that themselves are expressed by a name, the total count of searches of the respective suggestion together with the skill. This list will be used to predict the next item a user is likely to enter as described in \ref{autocomplete}.
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
 {
-  "_id" : "Java",
-  "_class" : "[...].skills.KnownSkill",
+	"_id" : "Java",
+	"_class" : "[...].skills.KnownSkill",
 	"iconDescriptor": "some icon",
-  "suggestions" : [
-    {
-      "name" : "AEM",
-      "count" : 1
-    }, {
-      "name" : "jquery",
-      "count" : 1
-    }
-  ],
-  "version" : NumberLong(3)
+	"suggestions" : [
+		{
+			"name" : "AEM",
+			"count" : 1
+		}, {
+			"name" : "jquery",
+			"count" : 1
+		}
+	],
+	"version" : NumberLong(3)
 }
 \end{lstlisting}
 \caption[Data Structure: Skill]{Data structure of a skill stored in the database}
@@ -54,7 +54,7 @@ Sessions are used to authenticate users that wish to modify their personal profi
 \begin{lstlisting}[language=Java]
 {
 	"_id" : "87163f310f124830bac677fe31484262",
-	"_class" : "com.sinnerschrader.skillwill.session.Session",
+	"_class" : "[...].session.Session",
 	"username" : "foobar",
 	"expireDate" : ISODate("2017-01-09T08:36:40.128Z"),
 	"version" : NumberLong(1)
@@ -68,29 +68,29 @@ The documents that represent persons contain the respective person's id\footnote
 \begin{figure}[h]
 \begin{lstlisting}[language=Java]
 {
-  "_id" : "foobar",
-  "_class" : "com.sinnerschrader.skillwill.domain.person.Person",
-  "skills" : [
-    {
-      "_id" : ".NET",
-      "skillLevel" : 1,
-      "willLevel" : 2
-    },{
-      "_id" : "Scrum",
-      "skillLevel" : 3,
-      "willLevel" : 1
-    }
-  ],
-  "version" : NumberLong(1),
-  "ldapDetails" : {
-    "firstName" : "Fooberius",
-    "lastName" : "Bartels",
-    "mail" : "foobar@mail.org",
-    "phone" : "+49 12 345678 901",
-    "location" : "Hamburg",
-    "title" : "Development"
-  },
-  "comment" : "Certified Cyber Specialist",
+	"_id" : "foobar",
+	"_class" : "[...].domain.person.Person",
+	"skills" : [
+		{
+			"_id" : ".NET",
+			"skillLevel" : 1,
+			"willLevel" : 2
+		},{
+			"_id" : "Scrum",
+			"skillLevel" : 3,
+			"willLevel" : 1
+		}
+	],
+	"version" : NumberLong(1),
+	"ldapDetails" : {
+		"firstName" : "Fooberius",
+		"lastName" : "Bartels",
+		"mail" : "foobar@mail.org",
+		"phone" : "+49 12 345678 901",
+		"location" : "Hamburg",
+		"title" : "Development"
+	},
+	"comment" : "Certified Cyber Specialist",
 }
 \end{lstlisting}
 \caption[Data Structure: Person]{Data structure of a person stored in the DB}
@@ -112,7 +112,7 @@ db.person.find({ "skills._id" : "Ruby" })
 SinnerSchrader runs an LDAP server which acts as a centralized source of personal information of all employees to provide all internal tools with data. The application connects to this server in order to retrieve contact information to display in users' profiles. In comparison with having the users to enter their data manually, this method has the benefit that the users' data will be kept in sync across all internal services, and that it reduces the effort a user has to spend to create their profile.
 
 \section{Reverse Proxy}
-Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguishing between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting one uniform service to the outside.
+Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguishing between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting one uniform service to the outside (see \ref{scale}).
 
 \section{API}
 To exchange data between the backend and the frontend, a \textit{Representational State Transfer} (REST) API is provided by the backend. Its endpoints are called by the fronted code to either request data or to command the backend to perform modifying operations on it.
@@ -125,17 +125,16 @@ The used HTTP method is the main indicator of the action to perform: \textit{GET
   URL & HTTP Method & Non-URL Parameters & Return Statuses & Comment\\
   \hline
   /login               & POST   & username, password                          & 200, 401, 500           & Try to login a user;\\ & & & & returns session key\\ \hline
-  /logout              & POST   & session                                     & 200, 401, 500           & Logout a session\\ \hline
+  /logout              & POST   & session                                     & 200, 401, 500           & Logout a session\\ & & & & \\ \hline
   /skills              & GET    & search                                      & 200, 500                & Search for autocompletion;\\ & & & & returns all skills if search is empty\\ \hline
   /skills              & POST   & name                                        & 200, 400, 401, 500      & Add new skill with\\ & & & & the given name\\ \hline
-  /skills/next         & GET    & search, count                               & 200, 400, 500           & Suggest skills based on\\ & & & & the comma separated list of\\ & & & &   skills (parameter: search)\\ \hline
-  /skills/\{skill\}      & DELETE &                                             & 200, 400, 401, 404, 500 & Remove the skill\\ & & & &  with the given name\\ \hline
-  /skills/\{skill\}      & PUT    & name                                        & 200, 400, 401, 404, 500 & Rename the skill\\
-	\hline
-	/users               & GET    & skills, location                            & 200, 400, 500           & Get all users\\ & & & &  matching the searched\\ & & & & skills in the given location\\ & & & & (parameters may be empty)\\ \hline
-  /users/\{user\}        & GET    &                                             & 200, 404, 500           & Return the specified user\\ \hline
-	/users/\{user\}/similar        & GET    &                                             & 200, 400, 404, 500           & Get similar users\\ \hline
-  /users/\{user\}/details        & PUT    &                                             & 200, 400, 404, 500           & Modify the user's\\ & & & & details that are not\\ & & & & synced with the LDAP\\ \hline
+  /skills/next         & GET    & search, count                               & 200, 400, 500           & Suggest skills based on\\ & & & & the search query\\ \hline
+  /skills/\{skill\}      & DELETE &                                             & 200, 400, 401, 404, 500 & Remove the skill\\ & & & & with the given name\\ \hline
+  /skills/\{skill\}      & PUT    & name                                        & 200, 400, 401, 404, 500 & Rename the skill\\ & & & & \\ \hline
+	/users               & GET    & skills, location                            & 200, 400, 500           & Get all users\\ & & & &  matching the search \\ \hline
+  /users/\{user\}        & GET    &                                             & 200, 404, 500           & Return the specified user\\ & & & & \\  \hline
+	/users/\{user\}/similar        & GET    &                                             & 200, 400, 404, 500           & Get similar users\\  & & & & \\ \hline
+  /users/\{user\}/details        & PUT    &                                             & 200, 400, 404, 500           & Modify the user's\\ & & & & details \\ \hline
   /users/\{user\}/skills & POST   & session, skill, skill\_level, will\_level & 200, 400, 401, 404, 500 & Create new skill/modifiy existing\\ & & & & personal skill\\ \hline
   /users/\{user\}/skills & DELETE & session, skill                              & 200, 400, 401, 404, 501 & Remove the skill\\ & & & & from the users profile\\
   \end{tabular}
@@ -190,7 +189,7 @@ For every HTTP request, the backend will return a JSON response, notwithstanding
 \label{impl:be}
 The backend component is implemented in Java 8\footnote{https://go.java/} using the Spring Boot framework\footnote{https://projects.spring.io/spring-boot/}. Maven\footnote{https://maven.apache.org/what-is-maven.html} is employed to manage the build process and run unit and integration tests.
 
-\section{Architecture}
+\subsection{Architecture}
 The software architecture consists of three main categories of classes: services handling data manipulation and filtering that hold the business logic, repository objects that wrap the database operations into easy to use handlers, and domain specific data types. Additionally, numerous helper classes like custom exception types, comparators, and general utilities are implemented.
 \begin{figure}[!h]
     \centering
@@ -199,7 +198,7 @@ The software architecture consists of three main categories of classes: services
     \label{fig:markovchain}
 \end{figure}
 \subsection{Spring Boot}
-\textit{Spring Boot} is a highly sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose java methods as HTTP request endpoints, an embedded webserver to run the application on, a modular design to extend its features, and dependency injection. It comes to use because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
+\textit{Spring Boot} is a highly sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose Java methods as HTTP request endpoints, an embedded webserver\footnote{Apache Tomcat 7 (http://tomcat.apache.org/)})to run the application on, a modular design to extend its features, and dependency injection. It comes to use because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
 For example, a controller that returns a static response can be created using two annotations:
 \textit{@Controller} to make Spring Boot identify the class as a resource that will listen to HTTP calls, and \textit{@Request} to specify the URL and HTTP method to use. Unlike most other web frameworks, Spring Boot does not require any more configuration or dispatching classes.
 
@@ -212,9 +211,9 @@ public class HTCPCPImpl {
 	public ResponseEntity<String> coffee() {
 		StatusJSON json = new StatusJSON("I'm a teapot \u2615");
 		return new ResponseEntity<String>(
-      json.toString(),
-      HttpStatus.I_AM_A_TEAPOT
-    );
+			json.toString(),
+			HttpStatus.I_AM_A_TEAPOT
+		);
 	}
 
 }
@@ -226,10 +225,8 @@ public class HTCPCPImpl {
 
 
 \subsection{Spring Data Repositories}
-\textit{Spring Data}\footnote{http://projects.spring.io/spring-data/} is a module for Spring Boot that streamlines the way elements can be accessed from a database.
-The components mainly used in this application are CRUD\footnote{Create, Read, Update, Delete} repository objects that enclose the database connections and serve
-simple java methods as an interface. To create such a repository, a java interface defining the stored data type and custom database queries has to be constructed.
-No actual implementation of the interface has to be created since it will be generated automatically by Spring Data.
+\textit{Spring Data}\footnote{http://projects.spring.io/spring-data/} is a module for Spring Boot that streamlines the way objects can be stored and retrieved from a database. The components used in this application are CRUD\footnote{Create, Read, Update, Delete} repository objects that enclose the database connections and serve simple Java methods as an interface. To create such a repository, a Java interface defining the stored data type and custom database queries has to be constructed.
+No actual implementation of the interface has to be realized since it will be generated automatically by Spring Data.
 The parameters needed to connect to the database have to be configured in any source of properties known to Spring Boot, e.g. in \textit{src/main/resources/application.properties}.
 
 \begin{figure}[h]
@@ -239,8 +236,11 @@ public interface PersonRepository
 
 	Person findById(String id);
 
-	@Query("{ skills._id : ?0 }")
+	@Query("{ 'skills._id' : '?0' }")
 	List<Person> findBySkill(String skillName);
+
+	@Query("{ 'skills._id' : { $all : ?0 } }")
+	List<Person> findBySkills(List<String> skillNames);
 
 }
 \end{lstlisting}
@@ -257,7 +257,7 @@ spring.datasource.driverClassName=com.mongodb.Mongo
 \end{figure}
 
 \subsection{LDAP Connection}
-To connect to the LDAP server, the \textit{unboundid} library\footnote{https://www.ldap.com/unboundid-ldap-sdk-for-java} is used in the class \textit{LdapService}, It provides methods to open a TCP connection to the server, make requests, and parse the server's response. The connection to the LDAP server will be kept alive and is reused for all operations, so that the effort to open a new connection is eliminated.
+To connect to the LDAP server, the \textit{unboundid} library\footnote{https://www.ldap.com/unboundid-ldap-sdk-for-java} which provides methods to open a TCP connection to the server, make requests, and parse the server's response comes to use. The connection to the LDAP server will be kept alive and is reused for all operations, so that the effort to open a new connection is minimized and to avoid networking problems with too many parallel connections.
 
 \begin{figure}[H]
 \begin{lstlisting}[language=Java]
@@ -306,8 +306,8 @@ public class LdapService {
 
 \subsection{Swagger}
 \textit{Swagger}\footnote{http://swagger.io/} is an open source framework for creating documentations of REST APIs.
-Its annotation based java integration is heavily used to generate an interactive overview of the API endpoints provided by the
-backend. This overview is automatically served by spring boot and contains a list of all URLs to make requests to, HTTP response codes to expect, the content type of the response and a built in form to make example requests. The main advantage of this approach is that the code and its documentation are located at the very same place and that parts of the documentation are automatically generated, so that both are maintained synchronously, thus avoiding the documentation differing from the implementation.
+Its annotation based Java integration is heavily used to generate an interactive overview of the API endpoints provided by the
+backend. This overview is automatically served by Spring Boot and contains a list of all URLs to make requests to, HTTP response codes to expect, the content type of the response, and a built in form to make example requests. The main advantage of this approach is that the code and its documentation are located at the very same place and that parts of the documentation are generated automatically, so that both are maintained synchronously, thus avoiding the documentation differing from the implementation.
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{images/swagger_ui.png}
@@ -316,7 +316,7 @@ backend. This overview is automatically served by spring boot and contains a lis
 \end{figure}
 
 \subsection{Testing}
-As a part of the build process, automatic tests are run using the \textit{JUnit}\footnote{http://junit.org} framework. Two types of tests are employed to ensure the proper working of the software: unit tests that validate isolated segments (java classes), and integration tests that simulate calls to the controllers and test the
+As a part of the build process, automatic tests are run using the \textit{JUnit}\footnote{http://junit.org} framework. Two types of tests are employed to ensure the proper working of the software: unit tests that validate isolated segments (Java classes), and integration tests that simulate calls to the controllers and test the
 interplay of the individual components.
 
 \begin{figure}[h]
@@ -345,12 +345,12 @@ public class UserControllerTest {
 
 
 \subsubsection{Embedded Services}
-During the integration test phase, external services like LDAP and a database have to be accessed in order to ensure the proper working of the interfaces connecting to them. Using the real services, however, is not an option as it cannot be assumed that the machine that runs the tests has a connection to them, and because the tests have to take control over the state of the services. To solve this, an LDAP server and a MongoDB are embedded into the application and will be used during testing.
+During the integration test phase, external services like LDAP and a database have to be accessed in order to ensure the proper working of the interfaces connecting to them. Using the live services, however, is not an option as it cannot be assumed that the machine that runs the tests has a connection to them, and because the tests have to take control over the state of the services. To solve this, an LDAP server and a MongoDB are embedded into the application and will be used during testing.
 The embedded database is the MongoDB implementation by \textit{flapdoodle}\footnote{https://github.com/flapdoodle-oss/de.flapdoodle.embed.mongo}, which has the advantage of being effortlessly deployed by importing it; all further configuration and setup happen automatically.
 To embed an LDAP service, the \textit{unboundid} library is used.
 
 \section{License}
-The software is licensed under the MIT license \cite{license} which is considered one of the most popular open source licenses, mainly because it grants a high level of freedom to modify and use the software under the sole condition that a copy of the original license is distributed algonside the software.
+The software is licensed under the MIT license \cite{license} which is considered one of the most popular open source licenses \cite{mit_stats}, mainly because it grants a high level of freedom to modify and use the software under the sole condition that a copy of the original license is distributed algonside the software.
 
 \begin{quote}
 Copyright 2017 SinnerSchrader Deutschland GmbH

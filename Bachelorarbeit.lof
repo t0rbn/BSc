@@ -5,9 +5,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 3.1}{\ignorespaces Screenshot: SkillsBase Dashboard}}{13}{figure.3.1}
-\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Screenshot: Talent Management Search}}{14}{figure.3.2}
+\contentsline {figure}{\numberline {\relax 3.2}{\ignorespaces Screenshot: SkillsDB Pro Overview}}{14}{figure.3.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Pseudocode: Search Algorithm}}{20}{figure.4.1}
+\contentsline {figure}{\numberline {\relax 4.1}{\ignorespaces Pseudocode: Search Algorithm}}{19}{figure.4.1}
 \contentsline {figure}{\numberline {\relax 4.2}{\ignorespaces Diagram: Markov Chain}}{28}{figure.4.2}
 \contentsline {figure}{\numberline {\relax 4.3}{\ignorespaces Data Structure: Known Skill}}{30}{figure.4.3}
 \contentsline {figure}{\numberline {\relax 4.4}{\ignorespaces Pseudocode: Skill Suggestion Algorithm}}{31}{figure.4.4}
@@ -31,7 +31,7 @@
 \contentsline {figure}{\numberline {\relax 5.14}{\ignorespaces Code: Example Unit Test}}{51}{figure.5.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {\relax 6.1}{\ignorespaces Diagram: Fitness Score Distribution (Raw)}}{54}{figure.6.1}
-\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Diagram: Fitness Score Distribution (Processed)}}{54}{figure.6.2}
+\contentsline {figure}{\numberline {\relax 6.2}{\ignorespaces Diagram: Fitness Score Distribution (Processed)}}{55}{figure.6.2}
 \contentsline {figure}{\numberline {\relax 6.3}{\ignorespaces Diagram: Fitness Score Distribution (Error Rates)}}{55}{figure.6.3}
 \contentsline {figure}{\numberline {\relax 6.4}{\ignorespaces Diagram: Survey Data}}{57}{figure.6.4}
 \contentsline {figure}{\numberline {\relax 6.5}{\ignorespaces Diagram: Comparison of Survey and Algorithm}}{59}{figure.6.5}

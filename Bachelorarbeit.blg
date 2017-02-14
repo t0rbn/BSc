@@ -23,45 +23,45 @@ Warning--empty booktitle in jaccard
 Warning--empty pages in jaccard
 Warning--empty booktitle in ivanovska
 Warning--empty pages in ivanovska
-You've used 29 entries,
+You've used 32 entries,
             4793 wiz_defined-function locations,
-            1064 strings with 10937 characters,
-and the built_in function-call counts, 16452 in all, are:
-= -- 1699
-> -- 403
-< -- 425
-+ -- 478
-- -- 146
-* -- 1078
-:= -- 2767
-add.period$ -- 40
-call.type$ -- 29
-change.case$ -- 136
-chr.to.int$ -- 29
-cite$ -- 33
-duplicate$ -- 471
-empty$ -- 1198
-format.name$ -- 270
-if$ -- 3312
+            1080 strings with 11361 characters,
+and the built_in function-call counts, 18410 in all, are:
+= -- 1891
+> -- 469
+< -- 499
++ -- 562
+- -- 169
+* -- 1209
+:= -- 3122
+add.period$ -- 43
+call.type$ -- 32
+change.case$ -- 155
+chr.to.int$ -- 32
+cite$ -- 36
+duplicate$ -- 523
+empty$ -- 1307
+format.name$ -- 317
+if$ -- 3672
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 138
-newline$ -- 175
-num.names$ -- 87
-pop$ -- 210
+missing$ -- 154
+newline$ -- 190
+num.names$ -- 96
+pop$ -- 238
 preamble$ -- 1
-purify$ -- 194
+purify$ -- 219
 quote$ -- 0
-skip$ -- 852
+skip$ -- 966
 stack$ -- 0
-substring$ -- 1280
-swap$ -- 92
-text.length$ -- 82
-text.prefix$ -- 19
+substring$ -- 1392
+swap$ -- 107
+text.length$ -- 95
+text.prefix$ -- 21
 top$ -- 0
-type$ -- 266
+type$ -- 296
 warning$ -- 4
-while$ -- 129
-width$ -- 31
-write$ -- 377
+while$ -- 147
+width$ -- 34
+write$ -- 411
 (There were 4 warnings)
