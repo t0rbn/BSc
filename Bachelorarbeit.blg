@@ -19,49 +19,51 @@ Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Database file #1: Bachelorarbeit.bib
+Warning--I'm ignoring markprop's extra "note" field
+--line 317 of file Bachelorarbeit.bib
 Warning--empty booktitle in jaccard
 Warning--empty pages in jaccard
 Warning--empty booktitle in ivanovska
 Warning--empty pages in ivanovska
 You've used 32 entries,
             4793 wiz_defined-function locations,
-            1080 strings with 11361 characters,
-and the built_in function-call counts, 18410 in all, are:
-= -- 1891
+            1078 strings with 11185 characters,
+and the built_in function-call counts, 17813 in all, are:
+= -- 1838
 > -- 469
-< -- 499
-+ -- 562
-- -- 169
-* -- 1209
-:= -- 3122
-add.period$ -- 43
+< -- 487
++ -- 549
+- -- 168
+* -- 1143
+:= -- 3059
+add.period$ -- 39
 call.type$ -- 32
 change.case$ -- 155
 chr.to.int$ -- 32
 cite$ -- 36
-duplicate$ -- 523
-empty$ -- 1307
+duplicate$ -- 522
+empty$ -- 1244
 format.name$ -- 317
-if$ -- 3672
+if$ -- 3558
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 154
-newline$ -- 190
+newline$ -- 192
 num.names$ -- 96
-pop$ -- 238
+pop$ -- 233
 preamble$ -- 1
 purify$ -- 219
 quote$ -- 0
-skip$ -- 966
+skip$ -- 951
 stack$ -- 0
-substring$ -- 1392
-swap$ -- 107
-text.length$ -- 95
+substring$ -- 1197
+swap$ -- 108
+text.length$ -- 96
 text.prefix$ -- 21
 top$ -- 0
 type$ -- 296
 warning$ -- 4
-while$ -- 147
+while$ -- 148
 width$ -- 34
-write$ -- 411
-(There were 4 warnings)
+write$ -- 414
+(There were 5 warnings)

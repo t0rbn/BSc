@@ -411,8 +411,7 @@ In this example, the query ``Java, PHP'' has already been entered. Based on thos
 \subsection{Recommending Similar Users}
 \label{similar}
 Additionally to the required features, the backend will provide the possibility to find users that are similar to a reference person.
-In the application, this feature could be used to show recommended persons when viewing one specific employee's profile. As this functionality filters the entirety of
-employees to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
+In the application, this feature will be used to show recommended persons when viewing one specific employee's profile. As this functionality filters the entirety of employees to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
 Unlike the recommender system used to provide more skills to search for, this system will use a content-based filtering approach. The employee profiles contain numerous skills that represent a sufficient amount inherent information about the respective person to compare profiles in order to find similar ones. Other users' interactions with the profiles, however, do not necessarily indicate similarities, so that the interaction history will not be taken into account for this feature.
 
 The recommender algorithm will contain three straightforward steps:

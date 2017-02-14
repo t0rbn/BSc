@@ -19,13 +19,17 @@
 \textsc{Balter}, Ben:
 \newblock \emph{Open source license usage on GitHub.com}.
 \newblock
-  \url{https://github.com/blog/1964-open-source-license-usage-on-github-com}
+  \url{https://github.com/blog/1964-open-source-license-usage-on-github-com}.
+  --
+\newblock Accessed: 2017-02-14
 
 \bibitem[Bea]{hvscale}
 \textsc{Beaumont}, David:
 \newblock \emph{How to explain vertical and horizontal scaling in the cloud}.
 \newblock
-  \url{https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/}
+  \url{https://www.ibm.com/blogs/cloud-computing/2014/04/explain-vertical-horizontal-scaling-cloud/}.
+  --
+\newblock Accessed: 2017-01-14
 
 \bibitem[Bec03]{beck}
 \textsc{Beck}, Simon:
@@ -38,13 +42,12 @@
 \textsc{Bergmann}, Rainer:
 \newblock \emph{Organisation und Projektmanagement}.
 \newblock 2. Aufl. 2016.
-\newblock Springer Gabler, 2016 (BA KOMPAKT).
-\newblock \url{https://beluga.sub.uni-hamburg.de/vufind/Record/866785566}
+\newblock Springer Gabler, 2016 (BA KOMPAKT)
 
 \bibitem[Can13]{CanosDaros2013}
 \textsc{Canós‐Darós}, Lourdes:
 \newblock An algorithm to identify the most motivated employees.
-\newblock {In: }\emph{Management Decision} 51 (2013), Nr. 4, 813-823.
+\newblock {In: }\emph{Management Decision} 51 (2013), Nr. 4, S. 813--823.
 \newblock \url{http://dx.doi.org/10.1108/00251741311326581}. --
 \newblock DOI 10.1108/00251741311326581
 
@@ -73,11 +76,6 @@
 \newblock \emph{Foliensatz Grundlagen der Systemsoftware SoSe 2016}.
 \newblock 2016
 
-\bibitem[Fou]{ldapscale}
-\textsc{Foundation}, The~O.:
-\newblock \emph{Replication - OpenLDAP Administrator's Guide}.
-\newblock \url{http://www.openldap.org/doc/admin24/replication.html}
-
 \bibitem[Gut16]{SpringGuide}
 \textsc{Gutierrez}, Felipe:
 \newblock \emph{Pro Spring Boot - A no-nonsense guide containing case studies
@@ -96,11 +94,8 @@
 \bibitem[IFO15]{Isinkaye2015261}
 \textsc{Isinkaye}, F.O. ; \textsc{Folajimi}, Y.O.  ; \textsc{Ojokoh}, B.A.:
 \newblock Recommendation systems: Principles, methods and evaluation.
-\newblock {In: }\emph{Egyptian Informatics Journal} 16 (2015), Nr. 3, 261 -
-  273.
-\newblock \url{http://dx.doi.org/http://dx.doi.org/10.1016/j.eij.2015.06.005}.
-  --
-\newblock DOI http://dx.doi.org/10.1016/j.eij.2015.06.005. --
+\newblock {In: }\emph{Egyptian Informatics Journal} 16 (2015), Nr. 3, S. 261 --
+  273. --
 \newblock ISSN 1110--8665
 
 \bibitem[IIK13]{ivanovska}
@@ -114,7 +109,8 @@
 \newblock \emph{Measure Peformance with the RAIL Model}.
 \newblock
   \url{https://developers.google.com/web/fundamentals/performance/rail}.
-\newblock \,Version:\,2017
+\newblock \,Version:\,2017. --
+\newblock Accessed: 2017-01-16
 
 \bibitem[Leh04]{Marktanalyse}
 \textsc{Lehner}, Franz:
@@ -131,12 +127,14 @@
 \textsc{Münzl}, Gerald:
 \newblock \emph{Cloud Computing als neue Herausforderung für Management und
   IT}.
-\newblock Berlin : Springer Vieweg, 2015 (essentials)
+\newblock Berlin : Springer Vieweg, 2015
 
 \bibitem[NGI]{NGINX}
 \textsc{NGINX{\ }Inc.}:
 \newblock \emph{WHAT IS A REVERSE PROXY SERVER?}
-\newblock \url{https://www.nginx.com/resources/glossary/reverse-proxy-server/}
+\newblock \url{https://www.nginx.com/resources/glossary/reverse-proxy-server/}.
+  --
+\newblock Accessed: 2017-01-08
 
 \bibitem[PRG{\etalchar{+}}17]{MongoLock}
 \textsc{Pollack}, Mark ; \textsc{Risberg}, Thomas ; \textsc{Gierke}, Oliver ;
@@ -148,24 +146,23 @@
 \bibitem[QS]{jsmarket}
 \textsc{Q-Success{\ }Software{\ }Quality{\ }Management}:
 \newblock \emph{Usage of JavaScript for websites}.
-\newblock \url{https://w3techs.com/technologies/details/cp-javascript/all/all}
+\newblock \url{https://w3techs.com/technologies/details/cp-javascript/all/all}.
+  --
+\newblock Accessed: 2017-01-14
 
 \bibitem[RD00]{RYAN200054}
 \textsc{Ryan}, Richard~M. ; \textsc{Deci}, Edward~L.:
 \newblock Intrinsic and Extrinsic Motivations: Classic Definitions and New
   Directions.
-\newblock {In: }\emph{Contemporary Educational Psychology} 25 (2000), Nr. 1, 54
-  - 67.
-\newblock \url{http://dx.doi.org/http://dx.doi.org/10.1006/ceps.1999.1020}. --
-\newblock DOI http://dx.doi.org/10.1006/ceps.1999.1020. --
+\newblock {In: }\emph{Contemporary Educational Psychology} 25 (2000), Nr. 1, S.
+  54 -- 67. --
 \newblock ISSN 0361--476X
 
 \bibitem[Sie]{markprop}
 \textsc{Siegrist}, Kyle:
 \newblock \emph{Markov Chains}.
 \newblock \url{http://www.math.uah.edu/stat/markov/Introduction.html}. --
-\newblock Department of Mathematical Sciences; University of Alabama in
-  Huntsville
+\newblock Accessed: 2017-01-13
 
 \bibitem[Sin01]{IR}
 \textsc{Singhal}, Amit:
@@ -176,7 +173,8 @@
 \textsc{SinnerSchrader}:
 \newblock \emph{Quartalsbericht 1 2016/2017}.
 \newblock \url{https://sinnerschrader.ag/de/berichte/}.
-\newblock \,Version:\,2017
+\newblock \,Version:\,2017. --
+\newblock Accessed: 2017-01-16
 
 \bibitem[Smi15]{json}
 \textsc{Smith}, Ben:
@@ -196,7 +194,9 @@
 \newblock \emph{Share of users with mobile or stationary internet access in
   Germany in 2014}.
 \newblock
-  \url{https://www.statista.com/statistics/432146/internet-access-devices-used-germany/}
+  \url{https://www.statista.com/statistics/432146/internet-access-devices-used-germany/}.
+  --
+\newblock Accessed: 2017-01-16
 
 \bibitem[Str17]{strecker}
 \textsc{Strecker}, Katharina:
@@ -204,13 +204,18 @@
   Webtools für Skillmanagement}.
 \newblock 2017
 
+\bibitem[The]{ldapscale}
+\textsc{The{\ }OpenLDAP{\ }Foundation}:
+\newblock \emph{Replication - OpenLDAP Administrator's Guide}.
+\newblock \url{http://www.openldap.org/doc/admin24/replication.html}. --
+\newblock Accessed: 2017-01-14
+
 \bibitem[WGGK16]{finger}
 \textsc{Wang}, Cliff ; \textsc{Gerdes}, Ryan~M. ; \textsc{Guan}, Yong  ;
   \textsc{Kasera}, Sneha~K.:
 \newblock \emph{Digital Fingerprinting}.
 \newblock New York, NY s.l. : Springer New York, 2016. --
 \newblock  189 S.
-\newblock \url{https://beluga.sub.uni-hamburg.de/vufind/Record/871476827}
 
 \bibitem[Wil10]{Wilson}
 \textsc{Wilson}, Carol:

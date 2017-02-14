@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  13 FEB 2017 20:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.12.5)  14 FEB 2017 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1208,28 +1208,28 @@ l.409 \newpage
 File: images/wireframe.png Graphic file (type png)
 
 <use images/wireframe.png>
-Package pdftex.def Info: images/wireframe.png used on input line 485.
+Package pdftex.def Info: images/wireframe.png used on input line 484.
 (pdftex.def)             Requested size: 426.79134pt x 404.62627pt.
 
 <images/design_home.png, id=806, 1475.5125pt x 1431.3475pt>
 File: images/design_home.png Graphic file (type png)
 
 <use images/design_home.png>
-Package pdftex.def Info: images/design_home.png used on input line 492.
+Package pdftex.def Info: images/design_home.png used on input line 491.
 (pdftex.def)             Requested size: 426.79134pt x 414.00996pt.
  [35] [36pdfTeX warning (ext4): destination with the same identifier (name{figu
 re.4.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.497 \newpage
+l.496 \newpage
                <./images/wireframe.png>] [37pdfTeX warning (ext4): destination 
 with the same identifier (name{figure.4.7}) has been already used, duplicate ig
 nored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.497 \newpage
+l.496 \newpage
                <./images/design_home.png>]) [38]
 \openout2 = `chapter_implementation.aux'.
 
@@ -1594,18 +1594,12 @@ ro-ni-sa-tion er-fol-gen. Weil,
  []
 
 [71]
-Overfull \hbox (6.07932pt too wide) in paragraph at lines 82--83
-\T1/ppl/m/n/10.95 eine sin-nvolle Zusam-men-stel-lung da rauskommt, als Ergeb-n
-is. Bei der Ressourcensi-
+Overfull \hbox (3.21042pt too wide) in paragraph at lines 82--83
+\T1/ppl/m/n/10.95 eine sin-nvolle Zusam-men-stel-lung da rauskommt als Ergeb-ni
+s. Bei der Ressourcensi-
  []
 
-[72]
-Overfull \hbox (5.23654pt too wide) in paragraph at lines 96--97
-\T1/ppl/m/n/10.95 wollen eine ganz unge-fähre Ten-denz bekom-men, und genauer k
-riegt man es sowieso
- []
-
-[73] [74]
+[72] [73] [74]
 chapter B.
 ) [75
 
@@ -1625,21 +1619,21 @@ l.54 \include{chapter_appendix}
                                ] (./Bachelorarbeit.bbl
 chapter without number
 
-Underfull \hbox (badness 2012) in paragraph at lines 38--43
-[]\T1/ppl/m/sc/10.95 Bergmann\T1/ppl/m/n/10.95 , Rainer:  \T1/ppl/m/it/10.95 Or
--gan-i-sa-tion und Pro-jek-t-man-age-ment\T1/ppl/m/n/10.95 .  2. Aufl.
+Underfull \hbox (badness 2495) in paragraph at lines 19--25
+\T1/pcr/m/n/10.95 com / blog / 1964-[]open-[]source-[]license-[]usage-[]on-[]gi
+thub-[]com$[][]\T1/ppl/m/n/10.95 . --
  []
 
 
-Underfull \hbox (badness 2368) in paragraph at lines 45--50
+Underfull \hbox (badness 1584) in paragraph at lines 48--53
 []\T1/ppl/m/sc/10.95 Canós-Darós\T1/ppl/m/n/10.95 , Lour-des:  An al-go-rithm t
-o iden-tify the most mo-
+o iden-tify the most mo-ti-
  []
 
 
-Underfull \hbox (badness 1946) in paragraph at lines 45--50
-\T1/ppl/m/n/10.95 ti-vated em-ploy-ees.  In: \T1/ppl/m/it/10.95 Man-age-ment De
--ci-sion \T1/ppl/m/n/10.95 51 (2013), Nr. 4, 813-
+Underfull \hbox (badness 1087) in paragraph at lines 48--53
+\T1/ppl/m/n/10.95 vated em-ploy-ees.  In: \T1/ppl/m/it/10.95 Man-age-ment De-ci
+-sion \T1/ppl/m/n/10.95 51 (2013), Nr. 4, S. 813--
  []
 
 [77
@@ -1647,58 +1641,46 @@ Underfull \hbox (badness 1946) in paragraph at lines 45--50
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 113--118
+Underfull \hbox (badness 10000) in paragraph at lines 108--114
 \T1/pcr/m/n/10.95 developers . google . com / web / fundamentals / performance 
 / rail$[][]\T1/ppl/m/n/10.95 .
  []
 
 
-Underfull \hbox (badness 1226) in paragraph at lines 149--152
+Underfull \hbox (badness 1226) in paragraph at lines 147--152
 []\T1/ppl/m/sc/10.95 Q-Success Soft-ware Qual-ity Man-age-ment\T1/ppl/m/n/10.95
  :  \T1/ppl/m/it/10.95 Us-age of JavaScript
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 147--152
 \T1/ppl/m/it/10.95 for web-sites\T1/ppl/m/n/10.95 .  [][]$\T1/pcr/m/n/10.95 htt
 ps : / / w3techs . com / technologies / details /
  []
 
-
-Underfull \hbox (badness 1189) in paragraph at lines 154--162
-[]\T1/ppl/m/sc/10.95 Ryan\T1/ppl/m/n/10.95 , Richard M. ; \T1/ppl/m/sc/10.95 De
-ci\T1/ppl/m/n/10.95 , Ed-ward L.:  In-trin-sic and Ex-trin-sic Mo-
- []
-
-
-Underfull \hbox (badness 3068) in paragraph at lines 154--162
-\T1/ppl/m/n/10.95 ti-va-tions: Clas-sic Def-i-ni-tions and New Di-rec-tions.  I
-n: \T1/ppl/m/it/10.95 Con-tem-po-
- []
-
-
-Underfull \hbox (badness 1975) in paragraph at lines 154--162
-\T1/ppl/m/it/10.95 rary Ed-u-ca-tional Psy-chol-ogy \T1/ppl/m/n/10.95 25 (2000)
-, Nr. 1, 54 - 67.  [][]$\T1/pcr/m/n/10.95 http : / / dx .
- []
-
-
-Underfull \hbox (badness 1348) in paragraph at lines 154--162
-\T1/pcr/m/n/10.95 doi . org / http : / / dx . doi . org / 10 . 1006 / ceps . 19
-99 . 1020$[][]\T1/ppl/m/n/10.95 . --  DOI
- []
-
 [78]
-Underfull \hbox (badness 10000) in paragraph at lines 176--180
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 []\T1/ppl/m/sc/10.95 SinnerSchrader\T1/ppl/m/n/10.95 :  \T1/ppl/m/it/10.95 Quar
 -tals-bericht 1 2016/2017\T1/ppl/m/n/10.95 .  [][]$\T1/pcr/m/n/10.95 https : / 
 /
  []
 
 
+Underfull \hbox (badness 2726) in paragraph at lines 173--178
+\T1/pcr/m/n/10.95 sinnerschrader . ag / de / berichte/$[][]\T1/ppl/m/n/10.95 . 
+ Version:2017. --  Ac-cessed:
+ []
+
+
 Underfull \hbox (badness 1092) in paragraph at lines 202--206
 []\T1/ppl/m/sc/10.95 Strecker\T1/ppl/m/n/10.95 , Katha-rina:  \T1/ppl/m/it/10.9
 5 Front-End Konzep-tion und Um-set-zung eines un-
+ []
+
+
+Underfull \hbox (badness 4467) in paragraph at lines 208--212
+\T1/ppl/m/it/10.95 Guide\T1/ppl/m/n/10.95 .  [][]$\T1/pcr/m/n/10.95 http : / / 
+www . openldap . org / doc / admin24 / replication .
  []
 
 ) [79] [80
@@ -1766,10 +1748,10 @@ amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrb
 xmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on Bachelorarbeit.pdf (95 pages, 2990722 bytes).
+Output written on Bachelorarbeit.pdf (95 pages, 2990149 bytes).
 PDF statistics:
- 1640 PDF objects out of 1728 (max. 8388607)
- 1473 compressed objects within 15 object streams
+ 1632 PDF objects out of 1728 (max. 8388607)
+ 1465 compressed objects within 15 object streams
  599 named destinations out of 1000 (max. 500000)
  680 words of extra memory for PDF output out of 10000 (max. 10000000)
 
