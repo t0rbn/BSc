@@ -10,6 +10,7 @@ Information Retrieval (IR) systems search a base of data (e.g. documents or webs
 Primitive IR systems used search queries combined with boolean operators to specify the searched item, hence they are called \textit{boolean systems}.
 Modern IR systems ``rank documents by their estimation of the usefulness of a document for a user query'' \cite{IR}, which means they provide more suitable results without the need to enter complex operator based search queries \cite{IR}.
 
+\newpage
 
 \subsection{Search Algorithm}
 \label{Search_Algo_Main}
@@ -31,9 +32,10 @@ The basic structure of the IR system's working consists of five steps:
     The results will be sorted by fitness score. The employee with the best fitness score will be shown first in the list of results.
 \end{enumerate}
 
+\newpage
 
 \subsubsection{Pseudo-Implementation}
-\begin{figure}[H]
+\begin{figure}[!htp]
 \begin{lstlisting}[language=Java]
 function search(searchItems, searchLocation) {
   var results = getAllEmployees()
@@ -246,6 +248,7 @@ As described by Isinkaye et al., filtering techniques used in recommender system
 \subsubsection{Hybrid Filtering}
 Hybrid filtering combines two or more filtering methods either by aggregating their respective results into a single set of recommendations preferring the items multiple methods recommend, or by bringing content based aspects into the approach of collaborative filtering and vice versa.
 
+\newpage
 
 \subsection{Search Suggestions}
 \label{autocomplete}
@@ -264,6 +267,9 @@ Although device and user fingerprinting are not prohibited by law,
 the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
 Due to those reasons, it will be assumed that there is no data about unique users, but about their entirety.
+
+\newpage
+
 \subsubsection{Skill Attributes}
 The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
@@ -273,6 +279,8 @@ Tracking which skills have been searched together can be implemented easily and 
 
 \subsubsection{Chosen Approach}
 Assuming that no user profiles exist, user based filtering and model based filtering cannot be applied. Due to the lack of metadata about the skills, content based filtering can also be eliminated as a possible approach. Item based filtering, however, does not require any data that is not available, so this approach will be used for the recommender system.
+
+\newpage
 
 \subsubsection{Concept}
 The application has access to the list of skills the user already entered and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next items that the user is likely to enter and recommend it to them.
@@ -294,6 +302,7 @@ An intuitive approach to the implementation of the markov chain generating the s
 As a tradeoff between keeping the number of states in the markov chain small and generating recommendations specific to the searched skill set, the system will generate predictions for each skill in the search query independently and aggregate these predictions afterwards. For each skill, a list of possible recommendations paired with the total count of searches for both will be stored. The recommendation lists of all skills combined represent the transition matrix. Instead of transition probabilities, the total number of searches is saved in order to simplify the aggreation of multiple suggestions.\\
 The recommender system will concatenate the suggestion lists of all items in the current search query and add up the count numbers of skills appearing in multiple suggestion lists. Then, all elements of the combined list that are part of the search query will be removed, the result is a list of suggestions for the whole search query. The items will then be sorted by said search count. The first $n$ elements, where $n$ ist the number of items to recommend, will be returned.\\
 
+\newpage
 
 \subsubsection{Pseudo-Code}
 \begin{figure}[!htp]
@@ -472,6 +481,9 @@ For each employee, the Jaccard Similarity Coefficient will be calculated based o
 \end{center}
 
 Given the task to recommend two persons that are similar to \textit{Alice}, the recommender system would choose \textit{Bob} and \textit{Charlie} because they have the highest Jaccard Similarity Coefficient in the set of given employees.
+
+
+\newpage
 
 \subsubsection{Drawbacks}
 The described recommender system inspects how many skills the examined persons have in common relative to their total number of skills. The levels of knowledge and motivation regarding those skills are not taken into account, so that the recommendations might be inaccurate. Unfortunately, there is no real life user feedback yet, so that the evaluation of this factor and the creation of a implemenation that includes those aspects will stay subject to further research.

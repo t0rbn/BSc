@@ -1,3 +1,4 @@
+\addtocontents{toc}{\protect\newpage}
 \chapter{Evaluation}
 
 \section{Fitness Score Algorithm}
@@ -13,7 +14,7 @@ The distribution of the score values for every respective search is shown in fig
 Figure \ref{fig:dist-avg} illustrates the average of all eight scores for each postion in the search result lists, the maximum value found at this position, and the respective minimum value.
 It shows that the average score declines approximately linearily, which means that the score values are distributed uniformly thorough the result lists. In figure \ref{fig:dist-raw}, every result function shows a variance from the ideal value; the average value in figure \ref{fig:dist-avg}, however, deviates signifitantly less from the ideal than any of the isolated data rows. This leads to the conclusion that the drift from the ideal that occurs when observering one single set of data for one specific search is based on the small amount of examined values (33 data points) and the individual deviations compensate each other. The average fitness score shows an mean error of approx. 6\% (see figure \ref{fig:dist-err}). The maximum error in the given set of data is 27\%.
 This leads to the conclusion that the fitness score algorithm generates uniformly distributed score values with an acceptable error.\\
-Interestingly, the maximum error seems to have a declining trend; the small amount of examined data does not provide a solid basis for assumptions about whether there is a systematic reason for this, and, if so, whether it could have a negative impact on the proper working of the system. Unfortunately, there is no authentic usage data yet, so that this question will remain unanswered and might be subject to further research.
+% Interestingly, the maximum error seems to have a declining trend; the small amount of examined data does not provide a solid basis for assumptions about whether there is a systematic reason for this, and, if so, whether it could have a negative impact on the proper working of the system. Unfortunately, there is no authentic usage data yet, so that this question will remain unanswered and might be subject to further research.
 
 \begin{figure}[H]
     \centering
@@ -199,17 +200,16 @@ The static content like HTML, CSS and JS files, that altogether represent the fr
 served by the reverse proxy web server. In the event of an increasing number of requests that cannot be handled by the single server, a \textit{Content Delivery Network} (CDN) could be deployed. A CDN is a network of webservers that provide static content and large files. The reverse proxy would redirect the URLs for those files, so that the users' browsers will connect directly to said network in order to retrieve the assets.
 
 \subsubsection{Backend}
-The backend application itself does not save any data on the machine it is running on, but connects to a database server (see \ref{impl:be}). As a result, any number of backend instances can be set up and ,in contrast to the other services, do not have to synchronize. In order to receive HTTP requests, the reverse proxy must be configured so that it redirects API calls to the backend servers. This is called \textit{load balancing} and is supported by many modern web servers such as \textit{nginx}\footnote{https://www.nginx.com/resources/wiki/}, \textit{Apache}\footnote{https://httpd.apache.org/} and \textit{Tomcat}\footnote{http://tomcat.apache.org/}.
+The backend application itself does not save any data on the machine it is running on, but connects to a database server (see \ref{impl:be}). As a result, any number of backend instances can be set up and, in contrast to the other services, do not have to synchronize. In order to receive HTTP requests, the reverse proxy must be configured so that it redirects API calls to the backend servers. This is called \textit{load balancing} and is supported by many modern web servers such as \textit{nginx}\footnote{https://www.nginx.com/resources/wiki/}, \textit{Apache}\footnote{https://httpd.apache.org/} and \textit{Tomcat}\footnote{http://tomcat.apache.org/}. Tests running ten backend instances in parallel on the same machine using nginx as a load balancer\footnote{Using round-robin as distribution mechanism.} did not show any issues.
 
 \newpage
 
 \subsubsection{Conclusion}
-TODO positiver formulieren
-In theory, the application should be able to scale according to the number of its users. Practically, only the running of multiple backend and LDAP servers has been tested successfully. Running multiple database instances has not been tested; since MongoDB has been designed to be horizontally scalable and comes to use in various companies like
+Each component of the system has been examined for scalability; the backend software has successfully been tested in laboratory conditions, whereas the LDAP servers at SinnerSchrader already run in a scaled-up fashion. MongoDB has been designed to be horizontally scalable and comes to use in various companies like
 \textit{Github}\footnote{https://www.mongodb.com/presentations/mongosv-2012/mongodb-analytics-github},
 \textit{eBay}\footnote{https://www.mongodb.com/presentations/mongodb-ebay}, and
-\textit{Otto}\footnote{https://www.mongodb.com/industries/retail}, it can be assumed that this can be done successfully for this application, too.
-Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend was not part of this thesis, but has been worked on by Strecker \cite{strecker}.
+\textit{Otto}\footnote{https://www.mongodb.com/industries/retail}, where its scalability has been proven, so that it is assumed that there will not be any problems regarding the database.
+Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend is not part of this thesis, but has been worked on by Strecker \cite{strecker}. In conclusion, the architecture can be considered as scalable beyond the needs at SinnerSchrader.
 
 \subsection{Response Times}
 \label{resptime}
