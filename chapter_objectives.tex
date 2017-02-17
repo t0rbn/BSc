@@ -1,4 +1,4 @@
-\chapter{Functional Objectives and Existing Solutions}
+\chapter{Requirements and Existing Solutions}
 
 \section{Usage Scenarios}
 \label{usecases}
@@ -12,7 +12,7 @@ enabling employees to find someone who can help in order to answer questions and
 Team managers constantly face the problem of reassembling parts of their teams, forming new teams for new projects, and
 disbanding teams whose projects have ended. As there is no unified source of information about all employees at SinnerSchrader, managers often
 do not find the most suitable team member to fill an open position because they simply do not know each other yet.
-The tool will give managers the opportunity to search the entirety of employees at SinnerSchrader and find one
+The tool will give managers the opportunity to search the entirety of employees at SinnerSchrader and find the most suitable one
 meeting all requirements of the open position, thus making collocating teams easier and more efficient.
 
 \newpage
@@ -30,7 +30,7 @@ The actual features the system should include have been collected by the \textit
 \end{itemize}
 
 \subsection{Interview Procedure}
-The interviews consist of a ten-minutes-long\footnote{The actual timeframe may vary depending on the 	exhaustiveness of the interviewees' answers.} open discussion between the interviewer and the interviewees, so that if the interviewee gives an extraordinate answer brings up a new idea, the interviewer may ask the interviewee to give further explanations. The questions listed in \ref{interviewquestions} will provide a guideline to structure the interviews. Before the interview, the interviewees have been informed about the procedure, the personal data that will be collected for the interview and the purpose of its collection, and have to give their written consent (see \ref{consentform}).
+The interviews consist of a ten-minutes-long\footnote{The actual timeframe may vary depending on the interviewees' answers.} open discussion between the interviewer and the interviewees, so that in the event of the interviewee giving an extraordinaire answer or bringing up a new idea, the interviewer may ask for further explanations. The questions listed in \ref{interviewquestions} will provide a guideline to structure the interviews. Before the interview, the interviewees have been informed about the procedure, the personal data that will be collected for the interview and the purpose of its collection, and have to give their written consent (see \ref{consentform}).
 In order to extract all information from the interviewees' answers, audio recordings have been taped during the interviews.
 
 \newpage
@@ -42,9 +42,9 @@ As described, there are three main groups of stakeholders regarding the applicat
 	Ms. Spranger is the Product Owner in the developent team and part of the Flow Team for which she will speak.
 	\item Mr. Warnholz\\
 	Mr. Warnholz is a project manager and has many years of experience with various teams at SinnerSchrader. He frequently searches for
-	employees suitable for specific project teams and will represent the project managers' point of view.
+	employees fitting into specific project teams and will represent the project managers' point of view.
 	\item Mr. Gruber\\
-	Mr. Gruber is a backend developer and supervisor of one of SinnerSchrader's domain-specific teams that specialize on Java. As he worked on multiple projects that
+	Mr. Gruber is a backend developer and supervisor of one of SinnerSchrader's domain-specific teams. As he worked on multiple projects that
 	use drastically different technology stacks and processes, he is familiar with the problem of having to look for colleagues that can help with a specific problem.
 \end{itemize}
 In contrast to Ms. Spranger, Mr. Warnholz and Mr. Gruber have not been in contact with the devlopment of the skills management application, so that their opinions should not be influenced by internal decisions made about the tool's design.
@@ -59,7 +59,7 @@ Popular features requested by the interviewees include the ability to see how mo
 
 \subsubsection{Scale}
 \label{scale_definition}
-Asked for a rough estimate of how the scale on which knowledge and motivation will be measured should be designed, all interviewees replied that they prefer a simple scale between four and six values. Mr. Gruber and Mr. Warnholz proposed to use five step \textit{Likert Items}. Since those items base on the idea to estimate the difference to a neutral element in both directions (e.g. better or worse), this type of scale is not applicable for the measurement of knowledge. The chosen approach will include a scale of four items for both types of values:
+Asked for a rough estimate of how the scale on which knowledge and motivation will be measured should be designed, all interviewees replied that they prefer a simple scale between four and six values. Mr. Gruber and Mr. Warnholz proposed to use five step \textit{Likert-Style Items}. Since those items base on the idea to estimate the difference to a neutral element in both directions (e.g. better or worse), this type of scale is not applicable for the measurement of knowledge. The chosen approach will include a scale of four items for both types of values:
 \begin{center}
 \begin{tabular}{c|c}
 	Knowledge & Motivation \\
@@ -76,11 +76,11 @@ Asked for a rough estimate of how the scale on which knowledge and motivation wi
 All interviewees agree that the overall experience of the employees should not be included in the search function because the skill-specific experience is significantly more meaningful in this context. The general grade of experience that is reflected by the employee's title (e.g. \textit{Junior}, \textit{Intermediate} or \textit{Senior}) should be shown in the result list but it must not influence the working of the search and rating.
 
 \subsubsection{Duration of Motivation}
-Regarding whether the duration of a will, that is how long the interest in a specific skill will persist, should be captured in the system, the interviewees agree that this should not be the case. The system is supposed to present a snapshot of the present situation and should not be used for long term assumptions. Another important factor stated by the interviewees is that forecasts about one's motivation will be highly inaccurate.
+Regarding whether the duration of a will, that is how long the interest in a specific skill will persist, should be captured in the system, the interviewees agree that this may not be the case. The system is supposed to present a snapshot of the present situation and should not be used for long term assumptions. Another important factor stated by the interviewees is that forecasts about one's motivation will be highly inaccurate.
 
 \subsubsection{Peer Rating}
 \label{peerrating}
-None of the interviewees answered that they want employees to be able to rate each other's skills because they fear that subjective impressions might blur the professional view so that ratings are heavily influenced by sympathy. Furthermore, the Works Council prohibits the introduction of such a feature (see \ref{legal_concerns}) because multiple employees raised concerns about this kind of functionality and whish it not to be included. To respect this demands, users of the application will not be able to rate someone other than themselves.
+None of the interviewees answered that they want employees to be able to rate each other's skills because they fear that subjective impressions might blur the professional view so that ratings are heavily influenced by sympathy. Furthermore, the works council prohibits the introduction of such a feature (see \ref{legal_concerns}) because multiple employees raised concerns about this kind of functionality and whish it not to be included. To respect this demands, users of the application will not be able to rate someone other than themselves.
 
 \subsubsection{Generating Teams}
 The application will not save which projects each employee works on or has previously worked on, because this information is managed by another internal service which will not be replaced by this application, so that this data would have to be updated in both systems manually. Under this condition, no interviewee wants the application to automatically compose project teams. Reasons that have been mentioned are that maintaining the same data in two systems\footnote{The project management system and the skills management application} is impractical, that this task is too complex to be automated, and that composing complete teams is not a popular use case for it. Project teams at SinnerSchrader grow organically, so it is much more common for project managers to look for one single potential member to add to their team instead of composing a completely new one. Based on these insights, the application will not be able to compose teams.
@@ -94,7 +94,7 @@ As employees continually enlarge their knowledge while their fields of interest 
 functional divisions, providing data about their skills and preference once will lead to the system being filled with obsolete
 information. The quality of the search results and suggestions heavily relies on the fidelity and volume of the underlying data about the employees, hence keeping said information up to date is crucial to the performance of the application.
 
-\subsubsection{Biannual Feedback Meetings}
+\subsection{Biannual Feedback Meetings}
 Every employee has biannual meetings with their supervisor to interchange
 bidirectional feedback, define personal goals, and negotiate possible changes of salary.
 Part of the feedback given by the employee are subjects they learned or enhanced their knowledge about, and newly developed interests. These insights are documented and registered in the employee's personnel file.
@@ -102,7 +102,7 @@ The aforesaid meeting will be the regular occasion for supervisors and employees
 newly gained skills to it. The supervisor is advised to address discrepancies between the employee's and their own estimations of skills to accommodate the human factors of self-perception. A case study performed by Beck indicates that this approach to
 collect information about the employees' skills generates a sufficient amount of data to run such a system \cite{beck}.
 
-\subsection{Maintenance of The Saved Data}
+\subsection{Data Maintenance}
 Employees and supervisors are encouraged to be in rich contact with each other in order to deliver continuous feedback
 about the individual person's needs, impediments, and the status of their current projects.
 As a result, supervisors can identify appropriate moments for reevaluating the skills and preferences saved in the application and notify the employee.\\
@@ -118,7 +118,7 @@ there also are intrinsic motivations to do so. Being motivated intrinsically is 
 \newpage
 
 \section{Requirements}
-Based on the Flow Team's demands and the data collected in the survey, requirements for to application have been composed. The functional requirements describe features which will be provided by the system, whereas non-functional requirements define framework conditions for its performance.
+Based on the Flow Team's demands and the data collected in the interviews, requirements for to application have been composed. The functional requirements describe features which will be provided by the system, whereas non-functional requirements define framework conditions for its performance.
 
 \label{requirements}
 \subsection{Functional Requirements}
@@ -133,12 +133,12 @@ Based on the Flow Team's demands and the data collected in the survey, requireme
 	A search function can be used to find people who have added one or more specific skills to their profile. When searching for multiple skills, only persons matching all of them will be displayed.
 	\begin{itemize}
 		\item Ranking\\
-			By default, the search results' order should be defined by a score aggregating the individual employee's skill level, will level and grade of specialization in the searched skills.
+			By default, the search results' order will be defined by a score aggregating the individual employee's skill level, will level and grade of specialization in the searched skills.
 		\item Sorting\\
-			The user should be able to sort the search results not only by said score
+			The users are able to sort the search results not only by said score
 			but also by skill and will level.
-	\item Provide Additional Information
-			Employees should be able to add comments to their profile to give extra information about working hours, special contracts, certificates they own, etc.
+	\item Provide Additional Information\\
+			Employees is able to add comments to their profile to give extra information about working hours, special contracts, certificates they own, etc.
 	\end{itemize}
 	\item Management of Known Skills\\
 	New skills can be added to the set of known skills in the application. Existing skills can be edited and removed. Users' personal skills are automatically updated when a skill has been edited, so that the integrity of the users' profiles is maintained at all times.
@@ -170,7 +170,7 @@ A more detailed analysis by Lehner shows that most tools provide a spectrum of f
 
 \subsection{Skills Base}
 Skills Base\footnote{http://www.skills-base.com/} offers most of the required features, but also includes a large number of functionality SinnerSchrader does not need and is not willing to use. This includes assessments, the categorization of skills, and a role model for advanced access rights configuration.
-A central asprect of the application are dashboards displaying information about the most popular skills in the organization and long term statistics. The API supports searching for multiple skills with minimum levels in knowledge and interest. Unfortunately, the application cannot be hosted by SinnerSchrader, which mean the employees data would have to be stored on external infrastructure that is operated and monitored by an external company, which should be avoided due to legal reasons.
+A central aspect of the application are dashboards displaying information about the most popular skills in the organization and long term statistics. The API supports searching for multiple skills with minimum levels in knowledge and interest. Unfortunately, the application cannot be hosted by SinnerSchrader. This means the employees data would have to be stored on external infrastructure that is operated and monitored by an external company, which should be avoided due to legal reasons.
 \begin{figure}[!htp]
     \centering
     \includegraphics[width=\textwidth]{images/skillsbase-dashboard.png}
@@ -182,7 +182,7 @@ A central asprect of the application are dashboards displaying information about
 Talent Management\footnote{http://www.infoniqa.com/hr-software/skill-management} is a module for \textit{Infoniqa’s} management software engage!\footnote{http://www.infoniqa.com/hr-software/personalmanagement}. It offers advanced features for managers such as a powerful search function controlled via a special query language. It also includes data about the employees’ salaries, feedback protocols, and certificates, but lacks the possibility to register motivation. It can only be used in combination with engage!, a complete human resources management solution including features like time tracking, e-learning, applicant management and payroll accounting.
 
 \subsection{SkillsDB Pro}
-SkillsDB Pro\footnote{http://www.skillsdbpro.com} is an application designed to serve as a database in an organization, providing an overview of every person’s own skills and training only to themselves and their supervisor. The search function is capable of searching for multiple skills combined with different logical operators which enables users to enter very sophisticated queries.
+SkillsDB Pro\footnote{http://www.skillsdbpro.com} is an application designed to serve as a database in an organization, providing an overview of every person’s personal skills and training only to themselves and their supervisor. The search function is capable of searching for multiple skills combined with different logical operators which enables users to enter very sophisticated queries.
 Not only can users provide information about their skills but supervisors can also do this with the limitation that no employee can see their supervisor's rating about themselves. Information about motivation, like in the other examined systems, cannot be captured.
 Furthermore, only privileged like supervisors can search for persons. Taking into consideration that SinnerSchrader needs a tool to enable everyone to find someone with a specific skill set, this is a serious disadvantage.
 SkillsDB Pro also offers features SinnerSchrader does not intend to use including the automatic generation of project reports based on plan succession and demands for assessments.
@@ -197,8 +197,8 @@ SkillsDB Pro also offers features SinnerSchrader does not intend to use includin
 \newpage
 
 \subsection{Conclusion}
-None of the analyzed applications offers all required features, but all of them include various functions SinnerSchrader does not intend to use, which brings undesired complexity into the applications.
-One of the most critical features, sorting the search results by both knowledge and motivation is not offered by any of the commercial solutions.
+None of the analyzed applications offers all required features, but all of them include various functions SinnerSchrader does not intend to use, which brings undesired complexity into the application.
+One of the most critical features, a search function that aggregates both knowledge and motivation is not offered by any of the commercial solutions.
 Furthermore, all those systems differentiate between employees and their supervisors and thus restrain transparency. The application is not supposed to be used for monitoring and rating employees, but should give employees the possibility to find each other; categorizing them into different roles would clearly defeat this purpose.
 
 \subsubsection{Pain Point Fitness Scoring}

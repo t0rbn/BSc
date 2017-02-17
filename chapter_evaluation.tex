@@ -4,8 +4,8 @@
 \section{Fitness Score Algorithm}
 
 \subsection{Uniform Distribution of Score Values}
-The scores calculated by the fitness score algorithm (see \ref{fitscorealg}) should be distributed uniformly in the complete range of possible values because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
-To test this, one hundred automatically generated persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each, thus a search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in table \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result\footnote{Counting starts at one} value is:
+The values calculated by the fitness score algorithm (see \ref{fitscorealg}) should be distributed uniformly in the complete range of possible values because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
+To test this, one hundred automatically generated persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each, thus a search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in appendix \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result\footnote{Counting starts at one} value is:
 \[
 	f_{Ideal}(n) = 1 - \frac{n-1}{32}
 \]
@@ -45,7 +45,7 @@ the chosen approach is capable of this, a set of fictional employees has been ra
 congruent to the estimations made by the rating persons.
 
 \subsubsection{Examined Test Records}
-For this test, five test records will be examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of these fictional persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that will be collected and examined represent scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
+For this test, five test records have been examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of these fictional persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that have been collected and examined represent scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
 \begin{table}[H]
 \centering
   \begin{tabular}{l||c|c|c|c}
@@ -62,7 +62,8 @@ For this test, five test records will be examined: \textit{Alice}, \textit{Bob},
 \subsubsection{Survey}
 A random group of 161 employees (35\% of SinnerSchrader's staff) have been presented a survey using \textit{Google Forms}\footnote{https://forms.google.com}.
 In total, 41 persons have given their responses in a timeframe of 72 hours.
-The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented \textit{Likert Items} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
+The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented
+\textit{Likert-Type Items}\footnote{\textit{Likert-Type} as defined by Uebersax \cite{likerttype}.} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
@@ -85,7 +86,7 @@ Charlie     & 1  & 14 & 23 & 3  & 0  & 0 & 2.68 & 0.42 \\
 Donald      & 0  & 10 & 27 & 3  & 0  & 1 & 2.83 & 0.44 \\
 Erika       & 32 & 70 & 0  & 2  & 0  & 0 & 1.31 & 0.08 \\
 \end{tabular}
-\caption[Survey: Estimated Fitness Scores]{Fitness scores estimated by 41 test subjects}
+\caption[Survey: Estimated Fitness Scores]{Fitness scores estimated by 41 test subjects. (Total count per rating scale item)}
 \label{tab:survey_raw}
 \end{table}
 
@@ -178,7 +179,7 @@ does not need to include weighting parameters since the test subjects perceive a
 \section{Implementation}
 \subsection{Scalability}
 \label{scale}
-A software system has to be able to scale according to the number of its users in order to be future-proof, as the current trend to dynamically scalable cloud solutions and server-less web architectures highlights \cite{allthecloud}. There are two concepts of preparing an application for a higher workload: vertical scaling and horizontal scaling. Vertical scaling is done by providing more resources, e.g. memory and CPU power, to the machines running the application. Horziontal scaling, however, means setting up more machines providing the same service, so that the workload can be distributed between them \cite{hvscale}. In contrast to vertical scaling, horizontal scaling has vital advantages: the application will be more robust since the crashing of one machine can be compensated by others \cite{fedi}, the capacity of the system can, theoretically, be unlimited, and it is cheaper because virutal machines running the service can be created dynamically if needed and then be destroyed in times of low workload, whereas the resources given to a machine that has been scaled vertically will remain unused.
+A software system has to be able to scale according to the number of its users in order to be future-proof, as the current trend to dynamically scalable cloud solutions and server-less web architectures highlights \cite{allthecloud}. There are two concepts of preparing an application for a higher workload: vertical scaling and horizontal scaling. Vertical scaling is performed by providing more resources, e.g. memory and CPU power, to the machines running the application. Horziontal scaling, however, means setting up more machines providing the same service, so that the workload can be distributed between them \cite{hvscale}. In contrast to vertical scaling, horizontal scaling has vital advantages: the application will be more robust since the crashing of one machine can be compensated by others \cite{fedi}, the capacity of the system can, theoretically, be unlimited, and it is cheaper because virutal machines running the service can be created dynamically if needed and then be destroyed in times of low workload, whereas the resources given to a machine that has been scaled vertically will remain unused.
 
 \begin{figure}[!htp]
     \centering
@@ -190,7 +191,7 @@ A software system has to be able to scale according to the number of its users i
 \newpage
 
 \subsubsection{MongoDB}
-MongoDB is meant to be scaled horizontally and supports the adding of new instances to a running cluster of databases out of the box \cite[p. 19]{MongoGuide}, so new machines running the database as a cluster will be created if needed. As shown in \ref{scaleup}, the backend servers can be connected to any of the database servers in order to request data. If the demanded document is not found on the instance the backend is connected to, MongoDB will handle the lookup in the cluster. To the application, the cluster is completely transparent and appears as if it was one machine.
+MongoDB is meant to be scaled horizontally and supports the adding of new instances to a running cluster of databases out of the box \cite[p. 19]{MongoGuide}, so new machines running the database as a cluster will be created if needed. As shown in figure \ref{scaleup}, the backend servers can be connected to any of the database servers in order to request data. If the demanded document is not found on the instance the backend is connected to, MongoDB will handle the lookup in the cluster. To the application, the cluster is completely transparent and appears as if it was one machine.
 
 \subsubsection{LDAP}
 The LDAP servers\footnote{SinnerSchrader is running \textit{OpenLDAP} (http://www.openldap.org)} can also be run as a cluster in order to improve response times and prevent data loss by replicating the stored information \cite{ldapscale}. In fact, the LDAP is currently being provided by six servers that represent the service. As illustrated in figure \ref{scaleup}, the backend servers can connect to any of the LDAP servers; the data replication and synchronization are handled transparently.
@@ -200,7 +201,7 @@ The static content like HTML, CSS and JS files, that altogether represent the fr
 served by the reverse proxy web server. In the event of an increasing number of requests that cannot be handled by the single server, a \textit{Content Delivery Network} (CDN) could be deployed. A CDN is a network of webservers that provide static content and large files. The reverse proxy would redirect the URLs for those files, so that the users' browsers will connect directly to said network in order to retrieve the assets.
 
 \subsubsection{Backend}
-The backend application itself does not save any data on the machine it is running on, but connects to a database server (see \ref{impl:be}). As a result, any number of backend instances can be set up and, in contrast to the other services, do not have to synchronize. In order to receive HTTP requests, the reverse proxy must be configured so that it redirects API calls to the backend servers. This is called \textit{load balancing} and is supported by many modern web servers such as \textit{nginx}\footnote{https://www.nginx.com/resources/wiki/}, \textit{Apache}\footnote{https://httpd.apache.org/} and \textit{Tomcat}\footnote{http://tomcat.apache.org/}. Tests running ten backend instances in parallel on the same machine using nginx as a load balancer\footnote{Using round-robin as distribution mechanism.} did not show any issues.
+The backend application itself does not save any data on the machine it is running on but connects to a database server (see \ref{impl:be}). As a result, any number of backend instances can be set up and, in contrast to the other services, do not have to synchronize. In order to receive HTTP requests, the reverse proxy must be configured so that it redirects API calls to the backend servers. This is called \textit{load balancing} and is supported by many modern web servers such as \textit{nginx}\footnote{https://www.nginx.com/resources/wiki/}, \textit{Apache}\footnote{https://httpd.apache.org/} and \textit{Tomcat}\footnote{http://tomcat.apache.org/}. Tests running ten backend instances in parallel on the same machine using nginx as a load balancer\footnote{Using round-robin as distribution mechanism.} did not show any issues.
 
 \newpage
 
@@ -242,4 +243,4 @@ to recommend profiles that are similar to the one which the user is inspecting (
 proactively propose items to the user in order to enrich the overall user experience.\newline
 The non-functional requirements include scalability, low response times, and the supported devices and browsers.
 As shown in \ref{scale}, scalability has been partially evaluated, whereas services that the application relies on such as MongoDB and LDAP were assumed to be scalable in this architecture as comparable systems have already shown this. The response times have been evaluated in \ref{resptime}; the results and tests with a prototypical stage of the frontend show that the application is capable of delivering the requested information in significantely less time than defined.
-The requirements for supported devices and browsers, however, could not be evaluated since the determinative factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}.
+The requirements for supported devices and browsers, however, could not be evaluated since the determinative factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}. In conclusion, the backend application and the system's architecture meet all requirements.
