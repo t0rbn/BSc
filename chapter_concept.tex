@@ -74,17 +74,20 @@ The requirements and design of the algorithm calculating this fitness will be ex
 
 \subsubsection{Requirements}
 According to Spoonamore et al., an algorithm that matches persons to positions that are defined by the skills that are required to fill them has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship has to fulfill as follows:
-\framebox{
+\begin{framed}
 \begin{itemize}
   \item Easy to implement and maintain
   \item Fast to execute, so as not to become a computational bottleneck
   \item Takes into account factors: rating, pay grade and NECs\footnote{Navy Enlisted Classifications} and future taxonomies characterizing required knowledge, skills and abilities
 \end{itemize}
-}
 \cite[P. 14]{USN}
+\end{framed}
+
 
 \label{customizable}
 These qualities include factors very specific to the \textit{US Navy} and thus will have to be evaluated and translated into SinnerSchraders' field of operation, but general requirements such an algorithm has to meet can be deduced: it may not be too complex as employees must be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
+
+\newpage
 
 \subsubsection{Factors to Include}
 An estimation of a concrete person's fitness into the searched skill set needs to not only take into account the matching of offered and required skills, but also the employees' motivation to apply said skills, derived from their preferences and their personal specialization. The latter can be described as the difference between the person's skill/will levels in the searched skill set and their skills that are not part of the search query. In conclusion the factors that will be included in the algorithm are:
@@ -121,6 +124,7 @@ The function $v_s$ assigns a value of skill to any item in $E$; the function $v_
   v_w: E \mapsto V
 \end{gather*}
 
+\newpage
 The scale values map to terms that describe the person's knowledge or interest:
 \begin{center}
 \begin{tabular}{c|c|c}
@@ -132,8 +136,6 @@ The scale values map to terms that describe the person's knowledge or interest:
 	3 & expert & highly interested\\
 \end{tabular}
 \end{center}
-
-\newpage
 
 The averages of the employees' skill/will values for the searched skills are defined as $a_s$ and $a_w$.
 The variables $s_s$ and $s_w$ describe the employee's specialization in the searched items and are defined as the difference
