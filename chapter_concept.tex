@@ -1,22 +1,22 @@
 \addtocontents{toc}{\protect\newpage}
 \chapter{Concept}
-The application should be accessible to all employees of SinnerSchrader. Due to the heterogeneity of the users' computer setups running \textit{Windows}, \textit{macOS} and \textit{Linux}, creating a native application supported by everyone’s system is a rather complicated task. A web application using standard technologies does not only solve this problem, but can also be used from mobile devices such as smartphones and tablets. Furthermore, there is no need to manually install and update the software on the client devices so that it can be assumed that all users use the latest version of the application. This is a positive factor regarding the overall usability of the system and assures bugs and security issues are eliminated the moment a new version of the software is deployed. All those advantages compared to native clients and the fact that SinnerSchrader’s expertise lies in the development of web applications lead to the decision, that such an application would be the appropriate choice.
+The application should be accessible to all employees of SinnerSchrader. Due to the heterogeneity of the users' computer setups running \textit{Windows}, \textit{macOS} and \textit{Linux}, creating a native application supported by everyone’s system is a rather complicated task. A web application using standard technologies does not only solve this problem, but can also be used from mobile devices such as smartphones and tablets. Furthermore, there is no need to manually install and update the software on the client devices so that it can be assumed that all users use the latest version of the application. This is a positive factor regarding the overall usability of the system and assures bugs and security issues are eliminated the moment a new version of the software is deployed. All those advantages compared to native clients and the fact that SinnerSchrader’s expertise lies in the development of web applications lead to the decision that such an application would be the appropriate choice.
 
 \section{Person Search}
 The central feature of the application is the search function that returns a list of all persons matching the entered set of skills. By default, the results are ordered by a \textit{fitness score} which describes how well a person fits into the set of searched skills.
-As the system searches a set of data for a search query entered by the user to return matching items, it falls within the group of \textit{Information Retrieval Systems}.
+As the system searches a set of data for a search query entered by the user to return matching items, it falls within the group of \textit{information retrieval systems}.
 
 \subsection{Information Retrieval Systems}
-Information Retrieval (IR) systems search a base of data (e.g. documents or websites) for attributes or keywords the user has entered.
-Primitive IR systems used search queries combined with boolean operators to specify the searched item, hence they are called \textit{boolean systems}. The commercial solutions examined in \ref{commercial} all use boolean systems.
-Modern IR systems ``rank documents by their estimation of the usefulness of a document for a user query'' \cite{IR}, which means they provide more suitable results without the need to enter complex operator based search queries \cite{IR}.
+Information retrieval (IR) systems search a base of data (e.g. documents or websites) for attributes or keywords the user has entered.
+Primitive IR systems use search queries combined with boolean operators to specify the searched item, hence they are called \textit{boolean systems}. The commercial solutions examined in \ref{commercial} all use boolean systems.
+Modern IR systems ``rank documents by their estimation of the usefulness of a document for a user query'' \cite{IR}, which means they provide more suitable results without the need to enter complex, operator based search queries \cite{IR}.
 
 \newpage
 
 \subsection{Search Algorithm}
 \label{Search_Algo_Main}
 The main feature of the application will be a person search function that uses a ranked IR system to retrieve the most suitable employee for a user's search query.
-In the context of this function, all employees are searchable items; their attributes include name, location and their respective skills structured as pairs of skill level and will level. The users will be able to enter the skills they search for and to specify a office location to search at. Minimum levels for skill and will cannot be specified because this would overcomplicate the search query. The IR system will find all employees that offer all skills entered by the user and then rank them so that the most suitable result will be presented first. Due to this ranking approach, the used IR system falls in the category of \textit{Ranked Information Retrieval Systems}.
+In the context of this function, all employees are searchable items; their attributes include name, location and their respective skills structured as pairs of skill level and will level. The users will be able to enter the skills they search for and to specify an office location to search at. Minimum levels for skill and will cannot be specified because this would overcomplicate the search query. The IR system will find all employees that offer all skills entered by the user and then rank them so that the most suitable result will be presented first. Due to this ranking approach, the used IR system falls into the category of \textit{Ranked Information Retrieval Systems}.
 
 
 \subsubsection{Outline}
@@ -26,7 +26,7 @@ The basic structure of the IR system's working consists of five steps:
   \item Filter by Skills\\
     Remove all employees from the list that do not have all skills the user searched for. At this point, only the presence of the skill in the employees' profiles is taken into account; skill/will levels are ignored.
   \item Filter by Location\\
-    If the user specified a location to search for, remove all employees from the list that do not match it.
+    If the user specified a location, remove all employees from the list that do not match it.
   \item Assign Fitness Scores\\
     Assign a fitness score to all remaining employees. This fitness score takes into account the user's skill/will levels and their specializations.
   \item Sort by fitness score\\
@@ -70,10 +70,10 @@ function search(searchItems, searchLocation) {
 \subsection{Scoring Algorithm}
 \label{fitscorealg}
 The application will rank all found persons by their fitness into the searched skill set; this fitness will be scored on a scale from zero (worst) to one (best).
-The requirements of the algorithm calculating this fitness and its design will be explained in this section.
+The requirements and design of the algorithm calculating this fitness will be explained in this section.
 
 \subsubsection{Requirements}
-According to Spoonamore et al., an algorithm that matches persons to positions that are defined by the skills that are required to fill them has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship as follows:
+According to Spoonamore et al., an algorithm that matches persons to positions that are defined by the skills that are required to fill them has to meet more demands than solely the functional ones. They define the specific requirements such an algorithm assigning naval personnel to positions on a ship has to fulfill as follows:
 \blockquote{
 \begin{itemize}
   \item Easy to implement and maintain
@@ -87,11 +87,11 @@ According to Spoonamore et al., an algorithm that matches persons to positions t
 These qualities include factors very specific to the \textit{US Navy} and thus will have to be evaluated and translated into SinnerSchraders' field of operation, but general requirements such an algorithm has to meet can be deduced: it may not be too complex as employees must be able to understand the system they are rated by, it should take into account different groups of factors and must be easy to adjust in order to keep the system maintainable.
 
 \subsubsection{Factors to Include}
-An estimation of a concrete person's fitness into the searched skill set needs not only to take into account the matching of offered and required skills, but also the employees' motivation to apply said skills derived from their preferences and their personal specialization. The latter can be described as the difference between the person's skill/will levels in the searched skill set and their skills that are not part of the search query. In conclusion the factors that will be included in the algorithm are:
+An estimation of a concrete person's fitness into the searched skill set needs to not only take into account the matching of offered and required skills, but also the employees' motivation to apply said skills, derived from their preferences and their personal specialization. The latter can be described as the difference between the person's skill/will levels in the searched skill set and their skills that are not part of the search query. In conclusion the factors that will be included in the algorithm are:
 \begin{itemize}
   \item Average level of knowledge regarding the searched skills
   \item Average level of will regarding the searched skills
-  \item Specialization in the searched skills, derivated from:
+  \item Specialization in the searched skills, derived from:
   \begin{itemize}
     \item Specialization in knowledge about the searched skills
     \item Preference of the searched skills over others
@@ -101,7 +101,7 @@ An estimation of a concrete person's fitness into the searched skill set needs n
 
 \subsubsection{Proposed Fitness Score Algorithm}
 \label{fitnessscore_impl}
-As shown in \ref{scale_definition}, the skill and will levels will be described on a four step scale, which will be expressed by natural numbers\footnote{Includes zero as defined by ISO\_80000-2} between zero and three:
+As shown in \ref{scale_definition}, the skill and will levels will be described on a four step scale, which will be expressed by natural numbers\footnote{Includes zero as defined by ISO 80000-2} between zero and three:
 \begin{gather*}
   V = \{ x \in \mathbb{N} \ | \  0 \leq x \leq 3\}
 \end{gather*}
@@ -188,7 +188,7 @@ Applying the algorithm with $w_{as} = w_{aw} = w_{ss} = w_{sw} = 0.25$ to search
 \end{tabular}
 \end{center}
 
-Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has a better average skill level than \textit{Bob} but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intendionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
+Ranking the employees only by the average value of skill regarding the two searched items would result in \textit{Charlie} being preferred to \textit{Alice} and \textit{Alice} being preferred to \textit{Bob}. Sorting them using the proposed fitness score, however, would result in \textit{Bob} being recommended as the best match because his relatively high interest in the searched skills and his specialization in them compensates his low average skill. Interestingly, \textit{Alice} has a better average skill level than \textit{Bob} but nonetheless gets scored the worst due to her obvious specialization in \textit{C++}. In real life usage, the weighting constants $w_{as}$, $w_{aw}$, $w_{ss}$ and $ w_{sw}$ might need to be adjusted.\footnote{The need to adjust the weights should not be considered a flaw since the algorithm has been intentionally designed to be customizable to the users' needs as defined in \ref{customizable}.}
 
 \newpage
 \subsection{Example Search}
@@ -225,13 +225,13 @@ Applying the algorithm and searching for employees knowing \textit{Java} and \te
 
 
 \section{Recommender Systems}
-Recommender systems ``are information filtering systems that deal with the problem of information overload by filtering vital information fragment out of large amount of [...] information'' \cite{Isinkaye2015261}\label{recommender-definition} and are commonly used to recommend items to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items more prominently than articles the customer is unlikely to fancy. In this application's context, two recommender systems will come to use in order to enrich the user experience by providing additional skills to search for (see \ref{autocomplete}) and by listing users similar to the currently showed one when the user inspects and employee's profile (see \ref{similar}).
+Recommender systems ``are information filtering systems that deal with the problem of information overload by filtering vital information fragment \textit{[sic]} out of large amount of [...] information'' \cite{Isinkaye2015261}\label{recommender-definition} and are commonly used to recommend items to the user based on their previous interactions with other items. For example, recommender systems are used to predict products a customer might want to buy based on the ones they already bought in order to present those items more prominently than articles the customer is unlikely to fancy. In this application's context, two recommender systems will come to use in order to enrich the user experience by providing additional skills to search for (see \ref{autocomplete}) and by listing users similar to the currently shown one when the user inspects an employee's profile (see \ref{similar}).
 
 \subsection{Techniques of Content Filtering}
 As described by Isinkaye et al., filtering techniques used in recommender systems are divided in three classes: content based, collaborative, and hybrid. Each of these classes relies on a different approach for gaining data by which the information is filtered \cite{Isinkaye2015261}.
 
 \subsubsection{Content Based Filtering}
-	The content is filtered by examining its attributes in order to find items that are contentually similar to the one the user is currently or has previously been interacting with.
+	The content is filtered by examining its attributes in order to find items that are substantially similar to the one the user is currently or has previously been interacting with.
 \subsubsection{Collaborative Filtering}
 	Collaborative filtering techniques rely on the assumption that users can be divided into groups of \textit{neighbors} that behave similarly, so that recommendations are deductible from other users' former interactions.
 	\begin{itemize}
@@ -253,7 +253,7 @@ Hybrid filtering combines two or more filtering methods either by aggregating th
 
 \subsection{Search Suggestions}
 \label{autocomplete}
-After entering a skill to look for into the search field, the user will be presented other items they are likely to enter next. Since all searchable objects (all skills) are filtered in order to retrieve objects the user might want to interact with which then will be presented to them proactively, this feature matches the definition of a recommender system given in \ref{recommender-definition}.
+After entering a skill to look for into the search field, the user will be presented other items they are likely to enter next. Since all searchable objects (all skills) are filtered in order to retrieve objects the user might want to interact with, which then will be presented to them proactively, this feature matches the definition of a recommender system given in \ref{recommender-definition}.
 
 \subsubsection{Available Data}
 It is not planned that users will have to log in before performing a search, so
@@ -267,27 +267,27 @@ Another possible method would be to recognize users by examining their very own 
 Although device and user fingerprinting are not prohibited by law,
 the \textit{Opinion 9/2014 on the application of Directive 2002/58/EC to device
 fingerprinting} by the EU's \textit{Article 29 data protection working party} states that a user must be informed about the fingerprinting process and be able to deny this.
-In the development of this recommender system, it will be assumed that there is no data about unique users, but about their entirety.
+In the development of this recommender system, it will be assumed that there is no data about unique users, but about the aggregated entirety of the user base.
 
 \newpage
 
 \subsubsection{Skill Attributes}
-The skills are planned to be saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
+The skills are saved as simple names not enriched with any metainformation, so using content based filtering is not a trivial task. One possible approach would be to use linguistic methods to find similarities in names of skills in order to create clusters of related skills. Unfortunately, most of the skills' names are arbitrarily chosen or acronyms, so that this form of analysis will fail to detect any meaningful attributes.\\
 Regarding the concept of the suggestion engine, the assumption is made, that there is no context to the skills and that the only information about any skill is its name.
 
 \subsubsection{Aggregated Search History}
-Tracking which skills have been searched together can be implemented easily and creates a fair amount of data to generate potentially useful suggestions. Legally, this is not problematic if the application does neither save personal data about the users (Article 15 Telemediengesetz), nor stores information that could potentially be used to create personal usage profiles that can be matched to specific persons (Article 15(3) Telemediengesetz). Grouping skills that have been searched jointly does not stand in conflict with those regulations and requires no information about distinguishable user, so the application will store the search history for each item.
+Tracking which skills have been searched together can be implemented easily and creates a fair amount of data to generate potentially useful suggestions. Legally, this is not problematic if the application does neither save personal data about the users (Article 15 Telemediengesetz) nor store information that could potentially be used to create personal usage profiles that can be matched to specific persons (Article 15(3) Telemediengesetz). Grouping skills that have been searched together does not stand in conflict with those regulations and requires no information about distinguishable user, so the application will store the search history for each item.
 
 \subsubsection{Chosen Approach}
-Assuming that no user context exist, user based filtering and model based filtering cannot be applied. Due to the lack of metadata about the skills, content based filtering can also be eliminated as a possible approach. Item based filtering, however, does not require any data that is not available, so this approach will be used for the recommender system.
+Assuming that no user context exists, user based filtering and model based filtering cannot be applied. Due to the lack of metadata about the skills, content based filtering can also be eliminated as a possible approach. Item based filtering, however, does not require any data that is unavailable, so this approach will be used for the recommender system.
 
 \newpage
 
 \subsubsection{Concept}
-The application has access to the list of skills the user already entered into the search field and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next items that the user is likely to enter and recommend it to them.
-Markov chains are stochastic models predicting future states of systems based on the current state. In fact, makrov chains rely on the fact, that the next state of the system is exclusively dependent on the current state, which is called the \textit{markov property} \cite{markprop}. In the context of the skill management application, this is assumed to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is the skill set of the current search plus the item the user is going to enter next.
+The application has access to the list of skills the user has already entered into the search field and to a repository of all previous searches. Having this information, the system will use a markov chain to predict the next items that the user is likely to enter and recommend it to them.
+Markov chains are stochastic models predicting future states of systems based on the current state. In fact, markov chains rely on the fact that the next state of the system is exclusively dependent on the current state, which is called the \textit{markov property} \cite{markprop}. In the context of the skill management application, this is assumed to be true because only two states will be examined: the current state is represented by the set of all items entered in the search field; the future state is the skill set of the current search plus the item the user is going to enter next.
 The basic concept is to store all possible states of the system and the respective probability of switching from any state to any other one.
-Knowing the current state one can easily deduce the most probable future state. When a state transistion occurs, the outgoing probabilities of the origin states
+Knowing the current state one can easily deduce the most probable future state. When a state transition occurs, the outgoing probabilities of the origin states
 can be adjusted accordingly in order to factor the transition into the prospective projections.
 \begin{figure}[!htp]
     \centering
@@ -421,8 +421,8 @@ In this example, the query ``Java, PHP'' has already been entered. Based on thos
 
 \subsection{Recommending Similar Users}
 \label{similar}
-Additionally to the required features, the backend will provide the possibility to find users that are similar to a reference person.
-In the application, this feature will be used to show recommended persons when viewing one specific employee's profile. As this functionality filters the entirety of employees to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
+Additionally to the required features, the backend will provide the capability to find users that are similar to a reference person.
+In the application, this feature will be used to show recommended persons when viewing one specific employee's profile. As this functionality filters SinnerSchrader's entire workforce to find the ones that are similar to currently shown profile and then proactively recommends those people to the user, it is another recommender system.
 Unlike the recommender system used to provide more skills to search for, this system will use a content-based filtering approach. The employee profiles contain numerous skills that represent a sufficient amount of inherent information about the respective person to compare profiles in order to find similar ones. Other users' interactions with the profiles, however, do not necessarily indicate similarities, so that the interaction history will not be taken into account for this feature. As a consequence, collaborative filtering approaches are not applicable to this problem.
 The recommender algorithm will contain three straightforward steps:
 \begin{itemize}
@@ -432,7 +432,7 @@ The recommender algorithm will contain three straightforward steps:
 \end{itemize}
 
 \subsubsection{Jaccard Similarity Coefficient}
-As shown in \ref{fitnessscore_impl}, users can be described as sets of skills they have, so the task of measuring the similarity between users can be abstracted to estimating the correlation between their skill sets. A popular approach to this problem is using the \textit{Jaccard Similarity Coefficient}, a statistical metric to determine the similitude of two finite sets by dividing the size of their intersection with the size of their union \cite{jaccard}. The resulting value describes how similar the skill sets are and thus represents how similar the respective users are. The results maximum value is one (users are identical); the minimum value is zero (users to not share any skills).\\
+As shown in \ref{fitnessscore_impl}, users can be described as sets of skills they have, so the task of measuring the similarity between users can be abstracted to estimating the correlation between their skill sets. A popular approach to this problem is using the \textit{Jaccard Similarity Coefficient}, a statistical metric to determine the similitude of two finite sets by dividing the size of their intersection with the size of their union \cite{jaccard}. The resulting value describes how similar the skill sets are and thus represents how similar the respective users are. The results' maximum value is one (users are identical); the minimum value is zero (users to not share any skills).\\
 Let $S$ be the set of all skills existing in the system. Persons will be described as the sets of skills they have: the employee based on whom the recommendations shall be made will be called $R$ (\textit{reference employee}). The employee whose similarity with $R$ is to be measured will be called $E$.
 
 \begin{gather*}
@@ -446,7 +446,7 @@ The Jaccard Similarity Coefficient $j$ is defined as the size of the intersectio
 \end{gather*}
 
 \subsubsection{Example Calculation}
-In this example, \textit{Alice} will be the the reference employee. Four other employees, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, will be the set of persons to pick recommendations from. The set of existing skills will be \textit{Java}, \textit{Ruby}, \textit{PHP}, \textit{.NET}, and \textit{CSS}.
+In this example, \textit{Alice} will be the reference employee. Four other employees, \textit{Bob}, \textit{Charlie}, \textit{Donald}, and \textit{Erika}, will be the set of persons to pick recommendations from. The set of existing skills will be \textit{Java}, \textit{Ruby}, \textit{PHP}, \textit{.NET}, and \textit{CSS}.
 The goal is to recommend two persons to a user who is inspecting \textit{Alice's} profile.
 The employees' skill sets are\footnote{Notation: \checkmark $\Rightarrow$ employee has skill}:
 \begin{center}
@@ -460,7 +460,7 @@ The employees' skill sets are\footnote{Notation: \checkmark $\Rightarrow$ employ
 	Erika    & \checkmark & \checkmark & \checkmark &            & \checkmark \\
 \end{tabular}
 \end{center}
-The aforesaid definitions can be applied; since the goal is to find two people similar to \textit{Alice}, her skills are represented by $R$.
+The definitions can be applied; since the goal is to find two people similar to \textit{Alice}, her skills are represented by $R$.
 \begin{gather*}
 	S = \{Java, Ruby, PHP, .NET, CSS\} \\
 	R = \{x \in S \ | \ \textrm{Alice has skill x}\} = \{ Java, Ruby, .NET \}
@@ -482,7 +482,7 @@ Given the task to recommend two persons that are similar to \textit{Alice}, the 
 \newpage
 
 \subsubsection{Drawbacks}
-The described recommender system inspects how many skills the examined persons have in common relative to their total number of skills. The levels of knowledge and motivation regarding those skills are not taken into account, so that the recommendations might be inaccurate. Unfortunately, there is no real life user feedback yet, so that the evaluation of this factor and the creation of a implemenation that includes those aspects will have to stay subject to further research.
+The described recommender system inspects how many skills the examined persons have in common relative to their total number of skills. The levels of knowledge and motivation regarding those skills are not taken into account, so the recommendations might be inaccurate. Unfortunately, there is no real life user feedback yet, so the evaluation of this factor and the creation of a implementation that includes those aspects will have to stay subject to further research.
 
 \section{Visual Concept}
 The application should be as simple as possible and usable for everyone in order to provide an efficient and fast tool. Thus, it will be designed as a single page application based around a search function that provides a way to input the skills to search for and returns all persons offering said skills. After entering a search, the user can select any of the found colleagues and view their personal profile showing extended information like contact details, more skills the user did not search for, and the employee's location. This profile will also include links to directly contact the inspected person via e-mail or \textit{Google Hangouts}\footnote{https://hangouts.google.com}. More information about the concept behind the visual design and the frontend's implementation is provided by Strecker \cite{strecker}.
@@ -507,6 +507,6 @@ The application should be as simple as possible and usable for everyone in order
 \label{legal_concerns}
 The information saved in the system fall into the category of personal data (\textit{Personenbezogene Daten}), which is defined as ``any information concerning the personal or material circumstances of an identified or identifiable individual (the data subject)'' (BDSG, 3(1)). The personal data will be collected (BDSG, 3(3)), processed (BDSG, 3(4)) and transferred (BDSG, 3(3)) to other employees of SinnerSchrader.
 Generally, this does not violate any law, since the ``collection, storage, modification or transfer of personal data or their use as a means of fulfilling one’s own business purposes shall be admissible'' (BDSG, 28(1)) but some restrictions apply: the data subjects have to be informed about the processing of their personal data, they must be able to deny their consent (BDSG, 4a), and the personal data shall not be made public.
-To ensure the latter, the application must not be accessible to persons that do not work for or on behalf of SinnerSchrader. Technically, this will be arranged by making the application attainable from SinnerSchrader's internal network only which can exclusively be accessed by employees and authorized persons.\\
+To ensure the latter, the application must not be accessible to persons that do not work for or on behalf of SinnerSchrader. Technically, this will be arranged by making the application reachable from SinnerSchrader's internal network only which can exclusively be accessed by employees and authorized persons.\\
 Furthermore, the Works Constitution Act (\textit{Betriebsverfassungsgesetz}) defines the rights and roles of the works council (\textit{Betriebsrat}) which have an impact on the design of the application. It states that ``the works council shall have a right of co-determination in the introduction and use of technical devices designed to monitor the behaviour or performance of the employees'' (BetrVG, 87(6)); since the application describes the employees' knowledge which is a key factor to their performance, this definition applies to it, so that the works council had to be involved in the design process.
 Regarding the possibility for users to rate each other's skills as described in \ref{peerrating}, the council exercised its rights to object and interdicts its implementation because of both legal reasons and the personal concerns of employees; the council's statement can be found in appendix \ref{statement_br}.

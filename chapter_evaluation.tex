@@ -5,14 +5,14 @@
 
 \subsection{Uniform Distribution of Score Values}
 The values calculated by the fitness score algorithm (see \ref{fitscorealg}) should be distributed uniformly in the complete range of possible values because this does not only generate the best search results, but also is an indicator for the algorithm's fairness.
-To test this, one hundred automatically generated persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each, thus a search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sktech} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in appendix \ref{alldatatable}. Ideally, the scores in each result list decline linearily from one to zero. The ideal value for the $n$-th result\footnote{Counting starts at one} value is:
+To test this, one hundred automatically generated persons have been fed into the system. Each test person has been assigned a random number of skills between zero and 17, with random skill and will levels each, thus a search for any skill will return a list of up to one hundred persons sorted by their fitness score. The search results for the skills \textit{Atomic Design}, \textit{Datenbanken}, \textit{Funkspots}, \textit{hybris}, \textit{Kommunikation}, \textit{MySQL}, \textit{Sketch} and \textit{Text} have been analyzed because those have the highest number of results (33 each); all results can be found in appendix \ref{alldatatable}. Ideally, the scores in each result list decline linearly from one to zero. The ideal value for the $n$-th result\footnote{Counting starts at one} value is:
 \[
 	f_{Ideal}(n) = 1 - \frac{n-1}{32}
 \]
 
 The distribution of the score values for every respective search is shown in figure \ref{fig:dist-raw}.
-Figure \ref{fig:dist-avg} illustrates the average of all eight scores for each postion in the search result lists, the maximum value found at this position, and the respective minimum value.
-It shows that the average score declines approximately linearily, which means that the score values are distributed uniformly thorough the result lists. In figure \ref{fig:dist-raw}, every result function shows a variance from the ideal value; the average value in figure \ref{fig:dist-avg}, however, deviates signifitantly less from the ideal than any of the isolated data rows. This leads to the conclusion that the drift from the ideal that occurs when observering one single set of data for one specific search is based on the small amount of examined values (33 data points) and the individual deviations compensate each other. The average fitness score shows an mean error of approx. 6\% (see figure \ref{fig:dist-err}). The maximum error in the given set of data is 27\%.
+Figure \ref{fig:dist-avg} illustrates the average of all eight scores for each position in the search result lists, the maximum value found at this position, and the respective minimum value.
+It shows that the average score declines approximately linearly, which means that the score values are distributed uniformly thorough the result lists. In figure \ref{fig:dist-raw}, every result function shows a variance from the ideal value; the average value in figure \ref{fig:dist-avg}, however, deviates significantly less from the ideal than any of the isolated data rows. This leads to the conclusion that the drift from the ideal that occurs when observing one single set of data for one specific search is based on the small amount of examined values (33 data points) and the individual deviations compensate each other. The average fitness score shows an mean error of approx. 6\% (see figure \ref{fig:dist-err}). The maximum error in the given set of data is 27\%.
 This leads to the conclusion that the fitness score algorithm generates uniformly distributed score values with an acceptable error.\\
 % Interestingly, the maximum error seems to have a declining trend; the small amount of examined data does not provide a solid basis for assumptions about whether there is a systematic reason for this, and, if so, whether it could have a negative impact on the proper working of the system. Unfortunately, there is no authentic usage data yet, so that this question will remain unanswered and might be subject to further research.
 
@@ -41,11 +41,11 @@ This leads to the conclusion that the fitness score algorithm generates uniforml
 
 \subsection{Fitness Score Algorithm vs. Human Estimations}
 The algorithm is supposed to calculate a person's fitness so that its results match the ratings estimated by other employees. To validate that
-the chosen approach is capable of this, a set of fictional employees has been rated by both the algorithm and employees. The respective estimations have been compared to analyze if there is a configuration of weigthing parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ that make the algorithm produce scores that are
+the chosen approach is capable of this, a set of fictional employees has been rated by both the algorithm and employees. The respective estimations have been compared to analyze if there is a configuration of weigthing parameters $w_{as}$, $w_{aw}$, $w_{ss}$ and $w_{sw}$ that makes the algorithm produce scores that are
 congruent to the estimations made by the rating persons.
 
 \subsubsection{Examined Test Records}
-For this test, five test records have been examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of these fictional persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that have been collected and examined represent scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
+For this test, five test records have been examined: \textit{Alice}, \textit{Bob}, \textit{Charlie}, \textit{Donald} and \textit{Erika}. Each of these fictional persons has different skill and will levels for the abilities \textit{Java}, \textit{AEM}, \textit{Ruby} and \textit{.NET}. The fitness scores that have been collected and examined represent the scenario that a potential user searches for the skills \textit{Java} and \textit{AEM}.
 \begin{table}[H]
 \centering
   \begin{tabular}{l||c|c|c|c}
@@ -63,7 +63,7 @@ For this test, five test records have been examined: \textit{Alice}, \textit{Bob
 A random group of 161 employees (35\% of SinnerSchrader's staff) have been presented a survey using \textit{Google Forms}\footnote{https://forms.google.com}.
 In total, 41 persons have given their responses in a timeframe of 72 hours.
 The survey consisted of two sections: the estimation of the test persons' fitness scores and the evaluation of the weighting of the factors included in the algorithm. To collect the personal estimations regarding the test records' fitness, the test subjects have been presented
-\textit{Likert-Type Items}\footnote{\textit{Likert-Type} as defined by Uebersax \cite{likerttype}.} using a scale form one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
+\textit{Likert-Type Items}\footnote{\textit{Likert-Type} as defined by Uebersax \cite{likerttype}.} using a scale from one (``does not fit at all'') to five (``perfect match''). As table \ref{tab:scoretrans} shows, values on this scale can easily be translated into the corresponding fitness score. The results of the survey are shown in table \ref{tab:survey_raw}\footnote{Values have been rounded off to two significant digits.} and figure \ref{survey_raw}.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c}
@@ -99,14 +99,14 @@ Erika       & 32 & 70 & 0  & 2  & 0  & 0 & 1.31 & 0.08 \\
 
 \newpage
 
-Furthermore, the participants were asked to rate the importance of the four factors included in the algorithm (see \ref{fitscorealg}), namely the person's average level of skill and will in the searched items, and their respective specialization in the items, on a scale from one (``not important'') to five (``very important''). The results illustrated in table \ref{tab:survey_weight} show that all factors are valued nearly equally important.
+Furthermore, the participants were asked to rate the importance of the four factors included in the algorithm (see \ref{fitscorealg}), namely the person's average level of skill and will in the searched items, and their respective specialization in the items, on a scale from one (``not important'') to five (``very important''). The results illustrated in table \ref{tab:survey_weight} show that all factors are seen as nearly equally important.
 \begin{table}[H]
 \centering
 \begin{tabular}{l||c|c|c|c|c|c||c}
 Factor & 1  & 2  & 3  & 4  & 5  & - & Mean \\
 \hline
-Avgerage Skill Level in Searched Items & 1 & 3 & 10 & 16 & 11 & 0 & 3.80\\
-Avgerage Will Level in Searched Items & 0 & 10 & 8 & 16 & 16 & 0 & 4.15\\
+Average Skill Level in Searched Items & 1 & 3 & 10 & 16 & 11 & 0 & 3.80\\
+Averageq2 Will Level in Searched Items & 0 & 10 & 8 & 16 & 16 & 0 & 4.15\\
 Specialization in Searched Items (Skill Levels) & 3 & 5 & 17 & 12 & 4 & 0 & 3.22\\
 Specialization in Searched Items (Will Levels) & 1 & 0 & 11 & 22 & 5 & 2 & 3.77\\
 \end{tabular}
@@ -184,7 +184,7 @@ A software system has to be able to scale according to the number of its users i
 \begin{figure}[!htp]
     \centering
     \includegraphics[width=0.75\textwidth]{images/system_architecture_scaled.png}
-    \caption[Illustration: Scaled System Architecture]{A possible approach to scale the system using multiple backend servers, a CDN, and multiple clustered database and ldap servers. Created with \textit{https://cloudcraft.co}.}
+    \caption[Illustration: Scaled System Architecture]{A possible approach to scale the system using multiple backend servers, a CDN, and multiple clustered database and LDAP servers. Created with \textit{https://cloudcraft.co}.}
     \label{scaleup}
 \end{figure}
 
@@ -210,7 +210,7 @@ Each component of the system has been examined for scalability; the backend soft
 \textit{Github}\footnote{https://www.mongodb.com/presentations/mongosv-2012/mongodb-analytics-github},
 \textit{eBay}\footnote{https://www.mongodb.com/presentations/mongodb-ebay}, and
 \textit{Otto}\footnote{https://www.mongodb.com/industries/retail}, where its scalability has been proven, so that it is assumed that there will not be any problems regarding the database.
-Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend is not part of this thesis, but has been worked on by Strecker \cite{strecker}. In conclusion, the architecture can be considered as scalable beyond the needs at SinnerSchrader.
+Deploying a CDN that serves the static content has not been evaluated, as the implementation of the frontend is not part of this thesis, but has been worked on by Strecker \cite{strecker}. In conclusion, the architecture can be considered as scalable beyond the needs of SinnerSchrader.
 
 \subsection{Response Times}
 \label{resptime}
@@ -229,18 +229,18 @@ The average response time of the backend is 28ms, the maximum in the test data i
 		Specific Skill and Location & 36, 24, 23, 21, 22, 24, 33, 20, 30, 21 & 25\\
   \end{tabular}
 
-\caption[API Response Times]{Measured response times of the api endpoint for the search function.}
+\caption[API Response Times]{Measured response times of the API endpoint for the search function.}
 \label{tab:responsetimes}
 \end{table}
 
 Measurements of a prototypical stage of the frontend using \textit{Google Chrome's} built-in profiling tools showed a total response time, that is sending the HTTP request to the API, waiting for the response, parsing the response, and rendering the results, of approximately 90ms on average. The maximum response time was 106ms.
 
-Those results demonstrate that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users percieving the interaction with the system as immediate \cite{RAIL}, which enhances the overall user experience.
+Those results demonstrate that the API is capable of serving the requests quickly enough to reach the goal of a response time under one second. The outcome of the profiling of the prototypical frontend suggest that it might even be possible to attain a total loading time of under 100ms; according to Kearney, this is would result in the users perceiving the interaction with the system as immediate \cite{RAIL}, which enhances the overall user experience.
 
 \section{Meeting the Requirements}
 In \ref{requirements}, a set of functional and non-functional requirements has been defined. The backend application that has been designed and implemented meets those requirements: the API supports the creation of user profiles that then can be retrieved, the skills in those profiles can be edited by the profile's owner only, and everybody can search for profiles of persons that offer specific skills (see table \ref{swaggertable}). Extra information about the employee can be added by them into their profile's comment section. New skills can be fed into the system so that people can add them to their profiles, existing skills can be edited and removed. In addition to the required features, the application offers API endpoints to recommend skills that the user might want to search for (see \ref{autocomplete}), and
 to recommend profiles that are similar to the one which the user is inspecting (see \ref{similar}). Those features are using recommender systems to
 proactively propose items to the user in order to enrich the overall user experience.\newline
 The non-functional requirements include scalability, low response times, and the supported devices and browsers.
-As shown in \ref{scale}, scalability has been partially evaluated, whereas services that the application relies on such as MongoDB and LDAP were assumed to be scalable in this architecture as comparable systems have already shown this. The response times have been evaluated in \ref{resptime}; the results and tests with a prototypical stage of the frontend show that the application is capable of delivering the requested information in significantely less time than defined.
-The requirements for supported devices and browsers, however, could not be evaluated since the determinative factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}. In conclusion, the backend application and the system's architecture meet all requirements.
+As shown in \ref{scale}, scalability has been partially evaluated, whereas services that the application relies on such as MongoDB and LDAP were assumed to be scalable in this architecture as comparable systems have already shown this. The response times have been evaluated in \ref{resptime}; the results and tests with a prototypical stage of the frontend show that the application is capable of delivering the requested information in significantly less time than defined.
+The requirements for supported devices and browsers, however, could not be evaluated since the determinant factor for those is the implementation of the frontend which has not been part of this thesis and will be evaluated by Strecker \cite{strecker}. In conclusion, the backend application and the system's architecture meet all requirements.
