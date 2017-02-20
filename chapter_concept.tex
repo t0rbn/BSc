@@ -161,7 +161,7 @@ The resulting fitness score $f$ is a weighted mean of the introduced factors. Th
 
 \subsubsection{Example Calculation}
 Let there be three example employees, \textit{Alice}, \textit{Bob} and \textit{Charlie}, having the same three skills each.
-(Notation: [skill level]/[will level])
+(Notation: [skill level]|[will level])
 \label{example-fitness}
 \newline
 \newline
@@ -169,9 +169,9 @@ Let there be three example employees, \textit{Alice}, \textit{Bob} and \textit{C
 \begin{tabular}{r|ccc}
   Person  & Java & Ruby & C++ \\
   \hline
-  Alice   & 2/1  & 2/2 & 3/3 \\
-  Bob     & 2/3  & 0/3 & 0/1 \\
-  Charlie & 3/3  & 2/1 & 1/2 \\
+  Alice   & 2|1  & 2|2 & 3|3 \\
+  Bob     & 2|3  & 0|3 & 0|1 \\
+  Charlie & 3|3  & 2|1 & 1|2 \\
 \end{tabular}
 \end{center}
 
@@ -199,11 +199,11 @@ The assignment of skill/will levels and the respective locations are:
 \begin{tabular}{r|c|ccc}
   Person  & Location & Java & Ruby & C++ \\
   \hline
-  Alice   & Hamburg   & 2/1 & 2/2 & 3/3 \\
-  Bob     & Hamburg   & 2/3 & 0/3 & 0/1 \\
-  Charlie & Hamburg   & 3/3 & 2/1 & 1/2 \\
-  Donald  & Hamburg   & 3/3 &  -  & 2/2 \\
-  Erika   & Frankfurt & 1/1 & 2/3 & 3/1 \\
+  Alice   & Hamburg   & 2|1 & 2|2 & 3|3 \\
+  Bob     & Hamburg   & 2|3 & 0|3 & 0|1 \\
+  Charlie & Hamburg   & 3|3 & 2|1 & 1|2 \\
+  Donald  & Hamburg   & 3|3 &  -  & 2|2 \\
+  Erika   & Frankfurt & 1|1 & 2|3 & 3|1 \\
 \end{tabular}
 \end{center}
 
