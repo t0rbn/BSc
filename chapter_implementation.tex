@@ -116,13 +116,15 @@ The application connects to it in order to retrieve contact information to displ
 \section{Reverse Proxy}
 Between the client and the backend, an intermediary web server that acts as a reverse proxy is switched in. Its main purpose is the distinguishing between requests for static files, like HTML and CSS content that will be directly delivered by said server, and API calls that are redirected to the backend. This increases the system's security by protecting the backend server's identity and presenting an additional defense layer \cite{NGINX}. Furthermore, this server can handle SSL encryption between the application and the client, and, if multiple backend servers are needed, balance the workload between them while presenting one uniform service to the outside (see \ref{scale}).
 
+\newpage
+
 \section{API}
 To exchange data between the backend and the frontend, a \textit{Representational State Transfer} (REST) API is provided by the backend. Its endpoints are called by the frontend code to either request data or to command the backend to perform modifying operations on it.
 The used HTTP method is the main indicator of the action to perform: \textit{GET} is used to retrieve data, \textit{POST} to insert new elements, \textit{PUT} to modify existing ones and \textit{DELETE} to remove them. The URLs of the individual action express the entity on which the action will be performed. All API endpoints are listed in table \ref{swaggertable}.
 
 \begin{table}[p]
 \centering
-\rotatebox{-90}{
+\rotatebox{90}{
   \begin{tabular}{l|l|l|l|l}
   URL & HTTP Method & Non-URL Parameters & Return Statuses & Comment\\
   \hline
@@ -176,14 +178,14 @@ For every HTTP request, the backend will return a JSON response, even though the
 \end{figure}
 
 
-\begin{figure}[h]
-\begin{lstlisting}[language=Java]
-{
-	"message" : "logout successful"
-}
-\end{lstlisting}
-\caption[Data Structure: Status API Response]{Example JSON response for a request that does not demand any data.}
-\end{figure}
+% \begin{figure}[h]
+% \begin{lstlisting}[language=Java]
+% {
+% 	"message" : "logout successful"
+% }
+% \end{lstlisting}
+% \caption[Data Structure: Status API Response]{Example JSON response for a request that does not demand any data.}
+% \end{figure}
 
 \newpage
 
