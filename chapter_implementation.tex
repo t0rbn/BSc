@@ -197,10 +197,13 @@ The backend component is implemented in Java 8\footnote{https://go.java/} using 
 The software architecture consists of three main categories of classes: services that handle data manipulation and filtering and hold the business logic, repository objects that wrap the database operations into easy to use handlers, and domain specific data types. Additionally, numerous helper classes like custom exception types, comparators, and general utilities are implemented.
 \begin{figure}[!h]
     \centering
-    \includegraphics[height=0.55\textheight]{images/uml.png}
-    \caption[Diagram: Backend Classes]{UML class diagram of the backend to illustrate its dimensions.}
+    \includegraphics[width=\textwidth]{images/be_structure.png}
+    \caption[Diagram: Backend Classes]{Class structure of the application's backend software.}
     \label{fig:markovchain}
 \end{figure}
+
+\newpage
+
 \subsection{Spring Boot}
 \textit{Spring Boot} is a sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose Java methods as HTTP request endpoints, an embedded webserver\footnote{Apache Tomcat 7 (http://tomcat.apache.org/)} to run the application on, a modular design to extend its features, and dependency injection. It is being used to use because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
 For example, a controller that returns a static response can be created using two annotations:
