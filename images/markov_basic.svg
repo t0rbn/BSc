@@ -14,8 +14,11 @@
    viewBox="0 0 150 98.716857"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.0 r"
-   sodipodi:docname="markov_basic.svg">
+   inkscape:version="0.92.1 r"
+   sodipodi:docname="markov_basic.svg"
+   inkscape:export-filename="/home/torree/Projects/BSc-WIP/images/markov_basic.png"
+   inkscape:export-xdpi="338.66666"
+   inkscape:export-ydpi="338.66666">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,10 +29,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.98994949"
-     inkscape:cx="257.58467"
+     inkscape:cx="79.292745"
      inkscape:cy="263.27072"
      inkscape:document-units="mm"
-     inkscape:current-layer="g4967"
+     inkscape:current-layer="g5132"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1145"
@@ -49,7 +52,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -67,76 +70,64 @@
            id="g4967">
           <g
              id="g5132">
-            <g
-               transform="translate(0.1889881,-51.59375)"
-               id="g5034">
-              <path
-                 style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20425773;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                 d="M 30.82612,49.37886 H -66.969626"
-                 id="rect4551-5"
-                 inkscape:connector-curvature="0"
-                 sodipodi:nodetypes="cc" />
-              <path
-                 style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20425773;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                 d="M 27.036836,38.212529 H -70.758911"
-                 id="rect4551-5-2"
-                 inkscape:connector-curvature="0"
-                 sodipodi:nodetypes="cc" />
-            </g>
+            <path
+               sodipodi:nodetypes="cc"
+               inkscape:connector-curvature="0"
+               id="rect4551-5"
+               d="M 31.015108,-2.21489 H -66.780638"
+               style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20425773;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+            <path
+               sodipodi:nodetypes="cc"
+               inkscape:connector-curvature="0"
+               id="rect4551-5-2"
+               d="M 27.225824,-13.381221 H -70.569923"
+               style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:2.20425773;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
             <circle
                r="13.029389"
                cy="19.04755"
                cx="-67.882767"
                id="path5036"
                style="fill:none;fill-opacity:1;stroke:#00001a;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <g
-               transform="translate(0.1889881,-58.279039)"
-               id="g5010">
-              <circle
-                 r="24.066868"
-                 style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.86626291;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                 cy="50.480984"
-                 cx="-68.071754"
-                 id="path4504-3-6-5" />
-              <text
-                 id="text4834"
-                 y="54.333462"
-                 x="-87.695877"
-                 style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-                 xml:space="preserve"><tspan
-                   style="stroke-width:0.26458332"
-                   y="54.333462"
-                   x="-87.695877"
-                   id="tspan4832"
-                   sodipodi:role="line">State A</tspan></text>
-            </g>
+            <circle
+               id="path4504-3-6-5"
+               cx="-67.882767"
+               cy="-7.7980552"
+               style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.86626291;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               r="24.066868" />
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="-88.054665"
+               y="-3.9455771"
+               id="text4834"><tspan
+                 sodipodi:role="line"
+                 id="tspan4832"
+                 x="-88.054665"
+                 y="-3.9455771"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';stroke-width:0.26458332">State A</tspan></text>
             <circle
                r="13.029389"
                cy="-34.643681"
                cx="32.117241"
                id="path5036-0"
                style="fill:none;fill-opacity:1;stroke:#00001a;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-            <g
-               transform="translate(0.1889881,-58.279039)"
-               id="g5015">
-              <circle
-                 r="24.066868"
-                 style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.86626291;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-                 cy="50.480984"
-                 cx="31.928253"
-                 id="path4504-3-6-6" />
-              <text
-                 id="text4838"
-                 y="54.333462"
-                 x="12.624522"
-                 style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-                 xml:space="preserve"><tspan
-                   style="stroke-width:0.26458332"
-                   y="54.333462"
-                   x="12.624522"
-                   id="tspan4836"
-                   sodipodi:role="line">State B</tspan></text>
-            </g>
+            <circle
+               id="path4504-3-6-6"
+               cx="32.117241"
+               cy="-7.7980552"
+               style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:1.86626291;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+               r="24.066868" />
+            <text
+               xml:space="preserve"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               x="12.252821"
+               y="-3.9455771"
+               id="text4838"><tspan
+                 sodipodi:role="line"
+                 id="tspan4836"
+                 x="12.252821"
+                 y="-3.9455771"
+                 style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'DejaVu Serif';-inkscape-font-specification:'DejaVu Serif';stroke-width:0.26458332">State B</tspan></text>
             <path
                sodipodi:nodetypes="ccc"
                inkscape:connector-curvature="0"
@@ -167,9 +158,9 @@
                id="text5093"
                y="-49.02092"
                x="23.286695"
-               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-stretch:normal;font-variant:normal;"
                xml:space="preserve"><tspan
-                 style="stroke-width:0.26458332"
+                 style="stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-family:'DejaVu Serif';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
                  y="-49.02092"
                  x="23.286695"
                  id="tspan5091"
@@ -178,9 +169,9 @@
                id="text5097"
                y="7.0105968"
                x="-25.508511"
-               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-stretch:normal;font-variant:normal;"
                xml:space="preserve"><tspan
-                 style="stroke-width:0.26458332"
+                 style="stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-family:'DejaVu Serif';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
                  y="7.0105968"
                  x="-25.508511"
                  id="tspan5095"
@@ -189,9 +180,9 @@
                id="text5101"
                y="-14.949819"
                x="-28.867477"
-               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-stretch:normal;font-variant:normal;"
                xml:space="preserve"><tspan
-                 style="stroke-width:0.26458332"
+                 style="stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-family:'DejaVu Serif';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
                  y="-14.949819"
                  x="-28.867477"
                  id="tspan5099"
@@ -200,9 +191,9 @@
                id="text5105"
                y="41.691257"
                x="-80.028793"
-               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+               style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:6.61458302px;font-family:'DejaVu Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-stretch:normal;font-variant:normal;"
                xml:space="preserve"><tspan
-                 style="stroke-width:0.26458332"
+                 style="stroke-width:0.26458332;-inkscape-font-specification:'DejaVu Serif';font-family:'DejaVu Serif';font-weight:normal;font-style:normal;font-stretch:normal;font-variant:normal;"
                  y="41.691257"
                  x="-80.028793"
                  id="tspan5103"
