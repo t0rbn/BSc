@@ -20,7 +20,7 @@ meeting all requirements of the open position, thus making collocating teams eas
 \section{Collecting the Required Featues}
 \label{interviewquestions}
 As shown in \ref{usecases}, the application is supposed to provide help for two target audiences: project managers staffing their teams, and employees looking for help with a certain problem.
-The actual features the system should include have been collected by the \textit{Flow Team}, a group of project managers who coordinate and monitor project team staffing and personnel development. This team also supervises the development of the skills management application. To validate that the requirements asked by them reflect the end users' needs, and to obtain a better impression thereof, semi-structured interviews have been conducted. In addition to collecting the asked persons' general expectations, the interviews aimed to give answers to these concrete questions:
+The actual features the system should include have been collected by the \textit{Flow Team}, a group of project managers who coordinate and monitor project team staffing and personnel development at SinnerSchrader. This team also supervises the development of the skills management application. To validate that the requirements asked by them reflect the end users' needs, and to obtain a better impression thereof, semi-structured interviews have been conducted. In addition to collecting the asked persons' general expectations, the interviews aimed to give answers to these concrete questions:
 \begin{itemize}
 	\item What should be the range of the scale used to measure knowledge and motivation?
 	\item Should the overall experience of the employees be captured by the system?
@@ -59,7 +59,9 @@ Popular features requested by the interviewees include the ability to see how mo
 
 \subsubsection{Scale}
 \label{scale_definition}
-When asked for a rough estimate of how the scale on which knowledge and motivation will be measured should be designed, all interviewees replied that they prefer a simple scale between four and six values. Mr. Gruber and Mr. Warnholz proposed to use five step \textit{Likert-Style Items}. Since those items are based on the idea of estimating the distance to a neutral element in both directions (e.g. better or worse), this type of scale is not applicable for the measurement of knowledge. The chosen approach will include a scale of four items for both types of values:
+When asked for a rough estimate of how the scale on which knowledge and motivation will be measured should be designed, all interviewees replied that they prefer a simple scale between four and six values. Mr. Gruber and Mr. Warnholz proposed to use five step \textit{Likert-Style Items}.
+% Since those items are based on the idea of estimating the distance to a neutral element in both directions (e.g. better or worse), this type of scale is not applicable for the measurement of knowledge.
+The chosen approach will include a scale of four items for both types of values:
 \begin{center}
 \begin{tabular}{c|c}
 	Knowledge & Motivation \\
@@ -133,7 +135,7 @@ Based on the Flow Team's demands and the data collected in the interviews, requi
 	A search function can be used to find people who have added one or more specific skills to their profile. When searching for multiple skills, only persons matching all of them will be displayed.
 	\begin{itemize}
 		\item Ranking\\
-			By default, the search results' order will be defined by a score aggregating the individual employee's skill level, will level and grade of specialization in the searched skills.
+			By default, the search results' order will be defined by a score aggregating the individual employee's skill levels, will levels and grade of specialization in the searched skills. The specialization is defined as the difference between the employee's average levels in the searched skills and in the unsearched skills.
 		\item Sorting\\
 			The users are able to sort the search results not only by said score
 			but also by skill and will level.

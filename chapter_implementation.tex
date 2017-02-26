@@ -205,7 +205,7 @@ The software architecture consists of three main categories of classes: services
 \newpage
 
 \subsection{Spring Boot}
-\textit{Spring Boot} is a sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose Java methods as HTTP request endpoints, an embedded webserver\footnote{Apache Tomcat 7 (http://tomcat.apache.org/)} to run the application on, a modular design to extend its features, and dependency injection. It is being used to use because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
+\textit{Spring Boot} is a sophisticated web framework that provides numerous features to create web applications including, but not limited to, annotations to expose Java methods as HTTP request endpoints, an embedded webserver\footnote{Apache Tomcat 7 (http://tomcat.apache.org/)} to run the application on, a modular design to extend its features, and dependency injection. It is being used because its credo to provide default configurations where possible and thus reduce the need to write infrastructure code simplifies the applications' structure \cite[p. 6]{SpringGuide}.
 For example, a controller that returns a static response can be created using two annotations:
 \textit{@Controller} to make Spring Boot identify the class as a resource that will listen to HTTP calls, and \textit{@Request} to specify the URL and HTTP method to use. Unlike most other web frameworks, Spring Boot does not require any more configuration or dispatching classes.
 
