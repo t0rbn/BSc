@@ -361,14 +361,14 @@ function suggest(searched, n) {
       if (accumulated.getByName(t) exists) {
         accumulated.getByName(t).count += t.count
       } else {
-        accumulated.getByName(t) = t.clone()
+        accumulated.add(t)
       }
     }
   }
 
   for (t in accumulated) {
-    if (searched contains t) {
-      remove t from accumulated
+    if (searched.contains(t)) {
+      accumulated.remove(t)
     }
   }
 
