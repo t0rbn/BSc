@@ -1,8 +1,8 @@
 # A Recommender FrameWork for Skills Management
-Bachelor's Thesis submitted at the group [MAST](https://mast.informatik.uni-hamburg.de/) (Applied Software Technology) at the [Department of Informatics](Department of Informatics) at the [University of Hamburg](https://www.uni-hamburg.de/en.html).
+Bachelor's Thesis submitted at the group [MAST](https://mast.informatik.uni-hamburg.de/) (Applied Software Technology) at the [Department of Informatics](https://www.inf.uni-hamburg.de/) at the [University of Hamburg](https://www.uni-hamburg.de/en.html).
 
 Academical supervisors:
-* [Prof. Dr. Walid Maalej](https://mast.informatik.uni-hamburg.de/people/walidmaalej/) (@maalejw)
+* [Prof. Dr. Walid Maalej](https://mast.informatik.uni-hamburg.de/people/walidmaalej/) ([@maalejw](https://github.com/maalejw))
 * [Prof. Dr. Eva Bittner](https://www.inf.uni-hamburg.de/inst/ab/wists/people/bittner.html)
 
 ## Very Abstract (tl;dr)
