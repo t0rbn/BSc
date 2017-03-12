@@ -8,7 +8,7 @@ Academical supervisors:
 ## Very Abstract (tl;dr)
 [SinnerSchrader](https://sinnerschrader.com) needed a tool for skills management. This thesis covers:
 * requirements and challenges
-* its design (as in 'concpept'; not visual)
+* its design (conceptual; not visual)
 * its implementation
 * its evaluation
 
