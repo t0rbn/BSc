@@ -1,4 +1,4 @@
-# A Recommender FrameWork for Skills Management
+# A Recommender Framework for Skills Management
 Bachelor's Thesis submitted at the group [MAST](https://mast.informatik.uni-hamburg.de/) (Applied Software Technology) at the [Department of Informatics](https://www.inf.uni-hamburg.de/) at the [University of Hamburg](https://www.uni-hamburg.de/en.html).
 
 Academical supervisors:
